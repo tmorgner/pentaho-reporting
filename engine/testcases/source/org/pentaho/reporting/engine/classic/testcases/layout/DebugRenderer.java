@@ -17,16 +17,18 @@
 
 package org.pentaho.reporting.engine.classic.testcases.layout;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.pentaho.reporting.engine.classic.core.ClassicEngineBoot;
+import org.pentaho.reporting.engine.classic.core.ReportDefinition;
+import org.pentaho.reporting.engine.classic.core.function.ProcessingContext;
+import org.pentaho.reporting.engine.classic.core.layout.model.LogicalPageBox;
 import org.pentaho.reporting.engine.classic.core.layout.output.AbstractOutputProcessor;
 import org.pentaho.reporting.engine.classic.core.layout.output.LogicalPageKey;
 import org.pentaho.reporting.engine.classic.core.layout.output.OutputProcessorMetaData;
-import org.pentaho.reporting.engine.classic.core.layout.model.LogicalPageBox;
-import org.pentaho.reporting.engine.classic.core.layout.ModelPrinter;
 import org.pentaho.reporting.engine.classic.core.modules.output.pageable.base.PageableRenderer;
 import org.pentaho.reporting.engine.classic.core.modules.output.pageable.graphics.internal.GraphicsOutputProcessorMetaData;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.pentaho.reporting.libraries.base.performance.NoOpPerformanceMonitorContext;
 
 /**
  * Creation-Date: 05.04.2007, 17:37:03
@@ -59,6 +61,12 @@ public class DebugRenderer extends PageableRenderer
   public DebugRenderer()
   {
     super(new DebugOutputProcessor());
+  }
+
+  public void startReport(final ReportDefinition report,
+                          final ProcessingContext processingContext)
+  {
+    super.startReport(report, processingContext, NoOpPerformanceMonitorContext.INSTANCE);
   }
 
   protected void debugPrint(final LogicalPageBox pageBox)

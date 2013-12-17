@@ -17,6 +17,7 @@
 
 package org.pentaho.reporting.engine.classic.core.layout.process;
 
+import org.pentaho.reporting.engine.classic.core.PerformanceTags;
 import org.pentaho.reporting.engine.classic.core.layout.model.BlockRenderBox;
 import org.pentaho.reporting.engine.classic.core.layout.model.CanvasRenderBox;
 import org.pentaho.reporting.engine.classic.core.layout.model.InlineRenderBox;
@@ -26,6 +27,9 @@ import org.pentaho.reporting.engine.classic.core.layout.model.ParagraphRenderBox
 import org.pentaho.reporting.engine.classic.core.layout.model.RenderBox;
 import org.pentaho.reporting.engine.classic.core.layout.model.RenderNode;
 import org.pentaho.reporting.engine.classic.core.layout.model.RenderableReplacedContentBox;
+import org.pentaho.reporting.libraries.base.performance.EmptyPerformanceLoggingStopWatch;
+import org.pentaho.reporting.libraries.base.performance.PerformanceLoggingStopWatch;
+import org.pentaho.reporting.libraries.base.performance.PerformanceMonitorContext;
 
 /**
  * Iterates over the document tree using the display-role of the current node as selector. Usually all structural
@@ -35,8 +39,30 @@ import org.pentaho.reporting.engine.classic.core.layout.model.RenderableReplaced
  */
 public abstract class IterateStructuralProcessStep
 {
+  private PerformanceLoggingStopWatch summaryWatch;
+  private PerformanceLoggingStopWatch eventWatch;
+
   protected IterateStructuralProcessStep()
   {
+    summaryWatch = EmptyPerformanceLoggingStopWatch.INSTANCE;
+    eventWatch = EmptyPerformanceLoggingStopWatch.INSTANCE;
+  }
+
+  public void initialize(PerformanceMonitorContext monitorContext)
+  {
+    summaryWatch.stop();
+    eventWatch.stop();
+
+    summaryWatch = monitorContext.createStopWatch
+        (PerformanceTags.getSummaryTag(PerformanceTags.REPORT_LAYOUT_PROCESS_SUFFIX, getClass().getSimpleName()));
+    eventWatch = monitorContext.createStopWatch
+        (PerformanceTags.getDetailTag(PerformanceTags.REPORT_LAYOUT_PROCESS_SUFFIX, getClass().getSimpleName()));
+  }
+
+  public void closeStep()
+  {
+    summaryWatch.close();
+    eventWatch.close();
   }
 
   protected final void startProcessing(final RenderNode node)

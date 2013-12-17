@@ -17,12 +17,18 @@
 
 package org.pentaho.reporting.engine.classic.core.layout;
 
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.pentaho.reporting.engine.classic.core.Band;
 import org.pentaho.reporting.engine.classic.core.Group;
 import org.pentaho.reporting.engine.classic.core.GroupBody;
 import org.pentaho.reporting.engine.classic.core.InvalidReportStateException;
+import org.pentaho.reporting.engine.classic.core.PerformanceTags;
 import org.pentaho.reporting.engine.classic.core.ReportAttributeMap;
 import org.pentaho.reporting.engine.classic.core.ReportDefinition;
 import org.pentaho.reporting.engine.classic.core.ReportProcessingException;
@@ -71,6 +77,8 @@ import org.pentaho.reporting.engine.classic.core.style.BandStyleKeys;
 import org.pentaho.reporting.engine.classic.core.style.ElementStyleKeys;
 import org.pentaho.reporting.engine.classic.core.style.StyleSheet;
 import org.pentaho.reporting.engine.classic.core.util.InstanceID;
+import org.pentaho.reporting.libraries.base.performance.PerformanceLoggingStopWatch;
+import org.pentaho.reporting.libraries.base.performance.PerformanceMonitorContext;
 import org.pentaho.reporting.libraries.base.util.FastStack;
 
 /**
@@ -81,6 +89,14 @@ import org.pentaho.reporting.libraries.base.util.FastStack;
 public abstract class AbstractRenderer implements Renderer
 {
   private static final Log logger = LogFactory.getLog(AbstractRenderer.class);
+
+  private class CloseListener implements ChangeListener
+  {
+    public void stateChanged(final ChangeEvent e)
+    {
+      close();
+    }
+  }
 
   private static class Section
   {
@@ -295,6 +311,10 @@ public abstract class AbstractRenderer implements Renderer
 
   private SectionRenderBox[] sectionBoxes;
   private LayoutResult lastValidateResult;
+  private PerformanceLoggingStopWatch validateStopWatch;
+  private PerformanceLoggingStopWatch paginateStopWatch;
+  private PerformanceMonitorContext performanceMonitorContext;
+  private HashMap<String, PerformanceLoggingStopWatch> performanceByBandType;
 
   protected AbstractRenderer(final OutputProcessor outputProcessor)
   {
@@ -337,6 +357,7 @@ public abstract class AbstractRenderer implements Renderer
     final boolean paddingsDisabled = metaData.isFeatureSupported(OutputProcessorFeature.DISABLE_PADDING);
     this.sectionStyleCache = new StyleCache(paddingsDisabled);
     this.boxDefinitionFactory = new BoxDefinitionFactory();
+    this.performanceByBandType = new HashMap<String, PerformanceLoggingStopWatch>();
   }
 
   public boolean isSafeToStore()
@@ -378,7 +399,9 @@ public abstract class AbstractRenderer implements Renderer
     return outputProcessor;
   }
 
-  public void startReport(final ReportDefinition report, final ProcessingContext processingContext)
+  public void startReport(final ReportDefinition report,
+                          final ProcessingContext processingContext,
+                          final PerformanceMonitorContext performanceMonitorContext)
   {
     if (report == null)
     {
@@ -389,6 +412,26 @@ public abstract class AbstractRenderer implements Renderer
     {
       throw new IllegalStateException();
     }
+
+    // todo
+    this.performanceMonitorContext = performanceMonitorContext;
+    this.performanceMonitorContext.addChangeListener(new CloseListener());
+
+    this.validateStopWatch = performanceMonitorContext.createStopWatch(PerformanceTags.REPORT_LAYOUT_VALIDATE);
+    this.paginateStopWatch = performanceMonitorContext.createStopWatch(PerformanceTags.REPORT_LAYOUT_PROCESS);
+
+    this.majorAxisLayoutStep.initialize(performanceMonitorContext);
+    this.canvasMajorAxisLayoutStep.initialize(performanceMonitorContext);
+    this.minorAxisLayoutStep.initialize(performanceMonitorContext);
+    this.validateModelStep.initialize(performanceMonitorContext);
+    this.staticPropertiesStep.initialize(performanceMonitorContext);
+    this.paragraphLineBreakStep.initialize(performanceMonitorContext);
+    this.validateSafeToStoreStateStep.initialize(performanceMonitorContext);
+    this.applyCachedValuesStep.initialize(performanceMonitorContext);
+    this.commitStep.initialize(performanceMonitorContext);
+    this.applyAutoCommitStep.initialize(performanceMonitorContext);
+    this.applyCommitStep.initialize(performanceMonitorContext);
+    this.rollbackStep.initialize(performanceMonitorContext);
 
     initializeRendererOnStartReport(processingContext);
 
@@ -866,6 +909,13 @@ public abstract class AbstractRenderer implements Renderer
     {
       return;
     }
+    PerformanceLoggingStopWatch performanceLoggingStopWatch = performanceByBandType.get(band.getElementTypeName());
+    if (performanceLoggingStopWatch == null)
+    {
+      performanceLoggingStopWatch = getPerformanceMonitorContext().createStopWatch(band.getElementTypeName());
+      performanceByBandType.put(band.getElementTypeName(), performanceLoggingStopWatch);
+    }
+    performanceLoggingStopWatch.start();
 
     final RenderBox sectionBox = section.getSectionBox();
     final int type = section.getType();
@@ -889,6 +939,7 @@ public abstract class AbstractRenderer implements Renderer
     {
       normalFlowLayoutBuilder.add(sectionBox, band, runtime, stateKey);
     }
+    performanceLoggingStopWatch.stop(true);
   }
 
   public void add(final RenderBox box)
@@ -917,6 +968,9 @@ public abstract class AbstractRenderer implements Renderer
     {
       throw new IllegalStateException();
     }
+    try
+    {
+      validateStopWatch.start();
     // Pagination time without dirty-flag: 875067
     if (pageBox == null)
     {
@@ -966,6 +1020,11 @@ public abstract class AbstractRenderer implements Renderer
       lastValidateResult = LayoutResult.LAYOUT_NO_PAGEBREAK;
       return LayoutResult.LAYOUT_NO_PAGEBREAK;
     }
+    }
+    finally
+    {
+      validateStopWatch.stop(true);
+    }
   }
 
   protected boolean preparePagination(final LogicalPageBox pageBox)
@@ -993,6 +1052,10 @@ public abstract class AbstractRenderer implements Renderer
     {
       throw new IllegalStateException();
     }
+    try
+    {
+      paginateStopWatch.start();
+
     // Pagination time without dirty-flag: 875067
     if (pageBox == null)
     {
@@ -1059,8 +1122,15 @@ public abstract class AbstractRenderer implements Renderer
 
       repeat = performPagination(handler, performOutput);
     }
-    clearDirty();
     return (pagebreaks > 0);
+    }
+    finally
+    {
+      clearDirty();
+
+      paginateStopWatch.stop(isOpen());
+    }
+
   }
 
   protected abstract boolean performPagination(LayoutPagebreakHandler handler,
@@ -1449,5 +1519,45 @@ public abstract class AbstractRenderer implements Renderer
     pageBox.getRepeatFooterArea().clear();
     pageBox.getHeaderArea().clear();
     pageBox.getWatermarkArea().clear();
+  }
+
+  protected PerformanceLoggingStopWatch getValidateStopWatch()
+  {
+    return validateStopWatch;
+  }
+
+  protected PerformanceLoggingStopWatch getPaginateStopWatch()
+  {
+    return paginateStopWatch;
+  }
+
+  protected PerformanceMonitorContext getPerformanceMonitorContext()
+  {
+    return performanceMonitorContext;
+  }
+
+  protected void close()
+  {
+    this.majorAxisLayoutStep.close();
+    this.canvasMajorAxisLayoutStep.close();
+    this.minorAxisLayoutStep.close();
+    this.validateModelStep.closeStep();
+    this.staticPropertiesStep.close();
+    this.paragraphLineBreakStep.closeStep();
+    this.validateSafeToStoreStateStep.closeStep();
+    this.applyCachedValuesStep.closeStep();
+    this.commitStep.closeStep();
+    this.applyAutoCommitStep.closeStep();
+    this.applyCommitStep.closeStep();
+    this.rollbackStep.closeStep();
+
+    validateStopWatch.close();
+    paginateStopWatch.close();
+
+    for (Map.Entry<String, PerformanceLoggingStopWatch> entry : performanceByBandType.entrySet())
+    {
+      entry.getValue().stop();
+    }
+
   }
 }

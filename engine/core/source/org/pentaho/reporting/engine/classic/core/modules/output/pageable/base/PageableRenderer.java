@@ -20,7 +20,6 @@ package org.pentaho.reporting.engine.classic.core.modules.output.pageable.base;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.pentaho.reporting.engine.classic.core.ClassicEngineBoot;
-import org.pentaho.reporting.engine.classic.core.ReportDefinition;
 import org.pentaho.reporting.engine.classic.core.function.ProcessingContext;
 import org.pentaho.reporting.engine.classic.core.layout.AbstractRenderer;
 import org.pentaho.reporting.engine.classic.core.layout.model.LogicalPageBox;
@@ -63,17 +62,6 @@ public class PageableRenderer extends AbstractRenderer
     this.lastPageAge = System.currentTimeMillis();
     this.orphanStep = new OrphanStep();
     this.widowStep = new WidowStep();
-  }
-
-  public void startReport(final ReportDefinition report, final ProcessingContext processingContext)
-  {
-    final long prePageAge = System.currentTimeMillis();
-    PageableRenderer.logger.debug("Time to pagination " + (prePageAge - lastPageAge));
-    this.lastPageAge = prePageAge;
-
-    widowsEnabled = !ClassicEngineBoot.isEnforceCompatibilityFor(processingContext.getCompatibilityLevel(), 3, 8);
-    super.startReport(report, processingContext);
-    pageCount = 0;
   }
 
   protected void debugPrint(final LogicalPageBox pageBox)
@@ -251,5 +239,32 @@ public class PageableRenderer extends AbstractRenderer
   public boolean isPendingPageHack()
   {
     return true;
+  }
+
+  protected void initializeRendererOnStartReport(final ProcessingContext processingContext)
+  {
+    super.initializeRendererOnStartReport(processingContext);
+
+    final long prePageAge = System.currentTimeMillis();
+    PageableRenderer.logger.debug("Time to pagination " + (prePageAge - lastPageAge));
+    this.lastPageAge = prePageAge;
+    this.widowsEnabled = !ClassicEngineBoot.isEnforceCompatibilityFor(processingContext.getCompatibilityLevel(), 3, 8);
+    this.pageCount = 0;
+
+    paginationStep.initialize(getPerformanceMonitorContext());
+    fillPhysicalPagesStep.initialize(getPerformanceMonitorContext());
+    this.cleanPaginatedBoxesStep.initialize(getPerformanceMonitorContext());
+    this.orphanStep.initialize(getPerformanceMonitorContext());
+    this.widowStep.initialize(getPerformanceMonitorContext());
+  }
+
+  protected void close()
+  {
+    super.close();
+    paginationStep.close();
+    fillPhysicalPagesStep.close();
+    this.cleanPaginatedBoxesStep.closeStep();
+    this.orphanStep.close();
+    this.widowStep.close();
   }
 }

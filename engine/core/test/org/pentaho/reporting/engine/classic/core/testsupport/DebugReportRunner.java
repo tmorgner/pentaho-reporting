@@ -64,6 +64,7 @@ import org.pentaho.reporting.engine.classic.core.states.ReportStateKey;
 import org.pentaho.reporting.engine.classic.core.testsupport.font.LocalFontRegistry;
 import org.pentaho.reporting.engine.classic.core.testsupport.gold.GoldTestBase;
 import org.pentaho.reporting.engine.classic.core.util.NullOutputStream;
+import org.pentaho.reporting.libraries.base.performance.NoOpPerformanceMonitorContext;
 import org.pentaho.reporting.libraries.base.util.MemoryByteArrayOutputStream;
 import org.pentaho.reporting.libraries.designtime.swing.LibSwingUtil;
 import org.pentaho.reporting.libraries.fonts.monospace.MonospaceFontRegistry;
@@ -446,7 +447,7 @@ public class DebugReportRunner
 
       final DebugRenderer debugLayoutSystem = new DebugRenderer(metaData);
       debugLayoutSystem.setStateKey(stateKey);
-      debugLayoutSystem.startReport(report, processingContext);
+      debugLayoutSystem.startReport(report, processingContext, NoOpPerformanceMonitorContext.INSTANCE);
       debugLayoutSystem.startSection(Renderer.TYPE_NORMALFLOW);
       debugLayoutSystem.add(reportHeader, runtime, stateKey);
       debugLayoutSystem.endSection();

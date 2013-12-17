@@ -17,7 +17,6 @@
 
 package org.pentaho.reporting.engine.classic.core.layout;
 
-import org.pentaho.reporting.engine.classic.core.ReportDefinition;
 import org.pentaho.reporting.engine.classic.core.function.ProcessingContext;
 import org.pentaho.reporting.engine.classic.core.layout.model.LogicalPageBox;
 import org.pentaho.reporting.engine.classic.core.layout.output.ContentProcessingException;
@@ -59,12 +58,6 @@ public class StreamingRenderer extends AbstractRenderer
       return false;
     }
     return true;
-  }
-
-  public void startReport(final ReportDefinition report, final ProcessingContext processingContext)
-  {
-    pageCount = 0;
-    super.startReport(report, processingContext);
   }
 
   public void processIncrementalUpdate(final boolean performOutput) throws ContentProcessingException
@@ -172,5 +165,22 @@ public class StreamingRenderer extends AbstractRenderer
   public void rollback()
   {
     throw new UnsupportedOperationException("Streaming-Renderer do not implement the rollback method.");
+  }
+
+  protected void initializeRendererOnStartReport(final ProcessingContext processingContext)
+  {
+    super.initializeRendererOnStartReport(processingContext);
+    pageCount = 0;
+    this.applyAutoCommitPageHeaderStep.initialize(getPerformanceMonitorContext());
+    this.countBoxesStep.initialize(getPerformanceMonitorContext());
+    this.cleanBoxesStep.initialize(getPerformanceMonitorContext());
+  }
+
+  protected void close()
+  {
+    super.close();
+    this.cleanBoxesStep.closeStep();
+    this.applyAutoCommitPageHeaderStep.closeStep();
+    this.countBoxesStep.closeStep();
   }
 }

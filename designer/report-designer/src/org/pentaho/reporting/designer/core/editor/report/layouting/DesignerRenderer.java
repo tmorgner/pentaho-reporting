@@ -17,7 +17,6 @@
 
 package org.pentaho.reporting.designer.core.editor.report.layouting;
 
-import org.pentaho.reporting.engine.classic.core.ReportDefinition;
 import org.pentaho.reporting.engine.classic.core.function.ProcessingContext;
 import org.pentaho.reporting.engine.classic.core.layout.DefaultLayoutBuilder;
 import org.pentaho.reporting.engine.classic.core.layout.StreamingRenderer;
@@ -44,11 +43,10 @@ public class DesignerRenderer extends StreamingRenderer
     return new DesignerLayoutBuilder(metaData);
   }
 
-
-  public void startReport(final ReportDefinition report, final ProcessingContext processingContext)
+  protected void initializeRendererOnStartReport(final ProcessingContext processingContext)
   {
-    outputProcessor.reset(); 
-    super.startReport(report, processingContext);
+    super.initializeRendererOnStartReport(processingContext);
+    outputProcessor.reset();
   }
 
   public LogicalPageBox getPageBox()
