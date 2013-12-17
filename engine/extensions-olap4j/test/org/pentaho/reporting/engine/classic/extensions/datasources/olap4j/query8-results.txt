@@ -1,0 +1,2020 @@
+Tablemodel contains 125 rows.
+Column: 0 Name=[Product].[(All)]; DataType=class java.lang.String
+Column: 1 Name=[Product].[Line]; DataType=class java.lang.String
+Column: 2 Name=[Time].[(All)]; DataType=class java.lang.String
+Column: 3 Name=[Time].[Years]; DataType=class java.lang.String
+Column: 4 Name=[Time].[Quarters]; DataType=class java.lang.Object
+Column: 5 Name=[Markets].[(All)]; DataType=class java.lang.String
+Column: 6 Name=[Markets].[Territory]; DataType=class java.lang.String
+Column: 7 Name=Measure; DataType=class java.lang.Double
+Checking the data inside
+ValueAt (0, 0) is in a typed column and is of type class java.lang.String
+ValueAt (0, 1) is in a typed column and is of type class java.lang.String
+ValueAt (0, 2) is in a typed column and is of type class java.lang.String
+ValueAt (0, 3) is in a typed column and is of type class java.lang.String
+ValueAt (0, 4) is null
+ValueAt (0, 5) is in a typed column and is of type class java.lang.String
+ValueAt (0, 6) is in a typed column and is of type class java.lang.String
+ValueAt (0, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (1, 0) is in a typed column and is of type class java.lang.String
+ValueAt (1, 1) is in a typed column and is of type class java.lang.String
+ValueAt (1, 2) is in a typed column and is of type class java.lang.String
+ValueAt (1, 3) is in a typed column and is of type class java.lang.String
+ValueAt (1, 4) is null
+ValueAt (1, 5) is in a typed column and is of type class java.lang.String
+ValueAt (1, 6) is in a typed column and is of type class java.lang.String
+ValueAt (1, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (2, 0) is in a typed column and is of type class java.lang.String
+ValueAt (2, 1) is in a typed column and is of type class java.lang.String
+ValueAt (2, 2) is in a typed column and is of type class java.lang.String
+ValueAt (2, 3) is in a typed column and is of type class java.lang.String
+ValueAt (2, 4) is null
+ValueAt (2, 5) is in a typed column and is of type class java.lang.String
+ValueAt (2, 6) is in a typed column and is of type class java.lang.String
+ValueAt (2, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (3, 0) is in a typed column and is of type class java.lang.String
+ValueAt (3, 1) is in a typed column and is of type class java.lang.String
+ValueAt (3, 2) is in a typed column and is of type class java.lang.String
+ValueAt (3, 3) is in a typed column and is of type class java.lang.String
+ValueAt (3, 4) is null
+ValueAt (3, 5) is in a typed column and is of type class java.lang.String
+ValueAt (3, 6) is in a typed column and is of type class java.lang.String
+ValueAt (3, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (4, 0) is in a typed column and is of type class java.lang.String
+ValueAt (4, 1) is in a typed column and is of type class java.lang.String
+ValueAt (4, 2) is in a typed column and is of type class java.lang.String
+ValueAt (4, 3) is in a typed column and is of type class java.lang.String
+ValueAt (4, 4) is null
+ValueAt (4, 5) is in a typed column and is of type class java.lang.String
+ValueAt (4, 6) is in a typed column and is of type class java.lang.String
+ValueAt (4, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (5, 0) is in a typed column and is of type class java.lang.String
+ValueAt (5, 1) is in a typed column and is of type class java.lang.String
+ValueAt (5, 2) is in a typed column and is of type class java.lang.String
+ValueAt (5, 3) is in a typed column and is of type class java.lang.String
+ValueAt (5, 4) is null
+ValueAt (5, 5) is in a typed column and is of type class java.lang.String
+ValueAt (5, 6) is in a typed column and is of type class java.lang.String
+ValueAt (5, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (6, 0) is in a typed column and is of type class java.lang.String
+ValueAt (6, 1) is in a typed column and is of type class java.lang.String
+ValueAt (6, 2) is in a typed column and is of type class java.lang.String
+ValueAt (6, 3) is in a typed column and is of type class java.lang.String
+ValueAt (6, 4) is null
+ValueAt (6, 5) is in a typed column and is of type class java.lang.String
+ValueAt (6, 6) is in a typed column and is of type class java.lang.String
+ValueAt (6, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (7, 0) is in a typed column and is of type class java.lang.String
+ValueAt (7, 1) is in a typed column and is of type class java.lang.String
+ValueAt (7, 2) is in a typed column and is of type class java.lang.String
+ValueAt (7, 3) is in a typed column and is of type class java.lang.String
+ValueAt (7, 4) is null
+ValueAt (7, 5) is in a typed column and is of type class java.lang.String
+ValueAt (7, 6) is in a typed column and is of type class java.lang.String
+ValueAt (7, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (8, 0) is in a typed column and is of type class java.lang.String
+ValueAt (8, 1) is in a typed column and is of type class java.lang.String
+ValueAt (8, 2) is in a typed column and is of type class java.lang.String
+ValueAt (8, 3) is in a typed column and is of type class java.lang.String
+ValueAt (8, 4) is null
+ValueAt (8, 5) is in a typed column and is of type class java.lang.String
+ValueAt (8, 6) is in a typed column and is of type class java.lang.String
+ValueAt (8, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (9, 0) is in a typed column and is of type class java.lang.String
+ValueAt (9, 1) is in a typed column and is of type class java.lang.String
+ValueAt (9, 2) is in a typed column and is of type class java.lang.String
+ValueAt (9, 3) is in a typed column and is of type class java.lang.String
+ValueAt (9, 4) is null
+ValueAt (9, 5) is in a typed column and is of type class java.lang.String
+ValueAt (9, 6) is in a typed column and is of type class java.lang.String
+ValueAt (9, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (10, 0) is in a typed column and is of type class java.lang.String
+ValueAt (10, 1) is in a typed column and is of type class java.lang.String
+ValueAt (10, 2) is in a typed column and is of type class java.lang.String
+ValueAt (10, 3) is in a typed column and is of type class java.lang.String
+ValueAt (10, 4) is null
+ValueAt (10, 5) is in a typed column and is of type class java.lang.String
+ValueAt (10, 6) is in a typed column and is of type class java.lang.String
+ValueAt (10, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (11, 0) is in a typed column and is of type class java.lang.String
+ValueAt (11, 1) is in a typed column and is of type class java.lang.String
+ValueAt (11, 2) is in a typed column and is of type class java.lang.String
+ValueAt (11, 3) is in a typed column and is of type class java.lang.String
+ValueAt (11, 4) is null
+ValueAt (11, 5) is in a typed column and is of type class java.lang.String
+ValueAt (11, 6) is in a typed column and is of type class java.lang.String
+ValueAt (11, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (12, 0) is in a typed column and is of type class java.lang.String
+ValueAt (12, 1) is in a typed column and is of type class java.lang.String
+ValueAt (12, 2) is in a typed column and is of type class java.lang.String
+ValueAt (12, 3) is in a typed column and is of type class java.lang.String
+ValueAt (12, 4) is null
+ValueAt (12, 5) is in a typed column and is of type class java.lang.String
+ValueAt (12, 6) is in a typed column and is of type class java.lang.String
+ValueAt (12, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (13, 0) is in a typed column and is of type class java.lang.String
+ValueAt (13, 1) is in a typed column and is of type class java.lang.String
+ValueAt (13, 2) is in a typed column and is of type class java.lang.String
+ValueAt (13, 3) is in a typed column and is of type class java.lang.String
+ValueAt (13, 4) is null
+ValueAt (13, 5) is in a typed column and is of type class java.lang.String
+ValueAt (13, 6) is in a typed column and is of type class java.lang.String
+ValueAt (13, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (14, 0) is in a typed column and is of type class java.lang.String
+ValueAt (14, 1) is in a typed column and is of type class java.lang.String
+ValueAt (14, 2) is in a typed column and is of type class java.lang.String
+ValueAt (14, 3) is in a typed column and is of type class java.lang.String
+ValueAt (14, 4) is null
+ValueAt (14, 5) is in a typed column and is of type class java.lang.String
+ValueAt (14, 6) is in a typed column and is of type class java.lang.String
+ValueAt (14, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (15, 0) is in a typed column and is of type class java.lang.String
+ValueAt (15, 1) is in a typed column and is of type class java.lang.String
+ValueAt (15, 2) is in a typed column and is of type class java.lang.String
+ValueAt (15, 3) is in a typed column and is of type class java.lang.String
+ValueAt (15, 4) is null
+ValueAt (15, 5) is in a typed column and is of type class java.lang.String
+ValueAt (15, 6) is in a typed column and is of type class java.lang.String
+ValueAt (15, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (16, 0) is in a typed column and is of type class java.lang.String
+ValueAt (16, 1) is in a typed column and is of type class java.lang.String
+ValueAt (16, 2) is in a typed column and is of type class java.lang.String
+ValueAt (16, 3) is in a typed column and is of type class java.lang.String
+ValueAt (16, 4) is null
+ValueAt (16, 5) is in a typed column and is of type class java.lang.String
+ValueAt (16, 6) is in a typed column and is of type class java.lang.String
+ValueAt (16, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (17, 0) is in a typed column and is of type class java.lang.String
+ValueAt (17, 1) is in a typed column and is of type class java.lang.String
+ValueAt (17, 2) is in a typed column and is of type class java.lang.String
+ValueAt (17, 3) is in a typed column and is of type class java.lang.String
+ValueAt (17, 4) is null
+ValueAt (17, 5) is in a typed column and is of type class java.lang.String
+ValueAt (17, 6) is in a typed column and is of type class java.lang.String
+ValueAt (17, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (18, 0) is in a typed column and is of type class java.lang.String
+ValueAt (18, 1) is in a typed column and is of type class java.lang.String
+ValueAt (18, 2) is in a typed column and is of type class java.lang.String
+ValueAt (18, 3) is in a typed column and is of type class java.lang.String
+ValueAt (18, 4) is null
+ValueAt (18, 5) is in a typed column and is of type class java.lang.String
+ValueAt (18, 6) is in a typed column and is of type class java.lang.String
+ValueAt (18, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (19, 0) is in a typed column and is of type class java.lang.String
+ValueAt (19, 1) is in a typed column and is of type class java.lang.String
+ValueAt (19, 2) is in a typed column and is of type class java.lang.String
+ValueAt (19, 3) is in a typed column and is of type class java.lang.String
+ValueAt (19, 4) is null
+ValueAt (19, 5) is in a typed column and is of type class java.lang.String
+ValueAt (19, 6) is in a typed column and is of type class java.lang.String
+ValueAt (19, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (20, 0) is in a typed column and is of type class java.lang.String
+ValueAt (20, 1) is in a typed column and is of type class java.lang.String
+ValueAt (20, 2) is in a typed column and is of type class java.lang.String
+ValueAt (20, 3) is in a typed column and is of type class java.lang.String
+ValueAt (20, 4) is null
+ValueAt (20, 5) is in a typed column and is of type class java.lang.String
+ValueAt (20, 6) is in a typed column and is of type class java.lang.String
+ValueAt (20, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (21, 0) is in a typed column and is of type class java.lang.String
+ValueAt (21, 1) is in a typed column and is of type class java.lang.String
+ValueAt (21, 2) is in a typed column and is of type class java.lang.String
+ValueAt (21, 3) is in a typed column and is of type class java.lang.String
+ValueAt (21, 4) is null
+ValueAt (21, 5) is in a typed column and is of type class java.lang.String
+ValueAt (21, 6) is in a typed column and is of type class java.lang.String
+ValueAt (21, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (22, 0) is in a typed column and is of type class java.lang.String
+ValueAt (22, 1) is in a typed column and is of type class java.lang.String
+ValueAt (22, 2) is in a typed column and is of type class java.lang.String
+ValueAt (22, 3) is in a typed column and is of type class java.lang.String
+ValueAt (22, 4) is null
+ValueAt (22, 5) is in a typed column and is of type class java.lang.String
+ValueAt (22, 6) is in a typed column and is of type class java.lang.String
+ValueAt (22, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (23, 0) is in a typed column and is of type class java.lang.String
+ValueAt (23, 1) is in a typed column and is of type class java.lang.String
+ValueAt (23, 2) is in a typed column and is of type class java.lang.String
+ValueAt (23, 3) is in a typed column and is of type class java.lang.String
+ValueAt (23, 4) is null
+ValueAt (23, 5) is in a typed column and is of type class java.lang.String
+ValueAt (23, 6) is in a typed column and is of type class java.lang.String
+ValueAt (23, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (24, 0) is in a typed column and is of type class java.lang.String
+ValueAt (24, 1) is in a typed column and is of type class java.lang.String
+ValueAt (24, 2) is in a typed column and is of type class java.lang.String
+ValueAt (24, 3) is in a typed column and is of type class java.lang.String
+ValueAt (24, 4) is null
+ValueAt (24, 5) is in a typed column and is of type class java.lang.String
+ValueAt (24, 6) is in a typed column and is of type class java.lang.String
+ValueAt (24, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (25, 0) is in a typed column and is of type class java.lang.String
+ValueAt (25, 1) is in a typed column and is of type class java.lang.String
+ValueAt (25, 2) is in a typed column and is of type class java.lang.String
+ValueAt (25, 3) is in a typed column and is of type class java.lang.String
+ValueAt (25, 4) is null
+ValueAt (25, 5) is in a typed column and is of type class java.lang.String
+ValueAt (25, 6) is in a typed column and is of type class java.lang.String
+ValueAt (25, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (26, 0) is in a typed column and is of type class java.lang.String
+ValueAt (26, 1) is in a typed column and is of type class java.lang.String
+ValueAt (26, 2) is in a typed column and is of type class java.lang.String
+ValueAt (26, 3) is in a typed column and is of type class java.lang.String
+ValueAt (26, 4) is null
+ValueAt (26, 5) is in a typed column and is of type class java.lang.String
+ValueAt (26, 6) is in a typed column and is of type class java.lang.String
+ValueAt (26, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (27, 0) is in a typed column and is of type class java.lang.String
+ValueAt (27, 1) is in a typed column and is of type class java.lang.String
+ValueAt (27, 2) is in a typed column and is of type class java.lang.String
+ValueAt (27, 3) is in a typed column and is of type class java.lang.String
+ValueAt (27, 4) is null
+ValueAt (27, 5) is in a typed column and is of type class java.lang.String
+ValueAt (27, 6) is in a typed column and is of type class java.lang.String
+ValueAt (27, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (28, 0) is in a typed column and is of type class java.lang.String
+ValueAt (28, 1) is in a typed column and is of type class java.lang.String
+ValueAt (28, 2) is in a typed column and is of type class java.lang.String
+ValueAt (28, 3) is in a typed column and is of type class java.lang.String
+ValueAt (28, 4) is null
+ValueAt (28, 5) is in a typed column and is of type class java.lang.String
+ValueAt (28, 6) is in a typed column and is of type class java.lang.String
+ValueAt (28, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (29, 0) is in a typed column and is of type class java.lang.String
+ValueAt (29, 1) is in a typed column and is of type class java.lang.String
+ValueAt (29, 2) is in a typed column and is of type class java.lang.String
+ValueAt (29, 3) is in a typed column and is of type class java.lang.String
+ValueAt (29, 4) is null
+ValueAt (29, 5) is in a typed column and is of type class java.lang.String
+ValueAt (29, 6) is in a typed column and is of type class java.lang.String
+ValueAt (29, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (30, 0) is in a typed column and is of type class java.lang.String
+ValueAt (30, 1) is in a typed column and is of type class java.lang.String
+ValueAt (30, 2) is in a typed column and is of type class java.lang.String
+ValueAt (30, 3) is in a typed column and is of type class java.lang.String
+ValueAt (30, 4) is null
+ValueAt (30, 5) is in a typed column and is of type class java.lang.String
+ValueAt (30, 6) is in a typed column and is of type class java.lang.String
+ValueAt (30, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (31, 0) is in a typed column and is of type class java.lang.String
+ValueAt (31, 1) is in a typed column and is of type class java.lang.String
+ValueAt (31, 2) is in a typed column and is of type class java.lang.String
+ValueAt (31, 3) is in a typed column and is of type class java.lang.String
+ValueAt (31, 4) is null
+ValueAt (31, 5) is in a typed column and is of type class java.lang.String
+ValueAt (31, 6) is in a typed column and is of type class java.lang.String
+ValueAt (31, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (32, 0) is in a typed column and is of type class java.lang.String
+ValueAt (32, 1) is in a typed column and is of type class java.lang.String
+ValueAt (32, 2) is in a typed column and is of type class java.lang.String
+ValueAt (32, 3) is in a typed column and is of type class java.lang.String
+ValueAt (32, 4) is null
+ValueAt (32, 5) is in a typed column and is of type class java.lang.String
+ValueAt (32, 6) is in a typed column and is of type class java.lang.String
+ValueAt (32, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (33, 0) is in a typed column and is of type class java.lang.String
+ValueAt (33, 1) is in a typed column and is of type class java.lang.String
+ValueAt (33, 2) is in a typed column and is of type class java.lang.String
+ValueAt (33, 3) is in a typed column and is of type class java.lang.String
+ValueAt (33, 4) is null
+ValueAt (33, 5) is in a typed column and is of type class java.lang.String
+ValueAt (33, 6) is in a typed column and is of type class java.lang.String
+ValueAt (33, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (34, 0) is in a typed column and is of type class java.lang.String
+ValueAt (34, 1) is in a typed column and is of type class java.lang.String
+ValueAt (34, 2) is in a typed column and is of type class java.lang.String
+ValueAt (34, 3) is in a typed column and is of type class java.lang.String
+ValueAt (34, 4) is null
+ValueAt (34, 5) is in a typed column and is of type class java.lang.String
+ValueAt (34, 6) is in a typed column and is of type class java.lang.String
+ValueAt (34, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (35, 0) is in a typed column and is of type class java.lang.String
+ValueAt (35, 1) is in a typed column and is of type class java.lang.String
+ValueAt (35, 2) is in a typed column and is of type class java.lang.String
+ValueAt (35, 3) is in a typed column and is of type class java.lang.String
+ValueAt (35, 4) is null
+ValueAt (35, 5) is in a typed column and is of type class java.lang.String
+ValueAt (35, 6) is in a typed column and is of type class java.lang.String
+ValueAt (35, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (36, 0) is in a typed column and is of type class java.lang.String
+ValueAt (36, 1) is in a typed column and is of type class java.lang.String
+ValueAt (36, 2) is in a typed column and is of type class java.lang.String
+ValueAt (36, 3) is in a typed column and is of type class java.lang.String
+ValueAt (36, 4) is null
+ValueAt (36, 5) is in a typed column and is of type class java.lang.String
+ValueAt (36, 6) is in a typed column and is of type class java.lang.String
+ValueAt (36, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (37, 0) is in a typed column and is of type class java.lang.String
+ValueAt (37, 1) is in a typed column and is of type class java.lang.String
+ValueAt (37, 2) is in a typed column and is of type class java.lang.String
+ValueAt (37, 3) is in a typed column and is of type class java.lang.String
+ValueAt (37, 4) is null
+ValueAt (37, 5) is in a typed column and is of type class java.lang.String
+ValueAt (37, 6) is in a typed column and is of type class java.lang.String
+ValueAt (37, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (38, 0) is in a typed column and is of type class java.lang.String
+ValueAt (38, 1) is in a typed column and is of type class java.lang.String
+ValueAt (38, 2) is in a typed column and is of type class java.lang.String
+ValueAt (38, 3) is in a typed column and is of type class java.lang.String
+ValueAt (38, 4) is null
+ValueAt (38, 5) is in a typed column and is of type class java.lang.String
+ValueAt (38, 6) is in a typed column and is of type class java.lang.String
+ValueAt (38, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (39, 0) is in a typed column and is of type class java.lang.String
+ValueAt (39, 1) is in a typed column and is of type class java.lang.String
+ValueAt (39, 2) is in a typed column and is of type class java.lang.String
+ValueAt (39, 3) is in a typed column and is of type class java.lang.String
+ValueAt (39, 4) is null
+ValueAt (39, 5) is in a typed column and is of type class java.lang.String
+ValueAt (39, 6) is in a typed column and is of type class java.lang.String
+ValueAt (39, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (40, 0) is in a typed column and is of type class java.lang.String
+ValueAt (40, 1) is in a typed column and is of type class java.lang.String
+ValueAt (40, 2) is in a typed column and is of type class java.lang.String
+ValueAt (40, 3) is in a typed column and is of type class java.lang.String
+ValueAt (40, 4) is in a generic column and is of type class java.lang.String
+ValueAt (40, 5) is in a typed column and is of type class java.lang.String
+ValueAt (40, 6) is in a typed column and is of type class java.lang.String
+ValueAt (40, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (41, 0) is in a typed column and is of type class java.lang.String
+ValueAt (41, 1) is in a typed column and is of type class java.lang.String
+ValueAt (41, 2) is in a typed column and is of type class java.lang.String
+ValueAt (41, 3) is in a typed column and is of type class java.lang.String
+ValueAt (41, 4) is in a generic column and is of type class java.lang.String
+ValueAt (41, 5) is in a typed column and is of type class java.lang.String
+ValueAt (41, 6) is in a typed column and is of type class java.lang.String
+ValueAt (41, 7) is null
+ValueAt (42, 0) is in a typed column and is of type class java.lang.String
+ValueAt (42, 1) is in a typed column and is of type class java.lang.String
+ValueAt (42, 2) is in a typed column and is of type class java.lang.String
+ValueAt (42, 3) is in a typed column and is of type class java.lang.String
+ValueAt (42, 4) is in a generic column and is of type class java.lang.String
+ValueAt (42, 5) is in a typed column and is of type class java.lang.String
+ValueAt (42, 6) is in a typed column and is of type class java.lang.String
+ValueAt (42, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (43, 0) is in a typed column and is of type class java.lang.String
+ValueAt (43, 1) is in a typed column and is of type class java.lang.String
+ValueAt (43, 2) is in a typed column and is of type class java.lang.String
+ValueAt (43, 3) is in a typed column and is of type class java.lang.String
+ValueAt (43, 4) is in a generic column and is of type class java.lang.String
+ValueAt (43, 5) is in a typed column and is of type class java.lang.String
+ValueAt (43, 6) is in a typed column and is of type class java.lang.String
+ValueAt (43, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (44, 0) is in a typed column and is of type class java.lang.String
+ValueAt (44, 1) is in a typed column and is of type class java.lang.String
+ValueAt (44, 2) is in a typed column and is of type class java.lang.String
+ValueAt (44, 3) is in a typed column and is of type class java.lang.String
+ValueAt (44, 4) is in a generic column and is of type class java.lang.String
+ValueAt (44, 5) is in a typed column and is of type class java.lang.String
+ValueAt (44, 6) is in a typed column and is of type class java.lang.String
+ValueAt (44, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (45, 0) is in a typed column and is of type class java.lang.String
+ValueAt (45, 1) is in a typed column and is of type class java.lang.String
+ValueAt (45, 2) is in a typed column and is of type class java.lang.String
+ValueAt (45, 3) is in a typed column and is of type class java.lang.String
+ValueAt (45, 4) is in a generic column and is of type class java.lang.String
+ValueAt (45, 5) is in a typed column and is of type class java.lang.String
+ValueAt (45, 6) is in a typed column and is of type class java.lang.String
+ValueAt (45, 7) is null
+ValueAt (46, 0) is in a typed column and is of type class java.lang.String
+ValueAt (46, 1) is in a typed column and is of type class java.lang.String
+ValueAt (46, 2) is in a typed column and is of type class java.lang.String
+ValueAt (46, 3) is in a typed column and is of type class java.lang.String
+ValueAt (46, 4) is in a generic column and is of type class java.lang.String
+ValueAt (46, 5) is in a typed column and is of type class java.lang.String
+ValueAt (46, 6) is in a typed column and is of type class java.lang.String
+ValueAt (46, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (47, 0) is in a typed column and is of type class java.lang.String
+ValueAt (47, 1) is in a typed column and is of type class java.lang.String
+ValueAt (47, 2) is in a typed column and is of type class java.lang.String
+ValueAt (47, 3) is in a typed column and is of type class java.lang.String
+ValueAt (47, 4) is in a generic column and is of type class java.lang.String
+ValueAt (47, 5) is in a typed column and is of type class java.lang.String
+ValueAt (47, 6) is in a typed column and is of type class java.lang.String
+ValueAt (47, 7) is null
+ValueAt (48, 0) is in a typed column and is of type class java.lang.String
+ValueAt (48, 1) is in a typed column and is of type class java.lang.String
+ValueAt (48, 2) is in a typed column and is of type class java.lang.String
+ValueAt (48, 3) is in a typed column and is of type class java.lang.String
+ValueAt (48, 4) is in a generic column and is of type class java.lang.String
+ValueAt (48, 5) is in a typed column and is of type class java.lang.String
+ValueAt (48, 6) is in a typed column and is of type class java.lang.String
+ValueAt (48, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (49, 0) is in a typed column and is of type class java.lang.String
+ValueAt (49, 1) is in a typed column and is of type class java.lang.String
+ValueAt (49, 2) is in a typed column and is of type class java.lang.String
+ValueAt (49, 3) is in a typed column and is of type class java.lang.String
+ValueAt (49, 4) is in a generic column and is of type class java.lang.String
+ValueAt (49, 5) is in a typed column and is of type class java.lang.String
+ValueAt (49, 6) is in a typed column and is of type class java.lang.String
+ValueAt (49, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (50, 0) is in a typed column and is of type class java.lang.String
+ValueAt (50, 1) is in a typed column and is of type class java.lang.String
+ValueAt (50, 2) is in a typed column and is of type class java.lang.String
+ValueAt (50, 3) is in a typed column and is of type class java.lang.String
+ValueAt (50, 4) is in a generic column and is of type class java.lang.String
+ValueAt (50, 5) is in a typed column and is of type class java.lang.String
+ValueAt (50, 6) is in a typed column and is of type class java.lang.String
+ValueAt (50, 7) is null
+ValueAt (51, 0) is in a typed column and is of type class java.lang.String
+ValueAt (51, 1) is in a typed column and is of type class java.lang.String
+ValueAt (51, 2) is in a typed column and is of type class java.lang.String
+ValueAt (51, 3) is in a typed column and is of type class java.lang.String
+ValueAt (51, 4) is in a generic column and is of type class java.lang.String
+ValueAt (51, 5) is in a typed column and is of type class java.lang.String
+ValueAt (51, 6) is in a typed column and is of type class java.lang.String
+ValueAt (51, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (52, 0) is in a typed column and is of type class java.lang.String
+ValueAt (52, 1) is in a typed column and is of type class java.lang.String
+ValueAt (52, 2) is in a typed column and is of type class java.lang.String
+ValueAt (52, 3) is in a typed column and is of type class java.lang.String
+ValueAt (52, 4) is in a generic column and is of type class java.lang.String
+ValueAt (52, 5) is in a typed column and is of type class java.lang.String
+ValueAt (52, 6) is in a typed column and is of type class java.lang.String
+ValueAt (52, 7) is null
+ValueAt (53, 0) is in a typed column and is of type class java.lang.String
+ValueAt (53, 1) is in a typed column and is of type class java.lang.String
+ValueAt (53, 2) is in a typed column and is of type class java.lang.String
+ValueAt (53, 3) is in a typed column and is of type class java.lang.String
+ValueAt (53, 4) is in a generic column and is of type class java.lang.String
+ValueAt (53, 5) is in a typed column and is of type class java.lang.String
+ValueAt (53, 6) is in a typed column and is of type class java.lang.String
+ValueAt (53, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (54, 0) is in a typed column and is of type class java.lang.String
+ValueAt (54, 1) is in a typed column and is of type class java.lang.String
+ValueAt (54, 2) is in a typed column and is of type class java.lang.String
+ValueAt (54, 3) is in a typed column and is of type class java.lang.String
+ValueAt (54, 4) is in a generic column and is of type class java.lang.String
+ValueAt (54, 5) is in a typed column and is of type class java.lang.String
+ValueAt (54, 6) is in a typed column and is of type class java.lang.String
+ValueAt (54, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (55, 0) is in a typed column and is of type class java.lang.String
+ValueAt (55, 1) is in a typed column and is of type class java.lang.String
+ValueAt (55, 2) is in a typed column and is of type class java.lang.String
+ValueAt (55, 3) is in a typed column and is of type class java.lang.String
+ValueAt (55, 4) is in a generic column and is of type class java.lang.String
+ValueAt (55, 5) is in a typed column and is of type class java.lang.String
+ValueAt (55, 6) is in a typed column and is of type class java.lang.String
+ValueAt (55, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (56, 0) is in a typed column and is of type class java.lang.String
+ValueAt (56, 1) is in a typed column and is of type class java.lang.String
+ValueAt (56, 2) is in a typed column and is of type class java.lang.String
+ValueAt (56, 3) is in a typed column and is of type class java.lang.String
+ValueAt (56, 4) is in a generic column and is of type class java.lang.String
+ValueAt (56, 5) is in a typed column and is of type class java.lang.String
+ValueAt (56, 6) is in a typed column and is of type class java.lang.String
+ValueAt (56, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (57, 0) is in a typed column and is of type class java.lang.String
+ValueAt (57, 1) is in a typed column and is of type class java.lang.String
+ValueAt (57, 2) is in a typed column and is of type class java.lang.String
+ValueAt (57, 3) is in a typed column and is of type class java.lang.String
+ValueAt (57, 4) is in a generic column and is of type class java.lang.String
+ValueAt (57, 5) is in a typed column and is of type class java.lang.String
+ValueAt (57, 6) is in a typed column and is of type class java.lang.String
+ValueAt (57, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (58, 0) is in a typed column and is of type class java.lang.String
+ValueAt (58, 1) is in a typed column and is of type class java.lang.String
+ValueAt (58, 2) is in a typed column and is of type class java.lang.String
+ValueAt (58, 3) is in a typed column and is of type class java.lang.String
+ValueAt (58, 4) is in a generic column and is of type class java.lang.String
+ValueAt (58, 5) is in a typed column and is of type class java.lang.String
+ValueAt (58, 6) is in a typed column and is of type class java.lang.String
+ValueAt (58, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (59, 0) is in a typed column and is of type class java.lang.String
+ValueAt (59, 1) is in a typed column and is of type class java.lang.String
+ValueAt (59, 2) is in a typed column and is of type class java.lang.String
+ValueAt (59, 3) is in a typed column and is of type class java.lang.String
+ValueAt (59, 4) is in a generic column and is of type class java.lang.String
+ValueAt (59, 5) is in a typed column and is of type class java.lang.String
+ValueAt (59, 6) is in a typed column and is of type class java.lang.String
+ValueAt (59, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (60, 0) is in a typed column and is of type class java.lang.String
+ValueAt (60, 1) is in a typed column and is of type class java.lang.String
+ValueAt (60, 2) is in a typed column and is of type class java.lang.String
+ValueAt (60, 3) is in a typed column and is of type class java.lang.String
+ValueAt (60, 4) is null
+ValueAt (60, 5) is in a typed column and is of type class java.lang.String
+ValueAt (60, 6) is in a typed column and is of type class java.lang.String
+ValueAt (60, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (61, 0) is in a typed column and is of type class java.lang.String
+ValueAt (61, 1) is in a typed column and is of type class java.lang.String
+ValueAt (61, 2) is in a typed column and is of type class java.lang.String
+ValueAt (61, 3) is in a typed column and is of type class java.lang.String
+ValueAt (61, 4) is null
+ValueAt (61, 5) is in a typed column and is of type class java.lang.String
+ValueAt (61, 6) is in a typed column and is of type class java.lang.String
+ValueAt (61, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (62, 0) is in a typed column and is of type class java.lang.String
+ValueAt (62, 1) is in a typed column and is of type class java.lang.String
+ValueAt (62, 2) is in a typed column and is of type class java.lang.String
+ValueAt (62, 3) is in a typed column and is of type class java.lang.String
+ValueAt (62, 4) is null
+ValueAt (62, 5) is in a typed column and is of type class java.lang.String
+ValueAt (62, 6) is in a typed column and is of type class java.lang.String
+ValueAt (62, 7) is null
+ValueAt (63, 0) is in a typed column and is of type class java.lang.String
+ValueAt (63, 1) is in a typed column and is of type class java.lang.String
+ValueAt (63, 2) is in a typed column and is of type class java.lang.String
+ValueAt (63, 3) is in a typed column and is of type class java.lang.String
+ValueAt (63, 4) is null
+ValueAt (63, 5) is in a typed column and is of type class java.lang.String
+ValueAt (63, 6) is in a typed column and is of type class java.lang.String
+ValueAt (63, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (64, 0) is in a typed column and is of type class java.lang.String
+ValueAt (64, 1) is in a typed column and is of type class java.lang.String
+ValueAt (64, 2) is in a typed column and is of type class java.lang.String
+ValueAt (64, 3) is in a typed column and is of type class java.lang.String
+ValueAt (64, 4) is null
+ValueAt (64, 5) is in a typed column and is of type class java.lang.String
+ValueAt (64, 6) is in a typed column and is of type class java.lang.String
+ValueAt (64, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (65, 0) is in a typed column and is of type class java.lang.String
+ValueAt (65, 1) is in a typed column and is of type class java.lang.String
+ValueAt (65, 2) is in a typed column and is of type class java.lang.String
+ValueAt (65, 3) is in a typed column and is of type class java.lang.String
+ValueAt (65, 4) is null
+ValueAt (65, 5) is in a typed column and is of type class java.lang.String
+ValueAt (65, 6) is in a typed column and is of type class java.lang.String
+ValueAt (65, 7) is null
+ValueAt (66, 0) is in a typed column and is of type class java.lang.String
+ValueAt (66, 1) is in a typed column and is of type class java.lang.String
+ValueAt (66, 2) is in a typed column and is of type class java.lang.String
+ValueAt (66, 3) is in a typed column and is of type class java.lang.String
+ValueAt (66, 4) is null
+ValueAt (66, 5) is in a typed column and is of type class java.lang.String
+ValueAt (66, 6) is in a typed column and is of type class java.lang.String
+ValueAt (66, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (67, 0) is in a typed column and is of type class java.lang.String
+ValueAt (67, 1) is in a typed column and is of type class java.lang.String
+ValueAt (67, 2) is in a typed column and is of type class java.lang.String
+ValueAt (67, 3) is in a typed column and is of type class java.lang.String
+ValueAt (67, 4) is null
+ValueAt (67, 5) is in a typed column and is of type class java.lang.String
+ValueAt (67, 6) is in a typed column and is of type class java.lang.String
+ValueAt (67, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (68, 0) is in a typed column and is of type class java.lang.String
+ValueAt (68, 1) is in a typed column and is of type class java.lang.String
+ValueAt (68, 2) is in a typed column and is of type class java.lang.String
+ValueAt (68, 3) is in a typed column and is of type class java.lang.String
+ValueAt (68, 4) is null
+ValueAt (68, 5) is in a typed column and is of type class java.lang.String
+ValueAt (68, 6) is in a typed column and is of type class java.lang.String
+ValueAt (68, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (69, 0) is in a typed column and is of type class java.lang.String
+ValueAt (69, 1) is in a typed column and is of type class java.lang.String
+ValueAt (69, 2) is in a typed column and is of type class java.lang.String
+ValueAt (69, 3) is in a typed column and is of type class java.lang.String
+ValueAt (69, 4) is null
+ValueAt (69, 5) is in a typed column and is of type class java.lang.String
+ValueAt (69, 6) is in a typed column and is of type class java.lang.String
+ValueAt (69, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (70, 0) is in a typed column and is of type class java.lang.String
+ValueAt (70, 1) is in a typed column and is of type class java.lang.String
+ValueAt (70, 2) is in a typed column and is of type class java.lang.String
+ValueAt (70, 3) is in a typed column and is of type class java.lang.String
+ValueAt (70, 4) is null
+ValueAt (70, 5) is in a typed column and is of type class java.lang.String
+ValueAt (70, 6) is in a typed column and is of type class java.lang.String
+ValueAt (70, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (71, 0) is in a typed column and is of type class java.lang.String
+ValueAt (71, 1) is in a typed column and is of type class java.lang.String
+ValueAt (71, 2) is in a typed column and is of type class java.lang.String
+ValueAt (71, 3) is in a typed column and is of type class java.lang.String
+ValueAt (71, 4) is null
+ValueAt (71, 5) is in a typed column and is of type class java.lang.String
+ValueAt (71, 6) is in a typed column and is of type class java.lang.String
+ValueAt (71, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (72, 0) is in a typed column and is of type class java.lang.String
+ValueAt (72, 1) is in a typed column and is of type class java.lang.String
+ValueAt (72, 2) is in a typed column and is of type class java.lang.String
+ValueAt (72, 3) is in a typed column and is of type class java.lang.String
+ValueAt (72, 4) is null
+ValueAt (72, 5) is in a typed column and is of type class java.lang.String
+ValueAt (72, 6) is in a typed column and is of type class java.lang.String
+ValueAt (72, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (73, 0) is in a typed column and is of type class java.lang.String
+ValueAt (73, 1) is in a typed column and is of type class java.lang.String
+ValueAt (73, 2) is in a typed column and is of type class java.lang.String
+ValueAt (73, 3) is in a typed column and is of type class java.lang.String
+ValueAt (73, 4) is null
+ValueAt (73, 5) is in a typed column and is of type class java.lang.String
+ValueAt (73, 6) is in a typed column and is of type class java.lang.String
+ValueAt (73, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (74, 0) is in a typed column and is of type class java.lang.String
+ValueAt (74, 1) is in a typed column and is of type class java.lang.String
+ValueAt (74, 2) is in a typed column and is of type class java.lang.String
+ValueAt (74, 3) is in a typed column and is of type class java.lang.String
+ValueAt (74, 4) is null
+ValueAt (74, 5) is in a typed column and is of type class java.lang.String
+ValueAt (74, 6) is in a typed column and is of type class java.lang.String
+ValueAt (74, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (75, 0) is in a typed column and is of type class java.lang.String
+ValueAt (75, 1) is in a typed column and is of type class java.lang.String
+ValueAt (75, 2) is in a typed column and is of type class java.lang.String
+ValueAt (75, 3) is in a typed column and is of type class java.lang.String
+ValueAt (75, 4) is null
+ValueAt (75, 5) is in a typed column and is of type class java.lang.String
+ValueAt (75, 6) is in a typed column and is of type class java.lang.String
+ValueAt (75, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (76, 0) is in a typed column and is of type class java.lang.String
+ValueAt (76, 1) is in a typed column and is of type class java.lang.String
+ValueAt (76, 2) is in a typed column and is of type class java.lang.String
+ValueAt (76, 3) is in a typed column and is of type class java.lang.String
+ValueAt (76, 4) is null
+ValueAt (76, 5) is in a typed column and is of type class java.lang.String
+ValueAt (76, 6) is in a typed column and is of type class java.lang.String
+ValueAt (76, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (77, 0) is in a typed column and is of type class java.lang.String
+ValueAt (77, 1) is in a typed column and is of type class java.lang.String
+ValueAt (77, 2) is in a typed column and is of type class java.lang.String
+ValueAt (77, 3) is in a typed column and is of type class java.lang.String
+ValueAt (77, 4) is null
+ValueAt (77, 5) is in a typed column and is of type class java.lang.String
+ValueAt (77, 6) is in a typed column and is of type class java.lang.String
+ValueAt (77, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (78, 0) is in a typed column and is of type class java.lang.String
+ValueAt (78, 1) is in a typed column and is of type class java.lang.String
+ValueAt (78, 2) is in a typed column and is of type class java.lang.String
+ValueAt (78, 3) is in a typed column and is of type class java.lang.String
+ValueAt (78, 4) is null
+ValueAt (78, 5) is in a typed column and is of type class java.lang.String
+ValueAt (78, 6) is in a typed column and is of type class java.lang.String
+ValueAt (78, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (79, 0) is in a typed column and is of type class java.lang.String
+ValueAt (79, 1) is in a typed column and is of type class java.lang.String
+ValueAt (79, 2) is in a typed column and is of type class java.lang.String
+ValueAt (79, 3) is in a typed column and is of type class java.lang.String
+ValueAt (79, 4) is null
+ValueAt (79, 5) is in a typed column and is of type class java.lang.String
+ValueAt (79, 6) is in a typed column and is of type class java.lang.String
+ValueAt (79, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (80, 0) is in a typed column and is of type class java.lang.String
+ValueAt (80, 1) is in a typed column and is of type class java.lang.String
+ValueAt (80, 2) is in a typed column and is of type class java.lang.String
+ValueAt (80, 3) is in a typed column and is of type class java.lang.String
+ValueAt (80, 4) is null
+ValueAt (80, 5) is in a typed column and is of type class java.lang.String
+ValueAt (80, 6) is in a typed column and is of type class java.lang.String
+ValueAt (80, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (81, 0) is in a typed column and is of type class java.lang.String
+ValueAt (81, 1) is in a typed column and is of type class java.lang.String
+ValueAt (81, 2) is in a typed column and is of type class java.lang.String
+ValueAt (81, 3) is in a typed column and is of type class java.lang.String
+ValueAt (81, 4) is null
+ValueAt (81, 5) is in a typed column and is of type class java.lang.String
+ValueAt (81, 6) is in a typed column and is of type class java.lang.String
+ValueAt (81, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (82, 0) is in a typed column and is of type class java.lang.String
+ValueAt (82, 1) is in a typed column and is of type class java.lang.String
+ValueAt (82, 2) is in a typed column and is of type class java.lang.String
+ValueAt (82, 3) is in a typed column and is of type class java.lang.String
+ValueAt (82, 4) is null
+ValueAt (82, 5) is in a typed column and is of type class java.lang.String
+ValueAt (82, 6) is in a typed column and is of type class java.lang.String
+ValueAt (82, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (83, 0) is in a typed column and is of type class java.lang.String
+ValueAt (83, 1) is in a typed column and is of type class java.lang.String
+ValueAt (83, 2) is in a typed column and is of type class java.lang.String
+ValueAt (83, 3) is in a typed column and is of type class java.lang.String
+ValueAt (83, 4) is null
+ValueAt (83, 5) is in a typed column and is of type class java.lang.String
+ValueAt (83, 6) is in a typed column and is of type class java.lang.String
+ValueAt (83, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (84, 0) is in a typed column and is of type class java.lang.String
+ValueAt (84, 1) is in a typed column and is of type class java.lang.String
+ValueAt (84, 2) is in a typed column and is of type class java.lang.String
+ValueAt (84, 3) is in a typed column and is of type class java.lang.String
+ValueAt (84, 4) is null
+ValueAt (84, 5) is in a typed column and is of type class java.lang.String
+ValueAt (84, 6) is in a typed column and is of type class java.lang.String
+ValueAt (84, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (85, 0) is in a typed column and is of type class java.lang.String
+ValueAt (85, 1) is in a typed column and is of type class java.lang.String
+ValueAt (85, 2) is in a typed column and is of type class java.lang.String
+ValueAt (85, 3) is in a typed column and is of type class java.lang.String
+ValueAt (85, 4) is null
+ValueAt (85, 5) is in a typed column and is of type class java.lang.String
+ValueAt (85, 6) is in a typed column and is of type class java.lang.String
+ValueAt (85, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (86, 0) is in a typed column and is of type class java.lang.String
+ValueAt (86, 1) is in a typed column and is of type class java.lang.String
+ValueAt (86, 2) is in a typed column and is of type class java.lang.String
+ValueAt (86, 3) is in a typed column and is of type class java.lang.String
+ValueAt (86, 4) is null
+ValueAt (86, 5) is in a typed column and is of type class java.lang.String
+ValueAt (86, 6) is in a typed column and is of type class java.lang.String
+ValueAt (86, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (87, 0) is in a typed column and is of type class java.lang.String
+ValueAt (87, 1) is in a typed column and is of type class java.lang.String
+ValueAt (87, 2) is in a typed column and is of type class java.lang.String
+ValueAt (87, 3) is in a typed column and is of type class java.lang.String
+ValueAt (87, 4) is null
+ValueAt (87, 5) is in a typed column and is of type class java.lang.String
+ValueAt (87, 6) is in a typed column and is of type class java.lang.String
+ValueAt (87, 7) is null
+ValueAt (88, 0) is in a typed column and is of type class java.lang.String
+ValueAt (88, 1) is in a typed column and is of type class java.lang.String
+ValueAt (88, 2) is in a typed column and is of type class java.lang.String
+ValueAt (88, 3) is in a typed column and is of type class java.lang.String
+ValueAt (88, 4) is null
+ValueAt (88, 5) is in a typed column and is of type class java.lang.String
+ValueAt (88, 6) is in a typed column and is of type class java.lang.String
+ValueAt (88, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (89, 0) is in a typed column and is of type class java.lang.String
+ValueAt (89, 1) is in a typed column and is of type class java.lang.String
+ValueAt (89, 2) is in a typed column and is of type class java.lang.String
+ValueAt (89, 3) is in a typed column and is of type class java.lang.String
+ValueAt (89, 4) is null
+ValueAt (89, 5) is in a typed column and is of type class java.lang.String
+ValueAt (89, 6) is in a typed column and is of type class java.lang.String
+ValueAt (89, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (90, 0) is in a typed column and is of type class java.lang.String
+ValueAt (90, 1) is in a typed column and is of type class java.lang.String
+ValueAt (90, 2) is in a typed column and is of type class java.lang.String
+ValueAt (90, 3) is in a typed column and is of type class java.lang.String
+ValueAt (90, 4) is null
+ValueAt (90, 5) is in a typed column and is of type class java.lang.String
+ValueAt (90, 6) is in a typed column and is of type class java.lang.String
+ValueAt (90, 7) is null
+ValueAt (91, 0) is in a typed column and is of type class java.lang.String
+ValueAt (91, 1) is in a typed column and is of type class java.lang.String
+ValueAt (91, 2) is in a typed column and is of type class java.lang.String
+ValueAt (91, 3) is in a typed column and is of type class java.lang.String
+ValueAt (91, 4) is null
+ValueAt (91, 5) is in a typed column and is of type class java.lang.String
+ValueAt (91, 6) is in a typed column and is of type class java.lang.String
+ValueAt (91, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (92, 0) is in a typed column and is of type class java.lang.String
+ValueAt (92, 1) is in a typed column and is of type class java.lang.String
+ValueAt (92, 2) is in a typed column and is of type class java.lang.String
+ValueAt (92, 3) is in a typed column and is of type class java.lang.String
+ValueAt (92, 4) is null
+ValueAt (92, 5) is in a typed column and is of type class java.lang.String
+ValueAt (92, 6) is in a typed column and is of type class java.lang.String
+ValueAt (92, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (93, 0) is in a typed column and is of type class java.lang.String
+ValueAt (93, 1) is in a typed column and is of type class java.lang.String
+ValueAt (93, 2) is in a typed column and is of type class java.lang.String
+ValueAt (93, 3) is in a typed column and is of type class java.lang.String
+ValueAt (93, 4) is null
+ValueAt (93, 5) is in a typed column and is of type class java.lang.String
+ValueAt (93, 6) is in a typed column and is of type class java.lang.String
+ValueAt (93, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (94, 0) is in a typed column and is of type class java.lang.String
+ValueAt (94, 1) is in a typed column and is of type class java.lang.String
+ValueAt (94, 2) is in a typed column and is of type class java.lang.String
+ValueAt (94, 3) is in a typed column and is of type class java.lang.String
+ValueAt (94, 4) is null
+ValueAt (94, 5) is in a typed column and is of type class java.lang.String
+ValueAt (94, 6) is in a typed column and is of type class java.lang.String
+ValueAt (94, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (95, 0) is in a typed column and is of type class java.lang.String
+ValueAt (95, 1) is in a typed column and is of type class java.lang.String
+ValueAt (95, 2) is in a typed column and is of type class java.lang.String
+ValueAt (95, 3) is in a typed column and is of type class java.lang.String
+ValueAt (95, 4) is null
+ValueAt (95, 5) is in a typed column and is of type class java.lang.String
+ValueAt (95, 6) is in a typed column and is of type class java.lang.String
+ValueAt (95, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (96, 0) is in a typed column and is of type class java.lang.String
+ValueAt (96, 1) is in a typed column and is of type class java.lang.String
+ValueAt (96, 2) is in a typed column and is of type class java.lang.String
+ValueAt (96, 3) is in a typed column and is of type class java.lang.String
+ValueAt (96, 4) is null
+ValueAt (96, 5) is in a typed column and is of type class java.lang.String
+ValueAt (96, 6) is in a typed column and is of type class java.lang.String
+ValueAt (96, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (97, 0) is in a typed column and is of type class java.lang.String
+ValueAt (97, 1) is in a typed column and is of type class java.lang.String
+ValueAt (97, 2) is in a typed column and is of type class java.lang.String
+ValueAt (97, 3) is in a typed column and is of type class java.lang.String
+ValueAt (97, 4) is null
+ValueAt (97, 5) is in a typed column and is of type class java.lang.String
+ValueAt (97, 6) is in a typed column and is of type class java.lang.String
+ValueAt (97, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (98, 0) is in a typed column and is of type class java.lang.String
+ValueAt (98, 1) is in a typed column and is of type class java.lang.String
+ValueAt (98, 2) is in a typed column and is of type class java.lang.String
+ValueAt (98, 3) is in a typed column and is of type class java.lang.String
+ValueAt (98, 4) is null
+ValueAt (98, 5) is in a typed column and is of type class java.lang.String
+ValueAt (98, 6) is in a typed column and is of type class java.lang.String
+ValueAt (98, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (99, 0) is in a typed column and is of type class java.lang.String
+ValueAt (99, 1) is in a typed column and is of type class java.lang.String
+ValueAt (99, 2) is in a typed column and is of type class java.lang.String
+ValueAt (99, 3) is in a typed column and is of type class java.lang.String
+ValueAt (99, 4) is null
+ValueAt (99, 5) is in a typed column and is of type class java.lang.String
+ValueAt (99, 6) is in a typed column and is of type class java.lang.String
+ValueAt (99, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (100, 0) is in a typed column and is of type class java.lang.String
+ValueAt (100, 1) is in a typed column and is of type class java.lang.String
+ValueAt (100, 2) is in a typed column and is of type class java.lang.String
+ValueAt (100, 3) is in a typed column and is of type class java.lang.String
+ValueAt (100, 4) is null
+ValueAt (100, 5) is in a typed column and is of type class java.lang.String
+ValueAt (100, 6) is in a typed column and is of type class java.lang.String
+ValueAt (100, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (101, 0) is in a typed column and is of type class java.lang.String
+ValueAt (101, 1) is in a typed column and is of type class java.lang.String
+ValueAt (101, 2) is in a typed column and is of type class java.lang.String
+ValueAt (101, 3) is in a typed column and is of type class java.lang.String
+ValueAt (101, 4) is null
+ValueAt (101, 5) is in a typed column and is of type class java.lang.String
+ValueAt (101, 6) is in a typed column and is of type class java.lang.String
+ValueAt (101, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (102, 0) is in a typed column and is of type class java.lang.String
+ValueAt (102, 1) is in a typed column and is of type class java.lang.String
+ValueAt (102, 2) is in a typed column and is of type class java.lang.String
+ValueAt (102, 3) is in a typed column and is of type class java.lang.String
+ValueAt (102, 4) is null
+ValueAt (102, 5) is in a typed column and is of type class java.lang.String
+ValueAt (102, 6) is in a typed column and is of type class java.lang.String
+ValueAt (102, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (103, 0) is in a typed column and is of type class java.lang.String
+ValueAt (103, 1) is in a typed column and is of type class java.lang.String
+ValueAt (103, 2) is in a typed column and is of type class java.lang.String
+ValueAt (103, 3) is in a typed column and is of type class java.lang.String
+ValueAt (103, 4) is null
+ValueAt (103, 5) is in a typed column and is of type class java.lang.String
+ValueAt (103, 6) is in a typed column and is of type class java.lang.String
+ValueAt (103, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (104, 0) is in a typed column and is of type class java.lang.String
+ValueAt (104, 1) is in a typed column and is of type class java.lang.String
+ValueAt (104, 2) is in a typed column and is of type class java.lang.String
+ValueAt (104, 3) is in a typed column and is of type class java.lang.String
+ValueAt (104, 4) is null
+ValueAt (104, 5) is in a typed column and is of type class java.lang.String
+ValueAt (104, 6) is in a typed column and is of type class java.lang.String
+ValueAt (104, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (105, 0) is in a typed column and is of type class java.lang.String
+ValueAt (105, 1) is in a typed column and is of type class java.lang.String
+ValueAt (105, 2) is in a typed column and is of type class java.lang.String
+ValueAt (105, 3) is in a typed column and is of type class java.lang.String
+ValueAt (105, 4) is null
+ValueAt (105, 5) is in a typed column and is of type class java.lang.String
+ValueAt (105, 6) is in a typed column and is of type class java.lang.String
+ValueAt (105, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (106, 0) is in a typed column and is of type class java.lang.String
+ValueAt (106, 1) is in a typed column and is of type class java.lang.String
+ValueAt (106, 2) is in a typed column and is of type class java.lang.String
+ValueAt (106, 3) is in a typed column and is of type class java.lang.String
+ValueAt (106, 4) is null
+ValueAt (106, 5) is in a typed column and is of type class java.lang.String
+ValueAt (106, 6) is in a typed column and is of type class java.lang.String
+ValueAt (106, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (107, 0) is in a typed column and is of type class java.lang.String
+ValueAt (107, 1) is in a typed column and is of type class java.lang.String
+ValueAt (107, 2) is in a typed column and is of type class java.lang.String
+ValueAt (107, 3) is in a typed column and is of type class java.lang.String
+ValueAt (107, 4) is null
+ValueAt (107, 5) is in a typed column and is of type class java.lang.String
+ValueAt (107, 6) is in a typed column and is of type class java.lang.String
+ValueAt (107, 7) is null
+ValueAt (108, 0) is in a typed column and is of type class java.lang.String
+ValueAt (108, 1) is in a typed column and is of type class java.lang.String
+ValueAt (108, 2) is in a typed column and is of type class java.lang.String
+ValueAt (108, 3) is in a typed column and is of type class java.lang.String
+ValueAt (108, 4) is null
+ValueAt (108, 5) is in a typed column and is of type class java.lang.String
+ValueAt (108, 6) is in a typed column and is of type class java.lang.String
+ValueAt (108, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (109, 0) is in a typed column and is of type class java.lang.String
+ValueAt (109, 1) is in a typed column and is of type class java.lang.String
+ValueAt (109, 2) is in a typed column and is of type class java.lang.String
+ValueAt (109, 3) is in a typed column and is of type class java.lang.String
+ValueAt (109, 4) is null
+ValueAt (109, 5) is in a typed column and is of type class java.lang.String
+ValueAt (109, 6) is in a typed column and is of type class java.lang.String
+ValueAt (109, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (110, 0) is in a typed column and is of type class java.lang.String
+ValueAt (110, 1) is in a typed column and is of type class java.lang.String
+ValueAt (110, 2) is in a typed column and is of type class java.lang.String
+ValueAt (110, 3) is in a typed column and is of type class java.lang.String
+ValueAt (110, 4) is null
+ValueAt (110, 5) is in a typed column and is of type class java.lang.String
+ValueAt (110, 6) is in a typed column and is of type class java.lang.String
+ValueAt (110, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (111, 0) is in a typed column and is of type class java.lang.String
+ValueAt (111, 1) is in a typed column and is of type class java.lang.String
+ValueAt (111, 2) is in a typed column and is of type class java.lang.String
+ValueAt (111, 3) is in a typed column and is of type class java.lang.String
+ValueAt (111, 4) is null
+ValueAt (111, 5) is in a typed column and is of type class java.lang.String
+ValueAt (111, 6) is in a typed column and is of type class java.lang.String
+ValueAt (111, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (112, 0) is in a typed column and is of type class java.lang.String
+ValueAt (112, 1) is in a typed column and is of type class java.lang.String
+ValueAt (112, 2) is in a typed column and is of type class java.lang.String
+ValueAt (112, 3) is in a typed column and is of type class java.lang.String
+ValueAt (112, 4) is null
+ValueAt (112, 5) is in a typed column and is of type class java.lang.String
+ValueAt (112, 6) is in a typed column and is of type class java.lang.String
+ValueAt (112, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (113, 0) is in a typed column and is of type class java.lang.String
+ValueAt (113, 1) is in a typed column and is of type class java.lang.String
+ValueAt (113, 2) is in a typed column and is of type class java.lang.String
+ValueAt (113, 3) is in a typed column and is of type class java.lang.String
+ValueAt (113, 4) is null
+ValueAt (113, 5) is in a typed column and is of type class java.lang.String
+ValueAt (113, 6) is in a typed column and is of type class java.lang.String
+ValueAt (113, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (114, 0) is in a typed column and is of type class java.lang.String
+ValueAt (114, 1) is in a typed column and is of type class java.lang.String
+ValueAt (114, 2) is in a typed column and is of type class java.lang.String
+ValueAt (114, 3) is in a typed column and is of type class java.lang.String
+ValueAt (114, 4) is null
+ValueAt (114, 5) is in a typed column and is of type class java.lang.String
+ValueAt (114, 6) is in a typed column and is of type class java.lang.String
+ValueAt (114, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (115, 0) is in a typed column and is of type class java.lang.String
+ValueAt (115, 1) is in a typed column and is of type class java.lang.String
+ValueAt (115, 2) is in a typed column and is of type class java.lang.String
+ValueAt (115, 3) is in a typed column and is of type class java.lang.String
+ValueAt (115, 4) is null
+ValueAt (115, 5) is in a typed column and is of type class java.lang.String
+ValueAt (115, 6) is in a typed column and is of type class java.lang.String
+ValueAt (115, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (116, 0) is in a typed column and is of type class java.lang.String
+ValueAt (116, 1) is in a typed column and is of type class java.lang.String
+ValueAt (116, 2) is in a typed column and is of type class java.lang.String
+ValueAt (116, 3) is in a typed column and is of type class java.lang.String
+ValueAt (116, 4) is null
+ValueAt (116, 5) is in a typed column and is of type class java.lang.String
+ValueAt (116, 6) is in a typed column and is of type class java.lang.String
+ValueAt (116, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (117, 0) is in a typed column and is of type class java.lang.String
+ValueAt (117, 1) is in a typed column and is of type class java.lang.String
+ValueAt (117, 2) is in a typed column and is of type class java.lang.String
+ValueAt (117, 3) is in a typed column and is of type class java.lang.String
+ValueAt (117, 4) is null
+ValueAt (117, 5) is in a typed column and is of type class java.lang.String
+ValueAt (117, 6) is in a typed column and is of type class java.lang.String
+ValueAt (117, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (118, 0) is in a typed column and is of type class java.lang.String
+ValueAt (118, 1) is in a typed column and is of type class java.lang.String
+ValueAt (118, 2) is in a typed column and is of type class java.lang.String
+ValueAt (118, 3) is in a typed column and is of type class java.lang.String
+ValueAt (118, 4) is null
+ValueAt (118, 5) is in a typed column and is of type class java.lang.String
+ValueAt (118, 6) is in a typed column and is of type class java.lang.String
+ValueAt (118, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (119, 0) is in a typed column and is of type class java.lang.String
+ValueAt (119, 1) is in a typed column and is of type class java.lang.String
+ValueAt (119, 2) is in a typed column and is of type class java.lang.String
+ValueAt (119, 3) is in a typed column and is of type class java.lang.String
+ValueAt (119, 4) is null
+ValueAt (119, 5) is in a typed column and is of type class java.lang.String
+ValueAt (119, 6) is in a typed column and is of type class java.lang.String
+ValueAt (119, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (120, 0) is in a typed column and is of type class java.lang.String
+ValueAt (120, 1) is in a typed column and is of type class java.lang.String
+ValueAt (120, 2) is in a typed column and is of type class java.lang.String
+ValueAt (120, 3) is in a typed column and is of type class java.lang.String
+ValueAt (120, 4) is null
+ValueAt (120, 5) is in a typed column and is of type class java.lang.String
+ValueAt (120, 6) is in a typed column and is of type class java.lang.String
+ValueAt (120, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (121, 0) is in a typed column and is of type class java.lang.String
+ValueAt (121, 1) is in a typed column and is of type class java.lang.String
+ValueAt (121, 2) is in a typed column and is of type class java.lang.String
+ValueAt (121, 3) is in a typed column and is of type class java.lang.String
+ValueAt (121, 4) is null
+ValueAt (121, 5) is in a typed column and is of type class java.lang.String
+ValueAt (121, 6) is in a typed column and is of type class java.lang.String
+ValueAt (121, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (122, 0) is in a typed column and is of type class java.lang.String
+ValueAt (122, 1) is in a typed column and is of type class java.lang.String
+ValueAt (122, 2) is in a typed column and is of type class java.lang.String
+ValueAt (122, 3) is in a typed column and is of type class java.lang.String
+ValueAt (122, 4) is null
+ValueAt (122, 5) is in a typed column and is of type class java.lang.String
+ValueAt (122, 6) is in a typed column and is of type class java.lang.String
+ValueAt (122, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (123, 0) is in a typed column and is of type class java.lang.String
+ValueAt (123, 1) is in a typed column and is of type class java.lang.String
+ValueAt (123, 2) is in a typed column and is of type class java.lang.String
+ValueAt (123, 3) is in a typed column and is of type class java.lang.String
+ValueAt (123, 4) is null
+ValueAt (123, 5) is in a typed column and is of type class java.lang.String
+ValueAt (123, 6) is in a typed column and is of type class java.lang.String
+ValueAt (123, 7) is in a typed column and is of type class java.lang.Double
+ValueAt (124, 0) is in a typed column and is of type class java.lang.String
+ValueAt (124, 1) is in a typed column and is of type class java.lang.String
+ValueAt (124, 2) is in a typed column and is of type class java.lang.String
+ValueAt (124, 3) is in a typed column and is of type class java.lang.String
+ValueAt (124, 4) is null
+ValueAt (124, 5) is in a typed column and is of type class java.lang.String
+ValueAt (124, 6) is in a typed column and is of type class java.lang.String
+ValueAt (124, 7) is in a typed column and is of type class java.lang.Double
+Tablemodel contains 125 rows.
+Column: 0 Name=[Product].[(All)]; DataType=class java.lang.String
+Column: 1 Name=[Product].[Line]; DataType=class java.lang.String
+Column: 2 Name=[Time].[(All)]; DataType=class java.lang.String
+Column: 3 Name=[Time].[Years]; DataType=class java.lang.String
+Column: 4 Name=[Time].[Quarters]; DataType=class java.lang.Object
+Column: 5 Name=[Markets].[(All)]; DataType=class java.lang.String
+Column: 6 Name=[Markets].[Territory]; DataType=class java.lang.String
+Column: 7 Name=Measure; DataType=class java.lang.Double
+Checking the data inside
+ValueAt (0, 0) is 'All Products'
+ValueAt (0, 1) is 'Classic Cars'
+ValueAt (0, 2) is 'All Years'
+ValueAt (0, 3) is '2003'
+ValueAt (0, 4) is 'null'
+ValueAt (0, 5) is 'All Markets'
+ValueAt (0, 6) is 'APAC'
+ValueAt (0, 7) is '1052.0'
+ValueAt (1, 0) is 'All Products'
+ValueAt (1, 1) is 'Classic Cars'
+ValueAt (1, 2) is 'All Years'
+ValueAt (1, 3) is '2003'
+ValueAt (1, 4) is 'null'
+ValueAt (1, 5) is 'All Markets'
+ValueAt (1, 6) is 'EMEA'
+ValueAt (1, 7) is '5853.0'
+ValueAt (2, 0) is 'All Products'
+ValueAt (2, 1) is 'Classic Cars'
+ValueAt (2, 2) is 'All Years'
+ValueAt (2, 3) is '2003'
+ValueAt (2, 4) is 'null'
+ValueAt (2, 5) is 'All Markets'
+ValueAt (2, 6) is 'Japan'
+ValueAt (2, 7) is '898.0'
+ValueAt (3, 0) is 'All Products'
+ValueAt (3, 1) is 'Classic Cars'
+ValueAt (3, 2) is 'All Years'
+ValueAt (3, 3) is '2003'
+ValueAt (3, 4) is 'null'
+ValueAt (3, 5) is 'All Markets'
+ValueAt (3, 6) is 'All Markets'
+ValueAt (3, 7) is '12762.0'
+ValueAt (4, 0) is 'All Products'
+ValueAt (4, 1) is 'Classic Cars'
+ValueAt (4, 2) is 'All Years'
+ValueAt (4, 3) is '2003'
+ValueAt (4, 4) is 'null'
+ValueAt (4, 5) is 'All Markets'
+ValueAt (4, 6) is 'NA'
+ValueAt (4, 7) is '4959.0'
+ValueAt (5, 0) is 'All Products'
+ValueAt (5, 1) is 'Classic Cars'
+ValueAt (5, 2) is 'All Years'
+ValueAt (5, 3) is '2004'
+ValueAt (5, 4) is 'null'
+ValueAt (5, 5) is 'All Markets'
+ValueAt (5, 6) is 'APAC'
+ValueAt (5, 7) is '1785.0'
+ValueAt (6, 0) is 'All Products'
+ValueAt (6, 1) is 'Classic Cars'
+ValueAt (6, 2) is 'All Years'
+ValueAt (6, 3) is '2004'
+ValueAt (6, 4) is 'null'
+ValueAt (6, 5) is 'All Markets'
+ValueAt (6, 6) is 'EMEA'
+ValueAt (6, 7) is '8976.0'
+ValueAt (7, 0) is 'All Products'
+ValueAt (7, 1) is 'Classic Cars'
+ValueAt (7, 2) is 'All Years'
+ValueAt (7, 3) is '2004'
+ValueAt (7, 4) is 'null'
+ValueAt (7, 5) is 'All Markets'
+ValueAt (7, 6) is 'Japan'
+ValueAt (7, 7) is '307.0'
+ValueAt (8, 0) is 'All Products'
+ValueAt (8, 1) is 'Classic Cars'
+ValueAt (8, 2) is 'All Years'
+ValueAt (8, 3) is '2004'
+ValueAt (8, 4) is 'null'
+ValueAt (8, 5) is 'All Markets'
+ValueAt (8, 6) is 'All Markets'
+ValueAt (8, 7) is '16085.0'
+ValueAt (9, 0) is 'All Products'
+ValueAt (9, 1) is 'Classic Cars'
+ValueAt (9, 2) is 'All Years'
+ValueAt (9, 3) is '2004'
+ValueAt (9, 4) is 'null'
+ValueAt (9, 5) is 'All Markets'
+ValueAt (9, 6) is 'NA'
+ValueAt (9, 7) is '5017.0'
+ValueAt (10, 0) is 'All Products'
+ValueAt (10, 1) is 'Classic Cars'
+ValueAt (10, 2) is 'All Years'
+ValueAt (10, 3) is '2005'
+ValueAt (10, 4) is 'null'
+ValueAt (10, 5) is 'All Markets'
+ValueAt (10, 6) is 'APAC'
+ValueAt (10, 7) is '1015.0'
+ValueAt (11, 0) is 'All Products'
+ValueAt (11, 1) is 'Classic Cars'
+ValueAt (11, 2) is 'All Years'
+ValueAt (11, 3) is '2005'
+ValueAt (11, 4) is 'null'
+ValueAt (11, 5) is 'All Markets'
+ValueAt (11, 6) is 'EMEA'
+ValueAt (11, 7) is '3463.0'
+ValueAt (12, 0) is 'All Products'
+ValueAt (12, 1) is 'Classic Cars'
+ValueAt (12, 2) is 'All Years'
+ValueAt (12, 3) is '2005'
+ValueAt (12, 4) is 'null'
+ValueAt (12, 5) is 'All Markets'
+ValueAt (12, 6) is 'Japan'
+ValueAt (12, 7) is '122.0'
+ValueAt (13, 0) is 'All Products'
+ValueAt (13, 1) is 'Classic Cars'
+ValueAt (13, 2) is 'All Years'
+ValueAt (13, 3) is '2005'
+ValueAt (13, 4) is 'null'
+ValueAt (13, 5) is 'All Markets'
+ValueAt (13, 6) is 'All Markets'
+ValueAt (13, 7) is '6705.0'
+ValueAt (14, 0) is 'All Products'
+ValueAt (14, 1) is 'Classic Cars'
+ValueAt (14, 2) is 'All Years'
+ValueAt (14, 3) is '2005'
+ValueAt (14, 4) is 'null'
+ValueAt (14, 5) is 'All Markets'
+ValueAt (14, 6) is 'NA'
+ValueAt (14, 7) is '2105.0'
+ValueAt (15, 0) is 'All Products'
+ValueAt (15, 1) is 'Motorcycles'
+ValueAt (15, 2) is 'All Years'
+ValueAt (15, 3) is '2003'
+ValueAt (15, 4) is 'null'
+ValueAt (15, 5) is 'All Markets'
+ValueAt (15, 6) is 'APAC'
+ValueAt (15, 7) is '654.0'
+ValueAt (16, 0) is 'All Products'
+ValueAt (16, 1) is 'Motorcycles'
+ValueAt (16, 2) is 'All Years'
+ValueAt (16, 3) is '2003'
+ValueAt (16, 4) is 'null'
+ValueAt (16, 5) is 'All Markets'
+ValueAt (16, 6) is 'EMEA'
+ValueAt (16, 7) is '1428.0'
+ValueAt (17, 0) is 'All Products'
+ValueAt (17, 1) is 'Motorcycles'
+ValueAt (17, 2) is 'All Years'
+ValueAt (17, 3) is '2003'
+ValueAt (17, 4) is 'null'
+ValueAt (17, 5) is 'All Markets'
+ValueAt (17, 6) is 'Japan'
+ValueAt (17, 7) is '205.0'
+ValueAt (18, 0) is 'All Products'
+ValueAt (18, 1) is 'Motorcycles'
+ValueAt (18, 2) is 'All Years'
+ValueAt (18, 3) is '2003'
+ValueAt (18, 4) is 'null'
+ValueAt (18, 5) is 'All Markets'
+ValueAt (18, 6) is 'All Markets'
+ValueAt (18, 7) is '4031.0'
+ValueAt (19, 0) is 'All Products'
+ValueAt (19, 1) is 'Motorcycles'
+ValueAt (19, 2) is 'All Years'
+ValueAt (19, 3) is '2003'
+ValueAt (19, 4) is 'null'
+ValueAt (19, 5) is 'All Markets'
+ValueAt (19, 6) is 'NA'
+ValueAt (19, 7) is '1744.0'
+ValueAt (20, 0) is 'All Products'
+ValueAt (20, 1) is 'Motorcycles'
+ValueAt (20, 2) is 'All Years'
+ValueAt (20, 3) is '2004'
+ValueAt (20, 4) is 'null'
+ValueAt (20, 5) is 'All Markets'
+ValueAt (20, 6) is 'APAC'
+ValueAt (20, 7) is '540.0'
+ValueAt (21, 0) is 'All Products'
+ValueAt (21, 1) is 'Motorcycles'
+ValueAt (21, 2) is 'All Years'
+ValueAt (21, 3) is '2004'
+ValueAt (21, 4) is 'null'
+ValueAt (21, 5) is 'All Markets'
+ValueAt (21, 6) is 'EMEA'
+ValueAt (21, 7) is '2177.0'
+ValueAt (22, 0) is 'All Products'
+ValueAt (22, 1) is 'Motorcycles'
+ValueAt (22, 2) is 'All Years'
+ValueAt (22, 3) is '2004'
+ValueAt (22, 4) is 'null'
+ValueAt (22, 5) is 'All Markets'
+ValueAt (22, 6) is 'Japan'
+ValueAt (22, 7) is '380.0'
+ValueAt (23, 0) is 'All Products'
+ValueAt (23, 1) is 'Motorcycles'
+ValueAt (23, 2) is 'All Years'
+ValueAt (23, 3) is '2004'
+ValueAt (23, 4) is 'null'
+ValueAt (23, 5) is 'All Markets'
+ValueAt (23, 6) is 'All Markets'
+ValueAt (23, 7) is '5906.0'
+ValueAt (24, 0) is 'All Products'
+ValueAt (24, 1) is 'Motorcycles'
+ValueAt (24, 2) is 'All Years'
+ValueAt (24, 3) is '2004'
+ValueAt (24, 4) is 'null'
+ValueAt (24, 5) is 'All Markets'
+ValueAt (24, 6) is 'NA'
+ValueAt (24, 7) is '2809.0'
+ValueAt (25, 0) is 'All Products'
+ValueAt (25, 1) is 'Motorcycles'
+ValueAt (25, 2) is 'All Years'
+ValueAt (25, 3) is '2005'
+ValueAt (25, 4) is 'null'
+ValueAt (25, 5) is 'All Markets'
+ValueAt (25, 6) is 'APAC'
+ValueAt (25, 7) is '658.0'
+ValueAt (26, 0) is 'All Products'
+ValueAt (26, 1) is 'Motorcycles'
+ValueAt (26, 2) is 'All Years'
+ValueAt (26, 3) is '2005'
+ValueAt (26, 4) is 'null'
+ValueAt (26, 5) is 'All Markets'
+ValueAt (26, 6) is 'EMEA'
+ValueAt (26, 7) is '1501.0'
+ValueAt (27, 0) is 'All Products'
+ValueAt (27, 1) is 'Motorcycles'
+ValueAt (27, 2) is 'All Years'
+ValueAt (27, 3) is '2005'
+ValueAt (27, 4) is 'null'
+ValueAt (27, 5) is 'All Markets'
+ValueAt (27, 6) is 'Japan'
+ValueAt (27, 7) is '44.0'
+ValueAt (28, 0) is 'All Products'
+ValueAt (28, 1) is 'Motorcycles'
+ValueAt (28, 2) is 'All Years'
+ValueAt (28, 3) is '2005'
+ValueAt (28, 4) is 'null'
+ValueAt (28, 5) is 'All Markets'
+ValueAt (28, 6) is 'All Markets'
+ValueAt (28, 7) is '2771.0'
+ValueAt (29, 0) is 'All Products'
+ValueAt (29, 1) is 'Motorcycles'
+ValueAt (29, 2) is 'All Years'
+ValueAt (29, 3) is '2005'
+ValueAt (29, 4) is 'null'
+ValueAt (29, 5) is 'All Markets'
+ValueAt (29, 6) is 'NA'
+ValueAt (29, 7) is '568.0'
+ValueAt (30, 0) is 'All Products'
+ValueAt (30, 1) is 'Planes'
+ValueAt (30, 2) is 'All Years'
+ValueAt (30, 3) is '2003'
+ValueAt (30, 4) is 'null'
+ValueAt (30, 5) is 'All Markets'
+ValueAt (30, 6) is 'APAC'
+ValueAt (30, 7) is '456.0'
+ValueAt (31, 0) is 'All Products'
+ValueAt (31, 1) is 'Planes'
+ValueAt (31, 2) is 'All Years'
+ValueAt (31, 3) is '2003'
+ValueAt (31, 4) is 'null'
+ValueAt (31, 5) is 'All Markets'
+ValueAt (31, 6) is 'EMEA'
+ValueAt (31, 7) is '1723.0'
+ValueAt (32, 0) is 'All Products'
+ValueAt (32, 1) is 'Planes'
+ValueAt (32, 2) is 'All Years'
+ValueAt (32, 3) is '2003'
+ValueAt (32, 4) is 'null'
+ValueAt (32, 5) is 'All Markets'
+ValueAt (32, 6) is 'Japan'
+ValueAt (32, 7) is '677.0'
+ValueAt (33, 0) is 'All Products'
+ValueAt (33, 1) is 'Planes'
+ValueAt (33, 2) is 'All Years'
+ValueAt (33, 3) is '2003'
+ValueAt (33, 4) is 'null'
+ValueAt (33, 5) is 'All Markets'
+ValueAt (33, 6) is 'All Markets'
+ValueAt (33, 7) is '3833.0'
+ValueAt (34, 0) is 'All Products'
+ValueAt (34, 1) is 'Planes'
+ValueAt (34, 2) is 'All Years'
+ValueAt (34, 3) is '2003'
+ValueAt (34, 4) is 'null'
+ValueAt (34, 5) is 'All Markets'
+ValueAt (34, 6) is 'NA'
+ValueAt (34, 7) is '977.0'
+ValueAt (35, 0) is 'All Products'
+ValueAt (35, 1) is 'Planes'
+ValueAt (35, 2) is 'All Years'
+ValueAt (35, 3) is '2004'
+ValueAt (35, 4) is 'null'
+ValueAt (35, 5) is 'All Markets'
+ValueAt (35, 6) is 'APAC'
+ValueAt (35, 7) is '723.0'
+ValueAt (36, 0) is 'All Products'
+ValueAt (36, 1) is 'Planes'
+ValueAt (36, 2) is 'All Years'
+ValueAt (36, 3) is '2004'
+ValueAt (36, 4) is 'null'
+ValueAt (36, 5) is 'All Markets'
+ValueAt (36, 6) is 'EMEA'
+ValueAt (36, 7) is '2326.0'
+ValueAt (37, 0) is 'All Products'
+ValueAt (37, 1) is 'Planes'
+ValueAt (37, 2) is 'All Years'
+ValueAt (37, 3) is '2004'
+ValueAt (37, 4) is 'null'
+ValueAt (37, 5) is 'All Markets'
+ValueAt (37, 6) is 'Japan'
+ValueAt (37, 7) is '547.0'
+ValueAt (38, 0) is 'All Products'
+ValueAt (38, 1) is 'Planes'
+ValueAt (38, 2) is 'All Years'
+ValueAt (38, 3) is '2004'
+ValueAt (38, 4) is 'null'
+ValueAt (38, 5) is 'All Markets'
+ValueAt (38, 6) is 'All Markets'
+ValueAt (38, 7) is '5820.0'
+ValueAt (39, 0) is 'All Products'
+ValueAt (39, 1) is 'Planes'
+ValueAt (39, 2) is 'All Years'
+ValueAt (39, 3) is '2004'
+ValueAt (39, 4) is 'null'
+ValueAt (39, 5) is 'All Markets'
+ValueAt (39, 6) is 'NA'
+ValueAt (39, 7) is '2224.0'
+ValueAt (40, 0) is 'All Products'
+ValueAt (40, 1) is 'Planes'
+ValueAt (40, 2) is 'All Years'
+ValueAt (40, 3) is '2004'
+ValueAt (40, 4) is 'QTR1'
+ValueAt (40, 5) is 'All Markets'
+ValueAt (40, 6) is 'APAC'
+ValueAt (40, 7) is '318.0'
+ValueAt (41, 0) is 'All Products'
+ValueAt (41, 1) is 'Planes'
+ValueAt (41, 2) is 'All Years'
+ValueAt (41, 3) is '2004'
+ValueAt (41, 4) is 'QTR1'
+ValueAt (41, 5) is 'All Markets'
+ValueAt (41, 6) is 'EMEA'
+ValueAt (41, 7) is 'null'
+ValueAt (42, 0) is 'All Products'
+ValueAt (42, 1) is 'Planes'
+ValueAt (42, 2) is 'All Years'
+ValueAt (42, 3) is '2004'
+ValueAt (42, 4) is 'QTR1'
+ValueAt (42, 5) is 'All Markets'
+ValueAt (42, 6) is 'Japan'
+ValueAt (42, 7) is '322.0'
+ValueAt (43, 0) is 'All Products'
+ValueAt (43, 1) is 'Planes'
+ValueAt (43, 2) is 'All Years'
+ValueAt (43, 3) is '2004'
+ValueAt (43, 4) is 'QTR1'
+ValueAt (43, 5) is 'All Markets'
+ValueAt (43, 6) is 'All Markets'
+ValueAt (43, 7) is '971.0'
+ValueAt (44, 0) is 'All Products'
+ValueAt (44, 1) is 'Planes'
+ValueAt (44, 2) is 'All Years'
+ValueAt (44, 3) is '2004'
+ValueAt (44, 4) is 'QTR1'
+ValueAt (44, 5) is 'All Markets'
+ValueAt (44, 6) is 'NA'
+ValueAt (44, 7) is '331.0'
+ValueAt (45, 0) is 'All Products'
+ValueAt (45, 1) is 'Planes'
+ValueAt (45, 2) is 'All Years'
+ValueAt (45, 3) is '2004'
+ValueAt (45, 4) is 'QTR2'
+ValueAt (45, 5) is 'All Markets'
+ValueAt (45, 6) is 'APAC'
+ValueAt (45, 7) is 'null'
+ValueAt (46, 0) is 'All Products'
+ValueAt (46, 1) is 'Planes'
+ValueAt (46, 2) is 'All Years'
+ValueAt (46, 3) is '2004'
+ValueAt (46, 4) is 'QTR2'
+ValueAt (46, 5) is 'All Markets'
+ValueAt (46, 6) is 'EMEA'
+ValueAt (46, 7) is '311.0'
+ValueAt (47, 0) is 'All Products'
+ValueAt (47, 1) is 'Planes'
+ValueAt (47, 2) is 'All Years'
+ValueAt (47, 3) is '2004'
+ValueAt (47, 4) is 'QTR2'
+ValueAt (47, 5) is 'All Markets'
+ValueAt (47, 6) is 'Japan'
+ValueAt (47, 7) is 'null'
+ValueAt (48, 0) is 'All Products'
+ValueAt (48, 1) is 'Planes'
+ValueAt (48, 2) is 'All Years'
+ValueAt (48, 3) is '2004'
+ValueAt (48, 4) is 'QTR2'
+ValueAt (48, 5) is 'All Markets'
+ValueAt (48, 6) is 'All Markets'
+ValueAt (48, 7) is '1113.0'
+ValueAt (49, 0) is 'All Products'
+ValueAt (49, 1) is 'Planes'
+ValueAt (49, 2) is 'All Years'
+ValueAt (49, 3) is '2004'
+ValueAt (49, 4) is 'QTR2'
+ValueAt (49, 5) is 'All Markets'
+ValueAt (49, 6) is 'NA'
+ValueAt (49, 7) is '802.0'
+ValueAt (50, 0) is 'All Products'
+ValueAt (50, 1) is 'Planes'
+ValueAt (50, 2) is 'All Years'
+ValueAt (50, 3) is '2004'
+ValueAt (50, 4) is 'QTR3'
+ValueAt (50, 5) is 'All Markets'
+ValueAt (50, 6) is 'APAC'
+ValueAt (50, 7) is 'null'
+ValueAt (51, 0) is 'All Products'
+ValueAt (51, 1) is 'Planes'
+ValueAt (51, 2) is 'All Years'
+ValueAt (51, 3) is '2004'
+ValueAt (51, 4) is 'QTR3'
+ValueAt (51, 5) is 'All Markets'
+ValueAt (51, 6) is 'EMEA'
+ValueAt (51, 7) is '977.0'
+ValueAt (52, 0) is 'All Products'
+ValueAt (52, 1) is 'Planes'
+ValueAt (52, 2) is 'All Years'
+ValueAt (52, 3) is '2004'
+ValueAt (52, 4) is 'QTR3'
+ValueAt (52, 5) is 'All Markets'
+ValueAt (52, 6) is 'Japan'
+ValueAt (52, 7) is 'null'
+ValueAt (53, 0) is 'All Products'
+ValueAt (53, 1) is 'Planes'
+ValueAt (53, 2) is 'All Years'
+ValueAt (53, 3) is '2004'
+ValueAt (53, 4) is 'QTR3'
+ValueAt (53, 5) is 'All Markets'
+ValueAt (53, 6) is 'All Markets'
+ValueAt (53, 7) is '1178.0'
+ValueAt (54, 0) is 'All Products'
+ValueAt (54, 1) is 'Planes'
+ValueAt (54, 2) is 'All Years'
+ValueAt (54, 3) is '2004'
+ValueAt (54, 4) is 'QTR3'
+ValueAt (54, 5) is 'All Markets'
+ValueAt (54, 6) is 'NA'
+ValueAt (54, 7) is '201.0'
+ValueAt (55, 0) is 'All Products'
+ValueAt (55, 1) is 'Planes'
+ValueAt (55, 2) is 'All Years'
+ValueAt (55, 3) is '2004'
+ValueAt (55, 4) is 'QTR4'
+ValueAt (55, 5) is 'All Markets'
+ValueAt (55, 6) is 'APAC'
+ValueAt (55, 7) is '405.0'
+ValueAt (56, 0) is 'All Products'
+ValueAt (56, 1) is 'Planes'
+ValueAt (56, 2) is 'All Years'
+ValueAt (56, 3) is '2004'
+ValueAt (56, 4) is 'QTR4'
+ValueAt (56, 5) is 'All Markets'
+ValueAt (56, 6) is 'EMEA'
+ValueAt (56, 7) is '1038.0'
+ValueAt (57, 0) is 'All Products'
+ValueAt (57, 1) is 'Planes'
+ValueAt (57, 2) is 'All Years'
+ValueAt (57, 3) is '2004'
+ValueAt (57, 4) is 'QTR4'
+ValueAt (57, 5) is 'All Markets'
+ValueAt (57, 6) is 'Japan'
+ValueAt (57, 7) is '225.0'
+ValueAt (58, 0) is 'All Products'
+ValueAt (58, 1) is 'Planes'
+ValueAt (58, 2) is 'All Years'
+ValueAt (58, 3) is '2004'
+ValueAt (58, 4) is 'QTR4'
+ValueAt (58, 5) is 'All Markets'
+ValueAt (58, 6) is 'All Markets'
+ValueAt (58, 7) is '2558.0'
+ValueAt (59, 0) is 'All Products'
+ValueAt (59, 1) is 'Planes'
+ValueAt (59, 2) is 'All Years'
+ValueAt (59, 3) is '2004'
+ValueAt (59, 4) is 'QTR4'
+ValueAt (59, 5) is 'All Markets'
+ValueAt (59, 6) is 'NA'
+ValueAt (59, 7) is '890.0'
+ValueAt (60, 0) is 'All Products'
+ValueAt (60, 1) is 'Planes'
+ValueAt (60, 2) is 'All Years'
+ValueAt (60, 3) is '2005'
+ValueAt (60, 4) is 'null'
+ValueAt (60, 5) is 'All Markets'
+ValueAt (60, 6) is 'APAC'
+ValueAt (60, 7) is '151.0'
+ValueAt (61, 0) is 'All Products'
+ValueAt (61, 1) is 'Planes'
+ValueAt (61, 2) is 'All Years'
+ValueAt (61, 3) is '2005'
+ValueAt (61, 4) is 'null'
+ValueAt (61, 5) is 'All Markets'
+ValueAt (61, 6) is 'EMEA'
+ValueAt (61, 7) is '1464.0'
+ValueAt (62, 0) is 'All Products'
+ValueAt (62, 1) is 'Planes'
+ValueAt (62, 2) is 'All Years'
+ValueAt (62, 3) is '2005'
+ValueAt (62, 4) is 'null'
+ValueAt (62, 5) is 'All Markets'
+ValueAt (62, 6) is 'Japan'
+ValueAt (62, 7) is 'null'
+ValueAt (63, 0) is 'All Products'
+ValueAt (63, 1) is 'Planes'
+ValueAt (63, 2) is 'All Years'
+ValueAt (63, 3) is '2005'
+ValueAt (63, 4) is 'null'
+ValueAt (63, 5) is 'All Markets'
+ValueAt (63, 6) is 'All Markets'
+ValueAt (63, 7) is '2207.0'
+ValueAt (64, 0) is 'All Products'
+ValueAt (64, 1) is 'Planes'
+ValueAt (64, 2) is 'All Years'
+ValueAt (64, 3) is '2005'
+ValueAt (64, 4) is 'null'
+ValueAt (64, 5) is 'All Markets'
+ValueAt (64, 6) is 'NA'
+ValueAt (64, 7) is '592.0'
+ValueAt (65, 0) is 'All Products'
+ValueAt (65, 1) is 'Ships'
+ValueAt (65, 2) is 'All Years'
+ValueAt (65, 3) is '2003'
+ValueAt (65, 4) is 'null'
+ValueAt (65, 5) is 'All Markets'
+ValueAt (65, 6) is 'APAC'
+ValueAt (65, 7) is 'null'
+ValueAt (66, 0) is 'All Products'
+ValueAt (66, 1) is 'Ships'
+ValueAt (66, 2) is 'All Years'
+ValueAt (66, 3) is '2003'
+ValueAt (66, 4) is 'null'
+ValueAt (66, 5) is 'All Markets'
+ValueAt (66, 6) is 'EMEA'
+ValueAt (66, 7) is '1968.0'
+ValueAt (67, 0) is 'All Products'
+ValueAt (67, 1) is 'Ships'
+ValueAt (67, 2) is 'All Years'
+ValueAt (67, 3) is '2003'
+ValueAt (67, 4) is 'null'
+ValueAt (67, 5) is 'All Markets'
+ValueAt (67, 6) is 'Japan'
+ValueAt (67, 7) is '174.0'
+ValueAt (68, 0) is 'All Products'
+ValueAt (68, 1) is 'Ships'
+ValueAt (68, 2) is 'All Years'
+ValueAt (68, 3) is '2003'
+ValueAt (68, 4) is 'null'
+ValueAt (68, 5) is 'All Markets'
+ValueAt (68, 6) is 'All Markets'
+ValueAt (68, 7) is '2844.0'
+ValueAt (69, 0) is 'All Products'
+ValueAt (69, 1) is 'Ships'
+ValueAt (69, 2) is 'All Years'
+ValueAt (69, 3) is '2003'
+ValueAt (69, 4) is 'null'
+ValueAt (69, 5) is 'All Markets'
+ValueAt (69, 6) is 'NA'
+ValueAt (69, 7) is '702.0'
+ValueAt (70, 0) is 'All Products'
+ValueAt (70, 1) is 'Ships'
+ValueAt (70, 2) is 'All Years'
+ValueAt (70, 3) is '2004'
+ValueAt (70, 4) is 'null'
+ValueAt (70, 5) is 'All Markets'
+ValueAt (70, 6) is 'APAC'
+ValueAt (70, 7) is '396.0'
+ValueAt (71, 0) is 'All Products'
+ValueAt (71, 1) is 'Ships'
+ValueAt (71, 2) is 'All Years'
+ValueAt (71, 3) is '2004'
+ValueAt (71, 4) is 'null'
+ValueAt (71, 5) is 'All Markets'
+ValueAt (71, 6) is 'EMEA'
+ValueAt (71, 7) is '2144.0'
+ValueAt (72, 0) is 'All Products'
+ValueAt (72, 1) is 'Ships'
+ValueAt (72, 2) is 'All Years'
+ValueAt (72, 3) is '2004'
+ValueAt (72, 4) is 'null'
+ValueAt (72, 5) is 'All Markets'
+ValueAt (72, 6) is 'Japan'
+ValueAt (72, 7) is '127.0'
+ValueAt (73, 0) is 'All Products'
+ValueAt (73, 1) is 'Ships'
+ValueAt (73, 2) is 'All Years'
+ValueAt (73, 3) is '2004'
+ValueAt (73, 4) is 'null'
+ValueAt (73, 5) is 'All Markets'
+ValueAt (73, 6) is 'All Markets'
+ValueAt (73, 7) is '4309.0'
+ValueAt (74, 0) is 'All Products'
+ValueAt (74, 1) is 'Ships'
+ValueAt (74, 2) is 'All Years'
+ValueAt (74, 3) is '2004'
+ValueAt (74, 4) is 'null'
+ValueAt (74, 5) is 'All Markets'
+ValueAt (74, 6) is 'NA'
+ValueAt (74, 7) is '1642.0'
+ValueAt (75, 0) is 'All Products'
+ValueAt (75, 1) is 'Ships'
+ValueAt (75, 2) is 'All Years'
+ValueAt (75, 3) is '2005'
+ValueAt (75, 4) is 'null'
+ValueAt (75, 5) is 'All Markets'
+ValueAt (75, 6) is 'APAC'
+ValueAt (75, 7) is '32.0'
+ValueAt (76, 0) is 'All Products'
+ValueAt (76, 1) is 'Ships'
+ValueAt (76, 2) is 'All Years'
+ValueAt (76, 3) is '2005'
+ValueAt (76, 4) is 'null'
+ValueAt (76, 5) is 'All Markets'
+ValueAt (76, 6) is 'EMEA'
+ValueAt (76, 7) is '696.0'
+ValueAt (77, 0) is 'All Products'
+ValueAt (77, 1) is 'Ships'
+ValueAt (77, 2) is 'All Years'
+ValueAt (77, 3) is '2005'
+ValueAt (77, 4) is 'null'
+ValueAt (77, 5) is 'All Markets'
+ValueAt (77, 6) is 'Japan'
+ValueAt (77, 7) is '81.0'
+ValueAt (78, 0) is 'All Products'
+ValueAt (78, 1) is 'Ships'
+ValueAt (78, 2) is 'All Years'
+ValueAt (78, 3) is '2005'
+ValueAt (78, 4) is 'null'
+ValueAt (78, 5) is 'All Markets'
+ValueAt (78, 6) is 'All Markets'
+ValueAt (78, 7) is '1346.0'
+ValueAt (79, 0) is 'All Products'
+ValueAt (79, 1) is 'Ships'
+ValueAt (79, 2) is 'All Years'
+ValueAt (79, 3) is '2005'
+ValueAt (79, 4) is 'null'
+ValueAt (79, 5) is 'All Markets'
+ValueAt (79, 6) is 'NA'
+ValueAt (79, 7) is '537.0'
+ValueAt (80, 0) is 'All Products'
+ValueAt (80, 1) is 'Trains'
+ValueAt (80, 2) is 'All Years'
+ValueAt (80, 3) is '2003'
+ValueAt (80, 4) is 'null'
+ValueAt (80, 5) is 'All Markets'
+ValueAt (80, 6) is 'APAC'
+ValueAt (80, 7) is '33.0'
+ValueAt (81, 0) is 'All Products'
+ValueAt (81, 1) is 'Trains'
+ValueAt (81, 2) is 'All Years'
+ValueAt (81, 3) is '2003'
+ValueAt (81, 4) is 'null'
+ValueAt (81, 5) is 'All Markets'
+ValueAt (81, 6) is 'EMEA'
+ValueAt (81, 7) is '384.0'
+ValueAt (82, 0) is 'All Products'
+ValueAt (82, 1) is 'Trains'
+ValueAt (82, 2) is 'All Years'
+ValueAt (82, 3) is '2003'
+ValueAt (82, 4) is 'null'
+ValueAt (82, 5) is 'All Markets'
+ValueAt (82, 6) is 'Japan'
+ValueAt (82, 7) is '174.0'
+ValueAt (83, 0) is 'All Products'
+ValueAt (83, 1) is 'Trains'
+ValueAt (83, 2) is 'All Years'
+ValueAt (83, 3) is '2003'
+ValueAt (83, 4) is 'null'
+ValueAt (83, 5) is 'All Markets'
+ValueAt (83, 6) is 'All Markets'
+ValueAt (83, 7) is '1000.0'
+ValueAt (84, 0) is 'All Products'
+ValueAt (84, 1) is 'Trains'
+ValueAt (84, 2) is 'All Years'
+ValueAt (84, 3) is '2003'
+ValueAt (84, 4) is 'null'
+ValueAt (84, 5) is 'All Markets'
+ValueAt (84, 6) is 'NA'
+ValueAt (84, 7) is '409.0'
+ValueAt (85, 0) is 'All Products'
+ValueAt (85, 1) is 'Trains'
+ValueAt (85, 2) is 'All Years'
+ValueAt (85, 3) is '2004'
+ValueAt (85, 4) is 'null'
+ValueAt (85, 5) is 'All Markets'
+ValueAt (85, 6) is 'APAC'
+ValueAt (85, 7) is '106.0'
+ValueAt (86, 0) is 'All Products'
+ValueAt (86, 1) is 'Trains'
+ValueAt (86, 2) is 'All Years'
+ValueAt (86, 3) is '2004'
+ValueAt (86, 4) is 'null'
+ValueAt (86, 5) is 'All Markets'
+ValueAt (86, 6) is 'EMEA'
+ValueAt (86, 7) is '977.0'
+ValueAt (87, 0) is 'All Products'
+ValueAt (87, 1) is 'Trains'
+ValueAt (87, 2) is 'All Years'
+ValueAt (87, 3) is '2004'
+ValueAt (87, 4) is 'null'
+ValueAt (87, 5) is 'All Markets'
+ValueAt (87, 6) is 'Japan'
+ValueAt (87, 7) is 'null'
+ValueAt (88, 0) is 'All Products'
+ValueAt (88, 1) is 'Trains'
+ValueAt (88, 2) is 'All Years'
+ValueAt (88, 3) is '2004'
+ValueAt (88, 4) is 'null'
+ValueAt (88, 5) is 'All Markets'
+ValueAt (88, 6) is 'All Markets'
+ValueAt (88, 7) is '1409.0'
+ValueAt (89, 0) is 'All Products'
+ValueAt (89, 1) is 'Trains'
+ValueAt (89, 2) is 'All Years'
+ValueAt (89, 3) is '2004'
+ValueAt (89, 4) is 'null'
+ValueAt (89, 5) is 'All Markets'
+ValueAt (89, 6) is 'NA'
+ValueAt (89, 7) is '326.0'
+ValueAt (90, 0) is 'All Products'
+ValueAt (90, 1) is 'Trains'
+ValueAt (90, 2) is 'All Years'
+ValueAt (90, 3) is '2005'
+ValueAt (90, 4) is 'null'
+ValueAt (90, 5) is 'All Markets'
+ValueAt (90, 6) is 'APAC'
+ValueAt (90, 7) is 'null'
+ValueAt (91, 0) is 'All Products'
+ValueAt (91, 1) is 'Trains'
+ValueAt (91, 2) is 'All Years'
+ValueAt (91, 3) is '2005'
+ValueAt (91, 4) is 'null'
+ValueAt (91, 5) is 'All Markets'
+ValueAt (91, 6) is 'EMEA'
+ValueAt (91, 7) is '183.0'
+ValueAt (92, 0) is 'All Products'
+ValueAt (92, 1) is 'Trains'
+ValueAt (92, 2) is 'All Years'
+ValueAt (92, 3) is '2005'
+ValueAt (92, 4) is 'null'
+ValueAt (92, 5) is 'All Markets'
+ValueAt (92, 6) is 'Japan'
+ValueAt (92, 7) is '49.0'
+ValueAt (93, 0) is 'All Products'
+ValueAt (93, 1) is 'Trains'
+ValueAt (93, 2) is 'All Years'
+ValueAt (93, 3) is '2005'
+ValueAt (93, 4) is 'null'
+ValueAt (93, 5) is 'All Markets'
+ValueAt (93, 6) is 'All Markets'
+ValueAt (93, 7) is '409.0'
+ValueAt (94, 0) is 'All Products'
+ValueAt (94, 1) is 'Trains'
+ValueAt (94, 2) is 'All Years'
+ValueAt (94, 3) is '2005'
+ValueAt (94, 4) is 'null'
+ValueAt (94, 5) is 'All Markets'
+ValueAt (94, 6) is 'NA'
+ValueAt (94, 7) is '177.0'
+ValueAt (95, 0) is 'All Products'
+ValueAt (95, 1) is 'Trucks and Buses'
+ValueAt (95, 2) is 'All Years'
+ValueAt (95, 3) is '2003'
+ValueAt (95, 4) is 'null'
+ValueAt (95, 5) is 'All Markets'
+ValueAt (95, 6) is 'APAC'
+ValueAt (95, 7) is '91.0'
+ValueAt (96, 0) is 'All Products'
+ValueAt (96, 1) is 'Trucks and Buses'
+ValueAt (96, 2) is 'All Years'
+ValueAt (96, 3) is '2003'
+ValueAt (96, 4) is 'null'
+ValueAt (96, 5) is 'All Markets'
+ValueAt (96, 6) is 'EMEA'
+ValueAt (96, 7) is '2261.0'
+ValueAt (97, 0) is 'All Products'
+ValueAt (97, 1) is 'Trucks and Buses'
+ValueAt (97, 2) is 'All Years'
+ValueAt (97, 3) is '2003'
+ValueAt (97, 4) is 'null'
+ValueAt (97, 5) is 'All Markets'
+ValueAt (97, 6) is 'Japan'
+ValueAt (97, 7) is '415.0'
+ValueAt (98, 0) is 'All Products'
+ValueAt (98, 1) is 'Trucks and Buses'
+ValueAt (98, 2) is 'All Years'
+ValueAt (98, 3) is '2003'
+ValueAt (98, 4) is 'null'
+ValueAt (98, 5) is 'All Markets'
+ValueAt (98, 6) is 'All Markets'
+ValueAt (98, 7) is '4056.0'
+ValueAt (99, 0) is 'All Products'
+ValueAt (99, 1) is 'Trucks and Buses'
+ValueAt (99, 2) is 'All Years'
+ValueAt (99, 3) is '2003'
+ValueAt (99, 4) is 'null'
+ValueAt (99, 5) is 'All Markets'
+ValueAt (99, 6) is 'NA'
+ValueAt (99, 7) is '1289.0'
+ValueAt (100, 0) is 'All Products'
+ValueAt (100, 1) is 'Trucks and Buses'
+ValueAt (100, 2) is 'All Years'
+ValueAt (100, 3) is '2004'
+ValueAt (100, 4) is 'null'
+ValueAt (100, 5) is 'All Markets'
+ValueAt (100, 6) is 'APAC'
+ValueAt (100, 7) is '801.0'
+ValueAt (101, 0) is 'All Products'
+ValueAt (101, 1) is 'Trucks and Buses'
+ValueAt (101, 2) is 'All Years'
+ValueAt (101, 3) is '2004'
+ValueAt (101, 4) is 'null'
+ValueAt (101, 5) is 'All Markets'
+ValueAt (101, 6) is 'EMEA'
+ValueAt (101, 7) is '1558.0'
+ValueAt (102, 0) is 'All Products'
+ValueAt (102, 1) is 'Trucks and Buses'
+ValueAt (102, 2) is 'All Years'
+ValueAt (102, 3) is '2004'
+ValueAt (102, 4) is 'null'
+ValueAt (102, 5) is 'All Markets'
+ValueAt (102, 6) is 'Japan'
+ValueAt (102, 7) is '102.0'
+ValueAt (103, 0) is 'All Products'
+ValueAt (103, 1) is 'Trucks and Buses'
+ValueAt (103, 2) is 'All Years'
+ValueAt (103, 3) is '2004'
+ValueAt (103, 4) is 'null'
+ValueAt (103, 5) is 'All Markets'
+ValueAt (103, 6) is 'All Markets'
+ValueAt (103, 7) is '5024.0'
+ValueAt (104, 0) is 'All Products'
+ValueAt (104, 1) is 'Trucks and Buses'
+ValueAt (104, 2) is 'All Years'
+ValueAt (104, 3) is '2004'
+ValueAt (104, 4) is 'null'
+ValueAt (104, 5) is 'All Markets'
+ValueAt (104, 6) is 'NA'
+ValueAt (104, 7) is '2563.0'
+ValueAt (105, 0) is 'All Products'
+ValueAt (105, 1) is 'Trucks and Buses'
+ValueAt (105, 2) is 'All Years'
+ValueAt (105, 3) is '2005'
+ValueAt (105, 4) is 'null'
+ValueAt (105, 5) is 'All Markets'
+ValueAt (105, 6) is 'APAC'
+ValueAt (105, 7) is '488.0'
+ValueAt (106, 0) is 'All Products'
+ValueAt (106, 1) is 'Trucks and Buses'
+ValueAt (106, 2) is 'All Years'
+ValueAt (106, 3) is '2005'
+ValueAt (106, 4) is 'null'
+ValueAt (106, 5) is 'All Markets'
+ValueAt (106, 6) is 'EMEA'
+ValueAt (106, 7) is '836.0'
+ValueAt (107, 0) is 'All Products'
+ValueAt (107, 1) is 'Trucks and Buses'
+ValueAt (107, 2) is 'All Years'
+ValueAt (107, 3) is '2005'
+ValueAt (107, 4) is 'null'
+ValueAt (107, 5) is 'All Markets'
+ValueAt (107, 6) is 'Japan'
+ValueAt (107, 7) is 'null'
+ValueAt (108, 0) is 'All Products'
+ValueAt (108, 1) is 'Trucks and Buses'
+ValueAt (108, 2) is 'All Years'
+ValueAt (108, 3) is '2005'
+ValueAt (108, 4) is 'null'
+ValueAt (108, 5) is 'All Markets'
+ValueAt (108, 6) is 'All Markets'
+ValueAt (108, 7) is '1921.0'
+ValueAt (109, 0) is 'All Products'
+ValueAt (109, 1) is 'Trucks and Buses'
+ValueAt (109, 2) is 'All Years'
+ValueAt (109, 3) is '2005'
+ValueAt (109, 4) is 'null'
+ValueAt (109, 5) is 'All Markets'
+ValueAt (109, 6) is 'NA'
+ValueAt (109, 7) is '597.0'
+ValueAt (110, 0) is 'All Products'
+ValueAt (110, 1) is 'Vintage Cars'
+ValueAt (110, 2) is 'All Years'
+ValueAt (110, 3) is '2003'
+ValueAt (110, 4) is 'null'
+ValueAt (110, 5) is 'All Markets'
+ValueAt (110, 6) is 'APAC'
+ValueAt (110, 7) is '1243.0'
+ValueAt (111, 0) is 'All Products'
+ValueAt (111, 1) is 'Vintage Cars'
+ValueAt (111, 2) is 'All Years'
+ValueAt (111, 3) is '2003'
+ValueAt (111, 4) is 'null'
+ValueAt (111, 5) is 'All Markets'
+ValueAt (111, 6) is 'EMEA'
+ValueAt (111, 7) is '3094.0'
+ValueAt (112, 0) is 'All Products'
+ValueAt (112, 1) is 'Vintage Cars'
+ValueAt (112, 2) is 'All Years'
+ValueAt (112, 3) is '2003'
+ValueAt (112, 4) is 'null'
+ValueAt (112, 5) is 'All Markets'
+ValueAt (112, 6) is 'Japan'
+ValueAt (112, 7) is '308.0'
+ValueAt (113, 0) is 'All Products'
+ValueAt (113, 1) is 'Vintage Cars'
+ValueAt (113, 2) is 'All Years'
+ValueAt (113, 3) is '2003'
+ValueAt (113, 4) is 'null'
+ValueAt (113, 5) is 'All Markets'
+ValueAt (113, 6) is 'All Markets'
+ValueAt (113, 7) is '7913.0'
+ValueAt (114, 0) is 'All Products'
+ValueAt (114, 1) is 'Vintage Cars'
+ValueAt (114, 2) is 'All Years'
+ValueAt (114, 3) is '2003'
+ValueAt (114, 4) is 'null'
+ValueAt (114, 5) is 'All Markets'
+ValueAt (114, 6) is 'NA'
+ValueAt (114, 7) is '3268.0'
+ValueAt (115, 0) is 'All Products'
+ValueAt (115, 1) is 'Vintage Cars'
+ValueAt (115, 2) is 'All Years'
+ValueAt (115, 3) is '2004'
+ValueAt (115, 4) is 'null'
+ValueAt (115, 5) is 'All Markets'
+ValueAt (115, 6) is 'APAC'
+ValueAt (115, 7) is '1587.0'
+ValueAt (116, 0) is 'All Products'
+ValueAt (116, 1) is 'Vintage Cars'
+ValueAt (116, 2) is 'All Years'
+ValueAt (116, 3) is '2004'
+ValueAt (116, 4) is 'null'
+ValueAt (116, 5) is 'All Markets'
+ValueAt (116, 6) is 'EMEA'
+ValueAt (116, 7) is '5472.0'
+ValueAt (117, 0) is 'All Products'
+ValueAt (117, 1) is 'Vintage Cars'
+ValueAt (117, 2) is 'All Years'
+ValueAt (117, 3) is '2004'
+ValueAt (117, 4) is 'null'
+ValueAt (117, 5) is 'All Markets'
+ValueAt (117, 6) is 'Japan'
+ValueAt (117, 7) is '229.0'
+ValueAt (118, 0) is 'All Products'
+ValueAt (118, 1) is 'Vintage Cars'
+ValueAt (118, 2) is 'All Years'
+ValueAt (118, 3) is '2004'
+ValueAt (118, 4) is 'null'
+ValueAt (118, 5) is 'All Markets'
+ValueAt (118, 6) is 'All Markets'
+ValueAt (118, 7) is '10864.0'
+ValueAt (119, 0) is 'All Products'
+ValueAt (119, 1) is 'Vintage Cars'
+ValueAt (119, 2) is 'All Years'
+ValueAt (119, 3) is '2004'
+ValueAt (119, 4) is 'null'
+ValueAt (119, 5) is 'All Markets'
+ValueAt (119, 6) is 'NA'
+ValueAt (119, 7) is '3576.0'
+ValueAt (120, 0) is 'All Products'
+ValueAt (120, 1) is 'Vintage Cars'
+ValueAt (120, 2) is 'All Years'
+ValueAt (120, 3) is '2005'
+ValueAt (120, 4) is 'null'
+ValueAt (120, 5) is 'All Markets'
+ValueAt (120, 6) is 'APAC'
+ValueAt (120, 7) is '1067.0'
+ValueAt (121, 0) is 'All Products'
+ValueAt (121, 1) is 'Vintage Cars'
+ValueAt (121, 2) is 'All Years'
+ValueAt (121, 3) is '2005'
+ValueAt (121, 4) is 'null'
+ValueAt (121, 5) is 'All Markets'
+ValueAt (121, 6) is 'EMEA'
+ValueAt (121, 7) is '1094.0'
+ValueAt (122, 0) is 'All Products'
+ValueAt (122, 1) is 'Vintage Cars'
+ValueAt (122, 2) is 'All Years'
+ValueAt (122, 3) is '2005'
+ValueAt (122, 4) is 'null'
+ValueAt (122, 5) is 'All Markets'
+ValueAt (122, 6) is 'Japan'
+ValueAt (122, 7) is '84.0'
+ValueAt (123, 0) is 'All Products'
+ValueAt (123, 1) is 'Vintage Cars'
+ValueAt (123, 2) is 'All Years'
+ValueAt (123, 3) is '2005'
+ValueAt (123, 4) is 'null'
+ValueAt (123, 5) is 'All Markets'
+ValueAt (123, 6) is 'All Markets'
+ValueAt (123, 7) is '4116.0'
+ValueAt (124, 0) is 'All Products'
+ValueAt (124, 1) is 'Vintage Cars'
+ValueAt (124, 2) is 'All Years'
+ValueAt (124, 3) is '2005'
+ValueAt (124, 4) is 'null'
+ValueAt (124, 5) is 'All Markets'
+ValueAt (124, 6) is 'NA'
+ValueAt (124, 7) is '1871.0'

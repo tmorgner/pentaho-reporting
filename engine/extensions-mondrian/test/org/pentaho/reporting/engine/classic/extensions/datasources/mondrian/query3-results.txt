@@ -1,0 +1,12 @@
+Tablemodel contains 1 rows.
+Column: 0 Name=[Time].[(All)]; DataType=class java.lang.String
+Column: 1 Name=[Time].[Years]; DataType=class java.lang.String
+Checking the data inside
+ValueAt (0, 0) is in a typed column and is of type class java.lang.String
+ValueAt (0, 1) is in a typed column and is of type class java.lang.String
+Tablemodel contains 1 rows.
+Column: 0 Name=[Time].[(All)]; DataType=class java.lang.String
+Column: 1 Name=[Time].[Years]; DataType=class java.lang.String
+Checking the data inside
+ValueAt (0, 0) is 'All Years'
+ValueAt (0, 1) is '2003'

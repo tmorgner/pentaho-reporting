@@ -1,0 +1,6 @@
+<providers>
+  <provider class-name="org.pentaho.reporting.libraries.pensol.vfs.WebSolutionFileProvider">
+    <scheme name="web-solution-ssl"/>
+    <scheme name="web-solution"/>
+  </provider>
+</providers>

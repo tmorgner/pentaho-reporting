@@ -1,0 +1,124 @@
+Tablemodel contains 14 rows.
+Column: 0 Name=[Product].[(All)]; DataType=class java.lang.String
+Column: 1 Name=[Product].[Line]; DataType=class java.lang.String
+Column: 2 Name=[Measures].[MeasuresLevel]; DataType=class java.lang.String
+Column: 3 Name=Measure; DataType=class java.lang.Double
+Checking the data inside
+ValueAt (0, 0) is in a typed column and is of type class java.lang.String
+ValueAt (0, 1) is in a typed column and is of type class java.lang.String
+ValueAt (0, 2) is in a typed column and is of type class java.lang.String
+ValueAt (0, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (1, 0) is in a typed column and is of type class java.lang.String
+ValueAt (1, 1) is in a typed column and is of type class java.lang.String
+ValueAt (1, 2) is in a typed column and is of type class java.lang.String
+ValueAt (1, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (2, 0) is in a typed column and is of type class java.lang.String
+ValueAt (2, 1) is in a typed column and is of type class java.lang.String
+ValueAt (2, 2) is in a typed column and is of type class java.lang.String
+ValueAt (2, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (3, 0) is in a typed column and is of type class java.lang.String
+ValueAt (3, 1) is in a typed column and is of type class java.lang.String
+ValueAt (3, 2) is in a typed column and is of type class java.lang.String
+ValueAt (3, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (4, 0) is in a typed column and is of type class java.lang.String
+ValueAt (4, 1) is in a typed column and is of type class java.lang.String
+ValueAt (4, 2) is in a typed column and is of type class java.lang.String
+ValueAt (4, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (5, 0) is in a typed column and is of type class java.lang.String
+ValueAt (5, 1) is in a typed column and is of type class java.lang.String
+ValueAt (5, 2) is in a typed column and is of type class java.lang.String
+ValueAt (5, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (6, 0) is in a typed column and is of type class java.lang.String
+ValueAt (6, 1) is in a typed column and is of type class java.lang.String
+ValueAt (6, 2) is in a typed column and is of type class java.lang.String
+ValueAt (6, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (7, 0) is in a typed column and is of type class java.lang.String
+ValueAt (7, 1) is in a typed column and is of type class java.lang.String
+ValueAt (7, 2) is in a typed column and is of type class java.lang.String
+ValueAt (7, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (8, 0) is in a typed column and is of type class java.lang.String
+ValueAt (8, 1) is in a typed column and is of type class java.lang.String
+ValueAt (8, 2) is in a typed column and is of type class java.lang.String
+ValueAt (8, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (9, 0) is in a typed column and is of type class java.lang.String
+ValueAt (9, 1) is in a typed column and is of type class java.lang.String
+ValueAt (9, 2) is in a typed column and is of type class java.lang.String
+ValueAt (9, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (10, 0) is in a typed column and is of type class java.lang.String
+ValueAt (10, 1) is in a typed column and is of type class java.lang.String
+ValueAt (10, 2) is in a typed column and is of type class java.lang.String
+ValueAt (10, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (11, 0) is in a typed column and is of type class java.lang.String
+ValueAt (11, 1) is in a typed column and is of type class java.lang.String
+ValueAt (11, 2) is in a typed column and is of type class java.lang.String
+ValueAt (11, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (12, 0) is in a typed column and is of type class java.lang.String
+ValueAt (12, 1) is in a typed column and is of type class java.lang.String
+ValueAt (12, 2) is in a typed column and is of type class java.lang.String
+ValueAt (12, 3) is in a typed column and is of type class java.lang.Double
+ValueAt (13, 0) is in a typed column and is of type class java.lang.String
+ValueAt (13, 1) is in a typed column and is of type class java.lang.String
+ValueAt (13, 2) is in a typed column and is of type class java.lang.String
+ValueAt (13, 3) is in a typed column and is of type class java.lang.Double
+Tablemodel contains 14 rows.
+Column: 0 Name=[Product].[(All)]; DataType=class java.lang.String
+Column: 1 Name=[Product].[Line]; DataType=class java.lang.String
+Column: 2 Name=[Measures].[MeasuresLevel]; DataType=class java.lang.String
+Column: 3 Name=Measure; DataType=class java.lang.Double
+Checking the data inside
+ValueAt (0, 0) is 'All Products'
+ValueAt (0, 1) is 'Classic Cars'
+ValueAt (0, 2) is 'Foo'
+ValueAt (0, 3) is '2045709.935'
+ValueAt (1, 0) is 'All Products'
+ValueAt (1, 1) is 'Classic Cars'
+ValueAt (1, 2) is 'Sales'
+ValueAt (1, 3) is '4091419.87'
+ValueAt (2, 0) is 'All Products'
+ValueAt (2, 1) is 'Motorcycles'
+ValueAt (2, 2) is 'Foo'
+ValueAt (2, 3) is '637062.5949999999'
+ValueAt (3, 0) is 'All Products'
+ValueAt (3, 1) is 'Motorcycles'
+ValueAt (3, 2) is 'Sales'
+ValueAt (3, 3) is '1274125.1899999997'
+ValueAt (4, 0) is 'All Products'
+ValueAt (4, 1) is 'Planes'
+ValueAt (4, 2) is 'Foo'
+ValueAt (4, 3) is '538378.5599999999'
+ValueAt (5, 0) is 'All Products'
+ValueAt (5, 1) is 'Planes'
+ValueAt (5, 2) is 'Sales'
+ValueAt (5, 3) is '1076757.1199999999'
+ValueAt (6, 0) is 'All Products'
+ValueAt (6, 1) is 'Ships'
+ValueAt (6, 2) is 'Foo'
+ValueAt (6, 3) is '374335.42500000005'
+ValueAt (7, 0) is 'All Products'
+ValueAt (7, 1) is 'Ships'
+ValueAt (7, 2) is 'Sales'
+ValueAt (7, 3) is '748670.8500000001'
+ValueAt (8, 0) is 'All Products'
+ValueAt (8, 1) is 'Trains'
+ValueAt (8, 2) is 'Foo'
+ValueAt (8, 3) is '117234.59499999999'
+ValueAt (9, 0) is 'All Products'
+ValueAt (9, 1) is 'Trains'
+ValueAt (9, 2) is 'Sales'
+ValueAt (9, 3) is '234469.18999999997'
+ValueAt (10, 0) is 'All Products'
+ValueAt (10, 1) is 'Trucks and Buses'
+ValueAt (10, 2) is 'Foo'
+ValueAt (10, 3) is '577140.2849999999'
+ValueAt (11, 0) is 'All Products'
+ValueAt (11, 1) is 'Trucks and Buses'
+ValueAt (11, 2) is 'Sales'
+ValueAt (11, 3) is '1154280.5699999998'
+ValueAt (12, 0) is 'All Products'
+ValueAt (12, 1) is 'Vintage Cars'
+ValueAt (12, 2) is 'Foo'
+ValueAt (12, 3) is '1033113.195'
+ValueAt (13, 0) is 'All Products'
+ValueAt (13, 1) is 'Vintage Cars'
+ValueAt (13, 2) is 'Sales'
+ValueAt (13, 3) is '2066226.39'

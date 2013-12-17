@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="cobertura.examples.basic" default="coverage" basedir=".">
+	<tstamp>
+		<format property="current.date" pattern="MM-dd-yyyy" locale="en"/>
+	</tstamp>
+
+	<property file="build_coverage.properties"/>
+
+	<path id="pentaho_classpath">
+		<fileset dir="${pentaho.reporting.lib.dir}">
+			<include name="**/*.jar"/>
+			<exclude name="**/pentaho-vfs.jar"/>
+		</fileset>
+		<fileset dir="${cobertura.dir}">
+			<include name="cobertura.jar"/>
+		</fileset>
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+      <!-- exclude name="**/asm*.jar" / -->
+		</fileset>
+		<fileset dir="${pentaho.reporting.testlib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${ext.lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${demo.lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${testcases.lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${core.lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>				
+	</path>
+
+	<taskdef classpathref="pentaho_classpath" resource="tasks.properties"/>
+
+	<target name="clean-all" description="Remove all files created by the build/test process.">
+		<delete dir="${instrumented.dir}"/>
+		<delete dir="${reports.dir}"/>
+		<delete dir="${coverage.dir}"/>
+		<delete dir="${classes.dir}"/>
+		<delete file="cobertura.log"/>
+		<delete file="cobertura.ser"/>
+		<delete file="testsettings.properties"/>
+		<delete file="${testcases.lib.dir}/pentaho-reporting-testcases-src.jar"/>
+	</target>
+
+	<target name="clean-pentaho-reporting-instrumented-classes">
+		<!--
+			Remove the coverage data file and any old instrumentation.
+		-->
+    <delete file="cobertura.ser"/>
+		<delete dir="${instrumented.dir}"/>
+	</target>
+	<target name="clean-pentaho-reporting-classes">
+		<delete dir="${classes.dir}"/>
+	</target>
+
+	<target name="clean-pentaho-reporting-test-reports">
+		<delete dir="${reports.dir}"/>
+	</target>
+
+	<target name="clean-pentaho-reporting-coverage-reports">
+		<delete dir="${coverage.dir}"/>
+	</target>
+
+	<target name="init-instrument-pentaho-reporting-classes" depends="clean-pentaho-reporting-instrumented-classes">
+		<mkdir dir="pentaho-instrumented-classes"/>
+	</target>
+
+	<target name="init-pentaho-reporting-test-reports" depends="clean-pentaho-reporting-test-reports">
+		<mkdir dir="${reports.xml.dir}"/>
+		<mkdir dir="${reports.html.dir}"/>
+	</target>
+
+	<target name="init-pentaho-reporting-coverage-reports" depends="clean-pentaho-reporting-coverage-reports">
+		<mkdir dir="${coverage.xml.dir}"/>
+		<mkdir dir="${coverage.html.dir}"/>
+	</target>
+	<target name="compile-core" unless="pentaho.compiled">
+		<mkdir dir="${classes.dir}"/>
+		<javac destdir="${classes.dir}" debug="yes" source="1.4" target="1.4" fork="true">
+			<src path="${src.dir}"/>
+			<classpath refid="pentaho_classpath"/>
+		</javac>
+	</target>
+	<target name="compile-ext" unless="pentaho.compiled" depends="compile-core">
+		<javac destdir="${classes.dir}" debug="yes" source="1.4" target="1.4" fork="true">
+			<src path="${ext.src.dir}"/>
+			<classpath refid="pentaho_classpath"/>
+		</javac>
+	</target>
+	<target name="compile-demo" unless="pentaho.compiled" depends="compile-core,compile-ext">
+		<javac destdir="${classes.dir}" debug="yes" source="1.4" target="1.4" fork="true">
+			<src path="${demo.src.dir}"/>
+			<classpath refid="pentaho_classpath"/>
+		</javac>
+	</target>
+	<target name="compile-testcases" unless="pentaho.compiled" depends="compile-core,compile-demo">
+		<javac destdir="${classes.dir}" debug="yes" source="1.4" target="1.4" fork="true">
+			<src path="${testcases.src.dir}"/>
+			<classpath refid="pentaho_classpath"/>
+		</javac>
+	</target>	
+
+	<target name="instrument-pentaho-reporting-classes" depends="init-instrument-pentaho-reporting-classes">
+		<!--
+			Instrument the application classes, writing the
+			instrumented classes into ${build.instrumented.dir}.
+		-->
+    <cobertura-instrument todir="${instrumented.dir}">
+			<!--
+				The following line causes instrument to ignore any
+				source line containing a reference to log4j, for the
+				purposes of coverage reporting.
+			-->
+      <ignore regex="org.pentaho.logging.*"/>
+
+			<fileset dir="${classes.dir}">
+				<!--
+					Instrument all the application classes, but
+					don't instrument the test classes, plus the classes
+					in the org.pentaho.reporting.engine.classic.demo.ancient, org.pentaho.reporting.engine.classic.extensions, and org.pentaho.reporting.engine.classic.core.demo packages
+				-->
+        <include name="**/*.class"/>
+			</fileset>
+			
+		</cobertura-instrument>
+
+	</target>
+
+	<target name="test" depends="init-pentaho-reporting-test-reports, jar-xml-resource">
+		<echo message="solution.path=[${solution.path}]"/>
+		<echo message="lib.path=[${lib.path}]"/>
+		<delete dir="${pentaho.reporting.output.dir}"/>
+		<mkdir dir="${pentaho.reporting.output.dir}"/>
+		<copy file="${testcases.dir}/testsettings.properties" todir="."/>
+		<junit fork="yes" dir="${basedir}" failureProperty="test.failed" showoutput="no">
+			<!--
+				Note the classpath order: instrumented classes are before the
+				original (uninstrumented) classes.  This is important.
+			-->
+      <classpath location="${instrumented.dir}"/>
+			<classpath location="${classes.dir}"/>
+			<classpath location="${testcases.lib.dir}"/>
+
+      <!--
+           The instrumented classes reference classes used by the
+           Cobertura runtime, so Cobertura and its dependencies
+           must be on your classpath.
+         -->
+      <classpath refid="pentaho_classpath"/>
+			<formatter type="xml"/>
+			<test name="${testcase}" todir="${reports.xml.dir}" if="testcase"/>
+			<batchtest todir="${reports.xml.dir}" unless="testcase">
+				<fileset dir="${testcases.src.dir}">
+					<include name="**/*Test.java"/>
+					<exclude name="**/*BaseTest.java"/>
+					<exclude name="**/AbstractReportExecuteTest.java"/>
+					<exclude name="**/ManyAWTComponentsBugTest.java"/>
+					<exclude name="**/ExportTest.java"/>	
+					<exclude name="**/InvalidColumnTest.java"/>	
+					<exclude name="**/AbstractReportExecuteTest.java"/>
+					<exclude name="**/ImageElementTest.java"/>
+				</fileset>
+			</batchtest>
+		</junit>
+
+		<junitreport todir="${reports.xml.dir}">
+			<fileset dir="${reports.xml.dir}">
+				<include name="TEST-*.xml"/>
+			</fileset>
+			<report format="frames" todir="${reports.html.dir}"/>
+		</junitreport>
+	</target>
+
+	<target name="coverage-check">
+		<cobertura-check branchrate="34" totallinerate="100"/>
+	</target>
+
+	<target name="coverage-report">
+		<!--
+			Generate an XML file containing the coverage data using
+			the "srcdir" attribute.
+		-->
+    <cobertura-report srcdir="${src.dir}" destdir="${coverage.xml.dir}" format="xml"/>
+	</target>
+
+	<target name="alternate-coverage-report">
+		<!--
+			Generate a series of HTML files containing the coverage
+			data in a user-readable form using nested source filesets.
+		-->
+    <cobertura-report destdir="${coverage.html.dir}">
+			<fileset dir="${src.dir}">
+				<include name="**/*.java"/>
+			</fileset>
+		</cobertura-report>
+	</target>
+
+	<target name="jar-xml-resource">
+		<zip destfile="${testcases.lib.dir}/pentaho-reporting-testcases-src.jar">
+			<zipfileset dir="${testcases.src.dir}"/>
+		</zip>
+	</target>
+
+	<target name="zip-reports">
+		<mkdir dir="${dist.dir}"/>
+		<zip destfile="${dist.dir}/open-source-pentaho-reporting-reports-${current.date}.zip">
+			<zipfileset dir="${reports.dir}" prefix="opensource-pentaho-reporting-tests"/>
+			<zipfileset dir="${coverage.dir}" prefix="opensource-pentaho-reporting-coverage"/>
+		</zip>
+	</target>
+
+	<target name="coverage"
+          depends="clean-pentaho-reporting-classes,compile-core,compile-ext,compile-demo,compile-testcases,instrument-pentaho-reporting-classes,test,coverage-report,alternate-coverage-report"
+          description="Compile, instrument ourself, run the tests and generate JUnit and coverage reports."/>
+
+</project>

@@ -1,0 +1,8 @@
+Tablemodel contains 1 rows.
+Column: 0 Name=Measure; DataType=class java.lang.Double
+Checking the data inside
+ValueAt (0, 0) is in a typed column and is of type class java.lang.Double
+Tablemodel contains 1 rows.
+Column: 0 Name=Measure; DataType=class java.lang.Double
+Checking the data inside
+ValueAt (0, 0) is '105331.0'

@@ -1,0 +1,1439 @@
+<project name="master-build" basedir="." default="all">
+
+  <import file="ant/build-init.xml"/>
+  <import file="ant/build-svn.xml"/>
+
+  <target name="init">
+    <property file="${user.home}/.build-pentaho-reporting-master-build.properties"/>
+    <property file="build.properties"/>
+
+    <available property="jdk1.5+" classname="java.lang.StringBuilder"/>
+  </target>
+
+  <target name="libbase" depends="init">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/libbase"/>
+    <mkdir dir="${pool}/jars/libbase"/>
+
+    <ant inheritall="false" antfile="${libbase.location}/build.xml" target="all" dir="${libbase.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/libbase">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/libbase">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="libsparkline" depends="init">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/libsparkline"/>
+    <mkdir dir="${pool}/jars/libsparkline"/>
+
+    <ant inheritall="false" antfile="${libsparkline.location}/build.xml" target="all" dir="${libsparkline.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/libsparkline">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/libsparkline">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="libserializer" depends="libbase">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/libserializer"/>
+    <mkdir dir="${pool}/jars/libserializer"/>
+
+    <copy file="${libserializer.dependency.libbase}" todir="${libserializer.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${libserializer.location}/build.xml" target="all" dir="${libserializer.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/libserializer">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/libserializer">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="pixie" depends="libbase">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/pixie"/>
+    <mkdir dir="${pool}/jars/pixie"/>
+
+    <copy file="${pixie.dependency.libbase}" todir="${pixie.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${pixie.location}/build.xml" target="all" dir="${pixie.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/pixie">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/pixie">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="libformat" depends="libbase">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/libformat"/>
+    <mkdir dir="${pool}/jars/libformat"/>
+
+    <copy file="${libformat.dependency.libbase}" todir="${libformat.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${libformat.location}/build.xml" target="all" dir="${libformat.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/libformat">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/libformat">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="libformula" depends="libbase">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/libformula"/>
+    <mkdir dir="${pool}/jars/libformula"/>
+
+    <copy file="${libformula.dependency.libbase}" todir="${libformula.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${libformula.location}/build.xml" target="all" dir="${libformula.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/libformula">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/libformula">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="libformula-ui" depends="libformula">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/libformula-ui"/>
+    <mkdir dir="${pool}/jars/libformula-ui"/>
+
+    <copy file="${libformula-ui.dependency.libbase}" todir="${libformula-ui.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${libformula-ui.dependency.libformula}" todir="${libformula-ui.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${libformula-ui.location}/build.xml" target="all" dir="${libformula-ui.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/libformula-ui">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/libformula-ui">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="librepository" depends="libbase">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/librepository"/>
+    <mkdir dir="${pool}/jars/librepository"/>
+
+    <copy file="${librepository.dependency.libbase}" todir="${librepository.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${librepository.location}/build.xml" target="all" dir="${librepository.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/librepository">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/librepository">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="libloader" depends="libbase, pixie">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/libloader"/>
+    <mkdir dir="${pool}/jars/libloader"/>
+
+    <copy file="${libloader.dependency.libbase}" todir="${libloader.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${libloader.dependency.pixie}" todir="${libloader.location}/lib/optional"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${libloader.location}/build.xml" target="all" dir="${libloader.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/libloader">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/libloader">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+ 
+  <target name="libxml" depends="libloader">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/libxml"/>
+    <mkdir dir="${pool}/jars/libxml"/>
+
+    <copy file="${libxml.dependency.libbase}" todir="${libxml.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${libxml.dependency.libloader}" todir="${libxml.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${libxml.location}/build.xml" target="all" dir="${libxml.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/libxml">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/libxml">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="libdocbundle" depends="libloader, libxml, librepository">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/libdocbundle"/>
+    <mkdir dir="${pool}/jars/libdocbundle"/>
+
+    <copy file="${libdocbundle.dependency.libbase}" todir="${libdocbundle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${libdocbundle.dependency.libloader}" todir="${libdocbundle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${libdocbundle.dependency.libxml}" todir="${libdocbundle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${libdocbundle.dependency.librepository}" todir="${libdocbundle.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${libdocbundle.location}/build.xml" target="all" dir="${libdocbundle.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/libdocbundle">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/libdocbundle">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="libfonts" depends="libloader">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/libfonts"/>
+    <mkdir dir="${pool}/jars/libfonts"/>
+
+    <copy file="${libfonts.dependency.libbase}" todir="${libfonts.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${libfonts.dependency.libloader}" todir="${libfonts.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${libfonts.location}/build.xml" target="all" dir="${libfonts.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/libfonts">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/libfonts">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>  
+
+  <target name="prc-core"
+          depends="libloader, libxml, librepository, libdocbundle, libfonts, libformat,
+                   libformula, libserializer">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/classic-engine-core"/>
+    <mkdir dir="${pool}/jars/classic-engine-core"/>
+
+    <copy file="${prc-core.dependency.libbase}" todir="${prc-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-core.dependency.libserializer}" todir="${prc-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-core.dependency.libfonts}" todir="${prc-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-core.dependency.libformula}" todir="${prc-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-core.dependency.libloader}" todir="${prc-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-core.dependency.librepository}" todir="${prc-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-core.dependency.libxml}" todir="${prc-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-core.dependency.libdocbundle}" todir="${prc-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-core.dependency.libformat}" todir="${prc-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-core.location}/build.xml" target="all" dir="${prc-core.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/classic-engine-core">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/classic-engine-core">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="prc-ext"
+          depends="prc-core, libsparkline">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/classic-engine-ext"/>
+    <mkdir dir="${pool}/jars/classic-engine-ext"/>
+
+    <copy file="${prc-ext.dependency.libbase}" todir="${prc-ext.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext.dependency.libserializer}" todir="${prc-ext.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext.dependency.libfonts}" todir="${prc-ext.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext.dependency.libformula}" todir="${prc-ext.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext.dependency.libloader}" todir="${prc-ext.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext.dependency.librepository}" todir="${prc-ext.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext.dependency.libxml}" todir="${prc-ext.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext.dependency.libdocbundle}" todir="${prc-ext.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext.dependency.classic-core}" todir="${prc-ext.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext.dependency.libformat}" todir="${prc-ext.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext.dependency.libsparkline}" todir="${prc-ext.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-ext.location}/build.xml" target="all" dir="${prc-ext.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/classic-engine-ext">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/classic-engine-ext">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="prc-demo"
+          depends="prc-ext">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/classic-engine-demo"/>
+    <mkdir dir="${pool}/jars/classic-engine-demo"/>
+
+    <copy file="${prc-demo.dependency.libbase}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.libserializer}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.libfonts}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.libformula}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.libloader}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.librepository}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.libxml}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.libdocbundle}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.classic-core}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.classic-ext}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.pixie}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.libformat}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-demo.dependency.libsparkline}" todir="${prc-demo.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-demo.location}/build.xml" target="all" dir="${prc-demo.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/classic-engine-demo">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/classic-engine-demo">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="prc-ext-pmd" depends="prc-core" if="jdk1.5+">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/classic-engine-ext-pmd"/>
+    <mkdir dir="${pool}/jars/classic-engine-ext-pmd"/>
+
+    <copy file="${prc-ext-pmd.dependency.libbase}" todir="${prc-ext-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-pmd.dependency.libserializer}" todir="${prc-ext-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-pmd.dependency.libfonts}" todir="${prc-ext-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-pmd.dependency.libformula}" todir="${prc-ext-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-pmd.dependency.libloader}" todir="${prc-ext-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-pmd.dependency.librepository}" todir="${prc-ext-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-pmd.dependency.libxml}" todir="${prc-ext-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-pmd.dependency.libdocbundle}" todir="${prc-ext-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-pmd.dependency.classic-core}" todir="${prc-ext-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-pmd.dependency.libformat}" todir="${prc-ext-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-ext-pmd.location}/build.xml" target="all" dir="${prc-ext-pmd.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/classic-engine-ext-pmd">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/classic-engine-ext-pmd">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="prc-ext-kettle" depends="prc-core" if="jdk1.5+">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/classic-engine-ext-kettle"/>
+    <mkdir dir="${pool}/jars/classic-engine-ext-kettle"/>
+
+    <copy file="${prc-ext-kettle.dependency.libbase}" todir="${prc-ext-kettle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-kettle.dependency.libserializer}" todir="${prc-ext-kettle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-kettle.dependency.libfonts}" todir="${prc-ext-kettle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-kettle.dependency.libformula}" todir="${prc-ext-kettle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-kettle.dependency.libloader}" todir="${prc-ext-kettle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-kettle.dependency.librepository}" todir="${prc-ext-kettle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-kettle.dependency.libxml}" todir="${prc-ext-kettle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-kettle.dependency.libdocbundle}" todir="${prc-ext-kettle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-kettle.dependency.classic-core}" todir="${prc-ext-kettle.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-kettle.dependency.libformat}" todir="${prc-ext-kettle.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-ext-kettle.location}/build.xml" target="all" dir="${prc-ext-kettle.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/classic-engine-ext-kettle">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/classic-engine-ext-kettle">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="prc-ext-sampledata" depends="prc-core" if="jdk1.5+">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/classic-engine-ext-sampledata"/>
+    <mkdir dir="${pool}/jars/classic-engine-ext-sampledata"/>
+
+    <copy file="${prc-ext-sampledata.dependency.libbase}" todir="${prc-ext-sampledata.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-sampledata.dependency.libserializer}" todir="${prc-ext-sampledata.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-sampledata.dependency.libfonts}" todir="${prc-ext-sampledata.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-sampledata.dependency.libformula}" todir="${prc-ext-sampledata.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-sampledata.dependency.libloader}" todir="${prc-ext-sampledata.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-sampledata.dependency.librepository}" todir="${prc-ext-sampledata.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-sampledata.dependency.libxml}" todir="${prc-ext-sampledata.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-sampledata.dependency.libdocbundle}" todir="${prc-ext-sampledata.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-sampledata.dependency.classic-core}" todir="${prc-ext-sampledata.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-sampledata.dependency.libformat}" todir="${prc-ext-sampledata.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-ext-sampledata.location}/build.xml" target="all" dir="${prc-ext-sampledata.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/classic-engine-ext-sampledata">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/classic-engine-ext-sampledata">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="prc-ext-xpath" depends="prc-core" if="jdk1.5+">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/classic-engine-ext-xpath"/>
+    <mkdir dir="${pool}/jars/classic-engine-ext-xpath"/>
+
+    <copy file="${prc-ext-xpath.dependency.libbase}" todir="${prc-ext-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-xpath.dependency.libserializer}" todir="${prc-ext-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-xpath.dependency.libfonts}" todir="${prc-ext-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-xpath.dependency.libformula}" todir="${prc-ext-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-xpath.dependency.libloader}" todir="${prc-ext-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-xpath.dependency.librepository}" todir="${prc-ext-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-xpath.dependency.libxml}" todir="${prc-ext-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-xpath.dependency.libdocbundle}" todir="${prc-ext-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-xpath.dependency.classic-core}" todir="${prc-ext-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-xpath.dependency.libformat}" todir="${prc-ext-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-ext-xpath.location}/build.xml" target="all" dir="${prc-ext-xpath.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/classic-engine-ext-xpath">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/classic-engine-ext-xpath">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="prc-ext-mondrian" depends="prc-core" if="jdk1.5+">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/classic-engine-ext-mondrian"/>
+    <mkdir dir="${pool}/jars/classic-engine-ext-mondrian"/>
+
+    <copy file="${prc-ext-mondrian.dependency.libbase}" todir="${prc-ext-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-mondrian.dependency.libserializer}" todir="${prc-ext-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-mondrian.dependency.libfonts}" todir="${prc-ext-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-mondrian.dependency.libformula}" todir="${prc-ext-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-mondrian.dependency.libloader}" todir="${prc-ext-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-mondrian.dependency.librepository}" todir="${prc-ext-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-mondrian.dependency.libxml}" todir="${prc-ext-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-mondrian.dependency.libdocbundle}" todir="${prc-ext-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-mondrian.dependency.classic-core}" todir="${prc-ext-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-mondrian.dependency.libformat}" todir="${prc-ext-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-ext-mondrian.location}/build.xml" target="all" dir="${prc-ext-mondrian.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/classic-engine-ext-mondrian">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/classic-engine-ext-mondrian">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="prc-ext-olap4j" depends="prc-core" if="jdk1.5+">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/classic-engine-ext-olap4j"/>
+    <mkdir dir="${pool}/jars/classic-engine-ext-olap4j"/>
+
+    <copy file="${prc-ext-olap4j.dependency.libbase}" todir="${prc-ext-olap4j.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-olap4j.dependency.libserializer}" todir="${prc-ext-olap4j.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-olap4j.dependency.libfonts}" todir="${prc-ext-olap4j.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-olap4j.dependency.libformula}" todir="${prc-ext-olap4j.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-olap4j.dependency.libloader}" todir="${prc-ext-olap4j.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-olap4j.dependency.librepository}" todir="${prc-ext-olap4j.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-olap4j.dependency.libxml}" todir="${prc-ext-olap4j.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-olap4j.dependency.libdocbundle}" todir="${prc-ext-olap4j.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-olap4j.dependency.classic-core}" todir="${prc-ext-olap4j.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-olap4j.dependency.libformat}" todir="${prc-ext-olap4j.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-ext-olap4j.location}/build.xml" target="all" dir="${prc-ext-olap4j.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/classic-engine-ext-olap4j">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/classic-engine-ext-olap4j">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="legacy-charts" depends="prc-core" if="jdk1.5+">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/legacy-charts"/>
+    <mkdir dir="${pool}/jars/legacy-charts"/>
+
+    <copy file="${legacy-charts.dependency.libbase}" todir="${legacy-charts.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-charts.dependency.libserializer}" todir="${legacy-charts.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-charts.dependency.libfonts}" todir="${legacy-charts.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-charts.dependency.libformula}" todir="${legacy-charts.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-charts.dependency.libloader}" todir="${legacy-charts.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-charts.dependency.librepository}" todir="${legacy-charts.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-charts.dependency.libxml}" todir="${legacy-charts.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-charts.dependency.libdocbundle}" todir="${legacy-charts.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-charts.dependency.classic-core}" todir="${legacy-charts.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-charts.dependency.libformat}" todir="${legacy-charts.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${legacy-charts.location}/build.xml" target="all" dir="${legacy-charts.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/legacy-charts">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/legacy-charts">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="legacy-functions" depends="prc-core" if="jdk1.5+">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/legacy-functions"/>
+    <mkdir dir="${pool}/jars/legacy-functions"/>
+
+    <copy file="${legacy-functions.dependency.libbase}" todir="${legacy-functions.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-functions.dependency.libserializer}" todir="${legacy-functions.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-functions.dependency.libfonts}" todir="${legacy-functions.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-functions.dependency.libformula}" todir="${legacy-functions.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-functions.dependency.libloader}" todir="${legacy-functions.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-functions.dependency.librepository}" todir="${legacy-functions.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-functions.dependency.libxml}" todir="${legacy-functions.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-functions.dependency.libdocbundle}" todir="${legacy-functions.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-functions.dependency.classic-core}" todir="${legacy-functions.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${legacy-functions.dependency.libformat}" todir="${legacy-functions.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${legacy-functions.location}/build.xml" target="all" dir="${legacy-functions.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/legacy-functions">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/legacy-functions">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="wizard-core"
+          depends="prc-ext, prc-ext-kettle, prc-ext-pmd">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/wizard-core"/>
+    <mkdir dir="${pool}/jars/wizard-core"/>
+
+    <copy file="${prc-wizard-core.dependency.libbase}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.libserializer}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.libfonts}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.libformula}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.libloader}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.librepository}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.libxml}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.libdocbundle}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.classic-core}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.classic-ext}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.classic-ext-pmd}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.classic-ext-kettle}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.libformat}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-wizard-core.dependency.libsparkline}" todir="${prc-wizard-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-wizard-core.location}/build.xml" target="all" dir="${prc-wizard-core.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/wizard-core">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/wizard-core">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="prc-tests"
+          depends="prc-demo">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/classic-engine-tests"/>
+    <mkdir dir="${pool}/jars/classic-engine-tests"/>
+
+    <copy file="${prc-tests.dependency.libbase}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.libserializer}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.libfonts}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.libformula}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.libloader}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.librepository}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.libxml}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.libdocbundle}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.classic-core}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.classic-ext}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.classic-demo}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.pixie}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.libformat}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-tests.dependency.libsparkline}" todir="${prc-tests.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-tests.location}/build.xml" target="all" dir="${prc-tests.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/classic-engine-tests">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/classic-engine-tests">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+  
+
+
+  <target name="prc-ext-rdparser"
+          depends="prc-core, prc-ext-kettle, prc-ext-mondrian, prc-ext-pmd, prc-ext-sampledata, prc-ext-xpath,
+          legacy-charts, legacy-functions">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/classic-engine-ext-reportdesigner-parser"/>
+    <mkdir dir="${pool}/jars/classic-engine-ext-reportdesigner-parser"/>
+
+    <copy file="${prc-ext-rdparser.dependency.libbase}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.libserializer}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.libfonts}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.libformula}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.libloader}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.librepository}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.libxml}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.libdocbundle}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.classic-core}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.libformat}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.classic-ext-pmd}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.classic-ext-xpath}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.classic-ext-sampledata}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.classic-ext-mondrian}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.legacy-charts}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-ext-rdparser.dependency.legacy-functions}" todir="${prc-ext-rdparser.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-ext-rdparser.location}/build.xml" target="all" dir="${prc-ext-rdparser.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/classic-engine-ext-reportdesigner-parser">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/classic-engine-ext-reportdesigner-parser">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="prc-rd-core"
+          depends="prc-core, libformula-ui, legacy-charts, legacy-functions, prc-ext-sampledata">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/report-designer"/>
+    <mkdir dir="${pool}/jars/report-designer"/>
+
+    <copy file="${prc-rd-core.dependency.libbase}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.libserializer}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.libfonts}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.libformula}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.libloader}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.librepository}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.libxml}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.libdocbundle}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.classic-core}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.libformat}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.classic-ext-sampledata}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.legacy-charts}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.legacy-functions}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-core.dependency.libformula-ui}" todir="${prc-rd-core.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-rd-core.location}/build.xml" target="all" dir="${prc-rd-core.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/report-designer">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/report-designer">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="prc-rd-ds-mondrian"
+          depends="prc-rd-core, prc-ext-mondrian">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/report-designer-datasource-mondrian"/>
+    <mkdir dir="${pool}/jars/report-designer-datasource-mondrian"/>
+
+    <copy file="${prc-rd-ds-mondrian.dependency.libbase}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-mondrian.dependency.libserializer}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-mondrian.dependency.libfonts}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-mondrian.dependency.libformula}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-mondrian.dependency.libloader}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-mondrian.dependency.librepository}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-mondrian.dependency.libxml}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-mondrian.dependency.libdocbundle}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-mondrian.dependency.classic-core}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-mondrian.dependency.libformat}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-mondrian.dependency.classic-ext-mondrian}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-mondrian.dependency.report-designer-core}" todir="${prc-rd-ds-mondrian.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-rd-ds-mondrian.location}/build.xml" target="all" dir="${prc-rd-ds-mondrian.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/report-designer-datasource-mondrian">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/report-designer-datasource-mondrian">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="prc-rd-ds-xpath"
+          depends="prc-rd-core, prc-ext-xpath">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/report-designer-datasource-xpath"/>
+    <mkdir dir="${pool}/jars/report-designer-datasource-xpath"/>
+
+    <copy file="${prc-rd-ds-xpath.dependency.libbase}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-xpath.dependency.libserializer}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-xpath.dependency.libfonts}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-xpath.dependency.libformula}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-xpath.dependency.libloader}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-xpath.dependency.librepository}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-xpath.dependency.libxml}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-xpath.dependency.libdocbundle}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-xpath.dependency.classic-core}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-xpath.dependency.libformat}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-xpath.dependency.classic-ext-xpath}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-xpath.dependency.report-designer-core}" todir="${prc-rd-ds-xpath.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-rd-ds-xpath.location}/build.xml" target="all" dir="${prc-rd-ds-xpath.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/report-designer-datasource-xpath">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/report-designer-datasource-xpath">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="mqleditor" depends="libloader">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/mqleditor"/>
+    <mkdir dir="${pool}/jars/mqleditor"/>
+
+    <copy file="${mqleditor.dependency.libbase}" todir="${mqleditor.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${mqleditor.dependency.libloader}" todir="${mqleditor.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${mqleditor.location}/build.xml" target="all" dir="${mqleditor.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/mqleditor">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/mqleditor">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+  <target name="prc-rd-ds-pmd"
+          depends="prc-rd-core, prc-ext-pmd">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/report-designer-datasource-pmd"/>
+    <mkdir dir="${pool}/jars/report-designer-datasource-pmd"/>
+
+    <copy file="${prc-rd-ds-pmd.dependency.libbase}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-pmd.dependency.libserializer}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-pmd.dependency.libfonts}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-pmd.dependency.libformula}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-pmd.dependency.libloader}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-pmd.dependency.librepository}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-pmd.dependency.libxml}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-pmd.dependency.libdocbundle}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-pmd.dependency.classic-core}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-pmd.dependency.libformat}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-pmd.dependency.classic-ext-pmd}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-ds-pmd.dependency.report-designer-core}" todir="${prc-rd-ds-pmd.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-rd-ds-pmd.location}/build.xml" target="all" dir="${prc-rd-ds-pmd.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/report-designer-datasource-pmd">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/report-designer-datasource-pmd">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+
+
+  <target name="prc-rd-extensions-pentaho"
+          depends="prc-rd-core, prc-ext-pmd, prc-ext-mondrian, prc-ext-sampledata, prc-ext-xpath">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/report-designer-extensions-pentaho"/>
+    <mkdir dir="${pool}/jars/report-designer-extensions-pentaho"/>
+
+    <copy file="${prc-rd-extensions-pentaho.dependency.libbase}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.libserializer}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.libfonts}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.libformula}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.libloader}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.librepository}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.libxml}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.libdocbundle}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.classic-core}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.libformat}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.report-designer-core}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.classic-ext-mondrian}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.classic-ext-pmd}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.classic-ext-sampledata}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.classic-ext-xpath}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+    <copy file="${prc-rd-extensions-pentaho.dependency.report-designer-core}" todir="${prc-rd-extensions-pentaho.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-rd-extensions-pentaho.location}/build.xml" target="all" dir="${prc-rd-extensions-pentaho.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/report-designer-extensions-pentaho">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/report-designer-extensions-pentaho">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="prc-rd-all"
+          depends="prc-rd-core, prc-ext-rdparser, prc-rd-ds-mondrian, prc-rd-ds-xpath, prc-rd-ds-pmd">
+    <mkdir dir="${pool}/temp"/>
+    <mkdir dir="${pool}/dist/report-designer-all"/>
+    <mkdir dir="${pool}/jars/report-designer-all"/>
+
+    <copy file="${prc-rd-all.dependency.prc-ext-rdparser}" todir="${prc-rd-all.location}/lib"
+          overwrite="true" failonerror="false"/>
+
+    <ant inheritall="false" antfile="${prc-rd-ds-pmd.location}/build.xml" target="all" dir="${prc-rd-ds-pmd.location}">
+      <property name="build.target-dir" value="${pool}/temp/"/>
+    </ant>
+
+    <copy todir="${pool}/jars/report-designer-datasource-pmd">
+      <fileset dir="${pool}/temp">
+        <include name="*.jar"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${pool}/dist/report-designer-datasource-pmd">
+      <fileset dir="${pool}/temp">
+        <include name="*.tar.gz"/>
+        <include name="*.zip"/>
+      </fileset>
+    </copy>
+
+    <delete dir="${pool}/temp"/>
+  </target>
+
+  <target name="svn-download" depends="init,install-svnant">
+    <svn-update url="${libbase.svn-location}" target="${libbase.location}"/>
+    <svn-update url="${libserializer.svn-location}" target="${libserializer.location}"/>
+    <svn-update url="${pixie.svn-location}" target="${pixie.location}"/>
+    <svn-update url="${libformat.svn-location}" target="${libformat.location}"/>
+    <svn-update url="${libformula.svn-location}" target="${libformula.location}"/>
+    <svn-update url="${libformula-ui.svn-location}" target="${libformula-ui.location}"/>
+    <svn-update url="${libloader.svn-location}" target="${libloader.location}"/>
+    <svn-update url="${libxml.svn-location}" target="${libxml.location}"/>
+    <svn-update url="${librepository.svn-location}" target="${librepository.location}"/>
+    <svn-update url="${libdocbundle.svn-location}" target="${libdocbundle.location}"/>
+    <svn-update url="${libfonts.svn-location}" target="${libfonts.location}"/>
+    <svn-update url="${libsparkline.svn-location}" target="${libsparkline.location}"/>
+    <svn-update url="${prc-core.svn-location}" target="${prc-core.location}"/>
+    <svn-update url="${prc-ext.svn-location}" target="${prc-ext.location}"/>
+    <svn-update url="${prc-demo.svn-location}" target="${prc-demo.location}"/>
+    <svn-update url="${prc-tests.svn-location}" target="${prc-tests.location}"/>
+    <svn-update url="${prc-ext-kettle.svn-location}" target="${prc-ext-kettle.location}"/>
+    <svn-update url="${prc-ext-sampledata.svn-location}" target="${prc-ext-sampledata.location}"/>
+    <svn-update url="${prc-ext-xpath.svn-location}" target="${prc-ext-xpath.location}"/>
+    <svn-update url="${prc-ext-pmd.svn-location}" target="${prc-ext-pmd.location}"/>
+    <svn-update url="${prc-ext-olap4j.svn-location}" target="${prc-ext-olap4j.location}"/>
+    <svn-update url="${prc-ext-mondrian.svn-location}" target="${prc-ext-mondrian.location}"/>
+    <svn-update url="${prc-ext-hibernate.svn-location}" target="${prc-ext-hibernate.location}"/>
+    <svn-update url="${prc-ext-rdparser.svn-location}" target="${prc-ext-rdparser.location}"/>
+    <svn-update url="${legacy-charts.svn-location}" target="${legacy-charts.location}"/>
+    <svn-update url="${legacy-functions.svn-location}" target="${legacy-functions.location}"/>
+    <svn-update url="${prc-wizard-swing.svn-location}" target="${prc-wizard-swing.location}"/>
+    <svn-update url="${prc-wizard-core.svn-location}" target="${prc-wizard-core.location}"/>
+    <svn-update url="${configuration-ui.svn-location}" target="${configuration-ui.location}"/>
+    <svn-update url="${mqleditor.svn-location}" target="${mqleditor.location}"/>
+    <svn-update url="${prc-rd-core.svn-location}" target="${prc-rd-core.location}"/>
+    <svn-update url="${prc-rd-ds-mondrian.svn-location}" target="${prc-rd-ds-mondrian.location}"/>
+    <svn-update url="${prc-rd-ds-kettle.svn-location}" target="${prc-rd-ds-kettle.location}"/>
+    <svn-update url="${prc-rd-ds-xpath.svn-location}" target="${prc-rd-ds-xpath.location}"/>
+    <svn-update url="${prc-rd-ds-olap4j.svn-location}" target="${prc-rd-ds-olap4j.location}"/>
+    <svn-update url="${prc-rd-ds-pmd.svn-location}" target="${prc-rd-ds-pmd.location}"/>
+    <svn-update url="${prc-rd-ds-hibernate.svn-location}" target="${prc-rd-ds-hibernate.location}"/>
+    <svn-update url="${prc-rd-extensions-pentaho.svn-location}" target="${prc-rd-extensions-pentaho.location}"/>
+    <svn-update url="${prc-rd-extensions-legacy-charts.svn-location}" target="${prc-rd-extensions-legacy-charts.location}"/>
+    <svn-update url="${prc-rd-all.svn-location}" target="${prc-rd-all.location}"/>
+    <svn-update url="${thirdparty.pentaho-chartbeans.svn-location}" target="${thirdparty.pentaho-chartbeans.location}"/>
+    <svn-update url="${thirdparty.pentaho-xul.svn-location}" target="${thirdparty.pentaho-xul.location}"/>
+    <svn-update url="${thirdparty.pentaho-database.svn-location}" target="${thirdparty.pentaho-database.location}"/>
+  </target>
+
+  <target name="all" depends="libbase, libserializer, pixie, libformat, libformula, libformula-ui, libloader,
+                              libxml, librepository, libdocbundle, libfonts, prc-core, prc-ext, prc-demo,
+                              prc-tests, prc-ext-kettle, prc-ext-sampledata, prc-ext-xpath, prc-ext-pmd,
+                              prc-ext-olap4j, wizard-core, legacy-charts, legacy-functions, prc-ext-rdparser,
+                              mqleditor, prc-rd-core, prc-rd-ds-mondrian, prc-rd-ds-xpath, prc-rd-ds-pmd,
+                              prc-rd-extensions-pentaho, prc-rd-all"/>
+  
+</project>
