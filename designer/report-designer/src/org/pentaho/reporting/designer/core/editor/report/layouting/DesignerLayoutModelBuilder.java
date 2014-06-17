@@ -17,19 +17,9 @@
 
 package org.pentaho.reporting.designer.core.editor.report.layouting;
 
-import org.pentaho.reporting.engine.classic.core.ReportElement;
-import org.pentaho.reporting.engine.classic.core.filter.types.bands.SubReportType;
 import org.pentaho.reporting.engine.classic.core.layout.TextProducer;
 import org.pentaho.reporting.engine.classic.core.layout.build.DefaultLayoutModelBuilder;
-import org.pentaho.reporting.engine.classic.core.layout.model.BlockRenderBox;
-import org.pentaho.reporting.engine.classic.core.layout.model.RenderBox;
-import org.pentaho.reporting.engine.classic.core.layout.model.context.BoxDefinition;
-import org.pentaho.reporting.engine.classic.core.layout.model.context.StaticBoxLayoutProperties;
-import org.pentaho.reporting.engine.classic.core.layout.output.OutputProcessorFeature;
-import org.pentaho.reporting.engine.classic.core.layout.style.SimpleStyleSheet;
-import org.pentaho.reporting.engine.classic.core.layout.style.SubReportStyleSheet;
 import org.pentaho.reporting.engine.classic.core.style.AbstractStyleSheet;
-import org.pentaho.reporting.engine.classic.core.style.BandStyleKeys;
 import org.pentaho.reporting.engine.classic.core.style.ElementStyleKeys;
 import org.pentaho.reporting.engine.classic.core.style.StyleKey;
 import org.pentaho.reporting.engine.classic.core.style.StyleSheet;
@@ -51,7 +41,7 @@ public class DesignerLayoutModelBuilder extends DefaultLayoutModelBuilder
       this.parent = parent;
 
       final float minHeightDefined = (float) parent.getDoubleStyleProperty(ElementStyleKeys.MIN_HEIGHT, 0);
-      this.minHeight = Math.max (10f, minHeightDefined);
+      this.minHeight = Math.max(10f, minHeightDefined);
     }
 
     public StyleSheet getParent()
@@ -100,38 +90,8 @@ public class DesignerLayoutModelBuilder extends DefaultLayoutModelBuilder
     return renderComponentFactory.createTextProducer();
   }
 
-  public void startSubFlow(final ReportElement element)
+  protected StyleSheet preProcessSubreportStyle(final StyleSheet resolverStyleSheet)
   {
-    final StyleSheet resolverStyleSheet = element.getComputedStyle();
-
-    final RenderBox box;
-    if (getMetaData().isFeatureSupported(OutputProcessorFeature.STRICT_COMPATIBILITY))
-    {
-      final StyleSheet styleSheet = new DesignerSubReportStyleSheet(new SubReportStyleSheet
-          (resolverStyleSheet.getBooleanStyleProperty(BandStyleKeys.PAGEBREAK_BEFORE),
-              (resolverStyleSheet.getBooleanStyleProperty(BandStyleKeys.PAGEBREAK_AFTER))));
-
-      final SimpleStyleSheet reportStyle = new SimpleStyleSheet(styleSheet);
-      final BoxDefinition boxDefinition = getRenderNodeFactory().getBoxDefinition(reportStyle);
-      box = new BlockRenderBox
-          (reportStyle, element.getObjectID(), boxDefinition, SubReportType.INSTANCE, element.getAttributes(), null);
-    }
-    else
-    {
-      box = getRenderNodeFactory().produceRenderBox
-          (element, new DesignerSubReportStyleSheet(resolverStyleSheet), BandStyleKeys.LAYOUT_BLOCK, getStateKey());
-    }
-
-    box.getStaticBoxLayoutProperties().setPlaceholderBox(StaticBoxLayoutProperties.PlaceholderType.SECTION);
-    if (element.getName() != null)
-    {
-      box.setName("Banded-SubReport-Section" + ": name=" + element.getName());
-    }
-    else
-    {
-      box.setName("Banded-SubReport-Section");
-    }
-
-    pushBoxToContext(box, false);
+    return new DesignerSubReportStyleSheet(resolverStyleSheet);
   }
 }

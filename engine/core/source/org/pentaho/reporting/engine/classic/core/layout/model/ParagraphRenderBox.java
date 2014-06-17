@@ -351,4 +351,14 @@ public final class ParagraphRenderBox extends BlockRenderBox
   {
     super.setCachedWidth(cachedWidth);
   }
+
+  public RenderNode findNodeById(final InstanceID instanceId)
+  {
+    if (instanceId == getInstanceId())
+    {
+      return this;
+    }
+
+    return pool.findNodeById(instanceId);
+  }
 }

@@ -252,9 +252,19 @@ public class DefaultRenderNodeFactory implements RenderNodeFactory
 
   public RenderBox produceSubReportPlaceholder(final ReportElement report,
                                                final StyleSheet style,
-                                               final ReportStateKey stateKey)
+                                               final ReportStateKey stateKey,
+                                               final boolean inlineContext)
   {
-    final String layout = (String) style.getStyleProperty(BandStyleKeys.LAYOUT, BandStyleKeys.LAYOUT_BLOCK);
+    final String layout;
+    if (inlineContext)
+    {
+      layout = BandStyleKeys.LAYOUT_INLINE;
+    }
+    else
+    {
+      layout = (String) style.getStyleProperty(BandStyleKeys.LAYOUT, BandStyleKeys.LAYOUT_BLOCK);
+    }
+
     final RenderBox box =
         createBox(layout, stateKey, style, report.getElementType(), report.getAttributes(), report.getObjectID());
     box.getStaticBoxLayoutProperties().setPlaceholderBox(StaticBoxLayoutProperties.PlaceholderType.COMPLEX);

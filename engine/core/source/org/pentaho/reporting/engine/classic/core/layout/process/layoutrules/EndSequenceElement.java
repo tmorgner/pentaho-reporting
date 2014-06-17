@@ -18,6 +18,7 @@
 package org.pentaho.reporting.engine.classic.core.layout.process.layoutrules;
 
 import org.pentaho.reporting.engine.classic.core.layout.model.InlineRenderBox;
+import org.pentaho.reporting.engine.classic.core.layout.model.RenderBox;
 import org.pentaho.reporting.engine.classic.core.layout.model.RenderNode;
 import org.pentaho.reporting.engine.classic.core.layout.model.context.BoxDefinition;
 import org.pentaho.reporting.engine.classic.core.layout.model.context.StaticBoxLayoutProperties;
@@ -44,7 +45,7 @@ public class EndSequenceElement implements InlineSequenceElement
    */
   public long getMinimumWidth(final RenderNode node)
   {
-    final InlineRenderBox box = (InlineRenderBox) node;
+    final RenderBox box = (RenderBox) node;
     final StaticBoxLayoutProperties blp = box.getStaticBoxLayoutProperties();
     final BoxDefinition bdef = box.getBoxDefinition();
     return blp.getBorderRight() + bdef.getPaddingRight() + blp.getMarginRight();
@@ -63,7 +64,7 @@ public class EndSequenceElement implements InlineSequenceElement
 
   public boolean isPreserveWhitespace(final RenderNode node)
   {
-    final InlineRenderBox box = (InlineRenderBox) node;
+    final RenderBox box = (RenderBox) node;
     final StaticBoxLayoutProperties blp = box.getStaticBoxLayoutProperties();
     return blp.isPreserveSpace();
   }

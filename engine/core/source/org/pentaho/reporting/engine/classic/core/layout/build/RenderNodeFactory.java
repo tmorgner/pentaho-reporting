@@ -34,7 +34,8 @@ public interface RenderNodeFactory extends Cloneable
 
   public RenderBox produceSubReportPlaceholder(final ReportElement element,
                                                final StyleSheet style,
-                                               final ReportStateKey stateKey);
+                                               final ReportStateKey stateKey,
+                                               final boolean inlineContext);
 
   public RenderBox produceSectionBox(final String layoutType,
                                      final ReportStateKey stateKey);

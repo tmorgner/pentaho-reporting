@@ -63,9 +63,10 @@ public class WatermarkLayoutModelBuilder extends LayoutModelBuilderWrapper
 
     public RenderBox produceSubReportPlaceholder(final ReportElement element,
                                                  final StyleSheet style,
-                                                 final ReportStateKey stateKey)
+                                                 final ReportStateKey stateKey,
+                                                 final boolean inlineContext)
     {
-      return backend.produceSubReportPlaceholder(element, style, stateKey);
+      return backend.produceSubReportPlaceholder(element, style, stateKey, inlineContext);
     }
 
     public RenderBox produceSectionBox(final String layoutType, final ReportStateKey stateKey)
