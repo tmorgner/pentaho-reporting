@@ -189,7 +189,13 @@ This is the build file for the collection of Shims modules to provide support
   <target name="continuous-local" depends="init">
     <for list="${modules}" param="module" trim="true">
       <sequential>
-        <ant antfile="build.xml" dir="@{module}" inheritall="false" target="continuous-local" />
+        <ant antfile="build.xml" dir="@{module}" inheritall="false">
+          <target name="clean"/>
+          <target name="resolve"/>
+          <target name="test"/>
+          <target name="dist"/>
+          <target name="publish-local"/>
+        </ant>
       </sequential>
     </for>
   </target>
@@ -197,7 +203,12 @@ This is the build file for the collection of Shims modules to provide support
   <target name="continuous-local-testless" depends="init">
     <for list="${modules}" param="module" trim="true">
       <sequential>
-        <ant antfile="build.xml" dir="@{module}" inheritall="false" target="continuous-local-testless" />
+        <ant antfile="build.xml" dir="@{module}" inheritall="false">
+          <target name="clean"/>
+          <target name="resolve"/>
+          <target name="dist"/>
+          <target name="publish-local"/>
+        </ant>
       </sequential>
     </for>
   </target>

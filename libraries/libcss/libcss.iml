@@ -10,7 +10,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="flute" exported="" />
     <orderEntry type="module" module-name="libloader" exported="" />
-    <orderEntry type="module" module-name="libfonts" />
+    <orderEntry type="module" module-name="libfonts" exported="" />
   </component>
 </module>
 
