@@ -61,7 +61,7 @@ public abstract class AbstractTableOutputProcessor extends AbstractOutputProcess
 
   public boolean isNeedAlignedPage()
   {
-    return getMetaData().isFeatureSupported(OutputProcessorFeature.ITERATIVE_RENDERING) == false;
+    return getMetaData().isFeatureSupported(OutputProcessorFeature.UNALIGNED_PAGEBANDS) == false;
   }
 
   protected final void processPaginationContent(final LogicalPageKey logicalPageKey, final LogicalPageBox logicalPage)

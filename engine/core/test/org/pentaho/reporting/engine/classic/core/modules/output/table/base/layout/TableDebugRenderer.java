@@ -17,6 +17,8 @@
 
 package org.pentaho.reporting.engine.classic.core.modules.output.table.base.layout;
 
+import org.pentaho.reporting.engine.classic.core.ReportDefinition;
+import org.pentaho.reporting.engine.classic.core.function.ProcessingContext;
 import org.pentaho.reporting.engine.classic.core.layout.AbstractRenderer;
 import org.pentaho.reporting.engine.classic.core.layout.model.LogicalPageBox;
 import org.pentaho.reporting.engine.classic.core.layout.model.PageBreakPositionList;
@@ -58,6 +60,11 @@ public class TableDebugRenderer extends AbstractRenderer
     this.cleanPaginatedBoxesStep = new CleanPaginatedBoxesStep();
     this.applyPageShiftValuesStep = new ApplyPageShiftValuesStep();
     this.applyAutoCommitPageHeaderStep = new ApplyAutoCommitPageHeaderStep();
+  }
+
+  public void startReport(final ReportDefinition report, final ProcessingContext processingContext)
+  {
+    super.startReport(report, processingContext);
   }
 
   protected boolean isPageFinished()

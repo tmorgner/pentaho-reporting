@@ -1298,11 +1298,7 @@
       <empty-cell/>
     </row>
     <row height="9.833">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="relational-group"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:group-fields="AGELT,BURLT"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Bureau"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -1310,9 +1306,7 @@
       <empty-cell/>
     </row>
     <row height="12.6">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="sub-group-body"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -5057,10 +5051,7 @@
       <empty-cell/>
     </row>
     <row height="20.933">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="group-data-body"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Acount"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -7689,11 +7680,7 @@
       <empty-cell/>
     </row>
     <row height="9.833">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="relational-group"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:group-fields="AGELT,BURLT"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Bureau"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -7701,9 +7688,7 @@
       <empty-cell/>
     </row>
     <row height="0.935">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="sub-group-body"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -10716,10 +10701,7 @@
       <empty-cell/>
     </row>
     <row height="0.898">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="group-data-body"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Acount"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -26751,9 +26733,7 @@
       <empty-cell/>
     </row>
     <row height="20.601">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="sub-group-body"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -28831,11 +28811,7 @@
       <empty-cell/>
     </row>
     <row height="4.601">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="relational-group"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:group-fields="AGELT,BURLT"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Bureau"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -28860,10 +28836,7 @@
       <empty-cell/>
     </row>
     <row height="20.23">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="group-data-body"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Acount"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -35580,11 +35553,7 @@
       <empty-cell/>
     </row>
     <row height="9.833">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="relational-group"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:group-fields="AGELT,BURLT"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Bureau"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -35592,10 +35561,7 @@
       <empty-cell/>
     </row>
     <row height="2">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="details-header"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Acount"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -35605,20 +35571,22 @@
     <row height="9.23">
       <empty-cell/>
       <empty-cell/>
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="OMBACCT"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="0.8">
       <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="black" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="black" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="black" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="black" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="3.303">
@@ -41449,11 +41417,7 @@
       <empty-cell/>
     </row>
     <row height="9.564">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="relational-group"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:group-fields="AGELT,BURLT"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Bureau"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -41474,10 +41438,7 @@
       <empty-cell/>
     </row>
     <row height="0.531">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="group-data-body"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Acount"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell border-bottom-color="black" border-bottom-width="0.5" border-bottom-style="solid">
       </empty-cell>
       <empty-cell border-bottom-color="black" border-bottom-width="0.5" border-bottom-style="solid">
@@ -44360,11 +44321,7 @@
       <empty-cell/>
     </row>
     <row height="5.768">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="relational-group"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:group-fields="AGELT,BURLT"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Bureau"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -44389,10 +44346,7 @@
       <empty-cell/>
     </row>
     <row height="21.397">
-      <empty-cell>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="group-data-body"/>
-        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Acount"/>
-      </empty-cell>
+      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>

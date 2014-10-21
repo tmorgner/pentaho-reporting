@@ -29,7 +29,7 @@
       </cell>
     </row>
     <row height="2">
-      <empty-cell border-top-color="blue" border-top-width="0.5" border-top-style="solid">
+      <empty-cell border-top-color="blue" border-top-width="0.5" border-top-style="solid" border-bottom-color="yellow" border-bottom-width="2.0" border-bottom-style="solid">
       </empty-cell>
     </row>
   </table>

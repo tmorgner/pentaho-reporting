@@ -30,7 +30,6 @@ import org.pentaho.reporting.engine.classic.core.layout.model.RenderNode;
 import org.pentaho.reporting.engine.classic.core.layout.output.ContentProcessingException;
 import org.pentaho.reporting.engine.classic.core.layout.output.OutputProcessorMetaData;
 import org.pentaho.reporting.engine.classic.core.wizard.DataSchema;
-import org.pentaho.reporting.libraries.base.performance.NoOpPerformanceMonitorContext;
 
 /**
  * A class holding the current layouter state. This class acts as a single point of caching for all re-layouting
@@ -65,7 +64,7 @@ public class BandLayouter
       runtime.setDataSchema(dataSchema);
       
       final DesignerRenderer renderer = new DesignerRenderer(context.getOutputProcessor());
-      renderer.startReport(report, context.getRuntime().getProcessingContext(), NoOpPerformanceMonitorContext.INSTANCE);
+      renderer.startReport(report, context.getRuntime().getProcessingContext());
       final LogicalPageBox logicalPageBox = renderer.getPageBox();
       final DesignerLayoutBuilder builder = new DesignerLayoutBuilder(context.getMetaData());
       final BlockRenderBox contentArea = logicalPageBox.getContentArea();

@@ -218,7 +218,7 @@
       </empty-cell>
       <empty-cell/>
     </row>
-    <row height="44">
+    <row height="30">
       <empty-cell>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="report-footer"/>
       </empty-cell>
@@ -229,7 +229,9 @@
       <empty-cell/>
     </row>
     <row height="3">
-      <empty-cell/>
+      <empty-cell>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="page-footer"/>
+      </empty-cell>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>

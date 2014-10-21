@@ -483,4 +483,16 @@ public final class FastGlobalView implements DataRow
     System.arraycopy(columnOldValue, 0, newOldColumnValue, 0, length);
     this.columnOldValue = newOldColumnValue;
   }
+
+  public void validateChangedFlags()
+  {
+    for (int i = 0; i < length; i++)
+    {
+      final Boolean b = columnChanged[i];
+      if (b == null)
+      {
+        throw new IllegalStateException("Validate failed: " + columnNames[i]);
+      }
+    }
+  }
 }

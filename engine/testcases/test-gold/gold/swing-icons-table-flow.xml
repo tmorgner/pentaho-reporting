@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <layout-output xmlns="http://reporting.pentaho.org/namespaces/output/layout-output/table/1.0">
-  <table col-count="4" row-count="16">
+  <table col-count="4" row-count="15">
     <cols>
       <column width="96"/>
       <column width="138"/>
@@ -243,7 +243,7 @@
       </empty-cell>
     </row>
     <row height="20">
-      <cell background-color="#ccffcc" row-span="1" col-span="2">
+      <cell border-bottom-color="black" border-bottom-width="0.5" border-bottom-style="solid" background-color="#ccffcc" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="legacy-element"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="reportTotalLabel"/>
         <line type="ParagraphPoolBox" x="0.0" y="182.0" width="95.232" height="12.0" color="black" font-face="SansSerif" font-size="12" font-style-bold="true" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
@@ -253,14 +253,14 @@
         </line>
       </cell>
       <spanned-cell/>
-      <cell background-color="#ccffcc" row-span="1" col-span="1">
+      <cell border-bottom-color="black" border-bottom-width="0.5" border-bottom-style="solid" background-color="#ccffcc" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="legacy-element"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="reportCountField"/>
         <line type="ParagraphPoolBox" x="301.698" y="182.0" width="5.004" height="9.0" color="black" font-face="SansSerif" font-size="9" font-style-bold="true" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
           <text x="301.698" y="182.0" width="5.004" height="9.0">0</text>
         </line>
       </cell>
-      <cell background-color="#ccffcc" row-span="1" col-span="1">
+      <cell border-bottom-color="black" border-bottom-width="0.5" border-bottom-style="solid" background-color="#ccffcc" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="legacy-element"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="reportSumField"/>
         <line type="ParagraphPoolBox" x="462.996" y="182.0" width="5.004" height="9.0" color="black" font-face="SansSerif" font-size="9" font-style-bold="true" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
@@ -268,14 +268,10 @@
         </line>
       </cell>
     </row>
-    <row height="14">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="3">
-      <empty-cell/>
+      <empty-cell>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="page-footer"/>
+      </empty-cell>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>

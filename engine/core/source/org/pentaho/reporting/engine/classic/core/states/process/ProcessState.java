@@ -24,10 +24,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.EventListenerList;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.pentaho.reporting.engine.classic.core.AbstractReportDefinition;
@@ -98,10 +94,7 @@ import org.pentaho.reporting.engine.classic.core.util.ReportParameterValues;
 import org.pentaho.reporting.engine.classic.core.util.beans.ConverterRegistry;
 import org.pentaho.reporting.engine.classic.core.wizard.DataSchemaDefinition;
 import org.pentaho.reporting.engine.classic.core.wizard.ProxyDataSchemaDefinition;
-import org.pentaho.reporting.libraries.base.LibBaseBoot;
 import org.pentaho.reporting.libraries.base.config.Configuration;
-import org.pentaho.reporting.libraries.base.performance.PerformanceLoggingStopWatch;
-import org.pentaho.reporting.libraries.base.performance.PerformanceMonitorContext;
 import org.pentaho.reporting.libraries.base.util.FastStack;
 import org.pentaho.reporting.libraries.base.util.ObjectUtilities;
 
@@ -109,65 +102,20 @@ public class ProcessState implements ReportState
 {
   private static class InternalProcessHandle implements ProcessStateHandle
   {
-    private PerformanceMonitorContext monitorContext;
     private DataFactoryManager manager;
 
-    private InternalProcessHandle(final DataFactoryManager manager,
-                                  final PerformanceMonitorContext monitorContext)
+    private InternalProcessHandle(final DataFactoryManager manager)
     {
       this.manager = manager;
-      this.monitorContext = monitorContext;
     }
 
     public void close()
     {
       // close the data-factory manager ...
-      monitorContext.close();
       manager.close();
     }
   }
 
-
-  private static class InternalPerformanceMonitorContext implements PerformanceMonitorContext
-  {
-    private PerformanceMonitorContext parent;
-    private EventListenerList listeners;
-
-    private InternalPerformanceMonitorContext(final PerformanceMonitorContext parent)
-    {
-      this.parent = parent;
-      this.listeners = new EventListenerList();
-    }
-
-    public PerformanceLoggingStopWatch createStopWatch(final String tag)
-    {
-      return parent.createStopWatch(tag);
-    }
-
-    public PerformanceLoggingStopWatch createStopWatch(final String tag, final Object message)
-    {
-      return parent.createStopWatch(tag, message);
-    }
-
-    public void addChangeListener(final ChangeListener listener)
-    {
-      listeners.add(ChangeListener.class, listener);
-    }
-
-    public void removeChangeListener(final ChangeListener listener)
-    {
-      listeners.remove(ChangeListener.class, listener);
-    }
-
-    public void close()
-    {
-      ChangeEvent event = new ChangeEvent(this);
-      for (ChangeListener changeListener : listeners.getListeners(ChangeListener.class))
-      {
-        changeListener.stateChanged(event);
-      }
-    }
-  }
 
   public static final int ARTIFICIAL_EVENT_CODE = ReportEvent.ARTIFICIAL_EVENT_CODE;
   private static final Log logger = LogFactory.getLog(ProcessState.class);
@@ -202,7 +150,6 @@ public class ProcessState implements ReportState
   private Integer queryLimit;
   private Integer queryTimeout;
   private boolean reportInstancesShareConnection;
-  private PerformanceMonitorContext performanceMonitorContext;
 
   public ProcessState()
   {
@@ -247,9 +194,6 @@ public class ProcessState implements ReportState
       parameterContext.close();
     }
 
-    final PerformanceMonitorContext rawPerformanceMonitorContext =
-        LibBaseBoot.getInstance().getObjectFactory().get(PerformanceMonitorContext.class);
-    this.performanceMonitorContext = new InternalPerformanceMonitorContext(rawPerformanceMonitorContext);
     this.reportInstancesShareConnection = "true".equals(processingContext.getConfiguration().getConfigProperty
         ("org.pentaho.reporting.engine.classic.core.ReportInstancesShareConnections"));
     this.processLevels = new HashSet();
@@ -267,7 +211,8 @@ public class ProcessState implements ReportState
         (null, ReportState.BEFORE_FIRST_ROW, 0, ReportState.BEFORE_FIRST_GROUP, -1, sequenceCounter, false, false);
     this.dataFactoryManager = new DataFactoryManager();
     this.subReportStorage = new SubReportStorage();
-    this.processHandle = new InternalProcessHandle(dataFactoryManager, this.performanceMonitorContext);
+    this.processHandle = new InternalProcessHandle(dataFactoryManager);
+
 
     if (isStructureRunNeeded(report) == false)
     {
@@ -1239,10 +1184,5 @@ public class ProcessState implements ReportState
   public boolean isStructuralPreprocessingNeeded()
   {
     return structuralPreprocessingNeeded;
-  }
-
-  public PerformanceMonitorContext getPerformanceMonitorContext()
-  {
-    return performanceMonitorContext;
   }
 }

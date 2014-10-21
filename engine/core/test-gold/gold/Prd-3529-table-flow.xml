@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <layout-output xmlns="http://reporting.pentaho.org/namespaces/output/layout-output/table/1.0">
-  <table col-count="4" row-count="74">
+  <table col-count="4" row-count="73">
     <cols>
       <column width="288"/>
       <column width="2"/>
@@ -35,20 +35,14 @@
       </empty-cell>
       <empty-cell/>
     </row>
-    <row height="21">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="32.718">
       <cell row-span="1" col-span="3">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="message"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Testd"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-report-header-label-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-report-header-label-0"/>
-        <line type="ParagraphPoolBox" x="0.0" y="21.0" width="67.976" height="32.718" color="#5985b6" font-face="Arial" font-size="24" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="21.0" width="67.976" height="32.718">Testd</text>
+        <line type="ParagraphPoolBox" x="0.0" y="0.0" width="67.976" height="32.718" color="#5985b6" font-face="Arial" font-size="24" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="0.0" width="67.976" height="32.718">Testd</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -61,8 +55,8 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Test"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-report-header-label-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-report-header-label-1"/>
-        <line type="ParagraphPoolBox" x="0.0" y="53.718" width="33.202" height="19.085" color="#5985b6" font-face="Arial" font-size="14" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="53.718" width="33.202" height="19.085">Test</text>
+        <line type="ParagraphPoolBox" x="0.0" y="32.718" width="33.202" height="19.085" color="#5985b6" font-face="Arial" font-size="14" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="32.718" width="33.202" height="19.085">Test</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -70,9 +64,16 @@
       <empty-cell/>
     </row>
     <row height="1">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="a"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-group-header-element-0"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-group-header-element-0"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="16.359">
@@ -80,14 +81,14 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="message"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Product Line: $(BC_PRODUCTS_PRODUCTLINE)"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
-        <line type="ParagraphPoolBox" x="0.0" y="73.803" width="141.3" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="73.803" width="41.328" height="16.359">Product</text>
+        <line type="ParagraphPoolBox" x="0.0" y="52.803" width="141.3" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="52.803" width="41.328" height="16.359">Product</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="44.652" y="73.803" width="26.004" height="16.359">Line:</text>
+          <text x="44.652" y="52.803" width="26.004" height="16.359">Line:</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="73.98" y="73.803" width="38.664" height="16.359">Classic</text>
+          <text x="73.98" y="52.803" width="38.664" height="16.359">Classic</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="115.968" y="73.803" width="25.332" height="16.359">Cars</text>
+          <text x="115.968" y="52.803" width="25.332" height="16.359">Cars</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -95,33 +96,33 @@
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell background-color="#5985b6" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Territory"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="0.0" y="91.9825" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="91.9825" width="44.64" height="16.359">Territory</text>
+        <line type="ParagraphPoolBox" x="0.0" y="70.9825" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="70.9825" width="44.64" height="16.359">Territory</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell background-color="#5985b6" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Total"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="549.348" y="91.9825" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="549.348" y="91.9825" width="26.652" height="16.359">Total</text>
+        <line type="ParagraphPoolBox" x="549.348" y="70.9825" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="549.348" y="70.9825" width="26.652" height="16.359">Total</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -129,11 +130,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="113.346" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="113.346" width="27.24" height="13.632">Japan</text>
+        <line type="ParagraphPoolBox" x="1.0" y="92.346" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="92.346" width="27.24" height="13.632">Japan</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -142,15 +143,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="113.346" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="113.346" width="55.58" height="13.632">$181,601.49</text>
+        <line type="ParagraphPoolBox" x="519.42" y="92.346" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="92.346" width="55.58" height="13.632">$181,601.49</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -158,11 +159,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="133.346" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="133.346" width="27.2" height="13.632">APAC</text>
+        <line type="ParagraphPoolBox" x="1.0" y="112.346" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="112.346" width="27.2" height="13.632">APAC</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -171,15 +172,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="133.346" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="133.346" width="55.58" height="13.632">$411,956.24</text>
+        <line type="ParagraphPoolBox" x="519.42" y="112.346" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="112.346" width="55.58" height="13.632">$411,956.24</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -187,11 +188,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="153.346" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="153.346" width="13.88" height="13.632">NA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="132.346" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="132.346" width="13.88" height="13.632">NA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -200,15 +201,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="511.09" y="153.346" width="63.91" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="511.09" y="153.346" width="63.91" height="13.632">$1,406,261.42</text>
+        <line type="ParagraphPoolBox" x="511.09" y="132.346" width="63.91" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="511.09" y="132.346" width="63.91" height="13.632">$1,406,261.42</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -216,11 +217,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="173.346" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="173.346" width="28.31" height="13.632">EMEA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="152.346" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="152.346" width="28.31" height="13.632">EMEA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -229,29 +230,44 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="511.09" y="173.346" width="63.91" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="511.09" y="173.346" width="63.91" height="13.632">$2,091,600.64</text>
+        <line type="ParagraphPoolBox" x="511.09" y="152.346" width="63.91" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="511.09" y="152.346" width="63.91" height="13.632">$2,091,600.64</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="1">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+    </row>
+    <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="a"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-group-header-element-0"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-group-header-element-0"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="16.359">
@@ -259,12 +275,12 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="message"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Product Line: $(BC_PRODUCTS_PRODUCTLINE)"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
-        <line type="ParagraphPoolBox" x="0.0" y="195.162" width="137.976" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="195.162" width="41.328" height="16.359">Product</text>
+        <line type="ParagraphPoolBox" x="0.0" y="174.162" width="137.976" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="174.162" width="41.328" height="16.359">Product</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="44.652" y="195.162" width="26.004" height="16.359">Line:</text>
+          <text x="44.652" y="174.162" width="26.004" height="16.359">Line:</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="73.98" y="195.162" width="63.996" height="16.359">Motorcycles</text>
+          <text x="73.98" y="174.162" width="63.996" height="16.359">Motorcycles</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -272,33 +288,33 @@
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell background-color="#5985b6" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Territory"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="0.0" y="213.3415" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="213.3415" width="44.64" height="16.359">Territory</text>
+        <line type="ParagraphPoolBox" x="0.0" y="192.3415" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="192.3415" width="44.64" height="16.359">Territory</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell background-color="#5985b6" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Total"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="549.348" y="213.3415" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="549.348" y="213.3415" width="26.652" height="16.359">Total</text>
+        <line type="ParagraphPoolBox" x="549.348" y="192.3415" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="549.348" y="192.3415" width="26.652" height="16.359">Total</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -306,11 +322,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="234.705" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="234.705" width="27.24" height="13.632">Japan</text>
+        <line type="ParagraphPoolBox" x="1.0" y="213.705" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="213.705" width="27.24" height="13.632">Japan</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -319,15 +335,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="524.98" y="234.705" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="524.98" y="234.705" width="50.02" height="13.632">$52,619.49</text>
+        <line type="ParagraphPoolBox" x="524.98" y="213.705" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="524.98" y="213.705" width="50.02" height="13.632">$52,619.49</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -335,11 +351,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="254.705" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="254.705" width="13.88" height="13.632">NA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="233.705" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="233.705" width="13.88" height="13.632">NA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -348,15 +364,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="254.705" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="254.705" width="55.58" height="13.632">$524,549.19</text>
+        <line type="ParagraphPoolBox" x="519.42" y="233.705" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="233.705" width="55.58" height="13.632">$524,549.19</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -364,11 +380,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="274.705" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="274.705" width="27.2" height="13.632">APAC</text>
+        <line type="ParagraphPoolBox" x="1.0" y="253.705" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="253.705" width="27.2" height="13.632">APAC</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -377,15 +393,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="274.705" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="274.705" width="55.58" height="13.632">$189,818.23</text>
+        <line type="ParagraphPoolBox" x="519.42" y="253.705" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="253.705" width="55.58" height="13.632">$189,818.23</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -393,11 +409,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="294.705" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="294.705" width="28.31" height="13.632">EMEA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="273.705" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="273.705" width="28.31" height="13.632">EMEA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -406,29 +422,44 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="294.705" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="294.705" width="55.58" height="13.632">$507,138.28</text>
+        <line type="ParagraphPoolBox" x="519.42" y="273.705" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="273.705" width="55.58" height="13.632">$507,138.28</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="1">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+    </row>
+    <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="a"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-group-header-element-0"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-group-header-element-0"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="16.359">
@@ -436,12 +467,12 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="message"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Product Line: $(BC_PRODUCTS_PRODUCTLINE)"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
-        <line type="ParagraphPoolBox" x="0.0" y="316.521" width="110.652" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="316.521" width="41.328" height="16.359">Product</text>
+        <line type="ParagraphPoolBox" x="0.0" y="295.521" width="110.652" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="295.521" width="41.328" height="16.359">Product</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="44.652" y="316.521" width="26.004" height="16.359">Line:</text>
+          <text x="44.652" y="295.521" width="26.004" height="16.359">Line:</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="73.98" y="316.521" width="36.672" height="16.359">Planes</text>
+          <text x="73.98" y="295.521" width="36.672" height="16.359">Planes</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -449,33 +480,33 @@
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell background-color="#5985b6" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Territory"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="0.0" y="334.7005" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="334.7005" width="44.64" height="16.359">Territory</text>
+        <line type="ParagraphPoolBox" x="0.0" y="313.7005" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="313.7005" width="44.64" height="16.359">Territory</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell background-color="#5985b6" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Total"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="549.348" y="334.7005" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="549.348" y="334.7005" width="26.652" height="16.359">Total</text>
+        <line type="ParagraphPoolBox" x="549.348" y="313.7005" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="549.348" y="313.7005" width="26.652" height="16.359">Total</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -483,11 +514,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="356.064" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="356.064" width="27.24" height="13.632">Japan</text>
+        <line type="ParagraphPoolBox" x="1.0" y="335.064" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="335.064" width="27.24" height="13.632">Japan</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -496,15 +527,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="356.064" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="356.064" width="55.58" height="13.632">$109,733.14</text>
+        <line type="ParagraphPoolBox" x="519.42" y="335.064" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="335.064" width="55.58" height="13.632">$109,733.14</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -512,11 +543,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="376.064" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="376.064" width="13.88" height="13.632">NA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="355.064" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="355.064" width="13.88" height="13.632">NA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -525,15 +556,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="376.064" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="376.064" width="55.58" height="13.632">$353,943.00</text>
+        <line type="ParagraphPoolBox" x="519.42" y="355.064" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="355.064" width="55.58" height="13.632">$353,943.00</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -541,11 +572,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="396.064" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="396.064" width="28.31" height="13.632">EMEA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="375.064" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="375.064" width="28.31" height="13.632">EMEA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -554,15 +585,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="396.064" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="396.064" width="55.58" height="13.632">$491,654.86</text>
+        <line type="ParagraphPoolBox" x="519.42" y="375.064" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="375.064" width="55.58" height="13.632">$491,654.86</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -570,11 +601,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="416.064" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="416.064" width="27.2" height="13.632">APAC</text>
+        <line type="ParagraphPoolBox" x="1.0" y="395.064" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="395.064" width="27.2" height="13.632">APAC</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -583,29 +614,44 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="416.064" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="416.064" width="55.58" height="13.632">$121,426.20</text>
+        <line type="ParagraphPoolBox" x="519.42" y="395.064" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="395.064" width="55.58" height="13.632">$121,426.20</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="1">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+    </row>
+    <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="a"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-group-header-element-0"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-group-header-element-0"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="16.359">
@@ -613,12 +659,12 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="message"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Product Line: $(BC_PRODUCTS_PRODUCTLINE)"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
-        <line type="ParagraphPoolBox" x="0.0" y="437.88" width="103.98" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="437.88" width="41.328" height="16.359">Product</text>
+        <line type="ParagraphPoolBox" x="0.0" y="416.88" width="103.98" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="416.88" width="41.328" height="16.359">Product</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="44.652" y="437.88" width="26.004" height="16.359">Line:</text>
+          <text x="44.652" y="416.88" width="26.004" height="16.359">Line:</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="73.98" y="437.88" width="30.0" height="16.359">Ships</text>
+          <text x="73.98" y="416.88" width="30.0" height="16.359">Ships</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -626,33 +672,33 @@
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell background-color="#5985b6" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Territory"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="0.0" y="456.0595" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="456.0595" width="44.64" height="16.359">Territory</text>
+        <line type="ParagraphPoolBox" x="0.0" y="435.0595" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="435.0595" width="44.64" height="16.359">Territory</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell background-color="#5985b6" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Total"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="549.348" y="456.0595" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="549.348" y="456.0595" width="26.652" height="16.359">Total</text>
+        <line type="ParagraphPoolBox" x="549.348" y="435.0595" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="549.348" y="435.0595" width="26.652" height="16.359">Total</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -660,11 +706,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="477.423" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="477.423" width="27.2" height="13.632">APAC</text>
+        <line type="ParagraphPoolBox" x="1.0" y="456.423" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="456.423" width="27.2" height="13.632">APAC</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -673,15 +719,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="524.98" y="477.423" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="524.98" y="477.423" width="50.02" height="13.632">$38,393.48</text>
+        <line type="ParagraphPoolBox" x="524.98" y="456.423" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="524.98" y="456.423" width="50.02" height="13.632">$38,393.48</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -689,11 +735,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="497.423" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="497.423" width="27.24" height="13.632">Japan</text>
+        <line type="ParagraphPoolBox" x="1.0" y="476.423" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="476.423" width="27.24" height="13.632">Japan</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -702,15 +748,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="524.98" y="497.423" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="524.98" y="497.423" width="50.02" height="13.632">$33,015.54</text>
+        <line type="ParagraphPoolBox" x="524.98" y="476.423" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="524.98" y="476.423" width="50.02" height="13.632">$33,015.54</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -718,11 +764,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="517.423" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="517.423" width="13.88" height="13.632">NA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="496.423" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="496.423" width="13.88" height="13.632">NA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -731,15 +777,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="517.423" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="517.423" width="55.58" height="13.632">$249,997.15</text>
+        <line type="ParagraphPoolBox" x="519.42" y="496.423" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="496.423" width="55.58" height="13.632">$249,997.15</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -747,11 +793,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="537.423" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="537.423" width="28.31" height="13.632">EMEA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="516.423" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="516.423" width="28.31" height="13.632">EMEA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -760,29 +806,44 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="537.423" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="537.423" width="55.58" height="13.632">$427,264.68</text>
+        <line type="ParagraphPoolBox" x="519.42" y="516.423" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="516.423" width="55.58" height="13.632">$427,264.68</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="1">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+    </row>
+    <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="a"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-group-header-element-0"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-group-header-element-0"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="16.359">
@@ -790,12 +851,12 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="message"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Product Line: $(BC_PRODUCTS_PRODUCTLINE)"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
-        <line type="ParagraphPoolBox" x="0.0" y="559.239" width="107.304" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="559.239" width="41.328" height="16.359">Product</text>
+        <line type="ParagraphPoolBox" x="0.0" y="538.239" width="107.304" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="538.239" width="41.328" height="16.359">Product</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="44.652" y="559.239" width="26.004" height="16.359">Line:</text>
+          <text x="44.652" y="538.239" width="26.004" height="16.359">Line:</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="73.98" y="559.239" width="33.324" height="16.359">Trains</text>
+          <text x="73.98" y="538.239" width="33.324" height="16.359">Trains</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -803,33 +864,33 @@
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell background-color="#5985b6" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Territory"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="0.0" y="577.4185" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="577.4185" width="44.64" height="16.359">Territory</text>
+        <line type="ParagraphPoolBox" x="0.0" y="556.4185" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="556.4185" width="44.64" height="16.359">Territory</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell background-color="#5985b6" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Total"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="549.348" y="577.4185" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="549.348" y="577.4185" width="26.652" height="16.359">Total</text>
+        <line type="ParagraphPoolBox" x="549.348" y="556.4185" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="549.348" y="556.4185" width="26.652" height="16.359">Total</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -837,11 +898,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="598.782" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="598.782" width="27.2" height="13.632">APAC</text>
+        <line type="ParagraphPoolBox" x="1.0" y="577.782" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="577.782" width="27.2" height="13.632">APAC</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -850,15 +911,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="530.54" y="598.782" width="44.46" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="530.54" y="598.782" width="44.46" height="13.632">$9,907.07</text>
+        <line type="ParagraphPoolBox" x="530.54" y="577.782" width="44.46" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="530.54" y="577.782" width="44.46" height="13.632">$9,907.07</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -866,11 +927,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="618.782" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="618.782" width="27.24" height="13.632">Japan</text>
+        <line type="ParagraphPoolBox" x="1.0" y="597.782" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="597.782" width="27.24" height="13.632">Japan</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -879,15 +940,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="524.98" y="618.782" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="524.98" y="618.782" width="50.02" height="13.632">$16,802.38</text>
+        <line type="ParagraphPoolBox" x="524.98" y="597.782" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="524.98" y="597.782" width="50.02" height="13.632">$16,802.38</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -895,11 +956,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="638.782" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="638.782" width="13.88" height="13.632">NA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="617.782" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="617.782" width="13.88" height="13.632">NA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -908,15 +969,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="524.98" y="638.782" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="524.98" y="638.782" width="50.02" height="13.632">$69,253.56</text>
+        <line type="ParagraphPoolBox" x="524.98" y="617.782" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="524.98" y="617.782" width="50.02" height="13.632">$69,253.56</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -924,11 +985,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="658.782" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="658.782" width="28.31" height="13.632">EMEA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="637.782" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="637.782" width="28.31" height="13.632">EMEA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -937,29 +998,44 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="658.782" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="658.782" width="55.58" height="13.632">$138,506.18</text>
+        <line type="ParagraphPoolBox" x="519.42" y="637.782" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="637.782" width="55.58" height="13.632">$138,506.18</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="1">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+    </row>
+    <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="a"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-group-header-element-0"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-group-header-element-0"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="16.359">
@@ -967,16 +1043,16 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="message"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Product Line: $(BC_PRODUCTS_PRODUCTLINE)"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
-        <line type="ParagraphPoolBox" x="0.0" y="680.598" width="169.968" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="680.598" width="41.328" height="16.359">Product</text>
+        <line type="ParagraphPoolBox" x="0.0" y="659.598" width="169.968" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="659.598" width="41.328" height="16.359">Product</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="44.652" y="680.598" width="26.004" height="16.359">Line:</text>
+          <text x="44.652" y="659.598" width="26.004" height="16.359">Line:</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="73.98" y="680.598" width="35.988" height="16.359">Trucks</text>
+          <text x="73.98" y="659.598" width="35.988" height="16.359">Trucks</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="113.292" y="680.598" width="20.016" height="16.359">and</text>
+          <text x="113.292" y="659.598" width="20.016" height="16.359">and</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="136.632" y="680.598" width="33.336" height="16.359">Buses</text>
+          <text x="136.632" y="659.598" width="33.336" height="16.359">Buses</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -984,33 +1060,33 @@
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell background-color="#5985b6" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Territory"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="0.0" y="698.7775" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="698.7775" width="44.64" height="16.359">Territory</text>
+        <line type="ParagraphPoolBox" x="0.0" y="677.7775" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="677.7775" width="44.64" height="16.359">Territory</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell background-color="#5985b6" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Total"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="549.348" y="698.7775" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="549.348" y="698.7775" width="26.652" height="16.359">Total</text>
+        <line type="ParagraphPoolBox" x="549.348" y="677.7775" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="549.348" y="677.7775" width="26.652" height="16.359">Total</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -1018,11 +1094,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="720.141" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="720.141" width="27.24" height="13.632">Japan</text>
+        <line type="ParagraphPoolBox" x="1.0" y="699.141" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="699.141" width="27.24" height="13.632">Japan</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -1031,15 +1107,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="524.98" y="720.141" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="524.98" y="720.141" width="50.02" height="13.632">$57,847.66</text>
+        <line type="ParagraphPoolBox" x="524.98" y="699.141" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="524.98" y="699.141" width="50.02" height="13.632">$57,847.66</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -1047,11 +1123,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="740.141" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="740.141" width="13.88" height="13.632">NA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="719.141" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="719.141" width="13.88" height="13.632">NA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -1060,15 +1136,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="740.141" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="740.141" width="55.58" height="13.632">$449,788.40</text>
+        <line type="ParagraphPoolBox" x="519.42" y="719.141" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="719.141" width="55.58" height="13.632">$449,788.40</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -1076,11 +1152,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="760.141" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="760.141" width="28.31" height="13.632">EMEA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="739.141" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="739.141" width="28.31" height="13.632">EMEA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -1089,15 +1165,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="760.141" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="760.141" width="55.58" height="13.632">$500,978.82</text>
+        <line type="ParagraphPoolBox" x="519.42" y="739.141" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="739.141" width="55.58" height="13.632">$500,978.82</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -1105,11 +1181,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="780.141" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="780.141" width="27.2" height="13.632">APAC</text>
+        <line type="ParagraphPoolBox" x="1.0" y="759.141" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="759.141" width="27.2" height="13.632">APAC</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -1118,29 +1194,44 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="780.141" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="780.141" width="55.58" height="13.632">$145,665.69</text>
+        <line type="ParagraphPoolBox" x="519.42" y="759.141" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="759.141" width="55.58" height="13.632">$145,665.69</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="1">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+    </row>
+    <row height="1">
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="a"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-group-header-element-0"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-group-header-element-0"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="16.359">
@@ -1148,14 +1239,14 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="message"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Product Line: $(BC_PRODUCTS_PRODUCTLINE)"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
-        <line type="ParagraphPoolBox" x="0.0" y="801.957" width="143.304" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="801.957" width="41.328" height="16.359">Product</text>
+        <line type="ParagraphPoolBox" x="0.0" y="780.957" width="143.304" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="780.957" width="41.328" height="16.359">Product</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="44.652" y="801.957" width="26.004" height="16.359">Line:</text>
+          <text x="44.652" y="780.957" width="26.004" height="16.359">Line:</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="73.98" y="801.957" width="40.668" height="16.359">Vintage</text>
+          <text x="73.98" y="780.957" width="40.668" height="16.359">Vintage</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="117.972" y="801.957" width="25.332" height="16.359">Cars</text>
+          <text x="117.972" y="780.957" width="25.332" height="16.359">Cars</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -1163,33 +1254,33 @@
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell background-color="#5985b6" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Territory"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="0.0" y="820.1365" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="820.1365" width="44.64" height="16.359">Territory</text>
+        <line type="ParagraphPoolBox" x="0.0" y="799.1365" width="44.64" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="799.1365" width="44.64" height="16.359">Territory</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell background-color="#5985b6" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Total"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-header-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="true"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="549.348" y="820.1365" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="549.348" y="820.1365" width="26.652" height="16.359">Total</text>
+        <line type="ParagraphPoolBox" x="549.348" y="799.1365" width="26.652" height="16.359" color="white" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="549.348" y="799.1365" width="26.652" height="16.359">Total</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -1197,11 +1288,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="841.5" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="841.5" width="27.24" height="13.632">Japan</text>
+        <line type="ParagraphPoolBox" x="1.0" y="820.5" width="27.24" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="820.5" width="27.24" height="13.632">Japan</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -1210,15 +1301,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="524.98" y="841.5" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="524.98" y="841.5" width="50.02" height="13.632">$52,337.88</text>
+        <line type="ParagraphPoolBox" x="524.98" y="820.5" width="50.02" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="524.98" y="820.5" width="50.02" height="13.632">$52,337.88</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -1226,11 +1317,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="861.5" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="861.5" width="27.2" height="13.632">APAC</text>
+        <line type="ParagraphPoolBox" x="1.0" y="840.5" width="27.2" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="840.5" width="27.2" height="13.632">APAC</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -1239,15 +1330,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="861.5" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="861.5" width="55.58" height="13.632">$364,538.92</text>
+        <line type="ParagraphPoolBox" x="519.42" y="840.5" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="840.5" width="55.58" height="13.632">$364,538.92</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -1255,11 +1346,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="881.5" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="881.5" width="28.31" height="13.632">EMEA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="860.5" width="28.31" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="860.5" width="28.31" height="13.632">EMEA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -1268,15 +1359,15 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="881.5" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="881.5" width="55.58" height="13.632">$851,080.90</text>
+        <line type="ParagraphPoolBox" x="519.42" y="860.5" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="860.5" width="55.58" height="13.632">$851,080.90</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="20">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_CUSTOMER_W_TER_TERRITORY"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="wizard::details-BC_CUSTOMER_W_TER_TERRITORY"/>
@@ -1284,11 +1375,11 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="1.0" y="901.5" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="1.0" y="901.5" width="13.88" height="13.632">NA</text>
+        <line type="ParagraphPoolBox" x="1.0" y="880.5" width="13.88" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="1.0" y="880.5" width="13.88" height="13.632">NA</text>
         </line>
       </cell>
-      <cell row-span="1" col-span="2">
+      <cell border-top-color="#b2a79a" border-top-width="1.0" border-top-style="solid" border-left-color="#b2a79a" border-left-width="1.0" border-left-style="solid" border-bottom-color="#b2a79a" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#b2a79a" border-right-width="1.0" border-right-style="solid" background-color="#d4e3e8" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="BC_ORDERDETAILS_TOTAL"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:format-string="$#,##0.00;($#,##0.00)"/>
@@ -1297,23 +1388,31 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-column-value-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="519.42" y="901.5" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="519.42" y="901.5" width="55.58" height="13.632">$798,268.69</text>
+        <line type="ParagraphPoolBox" x="519.42" y="880.5" width="55.58" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="519.42" y="880.5" width="55.58" height="13.632">$798,268.69</text>
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="1">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="20">
@@ -1323,7 +1422,7 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-report-footer-summary-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="0.0" y="924.1365" width="0.0" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+        <line type="ParagraphPoolBox" x="0.0" y="903.1365" width="0.0" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
         </line>
       </cell>
       <cell row-span="1" col-span="2">
@@ -1332,30 +1431,38 @@
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-report-footer-summary-1"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-attributes="false"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/wizard" autoGenNs:allow-metadata-styling="false"/>
-        <line type="ParagraphPoolBox" x="576.0" y="925.5" width="0.0" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+        <line type="ParagraphPoolBox" x="576.0" y="904.5" width="0.0" height="13.632" color="#5985b6" font-face="Arial" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
         </line>
       </cell>
       <spanned-cell/>
       <empty-cell/>
     </row>
     <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="2.0" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
-    <row height="41">
-      <cell border-top-color="#5985b6" border-top-width="0.5" border-top-style="solid" row-span="1" col-span="3">
+    <row height="20">
+      <cell row-span="1" col-span="3">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="message"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-report-footer-label-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-report-footer-label-0"/>
-        <line type="ParagraphPoolBox" x="288.0" y="948.316" width="0.0" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+        <line type="ParagraphPoolBox" x="288.0" y="927.316" width="0.0" height="16.359" color="#5985b6" font-face="Arial" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
         </line>
       </cell>
       <spanned-cell/>
@@ -1363,13 +1470,17 @@
       <empty-cell/>
     </row>
     <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5985b6" border-top-width="1.0" border-top-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="horizontal-line"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="1.0" border-top-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5985b6" border-top-width="1.0" border-top-style="solid">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="18">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="white" border-top-width="1.0" border-top-style="solid" border-left-color="white" border-left-width="1.0" border-left-style="solid" border-bottom-color="white" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="white" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="message"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:class="rpt-page-footer-0"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/html" autoGenNs:xml-id="rpt-page-footer-0"/>

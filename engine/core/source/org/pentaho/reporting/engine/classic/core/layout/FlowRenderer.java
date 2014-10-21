@@ -17,6 +17,7 @@
 
 package org.pentaho.reporting.engine.classic.core.layout;
 
+import org.pentaho.reporting.engine.classic.core.ReportDefinition;
 import org.pentaho.reporting.engine.classic.core.function.ProcessingContext;
 import org.pentaho.reporting.engine.classic.core.layout.model.LogicalPageBox;
 import org.pentaho.reporting.engine.classic.core.layout.model.PageBreakPositionList;
@@ -65,6 +66,12 @@ public class FlowRenderer extends AbstractRenderer
     this.cleanFlowBoxesStep = new CleanFlowBoxesStep();
     this.applyPageShiftValuesStep = new ApplyPageShiftValuesStep();
     this.applyAutoCommitPageHeaderStep = new ApplyAutoCommitPageHeaderStep();
+  }
+
+  public void startReport(final ReportDefinition report, final ProcessingContext processingContext)
+  {
+    flowCount = 0;
+    super.startReport(report, processingContext);
   }
 
   protected boolean isPageFinished()
@@ -265,25 +272,5 @@ public class FlowRenderer extends AbstractRenderer
   public boolean isPageStartPending()
   {
     return pageStartPending;
-  }
-
-
-  protected void initializeRendererOnStartReport(final ProcessingContext processingContext)
-  {
-    super.initializeRendererOnStartReport(processingContext);
-    flowCount = 0;
-    paginationStep.initialize(getPerformanceMonitorContext());
-    fillPhysicalPagesStep.initialize(getPerformanceMonitorContext());
-    this.cleanFlowBoxesStep.initialize(getPerformanceMonitorContext());
-    this.applyAutoCommitPageHeaderStep.initialize(getPerformanceMonitorContext());
-  }
-
-  protected void close()
-  {
-    super.close();
-    paginationStep.close();
-    fillPhysicalPagesStep.close();
-    this.cleanFlowBoxesStep.closeStep();
-    this.applyAutoCommitPageHeaderStep.closeStep();
   }
 }

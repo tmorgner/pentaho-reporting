@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <layout-output xmlns="http://reporting.pentaho.org/namespaces/output/layout-output/table/1.0">
-  <table col-count="7" row-count="7">
+  <table col-count="7" row-count="6">
     <cols>
       <column width="90"/>
       <column width="51.75"/>
@@ -19,7 +19,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="22">
+    <row height="2">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -37,7 +37,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="66">
+    <row height="36">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -64,17 +64,8 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="166">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
   </table>
-  <table col-count="9" row-count="14">
+  <table col-count="9" row-count="13">
     <cols>
       <column width="141.75"/>
       <column width="141.75"/>
@@ -97,7 +88,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="22">
+    <row height="2">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -207,17 +198,6 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="30">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="20">
       <empty-cell/>
       <empty-cell/>
@@ -232,272 +212,6 @@
     <row height="10">
       <empty-cell/>
       <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-  </table>
-  <table col-count="7" row-count="10">
-    <cols>
-      <column width="56.7"/>
-      <column width="85.05"/>
-      <column width="141.75"/>
-      <column width="164.0841"/>
-      <column width="0.0113"/>
-      <column width="113.4"/>
-      <column width="6.0045"/>
-    </cols>
-    <row height="18">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="2">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="12">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="32">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="12">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="12">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="11">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="30">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="20">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="10">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-  </table>
-  <table col-count="6" row-count="9">
-    <cols>
-      <column width="141.75"/>
-      <column width="141.75"/>
-      <column width="164.0841"/>
-      <column width="0.0113"/>
-      <column width="113.4"/>
-      <column width="6.0045"/>
-    </cols>
-    <row height="18">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="2">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="12">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="32">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="11">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="30">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="20">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="10">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="56">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-  </table>
-  <table col-count="7" row-count="8">
-    <cols>
-      <column width="56.7"/>
-      <column width="85.05"/>
-      <column width="141.75"/>
-      <column width="164.0841"/>
-      <column width="0.0113"/>
-      <column width="113.4"/>
-      <column width="6.0045"/>
-    </cols>
-    <row height="18">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="22">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="12">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="12">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="11">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="30">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="20">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="10">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -526,7 +240,16 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="22">
+    <row height="2">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="12">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -562,15 +285,6 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="30">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="20">
       <empty-cell/>
       <empty-cell/>
@@ -590,7 +304,7 @@
       <empty-cell/>
     </row>
   </table>
-  <table col-count="6" row-count="9">
+  <table col-count="6" row-count="6">
     <cols>
       <column width="141.75"/>
       <column width="141.75"/>
@@ -623,23 +337,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="32">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="11">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="30">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -663,16 +361,8 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="56">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
   </table>
-  <table col-count="7" row-count="8">
+  <table col-count="7" row-count="7">
     <cols>
       <column width="56.7"/>
       <column width="85.05"/>
@@ -691,87 +381,6 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="22">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="12">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="12">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="11">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="30">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="20">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="10">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-  </table>
-  <table col-count="6" row-count="9">
-    <cols>
-      <column width="141.75"/>
-      <column width="141.75"/>
-      <column width="164.0841"/>
-      <column width="0.0113"/>
-      <column width="113.4"/>
-      <column width="6.0045"/>
-    </cols>
-    <row height="18">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="2">
       <empty-cell/>
       <empty-cell/>
@@ -779,82 +388,10 @@
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
+      <empty-cell/>
     </row>
     <row height="12">
       <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="32">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="11">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="30">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="20">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="10">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="56">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-  </table>
-  <table col-count="6" row-count="9">
-    <cols>
-      <column width="141.75"/>
-      <column width="141.75"/>
-      <column width="164.0841"/>
-      <column width="0.0113"/>
-      <column width="113.4"/>
-      <column width="6.0045"/>
-    </cols>
-    <row height="18">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="2">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -869,24 +406,10 @@
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
-    </row>
-    <row height="32">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
       <empty-cell/>
     </row>
     <row height="11">
       <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="30">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -901,6 +424,7 @@
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
+      <empty-cell/>
     </row>
     <row height="10">
       <empty-cell/>
@@ -909,17 +433,10 @@
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
-    </row>
-    <row height="56">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
       <empty-cell/>
     </row>
   </table>
-  <table col-count="7" row-count="8">
+  <table col-count="7" row-count="7">
     <cols>
       <column width="56.7"/>
       <column width="85.05"/>
@@ -938,7 +455,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="22">
+    <row height="2">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -974,15 +491,6 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="30">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="20">
       <empty-cell/>
       <empty-cell/>
@@ -1002,7 +510,7 @@
       <empty-cell/>
     </row>
   </table>
-  <table col-count="6" row-count="9">
+  <table col-count="6" row-count="6">
     <cols>
       <column width="141.75"/>
       <column width="141.75"/>
@@ -1035,23 +543,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="32">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="11">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="30">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -1075,16 +567,8 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="56">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
   </table>
-  <table col-count="7" row-count="8">
+  <table col-count="7" row-count="7">
     <cols>
       <column width="56.7"/>
       <column width="85.05"/>
@@ -1103,7 +587,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="22">
+    <row height="2">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -1139,15 +623,6 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="30">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="20">
       <empty-cell/>
       <empty-cell/>
@@ -1167,7 +642,7 @@
       <empty-cell/>
     </row>
   </table>
-  <table col-count="6" row-count="9">
+  <table col-count="6" row-count="6">
     <cols>
       <column width="141.75"/>
       <column width="141.75"/>
@@ -1200,23 +675,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="32">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="11">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="30">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -1240,16 +699,8 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="56">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
   </table>
-  <table col-count="6" row-count="9">
+  <table col-count="6" row-count="6">
     <cols>
       <column width="141.75"/>
       <column width="141.75"/>
@@ -1282,23 +733,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="32">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="11">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="30">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -1322,16 +757,8 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="56">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
   </table>
-  <table col-count="7" row-count="8">
+  <table col-count="7" row-count="7">
     <cols>
       <column width="56.7"/>
       <column width="85.05"/>
@@ -1350,7 +777,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="22">
+    <row height="2">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -1386,7 +813,130 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="30">
+    <row height="20">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="10">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+  </table>
+  <table col-count="6" row-count="6">
+    <cols>
+      <column width="141.75"/>
+      <column width="141.75"/>
+      <column width="164.0841"/>
+      <column width="0.0113"/>
+      <column width="113.4"/>
+      <column width="6.0045"/>
+    </cols>
+    <row height="18">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="2">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="12">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="11">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="20">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="10">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+  </table>
+  <table col-count="7" row-count="7">
+    <cols>
+      <column width="56.7"/>
+      <column width="85.05"/>
+      <column width="141.75"/>
+      <column width="164.0841"/>
+      <column width="0.0113"/>
+      <column width="113.4"/>
+      <column width="6.0045"/>
+    </cols>
+    <row height="18">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="2">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="12">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="12">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="11">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -1414,7 +964,197 @@
       <empty-cell/>
     </row>
   </table>
-  <table col-count="8" row-count="12">
+  <table col-count="6" row-count="6">
+    <cols>
+      <column width="141.75"/>
+      <column width="141.75"/>
+      <column width="164.0841"/>
+      <column width="0.0113"/>
+      <column width="113.4"/>
+      <column width="6.0045"/>
+    </cols>
+    <row height="18">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="2">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="12">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="11">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="20">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="10">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+  </table>
+  <table col-count="6" row-count="6">
+    <cols>
+      <column width="141.75"/>
+      <column width="141.75"/>
+      <column width="164.0841"/>
+      <column width="0.0113"/>
+      <column width="113.4"/>
+      <column width="6.0045"/>
+    </cols>
+    <row height="18">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="2">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="12">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="11">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="20">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="10">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+  </table>
+  <table col-count="7" row-count="7">
+    <cols>
+      <column width="56.7"/>
+      <column width="85.05"/>
+      <column width="141.75"/>
+      <column width="164.0841"/>
+      <column width="0.0113"/>
+      <column width="113.4"/>
+      <column width="6.0045"/>
+    </cols>
+    <row height="18">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="2">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="12">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="12">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="11">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="20">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+    <row height="10">
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+      <empty-cell/>
+    </row>
+  </table>
+  <table col-count="8" row-count="11">
     <cols>
       <column width="141.75"/>
       <column width="56.7"/>
@@ -1435,7 +1175,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="22">
+    <row height="2">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -1506,16 +1246,6 @@
       <empty-cell/>
     </row>
     <row height="32">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="30">
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -1546,7 +1276,7 @@
       <empty-cell/>
     </row>
   </table>
-  <table col-count="6" row-count="8">
+  <table col-count="6" row-count="7">
     <cols>
       <column width="141.75"/>
       <column width="85.05"/>
@@ -1559,18 +1289,18 @@
       <cell row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Name"/>
-        <line type="ParagraphPoolBox" x="0.0" y="0.0" width="42.672" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="0.0" width="42.672" height="16.0">Name</text>
+        <line type="ParagraphPoolBox" x="0.0" y="735.0" width="42.672" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="735.0" width="42.672" height="16.0">Name</text>
         </line>
       </cell>
       <spanned-cell/>
       <cell row-span="1" col-span="4">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="calculated pages"/>
-        <line type="ParagraphPoolBox" x="226.8" y="0.0" width="120.032" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="226.8" y="0.0" width="72.016" height="16.0">calculated</text>
+        <line type="ParagraphPoolBox" x="226.8" y="735.0" width="120.032" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="226.8" y="735.0" width="72.016" height="16.0">calculated</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="303.248" y="0.0" width="43.584" height="16.0">pages</text>
+          <text x="303.248" y="735.0" width="43.584" height="16.0">pages</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -1581,25 +1311,25 @@
       <cell row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="item-key"/>
-        <line type="ParagraphPoolBox" x="0.0" y="20.0" width="226.8" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="20.0" width="24.88" height="16.0">mix</text>
+        <line type="ParagraphPoolBox" x="0.0" y="755.0" width="226.8" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="755.0" width="24.88" height="16.0">mix</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="29.312" y="20.0" width="26.688" height="16.0">non</text>
+          <text x="29.312" y="755.0" width="26.688" height="16.0">non</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="60.432" y="20.0" width="84.464" height="16.0">consecutive</text>
+          <text x="60.432" y="755.0" width="84.464" height="16.0">consecutive</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="149.328" y="20.0" width="28.432" height="16.0">with</text>
+          <text x="149.328" y="755.0" width="28.432" height="16.0">with</text>
         </line>
-        <line type="ParagraphPoolBox" x="0.0" y="36.0" width="84.464" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="36.0" width="84.464" height="16.0">consecutive</text>
+        <line type="ParagraphPoolBox" x="0.0" y="771.0" width="84.464" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="771.0" width="84.464" height="16.0">consecutive</text>
         </line>
       </cell>
       <spanned-cell/>
       <cell row-span="1" col-span="4">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="item-pages"/>
-        <line type="ParagraphPoolBox" x="226.8" y="20.0" width="168.896" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="226.8" y="20.0" width="168.896" height="16.0">5,8,9,11,12,13,14,15,16</text>
+        <line type="ParagraphPoolBox" x="226.8" y="755.0" width="168.896" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="226.8" y="755.0" width="168.896" height="16.0">5,8,9,11,12,13,14,15,16</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -1610,22 +1340,22 @@
       <cell row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="item-key"/>
-        <line type="ParagraphPoolBox" x="0.0" y="52.0" width="149.376" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="52.0" width="73.808" height="16.0">occurence</text>
+        <line type="ParagraphPoolBox" x="0.0" y="787.0" width="149.376" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="787.0" width="73.808" height="16.0">occurence</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="78.24" y="52.0" width="17.792" height="16.0">on</text>
+          <text x="78.24" y="787.0" width="17.792" height="16.0">on</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="100.464" y="52.0" width="8.896" height="16.0">1</text>
+          <text x="100.464" y="787.0" width="8.896" height="16.0">1</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="113.792" y="52.0" width="35.584" height="16.0">page</text>
+          <text x="113.792" y="787.0" width="35.584" height="16.0">page</text>
         </line>
       </cell>
       <spanned-cell/>
       <cell row-span="1" col-span="4">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="item-pages"/>
-        <line type="ParagraphPoolBox" x="226.8" y="52.0" width="8.896" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="226.8" y="52.0" width="8.896" height="16.0">3</text>
+        <line type="ParagraphPoolBox" x="226.8" y="787.0" width="8.896" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="226.8" y="787.0" width="8.896" height="16.0">3</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -1636,25 +1366,25 @@
       <cell row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="item-key"/>
-        <line type="ParagraphPoolBox" x="0.0" y="68.0" width="226.8" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="68.0" width="73.808" height="16.0">occurence</text>
+        <line type="ParagraphPoolBox" x="0.0" y="803.0" width="226.8" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="803.0" width="73.808" height="16.0">occurence</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="78.24" y="68.0" width="17.792" height="16.0">on</text>
+          <text x="78.24" y="803.0" width="17.792" height="16.0">on</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="100.464" y="68.0" width="8.896" height="16.0">3</text>
+          <text x="100.464" y="803.0" width="8.896" height="16.0">3</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="113.792" y="68.0" width="84.464" height="16.0">consecutive</text>
+          <text x="113.792" y="803.0" width="84.464" height="16.0">consecutive</text>
         </line>
-        <line type="ParagraphPoolBox" x="0.0" y="84.0" width="43.584" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="84.0" width="43.584" height="16.0">pages</text>
+        <line type="ParagraphPoolBox" x="0.0" y="819.0" width="43.584" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="819.0" width="43.584" height="16.0">pages</text>
         </line>
       </cell>
       <spanned-cell/>
       <cell row-span="1" col-span="4">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="item-pages"/>
-        <line type="ParagraphPoolBox" x="226.8" y="68.0" width="35.552" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="226.8" y="68.0" width="35.552" height="16.0">6,7,8</text>
+        <line type="ParagraphPoolBox" x="226.8" y="803.0" width="35.552" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="226.8" y="803.0" width="35.552" height="16.0">6,7,8</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -1665,38 +1395,30 @@
       <cell row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="item-key"/>
-        <line type="ParagraphPoolBox" x="0.0" y="100.0" width="226.8" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="100.0" width="73.808" height="16.0">occurence</text>
+        <line type="ParagraphPoolBox" x="0.0" y="835.0" width="226.8" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="835.0" width="73.808" height="16.0">occurence</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="78.24" y="100.0" width="17.792" height="16.0">on</text>
+          <text x="78.24" y="835.0" width="17.792" height="16.0">on</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="100.464" y="100.0" width="26.688" height="16.0">non</text>
+          <text x="100.464" y="835.0" width="26.688" height="16.0">non</text>
           <spacer width="4.432" height="0.0" preserve="true"/>
-          <text x="131.584" y="100.0" width="84.464" height="16.0">consecutive</text>
+          <text x="131.584" y="835.0" width="84.464" height="16.0">consecutive</text>
         </line>
-        <line type="ParagraphPoolBox" x="0.0" y="116.0" width="43.584" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="116.0" width="43.584" height="16.0">pages</text>
+        <line type="ParagraphPoolBox" x="0.0" y="851.0" width="43.584" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="851.0" width="43.584" height="16.0">pages</text>
         </line>
       </cell>
       <spanned-cell/>
       <cell row-span="1" col-span="4">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="text-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="item-pages"/>
-        <line type="ParagraphPoolBox" x="226.8" y="100.0" width="80.0" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="226.8" y="100.0" width="80.0" height="16.0">3,4,9,10,13</text>
+        <line type="ParagraphPoolBox" x="226.8" y="835.0" width="80.0" height="16.0" color="#003b79" font-face="Liberation Sans" font-size="16" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="226.8" y="835.0" width="80.0" height="16.0">3,4,9,10,13</text>
         </line>
       </cell>
       <spanned-cell/>
       <spanned-cell/>
       <spanned-cell/>
-    </row>
-    <row height="30">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
     </row>
     <row height="20">
       <empty-cell/>

@@ -376,7 +376,9 @@
       <column width="733"/>
     </cols>
     <row height="31">
-      <empty-cell/>
+      <empty-cell>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="report-footer"/>
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="17">
@@ -384,8 +386,8 @@
       <cell row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="legacy-element"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Element@14391839"/>
-        <line type="ParagraphPoolBox" x="39.0" y="31.0" width="34.656" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="39.0" y="31.0" width="34.656" height="12.0">Notes:</text>
+        <line type="ParagraphPoolBox" x="39.0" y="139.0" width="34.656" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="39.0" y="139.0" width="34.656" height="12.0">Notes:</text>
         </line>
       </cell>
     </row>
@@ -394,16 +396,16 @@
       <cell row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="legacy-element"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Element@14112742"/>
-        <line type="ParagraphPoolBox" x="39.0" y="48.0" width="206.616" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="39.0" y="48.0" width="22.656" height="12.0">This</text>
+        <line type="ParagraphPoolBox" x="39.0" y="156.0" width="206.616" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="39.0" y="156.0" width="22.656" height="12.0">This</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="64.98" y="48.0" width="31.332" height="12.0">report</text>
+          <text x="64.98" y="156.0" width="31.332" height="12.0">report</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="99.636" y="48.0" width="72.672" height="12.0">demonstrates</text>
+          <text x="99.636" y="156.0" width="72.672" height="12.0">demonstrates</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="175.632" y="48.0" width="16.668" height="12.0">the</text>
+          <text x="175.632" y="156.0" width="16.668" height="12.0">the</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="195.624" y="48.0" width="49.992" height="12.0">following:</text>
+          <text x="195.624" y="156.0" width="49.992" height="12.0">following:</text>
         </line>
       </cell>
     </row>
@@ -412,30 +414,30 @@
       <cell row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="legacy-element"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Element@7823121"/>
-        <line type="ParagraphPoolBox" x="39.0" y="65.0" width="389.844" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="39.0" y="65.0" width="3.996" height="12.0">-</text>
+        <line type="ParagraphPoolBox" x="39.0" y="173.0" width="389.844" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="39.0" y="173.0" width="3.996" height="12.0">-</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="46.32" y="65.0" width="30.672" height="12.0">Hides</text>
+          <text x="46.32" y="173.0" width="30.672" height="12.0">Hides</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="80.316" y="65.0" width="21.996" height="12.0">field</text>
+          <text x="80.316" y="173.0" width="21.996" height="12.0">field</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="105.636" y="65.0" width="5.988" height="12.0">if</text>
+          <text x="105.636" y="173.0" width="5.988" height="12.0">if</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="114.948" y="65.0" width="16.668" height="12.0">the</text>
+          <text x="114.948" y="173.0" width="16.668" height="12.0">the</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="134.94" y="65.0" width="28.68" height="12.0">value</text>
+          <text x="134.94" y="173.0" width="28.68" height="12.0">value</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="166.944" y="65.0" width="40.008" height="12.0">repeats</text>
+          <text x="166.944" y="173.0" width="40.008" height="12.0">repeats</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="210.276" y="65.0" width="13.344" height="12.0">on</text>
+          <text x="210.276" y="173.0" width="13.344" height="12.0">on</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="226.944" y="65.0" width="16.668" height="12.0">the</text>
+          <text x="226.944" y="173.0" width="16.668" height="12.0">the</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="246.936" y="65.0" width="22.668" height="12.0">next</text>
+          <text x="246.936" y="173.0" width="22.668" height="12.0">next</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="272.928" y="65.0" width="34.008" height="12.0">record</text>
+          <text x="272.928" y="173.0" width="34.008" height="12.0">record</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="310.26" y="65.0" width="118.584" height="12.0">(PRODUCTVENDOR)</text>
+          <text x="310.26" y="173.0" width="118.584" height="12.0">(PRODUCTVENDOR)</text>
         </line>
       </cell>
     </row>
@@ -444,18 +446,18 @@
       <cell row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="legacy-element"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Element@7823121"/>
-        <line type="ParagraphPoolBox" x="39.0" y="82.0" width="290.556" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="39.0" y="82.0" width="3.996" height="12.0">-</text>
+        <line type="ParagraphPoolBox" x="39.0" y="190.0" width="290.556" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="39.0" y="190.0" width="3.996" height="12.0">-</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="46.32" y="82.0" width="68.676" height="12.0">Conditionally</text>
+          <text x="46.32" y="190.0" width="68.676" height="12.0">Conditionally</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="118.32" y="82.0" width="21.996" height="12.0">sets</text>
+          <text x="118.32" y="190.0" width="21.996" height="12.0">sets</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="143.64" y="82.0" width="34.68" height="12.0">border</text>
+          <text x="143.64" y="190.0" width="34.68" height="12.0">border</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="181.644" y="82.0" width="26.004" height="12.0">color</text>
+          <text x="181.644" y="190.0" width="26.004" height="12.0">color</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="210.972" y="82.0" width="118.584" height="12.0">(PRODUCTVENDOR)</text>
+          <text x="210.972" y="190.0" width="118.584" height="12.0">(PRODUCTVENDOR)</text>
         </line>
       </cell>
     </row>
@@ -464,24 +466,24 @@
       <cell row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="legacy-element"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Element@7823121"/>
-        <line type="ParagraphPoolBox" x="39.0" y="99.0" width="427.212" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="39.0" y="99.0" width="3.996" height="12.0">-</text>
+        <line type="ParagraphPoolBox" x="39.0" y="207.0" width="427.212" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="39.0" y="207.0" width="3.996" height="12.0">-</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="46.32" y="99.0" width="68.676" height="12.0">Conditionally</text>
+          <text x="46.32" y="207.0" width="68.676" height="12.0">Conditionally</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="118.32" y="99.0" width="15.996" height="12.0">set</text>
+          <text x="118.32" y="207.0" width="15.996" height="12.0">set</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="137.64" y="99.0" width="62.7" height="12.0">background</text>
+          <text x="137.64" y="207.0" width="62.7" height="12.0">background</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="203.664" y="99.0" width="26.004" height="12.0">color</text>
+          <text x="203.664" y="207.0" width="26.004" height="12.0">color</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="232.992" y="99.0" width="32.688" height="12.0">based</text>
+          <text x="232.992" y="207.0" width="32.688" height="12.0">based</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="269.004" y="99.0" width="13.344" height="12.0">on</text>
+          <text x="269.004" y="207.0" width="13.344" height="12.0">on</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="285.672" y="99.0" width="55.344" height="12.0">thresholds</text>
+          <text x="285.672" y="207.0" width="55.344" height="12.0">thresholds</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="344.34" y="99.0" width="121.872" height="12.0">(QUANTITYINSTOCK)</text>
+          <text x="344.34" y="207.0" width="121.872" height="12.0">(QUANTITYINSTOCK)</text>
         </line>
       </cell>
     </row>
@@ -490,36 +492,36 @@
       <cell row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="legacy-element"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Element@7823121"/>
-        <line type="ParagraphPoolBox" x="39.0" y="116.0" width="494.412" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="39.0" y="116.0" width="3.996" height="12.0">-</text>
+        <line type="ParagraphPoolBox" x="39.0" y="224.0" width="494.412" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="39.0" y="224.0" width="3.996" height="12.0">-</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="46.32" y="116.0" width="17.988" height="12.0">For</text>
+          <text x="46.32" y="224.0" width="17.988" height="12.0">For</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="67.632" y="116.0" width="29.328" height="12.0">Excel</text>
+          <text x="67.632" y="224.0" width="29.328" height="12.0">Excel</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="100.284" y="116.0" width="39.312" height="12.0">Output,</text>
+          <text x="100.284" y="224.0" width="39.312" height="12.0">Output,</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="142.92" y="116.0" width="5.988" height="12.0">it</text>
+          <text x="142.92" y="224.0" width="5.988" height="12.0">it</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="152.232" y="116.0" width="36.012" height="12.0">breaks</text>
+          <text x="152.232" y="224.0" width="36.012" height="12.0">breaks</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="191.568" y="116.0" width="13.344" height="12.0">on</text>
+          <text x="191.568" y="224.0" width="13.344" height="12.0">on</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="208.236" y="116.0" width="85.944" height="12.0">PRODUCTLINE</text>
+          <text x="208.236" y="224.0" width="85.944" height="12.0">PRODUCTLINE</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="297.504" y="116.0" width="20.016" height="12.0">and</text>
+          <text x="297.504" y="224.0" width="20.016" height="12.0">and</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="320.844" y="116.0" width="21.996" height="12.0">sets</text>
+          <text x="320.844" y="224.0" width="21.996" height="12.0">sets</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="346.164" y="116.0" width="16.668" height="12.0">the</text>
+          <text x="346.164" y="224.0" width="16.668" height="12.0">the</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="366.156" y="116.0" width="31.332" height="12.0">Sheet</text>
+          <text x="366.156" y="224.0" width="31.332" height="12.0">Sheet</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="400.812" y="116.0" width="30.012" height="12.0">name</text>
+          <text x="400.812" y="224.0" width="30.012" height="12.0">name</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="434.148" y="116.0" width="9.996" height="12.0">to</text>
+          <text x="434.148" y="224.0" width="9.996" height="12.0">to</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="447.468" y="116.0" width="85.944" height="12.0">PRODUCTLINE</text>
+          <text x="447.468" y="224.0" width="85.944" height="12.0">PRODUCTLINE</text>
         </line>
       </cell>
     </row>
@@ -528,32 +530,32 @@
       <cell row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="legacy-element"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Element@7823121"/>
-        <line type="ParagraphPoolBox" x="39.0" y="133.0" width="532.476" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="39.0" y="133.0" width="3.996" height="12.0">-</text>
+        <line type="ParagraphPoolBox" x="39.0" y="241.0" width="532.476" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="39.0" y="241.0" width="3.996" height="12.0">-</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="46.32" y="133.0" width="40.008" height="12.0">Applied</text>
+          <text x="46.32" y="241.0" width="40.008" height="12.0">Applied</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="89.652" y="133.0" width="6.672" height="12.0">a</text>
+          <text x="89.652" y="241.0" width="6.672" height="12.0">a</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="99.648" y="133.0" width="48.012" height="12.0">hyperlink</text>
+          <text x="99.648" y="241.0" width="48.012" height="12.0">hyperlink</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="150.984" y="133.0" width="9.996" height="12.0">to</text>
+          <text x="150.984" y="241.0" width="9.996" height="12.0">to</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="164.304" y="133.0" width="16.668" height="12.0">the</text>
+          <text x="164.304" y="241.0" width="16.668" height="12.0">the</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="184.296" y="133.0" width="93.936" height="12.0">PRODUCTNAME</text>
+          <text x="184.296" y="241.0" width="93.936" height="12.0">PRODUCTNAME</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="281.556" y="133.0" width="19.992" height="12.0">that</text>
+          <text x="281.556" y="241.0" width="19.992" height="12.0">that</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="304.872" y="133.0" width="48.684" height="12.0">searches</text>
+          <text x="304.872" y="241.0" width="48.684" height="12.0">searches</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="356.88" y="133.0" width="93.936" height="12.0">PRODUCTNAME</text>
+          <text x="356.88" y="241.0" width="93.936" height="12.0">PRODUCTNAME</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="454.14" y="133.0" width="32.676" height="12.0">image</text>
+          <text x="454.14" y="241.0" width="32.676" height="12.0">image</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="490.14" y="133.0" width="13.344" height="12.0">on</text>
+          <text x="490.14" y="241.0" width="13.344" height="12.0">on</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="506.808" y="133.0" width="64.668" height="12.0">Google.com</text>
+          <text x="506.808" y="241.0" width="64.668" height="12.0">Google.com</text>
         </line>
       </cell>
     </row>
@@ -562,32 +564,32 @@
       <cell row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="legacy-element"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Element@7823121"/>
-        <line type="ParagraphPoolBox" x="39.0" y="150.0" width="485.16" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="39.0" y="150.0" width="3.996" height="12.0">-</text>
+        <line type="ParagraphPoolBox" x="39.0" y="258.0" width="485.16" height="12.0" color="black" font-face="dialog" font-size="12" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="39.0" y="258.0" width="3.996" height="12.0">-</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="46.32" y="150.0" width="60.024" height="12.0">Localizable</text>
+          <text x="46.32" y="258.0" width="60.024" height="12.0">Localizable</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="109.668" y="150.0" width="45.324" height="12.0">Reports,</text>
+          <text x="109.668" y="258.0" width="45.324" height="12.0">Reports,</text>
           <spacer width="6.648" height="0.0" preserve="true"/>
-          <text x="161.64" y="150.0" width="55.944" height="12.0">EntityTitle,</text>
+          <text x="161.64" y="258.0" width="55.944" height="12.0">EntityTitle,</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="220.908" y="150.0" width="53.976" height="12.0">reportTitle</text>
+          <text x="220.908" y="258.0" width="53.976" height="12.0">reportTitle</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="278.208" y="150.0" width="20.016" height="12.0">and</text>
+          <text x="278.208" y="258.0" width="20.016" height="12.0">and</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="301.548" y="150.0" width="45.984" height="12.0">dateTitle</text>
+          <text x="301.548" y="258.0" width="45.984" height="12.0">dateTitle</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="350.856" y="150.0" width="34.68" height="12.0">values</text>
+          <text x="350.856" y="258.0" width="34.68" height="12.0">values</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="388.86" y="150.0" width="29.34" height="12.0">come</text>
+          <text x="388.86" y="258.0" width="29.34" height="12.0">come</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="421.524" y="150.0" width="23.988" height="12.0">from</text>
+          <text x="421.524" y="258.0" width="23.988" height="12.0">from</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="448.836" y="150.0" width="6.672" height="12.0">a</text>
+          <text x="448.836" y="258.0" width="6.672" height="12.0">a</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="458.832" y="150.0" width="46.68" height="12.0">resource</text>
+          <text x="458.832" y="258.0" width="46.68" height="12.0">resource</text>
           <spacer width="3.324" height="0.0" preserve="true"/>
-          <text x="508.836" y="150.0" width="15.324" height="12.0">file</text>
+          <text x="508.836" y="258.0" width="15.324" height="12.0">file</text>
         </line>
       </cell>
     </row>

@@ -46,4 +46,9 @@ public final class CanvasRenderBox extends RenderBox
   {
     return LayoutNodeTypes.TYPE_BOX_CANVAS;
   }
+
+  public long extendHeight(final RenderNode child, final long heightOffset)
+  {
+    return extendHeightInRowMode(child, heightOffset);
+  }
 }

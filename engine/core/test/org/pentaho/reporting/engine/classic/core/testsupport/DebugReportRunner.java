@@ -58,13 +58,13 @@ import org.pentaho.reporting.engine.classic.core.modules.output.table.html.Singl
 import org.pentaho.reporting.engine.classic.core.modules.output.table.rtf.RTFReportUtil;
 import org.pentaho.reporting.engine.classic.core.modules.output.table.xls.ExcelReportUtil;
 import org.pentaho.reporting.engine.classic.core.modules.output.table.xml.XmlTableOutputProcessor;
+import org.pentaho.reporting.engine.classic.core.modules.output.table.xml.XmlTableReportUtil;
 import org.pentaho.reporting.engine.classic.core.modules.output.table.xml.internal.XmlTableOutputProcessorMetaData;
 import org.pentaho.reporting.engine.classic.core.modules.output.xml.XMLProcessor;
 import org.pentaho.reporting.engine.classic.core.states.ReportStateKey;
 import org.pentaho.reporting.engine.classic.core.testsupport.font.LocalFontRegistry;
 import org.pentaho.reporting.engine.classic.core.testsupport.gold.GoldTestBase;
 import org.pentaho.reporting.engine.classic.core.util.NullOutputStream;
-import org.pentaho.reporting.libraries.base.performance.NoOpPerformanceMonitorContext;
 import org.pentaho.reporting.libraries.base.util.MemoryByteArrayOutputStream;
 import org.pentaho.reporting.libraries.designtime.swing.LibSwingUtil;
 import org.pentaho.reporting.libraries.fonts.monospace.MonospaceFontRegistry;
@@ -119,6 +119,18 @@ public class DebugReportRunner
       // reports that have mandatory parameters are ok to fail.
       Assert.fail();
     }
+  }
+
+  public static void createXmlFlow(final MasterReport report)
+      throws Exception
+  {
+    XmlTableReportUtil.createFlowXML(report, new NullOutputStream());
+  }
+
+  public static void createXmlStream(final MasterReport report)
+      throws Exception
+  {
+    XmlTableReportUtil.createStreamXML(report, new NullOutputStream());
   }
 
   public static byte[] createXmlTablePageable(final MasterReport report)
@@ -447,7 +459,7 @@ public class DebugReportRunner
 
       final DebugRenderer debugLayoutSystem = new DebugRenderer(metaData);
       debugLayoutSystem.setStateKey(stateKey);
-      debugLayoutSystem.startReport(report, processingContext, NoOpPerformanceMonitorContext.INSTANCE);
+      debugLayoutSystem.startReport(report, processingContext);
       debugLayoutSystem.startSection(Renderer.TYPE_NORMALFLOW);
       debugLayoutSystem.add(reportHeader, runtime, stateKey);
       debugLayoutSystem.endSection();

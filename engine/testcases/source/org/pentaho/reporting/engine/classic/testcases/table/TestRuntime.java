@@ -41,7 +41,6 @@ import org.pentaho.reporting.engine.classic.testcases.table.model.SourceChunk;
 import org.pentaho.reporting.engine.classic.testcases.table.model.ValidationSequence;
 import org.pentaho.reporting.engine.classic.testcases.table.parser.TableTestSpecXmlResourceFactory;
 import org.pentaho.reporting.libraries.base.config.HierarchicalConfiguration;
-import org.pentaho.reporting.libraries.base.performance.NoOpPerformanceMonitorContext;
 import org.pentaho.reporting.libraries.resourceloader.Resource;
 import org.pentaho.reporting.libraries.resourceloader.ResourceException;
 import org.pentaho.reporting.libraries.resourceloader.ResourceKeyCreationException;
@@ -117,7 +116,7 @@ public class TestRuntime
     final TableDebugRenderer flowRenderer = new TableDebugRenderer(outputProcessor);
     final MasterReport report = new MasterReport();
     report.setPageDefinition(pageDefinition);
-    flowRenderer.startReport(report, processingContext, NoOpPerformanceMonitorContext.INSTANCE);
+    flowRenderer.startReport(report, processingContext);
     // execute .. (maybe it is not pretty, "... but it works")
     final ArrayList list = sequence.getContents();
     for (int i = 0; i < list.size(); i++)

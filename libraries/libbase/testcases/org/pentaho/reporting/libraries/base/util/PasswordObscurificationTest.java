@@ -2,11 +2,6 @@ package org.pentaho.reporting.libraries.base.util;
 
 import junit.framework.TestCase;
 
-/**
- * Todo: Document me!
- *
- * @author Thomas Morgner.
- */
 public class PasswordObscurificationTest extends TestCase
 {
   public PasswordObscurificationTest()
@@ -16,6 +11,11 @@ public class PasswordObscurificationTest extends TestCase
   public PasswordObscurificationTest(final String name)
   {
     super(name);
+  }
+
+  public void testKnownPassword() {
+    assertEquals("520c4657510d0301045f41", PasswordObscurification.encryptPassword("abcdefghijk"));
+    assertEquals("520c4657510d0301045f41ae", PasswordObscurification.encryptPassword("abcdefghijkl"));
   }
 
   public void testEncode() throws Exception

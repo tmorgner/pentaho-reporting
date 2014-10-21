@@ -19,6 +19,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="module" module-name="libbase" exported="" />
+    <orderEntry type="module" module-name="pixie" exported="" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
@@ -29,7 +30,6 @@
         <jarDirectory url="file://$MODULE_DIR$/lib/external" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="module" module-name="libpixie" exported="" />
   </component>
 </module>
 

@@ -82,10 +82,11 @@
       </cell>
     </row>
     <row height="18">
-      <empty-cell>
+      <empty-cell border-bottom-color="#cfcfcf" border-bottom-width="2.0" border-bottom-style="solid">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="report-footer"/>
       </empty-cell>
-      <empty-cell/>
+      <empty-cell border-bottom-color="#cfcfcf" border-bottom-width="2.0" border-bottom-style="solid">
+      </empty-cell>
     </row>
   </table>
 </layout-output>

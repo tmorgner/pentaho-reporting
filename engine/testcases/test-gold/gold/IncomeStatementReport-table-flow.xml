@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <layout-output xmlns="http://reporting.pentaho.org/namespaces/output/layout-output/table/1.0">
-  <table col-count="4" row-count="18">
+  <table col-count="4" row-count="17">
     <cols>
       <column width="234"/>
       <column width="187.2"/>
@@ -196,20 +196,19 @@
       </empty-cell>
       <empty-cell border-top-color="white" border-top-width="1.0" border-top-style="solid" border-bottom-color="white" border-bottom-width="1.0" border-bottom-style="solid" background-color="white">
       </empty-cell>
-      <empty-cell border-top-color="white" border-top-width="1.0" border-top-style="solid" border-bottom-color="white" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="white" border-right-width="1.0" border-right-style="solid" background-color="white">
+      <empty-cell border-top-color="white" border-top-width="1.0" border-top-style="solid" border-bottom-color="black" border-bottom-width="0.25" border-bottom-style="solid" border-right-color="white" border-right-width="1.0" border-right-style="solid" background-color="white">
       </empty-cell>
     </row>
     <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="3">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell border-top-color="#5c7485" border-top-width="0.5" border-top-style="solid" border-bottom-color="#5c7485" border-bottom-width="2.0" border-bottom-style="solid">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="page-footer"/>
+      </empty-cell>
+      <empty-cell border-top-color="#5c7485" border-top-width="0.5" border-top-style="solid" border-bottom-color="#5c7485" border-bottom-width="2.0" border-bottom-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5c7485" border-top-width="0.5" border-top-style="solid" border-bottom-color="#5c7485" border-bottom-width="2.0" border-bottom-style="solid">
+      </empty-cell>
+      <empty-cell border-top-color="#5c7485" border-top-width="0.5" border-top-style="solid" border-bottom-color="#5c7485" border-bottom-width="2.0" border-bottom-style="solid">
+      </empty-cell>
     </row>
   </table>
 </layout-output>

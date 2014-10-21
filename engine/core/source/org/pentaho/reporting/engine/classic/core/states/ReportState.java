@@ -22,7 +22,6 @@ import org.pentaho.reporting.engine.classic.core.ReportDefinition;
 import org.pentaho.reporting.engine.classic.core.ResourceBundleFactory;
 import org.pentaho.reporting.engine.classic.core.layout.InlineSubreportMarker;
 import org.pentaho.reporting.engine.classic.core.states.datarow.DefaultFlowController;
-import org.pentaho.reporting.libraries.base.performance.PerformanceMonitorContext;
 
 /**
  * Creation-Date: 03.07.2007, 13:18:11
@@ -102,6 +101,4 @@ public interface ReportState extends Cloneable
   public ResourceBundleFactory getResourceBundleFactory();
 
   public GroupingState createGroupingState();
-
-  PerformanceMonitorContext getPerformanceMonitorContext();
 }

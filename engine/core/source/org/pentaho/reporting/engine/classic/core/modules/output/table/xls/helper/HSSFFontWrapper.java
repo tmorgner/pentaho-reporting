@@ -74,6 +74,26 @@ public final class HSSFFontWrapper
    */
   private int hashCode;
 
+  private String normalizeFontName(final String fontName)
+  {
+     if ("SansSerif".equalsIgnoreCase(fontName))
+    {
+      return "Arial";
+    }
+    else if ("Monosspace".equalsIgnoreCase(fontName))
+    {
+      return "Courier New";
+    }
+    else if ("Serif".equalsIgnoreCase(fontName))
+    {
+      return "Times New Roman";
+    }
+    else
+    {
+      return fontName;
+    }
+ }
+
   /**
    * Creates a new HSSFFontWrapper for the given font and color.
    *
@@ -97,24 +117,11 @@ public final class HSSFFontWrapper
     {
       throw new NullPointerException("FontDefinition is null");
     }
-
-    if ("SansSerif".equalsIgnoreCase(fontName))
+    if (colorIndex < 0)
     {
-      this.fontName = "Arial";
+      throw new IllegalArgumentException("Negative color index is not allowed");
     }
-    else if ("Monosspace".equalsIgnoreCase(fontName))
-    {
-      this.fontName = "Courier New";
-    }
-    else if ("Serif".equalsIgnoreCase(fontName))
-    {
-      this.fontName = "Times New Roman";
-    }
-    else
-    {
-      this.fontName = fontName;
-    }
-
+    this.fontName = normalizeFontName(fontName);
     this.colorIndex = colorIndex;
     this.fontHeight = fontSize;
     this.bold = bold;
@@ -134,13 +141,18 @@ public final class HSSFFontWrapper
     {
       throw new NullPointerException("Font is null");
     }
-    fontName = font.getFontName();
-    colorIndex = font.getColor();
+    if (font.getColor() < 0)
+    {
+      throw new IllegalArgumentException("Negative color index is not allowed");
+    }
+
+    fontName = normalizeFontName(font.getFontName());
     fontHeight = font.getFontHeightInPoints();
-    italic = font.getItalic();
     bold = (font.getBoldweight() == HSSFFont.BOLDWEIGHT_BOLD);
+    italic = font.getItalic();
     underline = (font.getUnderline() != HSSFFont.U_NONE);
     strikethrough = font.getStrikeout();
+    colorIndex = font.getColor();
   }
 
   /**
@@ -166,7 +178,7 @@ public final class HSSFFontWrapper
     {
       return false;
     }
-    if (underline != wrapper.strikethrough)
+    if (underline != wrapper.underline)
     {
       return false;
     }
@@ -209,10 +221,27 @@ public final class HSSFFontWrapper
       result = 29 * result + fontHeight;
       result = 29 * result + (bold ? 1 : 0);
       result = 29 * result + (italic ? 1 : 0);
+      result = 29 * result + (underline ? 1 : 0);
+      result = 29 * result + (strikethrough ? 1 : 0);
       hashCode = result;
     }
     return hashCode;
   }
+
+  @Override
+  public String toString()
+  {
+    return "HSSFontWrapper{" +
+      "fontname='" + fontName + '\'' +
+      ", colorIndex=" + colorIndex +
+      ", fontHeight=" + fontHeight +
+      ", bold=" + bold +
+      ", italic=" + italic +
+      ", underline=" + underline +
+      ", strikethrough=" + strikethrough +
+      ", hashCode=" + hashCode +
+      '}';
+   }
 
   public boolean isBold()
   {

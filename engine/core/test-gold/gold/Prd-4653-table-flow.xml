@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <layout-output xmlns="http://reporting.pentaho.org/namespaces/output/layout-output/table/1.0">
-  <table col-count="5" row-count="10">
+  <table col-count="5" row-count="9">
     <cols>
       <column width="20"/>
       <column width="280"/>
@@ -232,15 +232,10 @@
       <spanned-cell/>
       <empty-cell/>
     </row>
-    <row height="16">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="5">
-      <empty-cell/>
+      <empty-cell>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="page-footer"/>
+      </empty-cell>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>
@@ -261,40 +256,40 @@
       <empty-cell/>
     </row>
   </table>
-  <table col-count="3" row-count="9">
+  <table col-count="3" row-count="8">
     <cols>
       <column width="20"/>
       <column width="520"/>
       <column width="182"/>
     </cols>
     <row height="20">
-      <cell row-span="1" col-span="3">
+      <cell background-color="#cccccc" row-span="1" col-span="3">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Duplicate content, you should see this message twice in the second page"/>
-        <line type="ParagraphPoolBox" x="187.54" y="4.0" width="346.92" height="12.0" color="black" font-face="Times New Roman" font-size="12" font-style-bold="true" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="187.54" y="4.0" width="46.584" height="12.0">Duplicate</text>
+        <line type="ParagraphPoolBox" x="187.54" y="170.666" width="346.92" height="12.0" color="black" font-face="Times New Roman" font-size="12" font-style-bold="true" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="187.54" y="170.666" width="46.584" height="12.0">Duplicate</text>
           <spacer width="3.0" height="0.0" preserve="true"/>
-          <text x="237.124" y="4.0" width="38.28" height="12.0">content,</text>
+          <text x="237.124" y="170.666" width="38.28" height="12.0">content,</text>
           <spacer width="3.0" height="0.0" preserve="true"/>
-          <text x="278.404" y="4.0" width="18.0" height="12.0">you</text>
+          <text x="278.404" y="170.666" width="18.0" height="12.0">you</text>
           <spacer width="3.0" height="0.0" preserve="true"/>
-          <text x="299.404" y="4.0" width="31.992" height="12.0">should</text>
+          <text x="299.404" y="170.666" width="31.992" height="12.0">should</text>
           <spacer width="3.0" height="0.0" preserve="true"/>
-          <text x="334.396" y="4.0" width="15.3" height="12.0">see</text>
+          <text x="334.396" y="170.666" width="15.3" height="12.0">see</text>
           <spacer width="3.0" height="0.0" preserve="true"/>
-          <text x="352.696" y="4.0" width="17.316" height="12.0">this</text>
+          <text x="352.696" y="170.666" width="17.316" height="12.0">this</text>
           <spacer width="3.0" height="0.0" preserve="true"/>
-          <text x="373.012" y="4.0" width="40.608" height="12.0">message</text>
+          <text x="373.012" y="170.666" width="40.608" height="12.0">message</text>
           <spacer width="3.0" height="0.0" preserve="true"/>
-          <text x="416.62" y="4.0" width="25.944" height="12.0">twice</text>
+          <text x="416.62" y="170.666" width="25.944" height="12.0">twice</text>
           <spacer width="3.0" height="0.0" preserve="true"/>
-          <text x="445.564" y="4.0" width="9.324" height="12.0">in</text>
+          <text x="445.564" y="170.666" width="9.324" height="12.0">in</text>
           <spacer width="3.0" height="0.0" preserve="true"/>
-          <text x="457.888" y="4.0" width="14.64" height="12.0">the</text>
+          <text x="457.888" y="170.666" width="14.64" height="12.0">the</text>
           <spacer width="3.0" height="0.0" preserve="true"/>
-          <text x="475.528" y="4.0" width="33.3" height="12.0">second</text>
+          <text x="475.528" y="170.666" width="33.3" height="12.0">second</text>
           <spacer width="3.0" height="0.0" preserve="true"/>
-          <text x="511.828" y="4.0" width="22.632" height="12.0">page</text>
+          <text x="511.828" y="170.666" width="22.632" height="12.0">page</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -304,35 +299,40 @@
       <cell row-span="1" col-span="3">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Dup 1"/>
-        <line type="ParagraphPoolBox" x="0.0" y="20.0" width="24.72" height="10.0" color="black" font-face="Times New Roman" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="20.0" width="17.22" height="10.0">Dup</text>
+        <line type="ParagraphPoolBox" x="0.0" y="186.666" width="24.72" height="10.0" color="black" font-face="Times New Roman" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="186.666" width="17.22" height="10.0">Dup</text>
           <spacer width="2.5" height="0.0" preserve="true"/>
-          <text x="19.72" y="20.0" width="5.0" height="10.0">1</text>
+          <text x="19.72" y="186.666" width="5.0" height="10.0">1</text>
         </line>
       </cell>
       <spanned-cell/>
       <spanned-cell/>
     </row>
     <row height="15">
-      <empty-cell/>
+      <empty-cell>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="group-header"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="Customer Name"/>
+      </empty-cell>
       <empty-cell/>
       <empty-cell/>
     </row>
     <row height="22">
-      <cell row-span="1" col-span="3">
+      <cell background-color="#0070c0" row-span="1" col-span="3">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Dup 2"/>
-        <line type="ParagraphPoolBox" x="0.0" y="55.0" width="19.776" height="8.0" color="white" font-face="Times New Roman" font-size="8" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="55.0" width="13.776" height="8.0">Dup</text>
+        <line type="ParagraphPoolBox" x="0.0" y="221.666" width="19.776" height="8.0" color="white" font-face="Times New Roman" font-size="8" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="221.666" width="13.776" height="8.0">Dup</text>
           <spacer width="2.0" height="0.0" preserve="true"/>
-          <text x="15.776" y="55.0" width="4.0" height="8.0">2</text>
+          <text x="15.776" y="221.666" width="4.0" height="8.0">2</text>
         </line>
       </cell>
       <spanned-cell/>
       <spanned-cell/>
     </row>
     <row height="2">
-      <empty-cell/>
+      <empty-cell>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="details-footer"/>
+      </empty-cell>
       <empty-cell/>
       <empty-cell/>
     </row>
@@ -342,17 +342,12 @@
       <cell row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Not Dup"/>
-        <line type="ParagraphPoolBox" x="585.899" y="79.0" width="27.768" height="8.0" color="black" font-face="Times New Roman" font-size="8" font-style-bold="true" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="585.899" y="79.0" width="11.992" height="8.0">Not</text>
+        <line type="ParagraphPoolBox" x="585.899" y="245.666" width="27.768" height="8.0" color="black" font-face="Times New Roman" font-size="8" font-style-bold="true" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="585.899" y="245.666" width="11.992" height="8.0">Not</text>
           <spacer width="2.0" height="0.0" preserve="true"/>
-          <text x="599.891" y="79.0" width="13.776" height="8.0">Dup</text>
+          <text x="599.891" y="245.666" width="13.776" height="8.0">Dup</text>
         </line>
       </cell>
-    </row>
-    <row height="16">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
     </row>
     <row height="5">
       <empty-cell/>

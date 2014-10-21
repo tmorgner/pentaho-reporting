@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <layout-output xmlns="http://reporting.pentaho.org/namespaces/output/layout-output/table/1.0">
-  <table col-count="2" row-count="9">
+  <table col-count="2" row-count="7">
     <cols>
       <column width="360.8"/>
       <column width="90.2"/>
@@ -27,20 +27,16 @@
       <spanned-cell/>
       <spanned-cell/>
     </row>
-    <row height="32">
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="12">
-      <cell row-span="1" col-span="2">
+      <cell background-color="#7fff7f" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="The report header"/>
-        <line type="ParagraphPoolBox" x="0.0" y="32.0" width="80.0" height="10.0" color="black" font-face="Serif" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="32.0" width="17.22" height="10.0">The</text>
+        <line type="ParagraphPoolBox" x="0.0" y="0.0" width="80.0" height="10.0" color="black" font-face="Serif" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="0.0" width="17.22" height="10.0">The</text>
           <spacer width="2.77" height="0.0" preserve="true"/>
-          <text x="19.99" y="32.0" width="26.11" height="10.0">report</text>
+          <text x="19.99" y="0.0" width="26.11" height="10.0">report</text>
           <spacer width="2.77" height="0.0" preserve="true"/>
-          <text x="48.87" y="32.0" width="31.13" height="10.0">header</text>
+          <text x="48.87" y="0.0" width="31.13" height="10.0">header</text>
         </line>
       </cell>
       <spanned-cell/>
@@ -49,20 +45,16 @@
       <cell background-color="#efefef" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="(hidden band)"/>
-        <line type="ParagraphPoolBox" x="0.0" y="44.0" width="61.69" height="10.0" color="black" font-face="Serif" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
-          <text x="0.0" y="44.0" width="33.35" height="10.0">(hidden</text>
+        <line type="ParagraphPoolBox" x="0.0" y="12.0" width="61.69" height="10.0" color="black" font-face="Serif" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
+          <text x="0.0" y="12.0" width="33.35" height="10.0">(hidden</text>
           <spacer width="2.77" height="0.0" preserve="true"/>
-          <text x="36.12" y="44.0" width="25.57" height="10.0">band)</text>
+          <text x="36.12" y="12.0" width="25.57" height="10.0">band)</text>
         </line>
       </cell>
       <spanned-cell/>
     </row>
-    <row height="100">
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="12">
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#7f7fff" border-top-width="1.0" border-top-style="solid" border-left-color="#7f7fff" border-left-width="1.0" border-left-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Number of items displayed: "/>
         <line type="ParagraphPoolBox" x="0.0" y="0.0" width="123.86" height="10.0" color="black" font-face="Serif" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
@@ -76,7 +68,7 @@
           <spacer width="2.77" height="0.0" preserve="true"/>
         </line>
       </cell>
-      <cell row-span="1" col-span="1">
+      <cell border-top-color="#7f7fff" border-top-width="1.0" border-top-style="solid" border-right-color="#7f7fff" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="1">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="number-field"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:field="itemcount"/>
         <line type="ParagraphPoolBox" x="360.8" y="0.0" width="5.56" height="10.0" color="black" font-face="Serif" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">
@@ -85,7 +77,7 @@
       </cell>
     </row>
     <row height="88">
-      <cell row-span="1" col-span="2">
+      <cell border-left-color="#7f7fff" border-left-width="1.0" border-left-style="solid" border-bottom-color="#7f7fff" border-bottom-width="1.0" border-bottom-style="solid" border-right-color="#7f7fff" border-right-width="1.0" border-right-style="solid" row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="&#x000a;This is just some report footer content declared in the page footer, so that it is&#x000a;printed at the bottom of the page.&#x000a;&#x000a;The grey area is the real report footer (make it white to be invisible, but do not remove it).&#x000a;The blue-bordered area is the page footer, which gets abused as a report footer.&#x000a;    "/>
         <line type="ParagraphPoolBox" x="0.0" y="12.0" width="0.0" height="10.0" color="black" font-face="SansSerif" font-size="10" font-style-bold="false" font-style-italics="false" font-style-underline="false" font-style-strikethrough="false">

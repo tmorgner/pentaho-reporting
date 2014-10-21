@@ -14255,7 +14255,7 @@
       <empty-cell/>
     </row>
   </table>
-  <table col-count="5" row-count="49">
+  <table col-count="5" row-count="48">
     <cols>
       <column width="2"/>
       <column width="104"/>
@@ -15259,13 +15259,6 @@
     <row height="12">
       <empty-cell>
       </empty-cell>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="18">
-      <empty-cell/>
       <empty-cell/>
       <empty-cell/>
       <empty-cell/>

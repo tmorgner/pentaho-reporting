@@ -12,7 +12,7 @@
  * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU Lesser General Public License for more details.
  *
- * Copyright (c) 2000 - 2011 Pentaho Corporation and Contributors...  
+ * Copyright (c) 2000 - 2011 Pentaho Corporation and Contributors...
  * All rights reserved.
  */
 
@@ -56,6 +56,12 @@ public class TestSetupModule extends AbstractModule
       throws SQLException, IOException
   {
     final Connection connection = DriverManager.getConnection("jdbc:hsqldb:mem:SampleData", "sa", "");
+    connection.setAutoCommit(false);
+    if (isValid(connection)) {
+      // both the test-module here and the sample-data module try to initialize the database.
+      // lets do it only once.
+      return;
+    }
     try
     {
       final InputStream in = new FileInputStream("sql/sampledata.script");
@@ -101,6 +107,27 @@ public class TestSetupModule extends AbstractModule
     finally
     {
       connection.close();
+    }
+  }
+
+  private boolean isValid(final Connection connection)
+  {
+    // cheap test:
+    try {
+      Statement statement = connection.createStatement();
+      boolean result = false;
+      try
+      {
+        result = statement.execute("SELECT Count(*) FROM CUSTOMERS");
+      }
+      finally {
+        statement.close();
+      }
+      return result;
+    }
+    catch (final SQLException e)
+    {
+      return false;
     }
   }
 }

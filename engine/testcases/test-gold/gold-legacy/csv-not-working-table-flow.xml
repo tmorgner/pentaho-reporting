@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <layout-output xmlns="http://reporting.pentaho.org/namespaces/output/layout-output/table/1.0">
-  <table col-count="5" row-count="9">
+  <table col-count="5" row-count="7">
     <cols>
       <column width="60"/>
       <column width="340"/>
@@ -71,25 +71,17 @@
       </empty-cell>
       <empty-cell/>
     </row>
-    <row height="103">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
-    <row height="22">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-    </row>
     <row height="4">
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
-      <empty-cell/>
+      <empty-cell background-color="#afafaf">
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="rectangle"/>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:name="PF0"/>
+      </empty-cell>
+      <empty-cell background-color="#afafaf">
+      </empty-cell>
+      <empty-cell background-color="#afafaf">
+      </empty-cell>
+      <empty-cell background-color="#afafaf">
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="14">
@@ -111,7 +103,7 @@
       <spanned-cell/>
       <empty-cell/>
     </row>
-    <row height="188">
+    <row height="4">
       <spanned-cell/>
       <spanned-cell/>
       <spanned-cell/>

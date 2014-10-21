@@ -300,7 +300,7 @@ public class ExcelPrinter
         fontColorProducer = new StaticExcelColorSupport();
       }
 
-      this.textExtractor = new ExcelTextExtractor(metaData, colorProducer);
+      this.textExtractor = new ExcelTextExtractor(metaData, fontColorProducer);
 
       final boolean hardLimit = "true".equals
           (config.getConfigProperty(
@@ -726,7 +726,7 @@ public class ExcelPrinter
 
     if(sheetFreezeTop>0 || sheetFreezeLeft > 0)
     {
-    	sheet.createFreezePane(sheetFreezeLeft, sheetFreezeTop);
+      sheet.createFreezePane(sheetFreezeLeft, sheetFreezeTop);
     }
   }
 

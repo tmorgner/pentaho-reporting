@@ -541,7 +541,7 @@
       <empty-cell/>
       <empty-cell/>
     </row>
-    <row height="60">
+    <row height="45">
       <cell row-span="1" col-span="11">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="message"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="Total Number of Orders for $(CUSTOMERNAME) is $(Orders Count, number, ###,###)."/>

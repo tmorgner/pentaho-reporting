@@ -495,7 +495,7 @@ public final class ExpressionDataRow
           final int dependencyLevel = expression.getDependencyLevel();
           if (dependencyLevel == minLevel && (expression instanceof Function == false))
           {
-            levelList.add(IntegerCache.getInteger(i), minLevel);
+            levelList.add(IntegerCache.getInteger(i), Integer.MIN_VALUE);
           }
         }
       }
@@ -642,8 +642,6 @@ public final class ExpressionDataRow
     {
       throw new IllegalArgumentException();
     }
-
-    reactivateExpressions(event.isDeepTraversing());
   }
 
   private void reactivateExpressions(final boolean deepTraversing)
@@ -728,7 +726,7 @@ public final class ExpressionDataRow
         break;
       }
 
-      final int[] listeners = levelData[levelIdx].getFunctions();
+      final int[] listeners = levelData[levelIdx].getActiveExpressions();
       for (int l = 0; l < listeners.length; l++)
       {
         final Expression expression = expressions[listeners[l]];
@@ -739,10 +737,13 @@ public final class ExpressionDataRow
 
         final ExpressionRuntime oldRuntime = expression.getRuntime();
         expression.setRuntime(runtime);
-        final Function e = (Function) expression;
         try
         {
-          e.itemsAdvanced(event);
+          if (expression instanceof Function)
+          {
+            final Function e = (Function) expression;
+            e.itemsAdvanced(event);
+          }
           final String name = expression.getName();
           if (name != null)
           {
@@ -781,7 +782,7 @@ public final class ExpressionDataRow
         break;
       }
 
-      final int[] listeners = levelData[levelIdx].getFunctions();
+      final int[] listeners = levelData[levelIdx].getActiveExpressions();
       for (int l = 0; l < listeners.length; l++)
       {
         final Expression expression = expressions[listeners[l]];
@@ -792,10 +793,13 @@ public final class ExpressionDataRow
 
         final ExpressionRuntime oldRuntime = expression.getRuntime();
         expression.setRuntime(runtime);
-        final Function e = (Function) expression;
         try
         {
-          e.itemsStarted(event);
+          if (expression instanceof Function)
+          {
+            final Function e = (Function) expression;
+            e.itemsStarted(event);
+          }
           final String name = expression.getName();
           if (name != null)
           {
@@ -834,7 +838,7 @@ public final class ExpressionDataRow
         break;
       }
 
-      final int[] listeners = levelData[levelIdx].getFunctions();
+      final int[] listeners = levelData[levelIdx].getActiveExpressions();
       for (int l = 0; l < listeners.length; l++)
       {
         final Expression expression = expressions[listeners[l]];
@@ -845,10 +849,13 @@ public final class ExpressionDataRow
 
         final ExpressionRuntime oldRuntime = expression.getRuntime();
         expression.setRuntime(runtime);
-        final Function e = (Function) expression;
         try
         {
-          e.itemsFinished(event);
+          if (expression instanceof Function)
+          {
+            final Function e = (Function) expression;
+            e.itemsFinished(event);
+          }
           final String name = expression.getName();
           if (name != null)
           {
@@ -887,7 +894,7 @@ public final class ExpressionDataRow
         break;
       }
 
-      final int[] listeners = levelData[levelIdx].getFunctions();
+      final int[] listeners = levelData[levelIdx].getActiveExpressions();
       for (int l = 0; l < listeners.length; l++)
       {
         final Expression expression = expressions[listeners[l]];
@@ -898,10 +905,13 @@ public final class ExpressionDataRow
 
         final ExpressionRuntime oldRuntime = expression.getRuntime();
         expression.setRuntime(runtime);
-        final Function e = (Function) expression;
         try
         {
-          e.groupStarted(event);
+          if (expression instanceof Function)
+          {
+            final Function e = (Function) expression;
+            e.groupStarted(event);
+          }
           final String name = expression.getName();
           if (name != null)
           {
@@ -940,7 +950,7 @@ public final class ExpressionDataRow
         break;
       }
 
-      final int[] listeners = levelData[levelIdx].getFunctions();
+      final int[] listeners = levelData[levelIdx].getActiveExpressions();
       for (int l = 0; l < listeners.length; l++)
       {
         final Expression expression = expressions[listeners[l]];
@@ -951,10 +961,13 @@ public final class ExpressionDataRow
 
         final ExpressionRuntime oldRuntime = expression.getRuntime();
         expression.setRuntime(runtime);
-        final Function e = (Function) expression;
         try
         {
-          e.groupFinished(event);
+          if (expression instanceof Function)
+          {
+            final Function e = (Function) expression;
+            e.groupFinished(event);
+          }
           final String name = expression.getName();
           if (name != null)
           {
@@ -993,7 +1006,7 @@ public final class ExpressionDataRow
         break;
       }
 
-      final int[] listeners = levelData[levelIdx].getFunctions();
+      final int[] listeners = levelData[levelIdx].getActiveExpressions();
       for (int l = 0; l < listeners.length; l++)
       {
         final Expression expression = expressions[listeners[l]];
@@ -1004,10 +1017,13 @@ public final class ExpressionDataRow
 
         final ExpressionRuntime oldRuntime = expression.getRuntime();
         expression.setRuntime(runtime);
-        final Function e = (Function) expression;
         try
         {
-          e.reportStarted(event);
+          if (expression instanceof Function)
+          {
+            final Function e = (Function) expression;
+            e.reportStarted(event);
+          }
           final String name = expression.getName();
           if (name != null)
           {
@@ -1046,7 +1062,7 @@ public final class ExpressionDataRow
         break;
       }
 
-      final int[] listeners = levelData[levelIdx].getFunctions();
+      final int[] listeners = levelData[levelIdx].getActiveExpressions();
       for (int l = 0; l < listeners.length; l++)
       {
         final Expression expression = expressions[listeners[l]];
@@ -1057,10 +1073,13 @@ public final class ExpressionDataRow
 
         final ExpressionRuntime oldRuntime = expression.getRuntime();
         expression.setRuntime(runtime);
-        final Function e = (Function) expression;
         try
         {
-          e.reportDone(event);
+          if (expression instanceof Function)
+          {
+            final Function e = (Function) expression;
+            e.reportDone(event);
+          }
           final String name = expression.getName();
           if (name != null)
           {
@@ -1099,7 +1118,7 @@ public final class ExpressionDataRow
         break;
       }
 
-      final int[] listeners = levelData[levelIdx].getFunctions();
+      final int[] listeners = levelData[levelIdx].getActiveExpressions();
       for (int l = 0; l < listeners.length; l++)
       {
         final Expression expression = expressions[listeners[l]];
@@ -1110,10 +1129,13 @@ public final class ExpressionDataRow
 
         final ExpressionRuntime oldRuntime = expression.getRuntime();
         expression.setRuntime(runtime);
-        final Function e = (Function) expression;
         try
         {
-          e.reportFinished(event);
+          if (expression instanceof Function)
+          {
+            final Function e = (Function) expression;
+            e.reportFinished(event);
+          }
           final String name = expression.getName();
           if (name != null)
           {
@@ -1152,7 +1174,7 @@ public final class ExpressionDataRow
         break;
       }
 
-      final int[] listeners = levelData[levelIdx].getFunctions();
+      final int[] listeners = levelData[levelIdx].getActiveExpressions();
       for (int l = 0; l < listeners.length; l++)
       {
         final Expression expression = expressions[listeners[l]];
@@ -1163,10 +1185,13 @@ public final class ExpressionDataRow
 
         final ExpressionRuntime oldRuntime = expression.getRuntime();
         expression.setRuntime(runtime);
-        final Function e = (Function) expression;
         try
         {
-          e.reportInitialized(event);
+          if (expression instanceof Function)
+          {
+            final Function e = (Function) expression;
+            e.reportInitialized(event);
+          }
           final String name = expression.getName();
           if (name != null)
           {
@@ -1206,7 +1231,7 @@ public final class ExpressionDataRow
         break;
       }
 
-      final int[] listeners = levelData[levelIdx].getPageEventListeners();
+      final int[] listeners = levelData[levelIdx].getActiveExpressions();
       for (int l = 0; l < listeners.length; l++)
       {
         final Expression expression = expressions[listeners[l]];
@@ -1217,10 +1242,13 @@ public final class ExpressionDataRow
 
         final ExpressionRuntime oldRuntime = expression.getRuntime();
         expression.setRuntime(runtime);
-        final PageEventListener e = (PageEventListener) expression;
         try
         {
-          e.pageStarted(event);
+          if (expression instanceof PageEventListener)
+          {
+            final PageEventListener e = (PageEventListener) expression;
+            e.pageStarted(event);
+          }
           final String name = expression.getName();
           if (name != null)
           {
@@ -1260,7 +1288,7 @@ public final class ExpressionDataRow
         break;
       }
 
-      final int[] listeners = levelData[levelIdx].getPageEventListeners();
+      final int[] listeners = levelData[levelIdx].getActiveExpressions();
       for (int l = 0; l < listeners.length; l++)
       {
         final Expression expression = expressions[listeners[l]];
@@ -1271,10 +1299,13 @@ public final class ExpressionDataRow
 
         final ExpressionRuntime oldRuntime = expression.getRuntime();
         expression.setRuntime(runtime);
-        final PageEventListener e = (PageEventListener) expression;
         try
         {
-          e.pageFinished(event);
+          if (expression instanceof PageEventListener)
+          {
+            final PageEventListener e = (PageEventListener) expression;
+            e.pageFinished(event);
+          }
           final String name = expression.getName();
           if (name != null)
           {

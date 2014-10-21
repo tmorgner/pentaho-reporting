@@ -51,9 +51,13 @@ public final class RowRenderBox extends RenderBox
         attributes, stateKey);
   }
 
-
   public int getNodeType()
   {
     return LayoutNodeTypes.TYPE_BOX_ROWBOX;
+  }
+
+  public long extendHeight(final RenderNode child, final long heightOffset)
+  {
+    return extendHeightInRowMode(child, heightOffset);
   }
 }

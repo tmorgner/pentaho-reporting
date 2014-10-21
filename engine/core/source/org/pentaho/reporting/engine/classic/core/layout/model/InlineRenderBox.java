@@ -63,4 +63,9 @@ public class InlineRenderBox extends RenderBox
   {
     return LayoutNodeTypes.TYPE_BOX_INLINE;
   }
+
+  public long extendHeight(final RenderNode child, final long heightOffset)
+  {
+    return extendHeightInRowMode(child, heightOffset);
+  }
 }

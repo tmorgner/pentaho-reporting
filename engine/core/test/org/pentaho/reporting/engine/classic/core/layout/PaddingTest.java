@@ -41,7 +41,6 @@ import org.pentaho.reporting.engine.classic.core.style.FontDefinition;
 import org.pentaho.reporting.engine.classic.core.testsupport.DebugExpressionRuntime;
 import org.pentaho.reporting.engine.classic.core.testsupport.DebugOutputProcessorMetaData;
 import org.pentaho.reporting.engine.classic.core.testsupport.DebugRenderer;
-import org.pentaho.reporting.libraries.base.performance.NoOpPerformanceMonitorContext;
 import org.pentaho.reporting.libraries.resourceloader.ResourceManager;
 import org.pentaho.reporting.libraries.resourceloader.Resource;
 import org.pentaho.reporting.libraries.fonts.registry.DefaultFontStorage;
@@ -91,7 +90,7 @@ public class PaddingTest extends TestCase
     final DebugOutputProcessorMetaData metaData = new DebugOutputProcessorMetaData(report.getConfiguration(),
         new DefaultFontStorage(new MonospaceFontRegistry(9, 18)));
     final DebugRenderer debugLayoutSystem = new DebugRenderer(metaData);
-    debugLayoutSystem.startReport(basereport, processingContext, NoOpPerformanceMonitorContext.INSTANCE);
+    debugLayoutSystem.startReport(basereport, processingContext);
     debugLayoutSystem.startSection(Renderer.TYPE_NORMALFLOW);
     debugLayoutSystem.add(containerBand, runtime, stateKey);
     debugLayoutSystem.endSection();
@@ -122,7 +121,7 @@ public class PaddingTest extends TestCase
     final DebugOutputProcessorMetaData metaData = new DebugOutputProcessorMetaData(report.getConfiguration(),
         new DefaultFontStorage(new MonospaceFontRegistry(9, 18)));
     final DebugRenderer debugLayoutSystem = new DebugRenderer(metaData);
-    debugLayoutSystem.startReport(basereport, processingContext, NoOpPerformanceMonitorContext.INSTANCE);
+    debugLayoutSystem.startReport(basereport, processingContext);
     debugLayoutSystem.startSection(Renderer.TYPE_NORMALFLOW);
     debugLayoutSystem.add(containerBand, runtime, stateKey);
     debugLayoutSystem.endSection();

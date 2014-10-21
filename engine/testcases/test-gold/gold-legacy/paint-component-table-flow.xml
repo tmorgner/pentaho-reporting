@@ -51,7 +51,7 @@
       </cell>
       <spanned-cell/>
     </row>
-    <row height="48">
+    <row height="24">
       <cell row-span="1" col-span="2">
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="label"/>
         <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:value="END OF REPORT"/>
@@ -66,7 +66,9 @@
       <spanned-cell/>
     </row>
     <row height="4">
-      <empty-cell/>
+      <empty-cell>
+        <attribute xmlns:autoGenNs="http://reporting.pentaho.org/namespaces/engine/attributes/core" autoGenNs:element-type="page-footer"/>
+      </empty-cell>
       <empty-cell/>
     </row>
     <row height="20">

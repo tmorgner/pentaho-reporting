@@ -83,7 +83,6 @@ public abstract class AbstractBoot implements SubSystem
    * The reason why booting failed for easier debugging or logging.
    */
   private Exception bootFailed;
-  private ObjectFactory objectFactory;
 
 
   /**
@@ -455,25 +454,5 @@ public abstract class AbstractBoot implements SubSystem
       extWrapper = new ExtendedConfigurationWrapper(getGlobalConfig());
     }
     return extWrapper;
-  }
-
-  public synchronized ObjectFactory getObjectFactory()
-  {
-    try
-    {
-      if (objectFactory == null)
-      {
-        final String configProperty = getGlobalConfig().getConfigProperty(ObjectFactoryBuilder.class.getName(),
-            DefaultObjectFactoryBuilder.class.getName());
-        final ObjectFactoryBuilder objectFactoryBuilder = (ObjectFactoryBuilder)
-            ObjectUtilities.loadAndInstantiate(configProperty, getClass(), ObjectFactoryBuilder.class);
-        objectFactory = objectFactoryBuilder.createObjectFactory(this);
-      }
-      return objectFactory;
-    }
-    catch (Throwable t)
-    {
-      throw new IllegalStateException("ObjectFactory is not configured properly", t);
-    }
   }
 }

@@ -146,8 +146,8 @@ public final class GlobalMasterRow implements MasterDataRow
     dataFactory.add(reportFactory);
     dataFactory.add(this.dataFactory);
     gmr.dataFactory = dataFactory;
-    gmr.setParameterDataRow(parameterDataRow);
     gmr.setEnvironmentDataRow(environmentDataRow);
+    gmr.setParameterDataRow(parameterDataRow);
     return gmr;
   }
 
@@ -360,20 +360,6 @@ public final class GlobalMasterRow implements MasterDataRow
    */
   private void updateGlobalView()
   {
-    if (parameterDataRow != null)
-    {
-      final String[] columnNames = parameterDataRow.getColumnNames();
-      for (int i = 0; i < columnNames.length; i++)
-      {
-        final String columnName = columnNames[i];
-        if (columnName != null)
-        {
-          final Object columnValue = parameterDataRow.get(columnName);
-          globalView.putField(columnName, columnValue, true);
-        }
-      }
-    }
-
     if (reportDataRow != null)
     {
       final int dataColCount = reportDataRow.getColumnCount();
@@ -546,6 +532,17 @@ public final class GlobalMasterRow implements MasterDataRow
     dataRow.schemaDefinition = schemaDefinition;
     dataRow.parameterDataRow = parameterDataRow;
     dataRow.resourceBundleFactory = resourceBundleFactory;
+    if (environmentDataRow != null)
+    {
+      DataRowEventHelper.refreshDataRow(dataRow.environmentDataRow, dataRow.globalView);
+    }
+
+    if (parameterDataRow != null)
+    {
+      dataRow.parameterDataRow = parameterDataRow;
+      DataRowEventHelper.refreshDataRow(dataRow.parameterDataRow, dataRow.globalView);
+    }
+
     boolean needActivate = false;
     if (deepTraversingOnly == false && paddingDataRow != null)
     {
@@ -615,6 +612,9 @@ public final class GlobalMasterRow implements MasterDataRow
         }
       }
     }
+
+    dataRow.refresh();
+    dataRow.globalView.validateChangedFlags();
     return dataRow;
   }
 
@@ -774,6 +774,7 @@ public final class GlobalMasterRow implements MasterDataRow
     gmr.dataSchema = null;
     gmr.globalView = new FastGlobalView();
     gmr.parameterDataRow = null;
+    gmr.setEnvironmentDataRow(environmentDataRow);
     gmr.setParameterDataRow(getParameterDataRow());
     return gmr;
   }
@@ -802,11 +803,24 @@ public final class GlobalMasterRow implements MasterDataRow
 
   public void refresh()
   {
+    if (environmentDataRow != null)
+    {
+      DataRowEventHelper.refreshDataRow(environmentDataRow, this.globalView);
+    }
+    if (parameterDataRow != null)
+    {
+      DataRowEventHelper.refreshDataRow(parameterDataRow, this.globalView);
+    }
+
     updateGlobalView();
 
     if (expressionDataRow != null)
     {
       expressionDataRow.refresh();
+    }
+    if (importedDataRow != null)
+    {
+      DataRowEventHelper.refreshDataRow(importedDataRow, this.globalView);
     }
   }
 }

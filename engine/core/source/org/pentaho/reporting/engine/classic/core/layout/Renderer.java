@@ -30,7 +30,6 @@ import org.pentaho.reporting.engine.classic.core.layout.output.LayoutPagebreakHa
 import org.pentaho.reporting.engine.classic.core.layout.output.OutputProcessor;
 import org.pentaho.reporting.engine.classic.core.states.ReportStateKey;
 import org.pentaho.reporting.engine.classic.core.util.InstanceID;
-import org.pentaho.reporting.libraries.base.performance.PerformanceMonitorContext;
 
 /**
  * Creation-Date: 08.04.2007, 16:35:29
@@ -52,9 +51,7 @@ public interface Renderer extends Cloneable
 
   public OutputProcessor getOutputProcessor();
 
-  public void startReport(final ReportDefinition report,
-                          final ProcessingContext processingContext,
-                          final PerformanceMonitorContext performanceMonitorContext);
+  public void startReport(final ReportDefinition pageDefinition, final ProcessingContext processingContext);
 
   public void startSubReport(final ReportDefinition report, final InstanceID insertationPoint);
 
