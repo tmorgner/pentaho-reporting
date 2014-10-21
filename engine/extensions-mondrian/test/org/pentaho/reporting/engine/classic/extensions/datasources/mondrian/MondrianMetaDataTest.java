@@ -93,13 +93,14 @@ public class MondrianMetaDataTest extends TestCase
     mdxDataFactory.setJdbcUser("sa");
     mdxDataFactory.setJdbcPassword("");
 
-    mondrianDataFactory.initialize
+    mdxDataFactory.initialize
         (ClassicEngineBoot.getInstance().getGlobalConfig(), resourceManager, null, resourceBundleFactory);
     mdxDataFactory.setQuery("default", QUERY, null, null);
     mdxDataFactory.setQuery("default2", PARAMETRIZED_QUERY, null, null);
 
     assertNotEquals("Physical Query is not the same", queryHash, metaData.getQueryHash(mdxDataFactory, "default", new StaticDataRow()));
-    assertEquals("Physical Query is the same", queryHash, metaData.getQueryHash(mdxDataFactory, "default2", new StaticDataRow()));
+    Object default2 = metaData.getQueryHash(mdxDataFactory, "default2", new StaticDataRow());
+    assertEquals("Physical Query is the same", queryHash, default2);
 
     final BandedMDXDataFactory mdxDataFactory2 = new BandedMDXDataFactory();
     mdxDataFactory2.setCubeFileProvider(new DefaultCubeFileProvider

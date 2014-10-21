@@ -58,6 +58,9 @@ public class MondrianTestUtil
   private static final String QUERY_6 = "select crossjoin([Product].Children, [Markets].Children) on 0, crossjoin({[Measures].[Quantity], " +
       "[Measures].[Sales]}, [Time].Children) on 1 from [SteelWheelsSales]";
 
+  private static final String QUERY_X =
+      "select [Markets].Children ON COLUMNS, [Time].Children ON ROWS from [SteelWheelsSales]";
+
   /**
    * Cells with properties.
    */
@@ -159,6 +162,7 @@ public class MondrianTestUtil
   public static String[][] createQueryArray(final String id)
   {
     return new String[][]{
+        {QUERY_X, "queryX" + id + "-results.txt"},
         {QUERY_1, "query1" + id + "-results.txt"},
         {QUERY_2, "query2" + id + "-results.txt"},
         {QUERY_3, "query3" + id + "-results.txt"},

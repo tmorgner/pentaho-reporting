@@ -1,23 +1,26 @@
 /*
- * This program is free software; you can redistribute it and/or modify it under the
- * terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
- * Foundation.
- *
- * You should have received a copy of the GNU Lesser General Public License along with this
- * program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
- * or from the Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU Lesser General Public License for more details.
- *
- * Copyright (c) 2001 - 2009 Object Refinery Ltd, Pentaho Corporation and Contributors..  All rights reserved.
- */
+* This program is free software; you can redistribute it and/or modify it under the
+* terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
+* Foundation.
+*
+* You should have received a copy of the GNU Lesser General Public License along with this
+* program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+* or from the Free Software Foundation, Inc.,
+* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*
+* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* See the GNU Lesser General Public License for more details.
+*
+* Copyright (c) 2001 - 2013 Object Refinery Ltd, Pentaho Corporation and Contributors..  All rights reserved.
+*/
 
 package org.pentaho.reporting.engine.classic.core.modules.misc.tablemodel;
 
 import java.io.PrintStream;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Arrays;
 import java.util.Locale;
 import javax.swing.table.TableModel;
 
@@ -55,17 +58,19 @@ public final class TableModelInfo
         new DefaultDataAttributeContext(new GenericOutputProcessorMetaData(), Locale.US);
 
     final String[] tableAttrDomains = tableAttributes.getMetaAttributeDomains();
+    Arrays.sort(tableAttrDomains);
     for (int i = 0; i < tableAttrDomains.length; i++)
     {
       final String tableAttrDomain = tableAttrDomains[i];
       final String[] attributeNames = tableAttributes.getMetaAttributeNames(tableAttrDomain);
+      Arrays.sort(attributeNames);
       for (int j = 0; j < attributeNames.length; j++)
       {
         final String attributeName = attributeNames[j];
         final Object o =
             tableAttributes.getMetaAttribute(tableAttrDomain, attributeName, Object.class, attributeContext);
 
-        out.println("TableAttribute [" + tableAttrDomain + ':' + attributeName + "]=" + o);
+        out.println("TableAttribute [" + tableAttrDomain + ':' + attributeName + "]=" + format(o));
       }
     }
 
@@ -73,17 +78,19 @@ public final class TableModelInfo
     {
       final DataAttributes columnAttributes = metaTableModel.getColumnAttributes(column);
       final String[] columnAttributeDomains = columnAttributes.getMetaAttributeDomains();
+      Arrays.sort(columnAttributeDomains);
       for (int i = 0; i < columnAttributeDomains.length; i++)
       {
         final String colAttrDomain = columnAttributeDomains[i];
         final String[] attributeNames = columnAttributes.getMetaAttributeNames(colAttrDomain);
+        Arrays.sort(attributeNames);
         for (int j = 0; j < attributeNames.length; j++)
         {
           final String attributeName = attributeNames[j];
           final Object o =
               columnAttributes.getMetaAttribute(colAttrDomain, attributeName, Object.class, attributeContext);
 
-          out.println("ColumnAttribute(" + column + ") [" + colAttrDomain + ':' + attributeName + "]=" + o);
+          out.println("ColumnAttribute(" + column + ") [" + colAttrDomain + ':' + attributeName + "]=" + format(o));
         }
       }
     }
@@ -116,17 +123,19 @@ public final class TableModelInfo
       {
         final DataAttributes cellAttributes = metaTableModel.getCellDataAttributes(rows, i);
         final String[] columnAttributeDomains = cellAttributes.getMetaAttributeDomains();
+        Arrays.sort(columnAttributeDomains);
         for (int attrDomainIdx = 0; attrDomainIdx < columnAttributeDomains.length; attrDomainIdx++)
         {
           final String colAttrDomain = columnAttributeDomains[attrDomainIdx];
           final String[] attributeNames = cellAttributes.getMetaAttributeNames(colAttrDomain);
+          Arrays.sort(attributeNames);
           for (int j = 0; j < attributeNames.length; j++)
           {
             final String attributeName = attributeNames[j];
             final Object o =
                 cellAttributes.getMetaAttribute(colAttrDomain, attributeName, Object.class, attributeContext);
 
-            out.println("CellAttribute(" + rows + ", " + i + ") [" + colAttrDomain + ':' + attributeName + "]=" + o);
+            out.println("CellAttribute(" + rows + ", " + i + ") [" + colAttrDomain + ':' + attributeName + "]=" + format(o));
           }
         }
       }
@@ -149,7 +158,7 @@ public final class TableModelInfo
       for (int i = 0; i < mod.getColumnCount(); i++)
       {
         final Object value = mod.getValueAt(rows, i);
-        final Class c = mod.getColumnClass(i);
+        final Class<?> c = mod.getColumnClass(i);
         if (value == null)
         {
           out.println("ValueAt (" + rows + ", " + i + ") is null"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
@@ -205,11 +214,21 @@ public final class TableModelInfo
       {
         final Object value = mod.getValueAt(rows, i);
         //final Class c = mod.getColumnClass(i);
-        out.println("ValueAt (" + rows + ", " + i + ") is '" + value + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        out.println("ValueAt (" + rows + ", " + i + ") is '" + format(value) + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
       }
     }
   }
 
+  private static String format(final Object value)
+  {
+    if (value instanceof Float ||
+        value instanceof Double)
+    {
+      final DecimalFormat fmt = new DecimalFormat("#0.0###", new DecimalFormatSymbols(Locale.US));
+      return fmt.format(value);
+    }
+    return String.valueOf(value);
+  }
   /**
    * Prints a table model to standard output.
    *

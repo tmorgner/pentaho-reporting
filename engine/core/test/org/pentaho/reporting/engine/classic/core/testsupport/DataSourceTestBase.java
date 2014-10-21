@@ -1,20 +1,20 @@
 /*
- * This program is free software; you can redistribute it and/or modify it under the
- * terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
- * Foundation.
- *
- * You should have received a copy of the GNU Lesser General Public License along with this
- * program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
- * or from the Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU Lesser General Public License for more details.
- *
- * Copyright (c) 2000 - 2011 Pentaho Corporation and Contributors...  
- * All rights reserved.
- */
+* This program is free software; you can redistribute it and/or modify it under the
+* terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
+* Foundation.
+*
+* You should have received a copy of the GNU Lesser General Public License along with this
+* program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+* or from the Free Software Foundation, Inc.,
+* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*
+* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* See the GNU Lesser General Public License for more details.
+*
+* Copyright (c) 2000 - 2013 Pentaho Corporation and Contributors...
+* All rights reserved.
+*/
 
 package org.pentaho.reporting.engine.classic.core.testsupport;
 
@@ -30,6 +30,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintStream;
 import java.io.StringReader;
+import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
 import javax.naming.spi.NamingManager;
 import javax.swing.table.TableModel;
@@ -43,9 +44,11 @@ import org.pentaho.reporting.engine.classic.core.MasterReport;
 import org.pentaho.reporting.engine.classic.core.ParameterDataRow;
 import org.pentaho.reporting.engine.classic.core.ReportDataFactoryException;
 import org.pentaho.reporting.engine.classic.core.ResourceBundleFactory;
+import org.pentaho.reporting.engine.classic.core.SubReport;
 import org.pentaho.reporting.engine.classic.core.modules.misc.tablemodel.TableModelInfo;
 import org.pentaho.reporting.engine.classic.core.modules.parser.bundle.writer.BundleWriter;
 import org.pentaho.reporting.engine.classic.core.util.CloseableTableModel;
+import org.pentaho.reporting.libraries.base.util.DebugLog;
 import org.pentaho.reporting.libraries.base.util.MemoryByteArrayOutputStream;
 import org.pentaho.reporting.libraries.base.util.ObjectUtilities;
 import org.pentaho.reporting.libraries.resourceloader.Resource;
@@ -82,6 +85,9 @@ public abstract class DataSourceTestBase extends TestCase
     {
       final String query = queriesAndResults[i][0];
       final String resultFile = queriesAndResults[i][1];
+
+      DebugLog.log("Executing query " + query);
+
       final DataFactory dataFactory = createDataFactory(query);
 
       final ByteArrayOutputStream bo = new ByteArrayOutputStream();
@@ -118,6 +124,40 @@ public abstract class DataSourceTestBase extends TestCase
     }
   }
 
+  protected void runSaveAndLoadForSubReports(final String[][] queriesAndResults) throws Exception
+  {
+    if (queriesAndResults.length == 0)
+    {
+      return;
+    }
+
+    for (int i = 0; i < queriesAndResults.length; i++)
+    {
+      final String query = queriesAndResults[i][0];
+      final String resultFile = queriesAndResults[i][1];
+      final DataFactory dataFactory = createDataFactory(query);
+
+      SubReport subReport = new SubReport();
+      subReport.setDataFactory(dataFactory);
+
+      final MasterReport report = new MasterReport();
+      report.getReportHeader().addSubReport(subReport);
+
+      final MemoryByteArrayOutputStream bout = new MemoryByteArrayOutputStream();
+      BundleWriter.writeReportToZipStream(report, bout);
+      final ResourceManager mgr = new ResourceManager();
+      mgr.registerDefaults();
+
+      final Resource resource = mgr.createDirectly(bout.toByteArray(), MasterReport.class);
+      final MasterReport r2 = (MasterReport) resource.getResource();
+      final SubReport sr2 = r2.getReportHeader().getSubReport(0);
+      final DataFactory e2 = sr2.getDataFactory();
+      assertNotNull(e2); // cannot assert equals, as this is not implemented ...
+      initializeDataFactory(e2);
+      final String queryResult = performQueryTest(e2);
+      compareLineByLine(resultFile, queryResult);
+    }
+  }
 
   protected void runSaveAndLoad(final String[][] queriesAndResults) throws Exception
   {
@@ -157,6 +197,7 @@ public abstract class DataSourceTestBase extends TestCase
       final String query = queriesAndResults[i][0];
       final String resultFile = queriesAndResults[i][1];
       final DataFactory dataFactory = createDataFactory(query);
+      initializeDataFactory(dataFactory);
       final String queryResult = performQueryTest(dataFactory);
       compareLineByLine(resultFile, queryResult);
     }
@@ -169,21 +210,28 @@ public abstract class DataSourceTestBase extends TestCase
       final String query = queriesAndResults[i][0];
       final String resultFile = queriesAndResults[i][1];
       final DataFactory dataFactory = createDataFactory(query);
-      final String queryResult = performQueryTest(dataFactory);
+      initializeDataFactory(dataFactory);
+      generate(dataFactory, resultFile);
+    }
+  }
 
-      final String packageName = getClass().getPackage().getName();
-      final String pathName = packageName.replace(".", "/");
-      final File file = new File(getTestDirectory()  + "/" + pathName + "/" + resultFile);
-      System.out.println("Generating test result: " + file.getAbsolutePath());
-      final FileOutputStream fout = new FileOutputStream(file);
-      try
-      {
-        fout.write(queryResult.getBytes("UTF-8"));
-      }
-      finally
-      {
-        fout.close();
-      }
+  protected void generate(final DataFactory dataFactory,
+                          final String resultFile) throws ReportDataFactoryException, SQLException, IOException
+  {
+    final String queryResult = performQueryTest(dataFactory);
+
+    final String packageName = getClass().getPackage().getName();
+    final String pathName = packageName.replace(".", "/");
+    final File file = new File(getTestDirectory() + "/" + pathName + "/" + resultFile);
+    System.out.println("Generating test result: " + file.getAbsolutePath());
+    final FileOutputStream fout = new FileOutputStream(file);
+    try
+    {
+      fout.write(queryResult.getBytes("UTF-8"));
+    }
+    finally
+    {
+      fout.close();
     }
   }
 
@@ -201,7 +249,7 @@ public abstract class DataSourceTestBase extends TestCase
         (ClassicEngineBoot.getInstance().getGlobalConfig(), resourceManager, null, resourceBundleFactory);
 
   }
-  
+
   protected abstract DataFactory createDataFactory(final String query) throws ReportDataFactoryException;
 
   protected void compareLineByLine(final String sourceFile, final String resultText) throws IOException
@@ -221,14 +269,14 @@ public abstract class DataSourceTestBase extends TestCase
       String lineSource = compareReader.readLine();
       while (lineResult != null && lineSource != null)
       {
-        assertEquals("Failure in line " + line, lineSource, lineResult);
+        assertEquals("Failure in line " + line + " (file: " + sourceFile + ")", lineSource, lineResult);
         line += 1;
         lineResult = resultReader.readLine();
         lineSource = compareReader.readLine();
       }
 
-      assertNull("Extra lines encountered in live-result " + line, lineResult);
-      assertNull("Extra lines encountered in recorded result " + line, lineSource);
+      assertNull("Extra lines encountered in live-result " + line + " (file: " + sourceFile + ")", lineResult);
+      assertNull("Extra lines encountered in recorded result " + line + " (file: " + sourceFile + ")", lineSource);
     }
     finally
     {
@@ -245,25 +293,34 @@ public abstract class DataSourceTestBase extends TestCase
   protected String performQueryTest(final DataFactory dataFactory) throws SQLException, ReportDataFactoryException
   {
     final ByteArrayOutputStream sw = new ByteArrayOutputStream();
-    final PrintStream ps = new PrintStream(sw);
     try
     {
+      final PrintStream ps = new PrintStream(sw, true, "UTF-8");
       final TableModel tableModel = dataFactory.queryData(getLogicalQueryForNextTest(), getParameterForNextTest());
-      TableModelInfo.printTableModel(tableModel, ps);
-      TableModelInfo.printTableMetaData(tableModel, ps);
-      TableModelInfo.printTableCellAttributes(tableModel, ps);
-      TableModelInfo.printTableModelContents(tableModel, ps);
+      generateCompareText(ps, tableModel);
       if (tableModel instanceof CloseableTableModel)
       {
         final CloseableTableModel ctm = (CloseableTableModel) tableModel;
         ctm.close();
       }
+      return sw.toString("UTF-8");
+    }
+    catch (UnsupportedEncodingException e)
+    {
+      throw new ReportDataFactoryException("If UTF-8 is not supported, we are in trouble.");
     }
     finally
     {
       dataFactory.close();
     }
-    return sw.toString();
+  }
+
+  protected void generateCompareText(final PrintStream ps, final TableModel tableModel)
+  {
+    TableModelInfo.printTableModel(tableModel, ps);
+    TableModelInfo.printTableMetaData(tableModel, ps);
+    TableModelInfo.printTableCellAttributes(tableModel, ps);
+    TableModelInfo.printTableModelContents(tableModel, ps);
   }
 
   protected DataRow getParameterForNextTest()

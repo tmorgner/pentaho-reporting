@@ -19,6 +19,7 @@
 package org.pentaho.reporting.engine.classic.core.testsupport;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,6 +32,7 @@ import java.sql.Statement;
 import org.pentaho.reporting.libraries.base.boot.AbstractModule;
 import org.pentaho.reporting.libraries.base.boot.ModuleInitializeException;
 import org.pentaho.reporting.libraries.base.boot.SubSystem;
+import org.pentaho.reporting.libraries.base.util.DebugLog;
 
 public class TestSetupModule extends AbstractModule
 {
@@ -56,7 +58,7 @@ public class TestSetupModule extends AbstractModule
       throws SQLException, IOException
   {
     final Connection connection = DriverManager.getConnection("jdbc:hsqldb:mem:SampleData", "sa", "");
-    connection.setAutoCommit(false);
+
     if (isValid(connection)) {
       // both the test-module here and the sample-data module try to initialize the database.
       // lets do it only once.
@@ -64,7 +66,9 @@ public class TestSetupModule extends AbstractModule
     }
     try
     {
-      final InputStream in = new FileInputStream("sql/sampledata.script");
+      final File source = new File("sql/sampledata.script");
+      DebugLog.log("Loading test data from " + source.getAbsolutePath());
+      final InputStream in = new FileInputStream(source);
       final InputStreamReader inReader = new InputStreamReader(in);
       final BufferedReader bin = new BufferedReader(inReader);
       try
@@ -93,6 +97,7 @@ public class TestSetupModule extends AbstractModule
               }
             }
           }
+
         }
         finally
         {
