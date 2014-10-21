@@ -90,6 +90,15 @@ public abstract class AbstractMDXDataFactory implements DataFactory, Cloneable
     protected MDXCompiler(final DataRow parameters,
                           final Locale locale)
     {
+      if (locale == null)
+      {
+        throw new NullPointerException("Locale must not be null");
+      }
+      if (parameters == null)
+      {
+        throw new NullPointerException("Parameter datarow must not be null");
+      }
+
       this.collectedParameter = new HashSet<String>();
       this.parameters = parameters;
       this.locale = locale;
@@ -179,6 +188,7 @@ public abstract class AbstractMDXDataFactory implements DataFactory, Cloneable
   private transient ResourceKey contextKey;
   private static final String[] EMPTY_QUERYNAMES = new String[0];
   private static final Log logger = LogFactory.getLog(AbstractMDXDataFactory.class);
+  private boolean membersOnAxisSorted;
 
   public AbstractMDXDataFactory()
   {
@@ -210,6 +220,8 @@ public abstract class AbstractMDXDataFactory implements DataFactory, Cloneable
     {
       locale = resourceBundleFactory.getLocale();
     }
+    membersOnAxisSorted = "true".equals
+        (configuration.getConfigProperty(MondrianDataFactoryModule.MEMBER_ON_AXIS_SORTED_KEY));
   }
 
   public MondrianConnectionProvider getMondrianConnectionProvider()
@@ -234,6 +246,16 @@ public abstract class AbstractMDXDataFactory implements DataFactory, Cloneable
   public void setDynamicSchemaProcessor(final String dynamicSchemaProcessor)
   {
     this.dynamicSchemaProcessor = dynamicSchemaProcessor;
+  }
+
+  public boolean isMembersOnAxisSorted()
+  {
+    return membersOnAxisSorted;
+  }
+
+  public void setMembersOnAxisSorted(final boolean membersOnAxisSorted)
+  {
+    this.membersOnAxisSorted = membersOnAxisSorted;
   }
 
   public Boolean isUseSchemaPool()
@@ -1205,5 +1227,20 @@ public abstract class AbstractMDXDataFactory implements DataFactory, Cloneable
     {
       throw new ReportDataFactoryException("Failed to create datasource:" + e.getLocalizedMessage(), e);
     }
+  }
+
+  public Locale getLocale()
+  {
+    return locale;
+  }
+
+  public ResourceManager getResourceManager()
+  {
+    return resourceManager;
+  }
+
+  public ResourceKey getContextKey()
+  {
+    return contextKey;
   }
 }

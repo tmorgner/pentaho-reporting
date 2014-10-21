@@ -187,7 +187,7 @@ public abstract class AbstractNamedMDXDataFactory extends AbstractMDXDataFactory
     scriptingSupport.shutdown();
     super.close();
   }
-  
+
   public Object clone()
   {
     final AbstractNamedMDXDataFactory dataFactory = (AbstractNamedMDXDataFactory) super.clone();

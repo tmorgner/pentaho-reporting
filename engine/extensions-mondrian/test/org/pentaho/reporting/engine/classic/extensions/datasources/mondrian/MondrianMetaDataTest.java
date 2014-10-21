@@ -1,3 +1,20 @@
+/*!
+* This program is free software; you can redistribute it and/or modify it under the
+* terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
+* Foundation.
+*
+* You should have received a copy of the GNU Lesser General Public License along with this
+* program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+* or from the Free Software Foundation, Inc.,
+* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*
+* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* See the GNU Lesser General Public License for more details.
+*
+* Copyright (c) 2002-2013 Pentaho Corporation..  All rights reserved.
+*/
+
 package org.pentaho.reporting.engine.classic.extensions.datasources.mondrian;
 
 import junit.framework.TestCase;
@@ -48,7 +65,7 @@ public class MondrianMetaDataTest extends TestCase
   {
     final DriverDataSourceProvider provider = new DriverDataSourceProvider();
     provider.setDriver("org.hsqldb.jdbcDriver");
-    provider.setUrl("jdbc:hsqldb:./sql/sampledata");
+    provider.setUrl("jdbc:hsqldb:mem:SampleData");
 
     final BandedMDXDataFactory mondrianDataFactory = new BandedMDXDataFactory();
     mondrianDataFactory.setCubeFileProvider(new DefaultCubeFileProvider
@@ -56,12 +73,13 @@ public class MondrianMetaDataTest extends TestCase
     mondrianDataFactory.setDataSourceProvider(provider);
     mondrianDataFactory.setJdbcUser("sa");
     mondrianDataFactory.setJdbcPassword("");
+
     final ResourceManager resourceManager = new ResourceManager();
     resourceManager.registerDefaults();
     final ResourceBundleFactory resourceBundleFactory = new DefaultResourceBundleFactory();
     mondrianDataFactory.initialize
         (ClassicEngineBoot.getInstance().getGlobalConfig(), resourceManager, null, resourceBundleFactory);
-    mondrianDataFactory.setQuery("default", PARAMETRIZED_QUERY);
+    mondrianDataFactory.setQuery("default", PARAMETRIZED_QUERY, null, null);
 
 
     final DataFactoryMetaData metaData = DataFactoryRegistry.getInstance().getMetaData(BandedMDXDataFactory.class.getName());
@@ -74,10 +92,11 @@ public class MondrianMetaDataTest extends TestCase
     mdxDataFactory.setDataSourceProvider(provider);
     mdxDataFactory.setJdbcUser("sa");
     mdxDataFactory.setJdbcPassword("");
-    mdxDataFactory.initialize
+
+    mondrianDataFactory.initialize
         (ClassicEngineBoot.getInstance().getGlobalConfig(), resourceManager, null, resourceBundleFactory);
-    mdxDataFactory.setQuery("default", QUERY);
-    mdxDataFactory.setQuery("default2", PARAMETRIZED_QUERY);
+    mdxDataFactory.setQuery("default", QUERY, null, null);
+    mdxDataFactory.setQuery("default2", PARAMETRIZED_QUERY, null, null);
 
     assertNotEquals("Physical Query is not the same", queryHash, metaData.getQueryHash(mdxDataFactory, "default", new StaticDataRow()));
     assertEquals("Physical Query is the same", queryHash, metaData.getQueryHash(mdxDataFactory, "default2", new StaticDataRow()));
@@ -88,10 +107,10 @@ public class MondrianMetaDataTest extends TestCase
     mdxDataFactory2.setDataSourceProvider(provider);
     mdxDataFactory2.setJdbcUser("sa");
     mdxDataFactory2.setJdbcPassword("");
-    mdxDataFactory2.initialize
+    mondrianDataFactory.initialize
         (ClassicEngineBoot.getInstance().getGlobalConfig(), resourceManager, null, resourceBundleFactory);
-    mdxDataFactory2.setQuery("default", QUERY);
-    mdxDataFactory2.setQuery("default2", PARAMETRIZED_QUERY);
+    mdxDataFactory2.setQuery("default", QUERY, null, null);
+    mdxDataFactory2.setQuery("default2", PARAMETRIZED_QUERY, null, null);
 
     assertNotEquals("Physical Connection is not the same", queryHash, metaData.getQueryHash(mdxDataFactory, "default", new StaticDataRow()));
     assertNotEquals("Physical Connection is the same", queryHash, metaData.getQueryHash(mdxDataFactory2, "default2", new StaticDataRow()));
@@ -101,7 +120,7 @@ public class MondrianMetaDataTest extends TestCase
   {
     final DriverDataSourceProvider provider = new DriverDataSourceProvider();
     provider.setDriver("org.hsqldb.jdbcDriver");
-    provider.setUrl("jdbc:hsqldb:./sql/sampledata");
+    provider.setUrl("jdbc:hsqldb:mem:SampleData");
 
     final BandedMDXDataFactory mondrianDataFactory = new BandedMDXDataFactory();
     mondrianDataFactory.setCubeFileProvider(new DefaultCubeFileProvider
@@ -114,8 +133,8 @@ public class MondrianMetaDataTest extends TestCase
     final ResourceBundleFactory resourceBundleFactory = new DefaultResourceBundleFactory();
     mondrianDataFactory.initialize
         (ClassicEngineBoot.getInstance().getGlobalConfig(), resourceManager, null, resourceBundleFactory);
-    mondrianDataFactory.setQuery("default", PARAMETRIZED_QUERY);
-    mondrianDataFactory.setQuery("default2", QUERY);
+    mondrianDataFactory.setQuery("default", PARAMETRIZED_QUERY, null, null);
+    mondrianDataFactory.setQuery("default2", QUERY, null, null);
 
     final DataFactoryMetaData metaData = DataFactoryRegistry.getInstance().getMetaData(BandedMDXDataFactory.class.getName());
     final String[] fields = metaData.getReferencedFields(mondrianDataFactory, "default", new StaticDataRow());

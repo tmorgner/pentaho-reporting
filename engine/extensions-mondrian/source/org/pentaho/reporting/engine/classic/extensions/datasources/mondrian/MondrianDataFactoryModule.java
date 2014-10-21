@@ -1,19 +1,19 @@
-/*
- * This program is free software; you can redistribute it and/or modify it under the
- * terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
- * Foundation.
- *
- * You should have received a copy of the GNU Lesser General Public License along with this
- * program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
- * or from the Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU Lesser General Public License for more details.
- *
- * Copyright (c) 2008 - 2009 Pentaho Corporation, .  All rights reserved.
- */
+/*!
+* This program is free software; you can redistribute it and/or modify it under the
+* terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
+* Foundation.
+*
+* You should have received a copy of the GNU Lesser General Public License along with this
+* program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+* or from the Free Software Foundation, Inc.,
+* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*
+* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* See the GNU Lesser General Public License for more details.
+*
+* Copyright (c) 2002-2013 Pentaho Corporation..  All rights reserved.
+*/
 
 package org.pentaho.reporting.engine.classic.extensions.datasources.mondrian;
 
@@ -22,11 +22,6 @@ import org.pentaho.reporting.libraries.base.boot.SubSystem;
 import org.pentaho.reporting.libraries.base.boot.AbstractModule;
 import org.pentaho.reporting.engine.classic.core.metadata.ElementMetaDataParser;
 
-/**
- * Todo: Document me!
- *
- * @author : Thomas Morgner
- */
 public class MondrianDataFactoryModule extends AbstractModule
 {
   public static final String NAMESPACE = "http://jfreereport.sourceforge.net/namespaces/datasources/mondrian";
@@ -38,6 +33,7 @@ public class MondrianDataFactoryModule extends AbstractModule
   public static final String CUBEFILE_WRITER_PREFIX ="org.pentaho.reporting.engine.classic.extensions.datasources.mondrian.writer.cubefile-provider.";
   public static final String CUBEFILE_BUNDLEWRITER_PREFIX ="org.pentaho.reporting.engine.classic.extensions.datasources.mondrian.bundle-writer.cubefile-provider.";
 
+  public static final String MEMBER_ON_AXIS_SORTED_KEY = "org.pentaho.reporting.engine.classic.extensions.datasources.mondrian.MembersOnAxisSorted";
 
   public MondrianDataFactoryModule() throws ModuleInitializeException
   {
