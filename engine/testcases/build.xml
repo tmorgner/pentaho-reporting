@@ -14,9 +14,6 @@
     and works with the build-res/subfloor.xml file.
   </description>
 
-    <property file="${user.home}/.pentaho-reporting-build-settings.properties"
-                description="Per user override settings-file for all pentaho-reporting projects." />
-
   <!-- Define the default location of the common build file -->
   <property name="common.build.file" value="./build-res/subfloor.xml"
     description="This is the location of the standardized build-res/subfloor.xml file"/>
@@ -58,9 +55,6 @@
         and coverage artifacts
         ====================================================================-->
     <target name="continuous-local-testless" />
-
-    <target name="publish-local" depends="build"/>
-    <target name="publish" depends="build"/>
 
     <!--
       AS STATED ABOVE, THE ONLY TASKS THAT SHOULD EXIST IN THIS BUILD FILE ARE
