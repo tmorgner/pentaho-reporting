@@ -252,4 +252,6 @@
     <!-- The dist target is where everything is assembled -->
     <target name="dist" depends="clean-all, init, resolve, stage-plugins, dist-winlinux, dist-mac"
             description="Creates the distributables for the Report Designer"/>
+    <target name="publish"/>
+    <target name="publish-local"/>
 </project>

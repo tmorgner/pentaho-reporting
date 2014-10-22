@@ -63,7 +63,7 @@
     -->
 
   <!-- Override default dist target to do a dist-full instead -->
-  <target name="dist" depends="dist-full"/>
+  <target name="dist"/>
 
      <!-- Need src.dir to exist even though this project only has testsrc -->
      <target name="init" depends="subfloor.init" >
@@ -150,7 +150,7 @@
         </junitreport>
     </target>
 
-    <target name="publish-local" depends="build"/>
-    <target name="publish" depends="build"/>
+    <target name="publish-local"/>
+    <target name="publish"/>
 
 </project>

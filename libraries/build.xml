@@ -190,7 +190,7 @@ This is the build file for the collection of Shims modules to provide support
     <for list="${modules}" param="module" trim="true">
       <sequential>
         <ant antfile="build.xml" dir="@{module}" inheritall="false">
-          <target name="clean"/>
+          <target name="clean-all"/>
           <target name="resolve"/>
           <target name="test"/>
           <target name="dist"/>
@@ -204,7 +204,7 @@ This is the build file for the collection of Shims modules to provide support
     <for list="${modules}" param="module" trim="true">
       <sequential>
         <ant antfile="build.xml" dir="@{module}" inheritall="false">
-          <target name="clean"/>
+          <target name="clean-all"/>
           <target name="resolve"/>
           <target name="dist"/>
           <target name="publish-local"/>
