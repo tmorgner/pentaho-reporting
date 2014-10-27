@@ -19,6 +19,7 @@
     <parent-pom.group>org.pentaho</parent-pom.group>
     <parent-pom.artifact>pentaho-ce-parent-pom</parent-pom.artifact>
     <parent-pom.version>1.0.2</parent-pom.version>
+    <project.build.sourceEncoding>ASCII</project.build.sourceEncoding>
     <!--
      If you plan to use the pentaho parent pom and still want to publish to your own repository,
      uncomment these properties and point them to your own repository.
@@ -82,10 +83,8 @@
 
   <modules>
     <module>libraries</module>
-    <!--
     <module>engine</module>
     <module>designer</module>
-    -->
   </modules>
 
 </project>

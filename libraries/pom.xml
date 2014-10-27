@@ -67,8 +67,29 @@
            </systemPropertyVariables>
          </configuration>
        </plugin>
-     </plugins>
- 	</build>
+    <plugin>
+      <artifactId>maven-enforcer-plugin</artifactId>
+      <version>1.0.1</version>
+      <executions>
+        <execution>
+          <id>ensure-no-xmlapis</id>
+          <goals>
+            <goal>enforce</goal>
+          </goals>
+          <configuration>
+            <rules>
+               <bannedDependencies>
+                 <excludes>
+                   <exclude>xmlapis:xmlapis</exclude>
+                 </excludes>
+               </bannedDependencies>
+            </rules>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+    </plugins>
+  </build>
 
 	<modules>
     <module>configuration-editor</module>

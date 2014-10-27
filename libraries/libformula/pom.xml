@@ -1,40 +1,79 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<artifactId>libformula</artifactId>
-	<packaging>jar</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>libformula</artifactId>
+  <packaging>jar</packaging>
 
-	<parent>
+  <parent>
     <groupId>pentaho-library</groupId>
-		<artifactId>pentaho-reporting-library-parent-pom</artifactId>
-		<version>TRUNK-SNAPSHOT</version>
+    <artifactId>pentaho-reporting-library-parent-pom</artifactId>
+    <version>TRUNK-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
-	</parent>
+  </parent>
 
-	<name>LibFormula</name>
-	<description>
-		LibFormula provides Excel-Style-Expressions. The implementation provided
-		here is very generic and can be used in any application that needs to
-		compute formulas.
-	</description>
+  <name>LibFormula</name>
+  <description>
+    LibFormula provides Excel-Style-Expressions. The implementation provided
+    here is very generic and can be used in any application that needs to
+    compute formulas.
+  </description>
 
-	<organization>
-		<url>http://reporting.pentaho.org/libformula</url>
-	</organization>
+  <organization>
+    <url>http://reporting.pentaho.org/libformula</url>
+  </organization>
 
-	<dependencies>
-		<dependency>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>javacc-maven-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+            <id>javacc</id>
+            <goals>
+              <goal>javacc</goal>
+            </goals>
+            <configuration>
+              <lookAhead>2</lookAhead>
+              <isStatic>false</isStatic>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.2</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
       <groupId>${project.groupId}</groupId>
-			<artifactId>libbase</artifactId>
-			<version>${project.version}</version>
-		</dependency>
+      <artifactId>libbase</artifactId>
+      <version>${project.version}</version>
+    </dependency>
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.10</version>
-			<scope>test</scope>
-		</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+      <scope>test</scope>
+    </dependency>
 
-	</dependencies>
+  </dependencies>
 
 </project>
