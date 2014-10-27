@@ -1,25 +1,26 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<artifactId>libpixie</artifactId>
-	<packaging>jar</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>libpixie</artifactId>
+  <packaging>jar</packaging>
 
-	<parent>
-		<groupId>org.pentaho.reporting.library</groupId>
-		<artifactId>pentaho-reporting-library-parent-pom</artifactId>
-		<version>TRUNK-SNAPSHOT</version>
+  <parent>
+    <groupId>pentaho-library</groupId>
+    <artifactId>pentaho-reporting-library-parent-pom</artifactId>
+    <version>TRUNK-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
-	</parent>
+  </parent>
 
-	<name>LibPixie</name>
-	<description>
-		Pixie is a WMF-File reading library originally written by David R. Harris as
-		converter for the Pixie-ImageViewer. Pixie was long time dead and is now
-		resurrected as WMF-Reader and ImageProducer for Java 1.2.2 or higher.
-	</description>
+  <name>LibPixie</name>
+  <description>
+    Pixie is a WMF-File reading library originally written by David R. Harris as
+    converter for the Pixie-ImageViewer. Pixie was long time dead and is now
+    resurrected as WMF-Reader and ImageProducer for Java 1.2.2 or higher.
+  </description>
 
-	<organization>
-		<url>http://reporting.pentaho.org/libpixie</url>
-	</organization>
+  <organization>
+    <url>http://reporting.pentaho.org/libpixie</url>
+  </organization>
 
   <build>
     <sourceDirectory>source</sourceDirectory>
@@ -42,12 +43,18 @@
     </testResources>
   </build>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.pentaho.reporting.library</groupId>
-			<artifactId>libbase</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-	</dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>libbase</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
 </project>

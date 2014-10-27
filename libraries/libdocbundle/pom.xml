@@ -4,7 +4,7 @@
 	<packaging>jar</packaging>
 
 	<parent>
-		<groupId>org.pentaho.reporting.library</groupId>
+    <groupId>pentaho-library</groupId>
 		<artifactId>pentaho-reporting-library-parent-pom</artifactId>
 		<version>TRUNK-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
@@ -43,17 +43,17 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.pentaho.reporting.library</groupId>
+      <groupId>${project.groupId}</groupId>
 			<artifactId>libloader</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.pentaho.reporting.library</groupId>
+      <groupId>${project.groupId}</groupId>
 			<artifactId>librepository</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.pentaho.reporting.library</groupId>
+      <groupId>${project.groupId}</groupId>
 			<artifactId>libxml</artifactId>
 			<version>${project.version}</version>
 		</dependency>

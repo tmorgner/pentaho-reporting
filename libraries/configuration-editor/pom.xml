@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.pentaho.reporting.designer</groupId>
+  <groupId>pentaho-report-designer</groupId>
   <artifactId>report-designer-configuration-editor</artifactId>
   <packaging>jar</packaging>
 
   <parent>
-    <groupId>org.pentaho.reporting.library</groupId>
+    <groupId>pentaho-library</groupId>
     <artifactId>pentaho-reporting-library-parent-pom</artifactId>
     <version>TRUNK-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
@@ -45,12 +45,12 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.pentaho.reporting.library</groupId>
+      <groupId>pentaho-library</groupId>
       <artifactId>libloader</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.pentaho.reporting.library</groupId>
+      <groupId>pentaho-library</groupId>
       <artifactId>libxml</artifactId>
       <version>${project.version}</version>
     </dependency>
