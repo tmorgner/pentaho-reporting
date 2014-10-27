@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>libbase</artifactId>
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>org.pentaho.reporting.library</groupId>
+		<artifactId>pentaho-reporting-library-parent-pom</artifactId>
+		<version>TRUNK-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<name>LibBase</name>
+	<description>
+		LibBase is a library developed to provide base services like
+		logging, configuration and initialization to all other libraries
+		and applications. The library is the root library for all other
+		Pentaho-Reporting projects.
+	</description>
+
+	<organization>
+		<url>http://reporting.pentaho.org/libbase</url>
+	</organization>
+
+  <build>
+    <sourceDirectory>source</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>source</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <testSourceDirectory>testcases</testSourceDirectory>
+    <testResources>
+      <testResource>
+        <directory>testcases</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </testResource>
+    </testResources>
+  </build>
+
+	<dependencies>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging-api</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+</project>

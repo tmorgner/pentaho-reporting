@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>libdocbundle</artifactId>
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>org.pentaho.reporting.library</groupId>
+		<artifactId>pentaho-reporting-library-parent-pom</artifactId>
+		<version>TRUNK-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<name>LibDocBundle</name>
+	<description>
+		LibDocBundle is a library developed to provide a transparent
+		document bundle service to applications. With LibDocBundle an
+		application can hold documents and all referenced resources in
+		a single storage (a zip-file or a directory) without knowing
+		details about the storage method itself. Therefore application
+		developers do not have to deal with ZIP-Access or File-access
+		by themselves.
+	</description>
+
+	<organization>
+		<url>http://reporting.pentaho.org/libdocbundle</url>
+	</organization>
+
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.14.1</version>
+				<configuration>
+					<excludes>
+						<!-- TODO: figure out why tests work in Ant but not Maven -->
+						<exclude>**/**Test.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.pentaho.reporting.library</groupId>
+			<artifactId>libloader</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.pentaho.reporting.library</groupId>
+			<artifactId>librepository</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.pentaho.reporting.library</groupId>
+			<artifactId>libxml</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+</project>

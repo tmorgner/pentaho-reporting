@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>libserializer</artifactId>
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>org.pentaho.reporting.library</groupId>
+		<artifactId>pentaho-reporting-library-parent-pom</artifactId>
+		<version>TRUNK-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<name>LibSerializer</name>
+	<description>
+		This library module contains a general serialization framework. It simplifies
+		the task of writing custom serialization handlers for non-serializable classes.
+	</description>
+
+	<organization>
+		<url>http://reporting.pentaho.org/libserializer</url>
+	</organization>
+
+
+  <build>
+    <sourceDirectory>source</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>source</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <testSourceDirectory>test-src</testSourceDirectory>
+    <testResources>
+      <testResource>
+        <directory>test-src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </testResource>
+    </testResources>
+  </build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.pentaho.reporting.library</groupId>
+			<artifactId>libbase</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

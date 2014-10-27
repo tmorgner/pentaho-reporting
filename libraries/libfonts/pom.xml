@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>libfonts</artifactId>
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>org.pentaho.reporting.library</groupId>
+		<artifactId>pentaho-reporting-library-parent-pom</artifactId>
+		<version>TRUNK-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<name>LibFonts</name>
+	<description>
+		LibFonts is a library developed to support advanced layouting in Pentaho
+		Reporting. This library allows to read physical files and to access
+		other font system in a uniform way to extract layouting specific informations.
+		LibFonts also provides heavy caching so that text processing is less
+		CPU and memory intensive.
+	</description>
+
+	<organization>
+		<url>http://reporting.pentaho.org/libfonts</url>
+	</organization>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.pentaho.reporting.library</groupId>
+			<artifactId>libloader</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+</project>
