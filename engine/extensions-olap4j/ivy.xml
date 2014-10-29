@@ -33,11 +33,6 @@
       <exclude org="org.apache.ant" module="ant"/>
     </dependency>
 
-    <!-- Mondrian needs xerces and xalan for XMLA support, but ships with a ancient version -->
-    <dependency org="xerces" name="xercesImpl" rev="2.8.1" conf="test->default">
-      <exclude org="xml-apis" module="xml-apis"/>
-    </dependency>
-
 		<!-- testing dependencies -->
 		<dependency org="junit" name="junit" rev="4.10" transitive="false" conf="test->default" />
 		<dependency org="hsqldb" name="hsqldb" rev="1.8.0" transitive="false" conf="test->default" />
