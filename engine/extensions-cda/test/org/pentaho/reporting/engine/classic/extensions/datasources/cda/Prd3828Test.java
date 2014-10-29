@@ -94,8 +94,8 @@ public class Prd3828Test extends TestCase
     dataFactory.initialize(new DesignTimeDataFactoryContext());
     dataFactory.queryData("testQuery", new StaticDataRow());
 
-    assertEquals("http://localhost:12345/testcase/content/cda/listParameters?outputType=xml&solution=testsolution&path=testpath&file=testcase.cda&dataAccessId=cdaId", simpleBackend.getParamUrl());
-    assertEquals("http://localhost:12345/testcase/content/cda/doQuery?outputType=xml&solution=testsolution&path=testpath&file=testcase.cda&paramP4=A%3BB%3BC&dataAccessId=cdaId&paramP3=2010-12-30&paramP1=DefaultString&paramP2=10", simpleBackend.getUrl());
+    assertEquals("http://localhost:12345/testcase/content/cda/listParameters?outputType=xml&path=testpath&solution=testsolution&file=testcase.cda&dataAccessId=cdaId", simpleBackend.getParamUrl());
+    assertEquals("http://localhost:12345/testcase/content/cda/doQuery?outputType=xml&path=testpath&solution=testsolution&file=testcase.cda&paramP4=A%3BB%3BC&dataAccessId=cdaId&paramP3=2010-12-30&paramP1=DefaultString&paramP2=10", simpleBackend.getUrl());
   }
 
   public void testFilledUrl() throws ReportDataFactoryException
@@ -117,7 +117,7 @@ public class Prd3828Test extends TestCase
         (new String[]{"P1", "P2", "P3", "P4"},
             new Object[]{"x", 10, new Date(1000000000000l), new String[]{"x","y","z"} }));
 
-    assertEquals("http://localhost:12345/testcase/content/cda/listParameters?outputType=xml&solution=testsolution&path=testpath&file=testcase.cda&dataAccessId=cdaId", simpleBackend.getParamUrl());
-    assertEquals("http://localhost:12345/testcase/content/cda/doQuery?outputType=xml&solution=testsolution&path=testpath&file=testcase.cda&paramP4=x%3By%3Bz&dataAccessId=cdaId&paramP3=2001-09-09&paramP1=x&paramP2=10", simpleBackend.getUrl());
+    assertEquals("http://localhost:12345/testcase/content/cda/listParameters?outputType=xml&path=testpath&solution=testsolution&file=testcase.cda&dataAccessId=cdaId", simpleBackend.getParamUrl());
+    assertEquals("http://localhost:12345/testcase/content/cda/doQuery?outputType=xml&path=testpath&solution=testsolution&file=testcase.cda&paramP4=x%3By%3Bz&dataAccessId=cdaId&paramP3=2001-09-09&paramP1=x&paramP2=10", simpleBackend.getUrl());
   }
 }

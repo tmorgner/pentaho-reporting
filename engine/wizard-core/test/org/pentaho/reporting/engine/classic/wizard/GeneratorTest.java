@@ -58,6 +58,10 @@ public class GeneratorTest extends TestCase
 
   public void testCrosstab() throws Exception
   {
+    if (true) {
+      // the wizard no longer supports crosstab generation ..
+      return;
+    }
     final GroupDefinition[] groupDefs = new GroupDefinition[3];
     groupDefs[0] = new DefaultGroupDefinition(GroupType.RELATIONAL, "group-field1");
     groupDefs[1] = new DefaultGroupDefinition(GroupType.CT_ROW, "group-field2");

@@ -17,6 +17,7 @@
 
 package org.pentaho.plugin.jfreereport.reportcharts;
 
+import java.io.File;
 import java.net.URL;
 
 import junit.framework.TestCase;
@@ -31,6 +32,7 @@ import org.pentaho.reporting.engine.classic.core.layout.model.LogicalPageBox;
 import org.pentaho.reporting.engine.classic.core.layout.model.RenderNode;
 import org.pentaho.reporting.engine.classic.core.layout.model.RenderableReplacedContentBox;
 import org.pentaho.reporting.engine.classic.core.testsupport.DebugReportRunner;
+import org.pentaho.reporting.engine.classic.core.testsupport.TestSetupModule;
 import org.pentaho.reporting.engine.classic.core.testsupport.selector.MatchFactory;
 import org.pentaho.reporting.libraries.base.util.DebugLog;
 import org.pentaho.reporting.libraries.resourceloader.Resource;
@@ -46,11 +48,15 @@ public class Prd4981Test extends TestCase
   protected void setUp() throws Exception
   {
     ClassicEngineBoot.getInstance().start();
+    assertTrue(ClassicEngineBoot.getInstance().getPackageManager().isModuleAvailable(TestSetupModule.class.getName()));
   }
 
 
   public void testChartProcessing50_Hidden() throws Exception
   {
+    final File f = new File(".").getAbsoluteFile();
+    System.out.println(f);
+
     final URL url = getClass().getResource("Prd-4981.prpt");
     assertNotNull(url);
     final ResourceManager resourceManager = new ResourceManager();
