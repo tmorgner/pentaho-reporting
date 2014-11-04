@@ -102,6 +102,6 @@ public class DefaultQueryEditorPanel extends QueryEditorPanel<String>
 
   protected JComponent getQueryEditor()
   {
-    return new RTextScrollPane(500, 300, queryTextArea, true);
+    return new RTextScrollPane(queryTextArea, true);
   }
 }

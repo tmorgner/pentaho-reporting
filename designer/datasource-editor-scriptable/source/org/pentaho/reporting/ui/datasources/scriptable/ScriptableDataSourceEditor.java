@@ -524,11 +524,11 @@ public class ScriptableDataSourceEditor extends CommonDialog
   {
     final JPanel initScriptContentHolder = new JPanel(new BorderLayout());
     initScriptContentHolder.add(BorderLayout.NORTH, new JLabel(Messages.getString("ScriptableDataSourceEditor.InitScript")));
-    initScriptContentHolder.add(BorderLayout.CENTER, new RTextScrollPane(500, 600, initScriptTextArea, true));
+    initScriptContentHolder.add(BorderLayout.CENTER, new RTextScrollPane(initScriptTextArea, true));
 
     final JPanel shutdownScriptContentHolder = new JPanel(new BorderLayout());
     shutdownScriptContentHolder.add(BorderLayout.NORTH, new JLabel(Messages.getString("ScriptableDataSourceEditor.ShutdownScript")));
-    shutdownScriptContentHolder.add(BorderLayout.CENTER, new RTextScrollPane(500, 600, shutdownScriptTextArea, true));
+    shutdownScriptContentHolder.add(BorderLayout.CENTER, new RTextScrollPane(shutdownScriptTextArea, true));
 
     final JPanel queryDetailsNamePanel = new JPanel(new BorderLayout());
     queryDetailsNamePanel.add(new JLabel(Messages.getString("ScriptableDataSourceEditor.QueryName")), BorderLayout.NORTH);
@@ -536,7 +536,7 @@ public class ScriptableDataSourceEditor extends CommonDialog
 
     final JPanel queryContentHolder = new JPanel(new BorderLayout());
     queryContentHolder.add(BorderLayout.NORTH, new JLabel(Messages.getString("ScriptableDataSourceEditor.QueryLabel")));
-    queryContentHolder.add(BorderLayout.CENTER, new RTextScrollPane(500, 300, queryTextArea, true));
+    queryContentHolder.add(BorderLayout.CENTER, new RTextScrollPane(queryTextArea, true));
 
     // Create the query details panel
     final JPanel queryDetailsPanel = new JPanel(new BorderLayout());

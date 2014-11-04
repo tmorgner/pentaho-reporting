@@ -760,7 +760,7 @@ public class PmdDataSourceEditor extends CommonDialog
     final JPanel queryConfigurationPanel = new JPanel();
     queryConfigurationPanel.setLayout(new BorderLayout());
     queryConfigurationPanel.add(queryTextAreaHeaderPanel, BorderLayout.NORTH);
-    queryConfigurationPanel.add(new RTextScrollPane(700, 500, queryTextArea, true), BorderLayout.CENTER);
+    queryConfigurationPanel.add(new RTextScrollPane(queryTextArea, true), BorderLayout.CENTER);
 
     final JTabbedPane queryScriptTabPane = new JTabbedPane();
     queryScriptTabPane.addTab(Messages.getString("PmdDataSourceEditor.StaticQuery"), queryConfigurationPanel);
@@ -796,7 +796,7 @@ public class PmdDataSourceEditor extends CommonDialog
 
     final JPanel queryScriptContentHolder = new JPanel(new BorderLayout());
     queryScriptContentHolder.add(queryScriptHeader, BorderLayout.NORTH);
-    queryScriptContentHolder.add(new RTextScrollPane(700, 300, queryScriptTextArea, true), BorderLayout.CENTER);
+    queryScriptContentHolder.add(new RTextScrollPane(queryScriptTextArea, true), BorderLayout.CENTER);
     return queryScriptContentHolder;
   }
 
@@ -813,7 +813,7 @@ public class PmdDataSourceEditor extends CommonDialog
 
     final JPanel globalScriptContentHolder = new JPanel(new BorderLayout());
     globalScriptContentHolder.add(globalScriptHeader, BorderLayout.NORTH);
-    globalScriptContentHolder.add(new RTextScrollPane(700, 600, globalScriptTextArea, true), BorderLayout.CENTER);
+    globalScriptContentHolder.add(new RTextScrollPane(globalScriptTextArea, true), BorderLayout.CENTER);
     return globalScriptContentHolder;
   }
 

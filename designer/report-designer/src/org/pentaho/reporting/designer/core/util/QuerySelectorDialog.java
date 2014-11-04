@@ -146,7 +146,7 @@ public class QuerySelectorDialog extends CommonDialog
 
     final JPanel contentPane = new JPanel();
     contentPane.setLayout(new BorderLayout());
-    contentPane.add(new RTextScrollPane(500, 300, textArea, true), BorderLayout.CENTER);
+    contentPane.add(new RTextScrollPane(textArea, true), BorderLayout.CENTER);
     contentPane.add(syntaxBox, BorderLayout.NORTH);
 
     tab = new JTabbedPane();

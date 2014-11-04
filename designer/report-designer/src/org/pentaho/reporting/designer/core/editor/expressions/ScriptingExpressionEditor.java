@@ -44,7 +44,7 @@ public abstract class ScriptingExpressionEditor implements ExpressionEditor
     final JPanel queryContentHolder = new JPanel(new BorderLayout());
     queryContentHolder.add(BorderLayout.NORTH,
         new JLabel(EditorExpressionsMessages.getString("ScriptingExpressionEditor.Script")));
-    queryContentHolder.add(BorderLayout.CENTER, new RTextScrollPane(500, 300, textArea, true));
+    queryContentHolder.add(BorderLayout.CENTER, new RTextScrollPane(textArea, true));
 
 
     panel = new JPanel();

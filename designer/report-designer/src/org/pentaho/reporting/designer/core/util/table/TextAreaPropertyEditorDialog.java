@@ -121,7 +121,7 @@ public class TextAreaPropertyEditorDialog extends BasicTextPropertyEditorDialog
 
     final JPanel contentPane = new JPanel();
     contentPane.setLayout(new BorderLayout());
-    contentPane.add(new RTextScrollPane(500, 300, (RSyntaxTextArea) getTextArea(), true), BorderLayout.CENTER);
+    contentPane.add(new RTextScrollPane(getTextArea(), true), BorderLayout.CENTER);
     contentPane.add(syntaxBox, BorderLayout.NORTH);
 
     return contentPane;

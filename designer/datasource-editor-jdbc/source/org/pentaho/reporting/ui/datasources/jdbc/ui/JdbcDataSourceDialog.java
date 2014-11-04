@@ -1005,7 +1005,7 @@ public class JdbcDataSourceDialog extends CommonDialog
 
     final JPanel queryScriptContentHolder = new JPanel(new BorderLayout());
     queryScriptContentHolder.add(queryScriptHeader, BorderLayout.NORTH);
-    queryScriptContentHolder.add(new RTextScrollPane(700, 300, queryScriptTextArea, true), BorderLayout.CENTER);
+    queryScriptContentHolder.add(new RTextScrollPane(queryScriptTextArea, true), BorderLayout.CENTER);
     return queryScriptContentHolder;
   }
 
@@ -1022,7 +1022,7 @@ public class JdbcDataSourceDialog extends CommonDialog
 
     final JPanel globalScriptContentHolder = new JPanel(new BorderLayout());
     globalScriptContentHolder.add(globalScriptHeader, BorderLayout.NORTH);
-    globalScriptContentHolder.add(new RTextScrollPane(700, 600, globalScriptTextArea, true), BorderLayout.CENTER);
+    globalScriptContentHolder.add(new RTextScrollPane(globalScriptTextArea, true), BorderLayout.CENTER);
     return globalScriptContentHolder;
   }
 
@@ -1082,7 +1082,7 @@ public class JdbcDataSourceDialog extends CommonDialog
 
     final JPanel queryPanel = new JPanel(new BorderLayout());
     queryPanel.add(queryControlsPanel, BorderLayout.NORTH);
-    queryPanel.add(new RTextScrollPane(500, 300, queryTextArea, true), BorderLayout.CENTER);
+    queryPanel.add(new RTextScrollPane(queryTextArea, true), BorderLayout.CENTER);
     queryPanel.setBorder(BorderFactory.createEmptyBorder(8, 8, 0, 8));
 
     final JTabbedPane queryScriptTabPane = new JTabbedPane();
