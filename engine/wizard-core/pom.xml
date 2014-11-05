@@ -26,6 +26,23 @@
       <artifactId>junit</artifactId>
       <version>4.10</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
+  <build>
+    <testSourceDirectory>${project.basedir}/test</testSourceDirectory>
+    <testResources>
+      <testResource>
+        <directory>${project.basedir}/test</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </testResource>
+    </testResources>
+  </build>
 </project>

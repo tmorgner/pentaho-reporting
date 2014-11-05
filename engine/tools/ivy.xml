@@ -20,8 +20,6 @@
 		<dependency org="${ivy.artifact.group}" name="pentaho-reporting-engine-classic-core" rev="${project.revision}" transitive="true" changing="true" />
     <dependency org="${ivy.artifact.group}" name="pentaho-reporting-engine-classic-extensions"
                 rev="${project.revision}" transitive="true" changing="true"/>
-    <dependency org="${ivy.artifact.group}" name="pentaho-reporting-engine-classic-extensions-scripting"
-                rev="${project.revision}" transitive="true" changing="true"/>
     <dependency org="${ivy.artifact.group}" name="pentaho-reporting-engine-classic-extensions-reportdesigner-parser"
                 rev="${project.revision}" transitive="true" changing="true"/>
     <dependency org="${ivy.artifact.group}" name="pentaho-reporting-engine-classic-extensions-drill-down"

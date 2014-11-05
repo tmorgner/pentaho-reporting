@@ -14,6 +14,7 @@
     <junit.sysprop.user.language>en</junit.sysprop.user.language>
     <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
     <dependency.reporting-libraries>pentaho-library</dependency.reporting-libraries>
+    <dependency.pentaho-library.libformula-test.version>TRUNK-SNAPSHOT</dependency.pentaho-library.libformula-test.version>
     <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
   </properties>
   <dependencies>
@@ -23,9 +24,9 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>${dependency.reporting-libraries}</groupId>
+      <groupId>pentaho-library</groupId>
       <artifactId>libformula-test</artifactId>
-      <version>${project.version}</version>
+      <version>${dependency.pentaho-library.libformula-test.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -33,6 +34,12 @@
       <artifactId>junit</artifactId>
       <version>4.10</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   <build>

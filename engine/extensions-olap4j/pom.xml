@@ -11,11 +11,11 @@
   <properties>
     <junit.sysprop.user.timezone>UTC</junit.sysprop.user.timezone>
     <mondrian.group>pentaho</mondrian.group>
-    <dependency.mondrian.revision>TRUNK-SNAPSHOT</dependency.mondrian.revision>
+    <dependency.pentaho.mondrian.version>TRUNK-SNAPSHOT</dependency.pentaho.mondrian.version>
     <junit.sysprop.user.region>US</junit.sysprop.user.region>
     <junit.sysprop.user.language>en</junit.sysprop.user.language>
     <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
-    <dependency.olap4j.revision>1.2.0</dependency.olap4j.revision>
+    <dependency.org.olap4j.olap4j.version>1.2.0</dependency.org.olap4j.olap4j.version>
     <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
   </properties>
   <dependencies>
@@ -27,44 +27,44 @@
     <dependency>
       <groupId>org.olap4j</groupId>
       <artifactId>olap4j</artifactId>
-      <version>${dependency.olap4j.revision}</version>
+      <version>${dependency.org.olap4j.olap4j.version}</version>
     </dependency>
     <dependency>
-      <groupId>${mondrian.group}</groupId>
+      <groupId>pentaho</groupId>
       <artifactId>mondrian</artifactId>
-      <version>${dependency.mondrian.revision}</version>
+      <version>${dependency.pentaho.mondrian.version}</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>xml-apis</artifactId>
           <groupId>xml-apis</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>xerces</artifactId>
           <groupId>xerces</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>xercesImpl</artifactId>
           <groupId>xerces</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>jsp-api</artifactId>
           <groupId>javax.servlet</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>servlet-api</artifactId>
           <groupId>javax.servlet</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>commons-logging</artifactId>
           <groupId>commons-logging</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>olap4j</artifactId>
           <groupId>org.olap4j</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>ant</artifactId>
           <groupId>org.apache.ant</groupId>
         </exclusion>
       </exclusions>
@@ -74,36 +74,72 @@
       <artifactId>junit</artifactId>
       <version>4.10</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>hsqldb</groupId>
       <artifactId>hsqldb</artifactId>
       <version>1.8.0</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>pentaho-reporting-engine-classic-core-test</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.3</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>simple-jndi</groupId>
       <artifactId>simple-jndi</artifactId>
       <version>0.11.3</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.0</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   <build>

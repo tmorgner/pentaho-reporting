@@ -11,19 +11,20 @@
   <artifactId>pentaho-reporting-engine-datasource-editor-pmd</artifactId>
   <properties>
     <junit.sysprop.user.timezone>UTC</junit.sysprop.user.timezone>
-    <junit.sysprop.user.region>US</junit.sysprop.user.region>
-    <junit.sysprop.user.language>en</junit.sysprop.user.language>
     <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
+    <junit.sysprop.user.region>US</junit.sysprop.user.region>
+    <properties.parentGroupId>pentaho-report-designer</properties.parentGroupId>
+    <dependency.pentaho.pentaho-mql-editor.version>TRUNK-SNAPSHOT</dependency.pentaho.pentaho-mql-editor.version>
     <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
-    <dependency.pentaho-xul.revision>TRUNK-SNAPSHOT</dependency.pentaho-xul.revision>
+    <dependency.pentaho-library.libswing.version>TRUNK-SNAPSHOT</dependency.pentaho-library.libswing.version>
+    <junit.sysprop.user.language>en</junit.sysprop.user.language>
     <dependency.reporting-libraries>pentaho-library</dependency.reporting-libraries>
-    <dependency.pentaho-mql-editor.revision>TRUNK-SNAPSHOT</dependency.pentaho-mql-editor.revision>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>${dependency.reporting-libraries}</groupId>
+      <groupId>pentaho-library</groupId>
       <artifactId>libswing</artifactId>
-      <version>${project.version}</version>
+      <version>${dependency.pentaho-library.libswing.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -54,47 +55,20 @@
     </dependency>
     <dependency>
       <groupId>pentaho</groupId>
-      <artifactId>pentaho-xul-swing</artifactId>
-      <version>${dependency.pentaho-xul.revision}</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>xml-apis</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>xerces</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>pentaho</groupId>
       <artifactId>pentaho-mql-editor</artifactId>
-      <version>${dependency.pentaho-mql-editor.revision}</version>
+      <version>${dependency.pentaho.pentaho-mql-editor.version}</version>
       <exclusions>
         <exclusion>
-          <artifactId>xml-apis</artifactId>
-          <groupId>xml-apis</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>xercesImpl</artifactId>
-          <groupId>xerces</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>pentaho-xul-swt</artifactId>
-          <groupId>pentaho</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>pentaho-xul-swt</artifactId>
           <groupId>pentaho</groupId>
         </exclusion>
         <exclusion>
           <artifactId>*</artifactId>
-          <groupId>${library.group}</groupId>
+          <groupId>${dependency.reporting-libraries}</groupId>
         </exclusion>
         <exclusion>
           <artifactId>*</artifactId>
-          <groupId>${ivy.artifact.group}</groupId>
+          <groupId>${project.groupId}</groupId>
         </exclusion>
         <exclusion>
           <artifactId>pentaho-xul-gwt</artifactId>
@@ -238,62 +212,62 @@
         </exclusion>
         <exclusion>
           <artifactId>*</artifactId>
-          <groupId>${library.group}</groupId>
+          <groupId>${dependency.reporting-libraries}</groupId>
         </exclusion>
         <exclusion>
           <artifactId>*</artifactId>
-          <groupId>${ivy.artifact.group}</groupId>
+          <groupId>${project.groupId}</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>derby</artifactId>
           <groupId>org.apache.derby</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>derbyclient</artifactId>
           <groupId>org.apache.derby</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>h2</artifactId>
           <groupId>com.h2database</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>hsqldb</artifactId>
           <groupId>hsqldb</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>infobright-core</artifactId>
           <groupId>infobright</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>jaybird</artifactId>
           <groupId>org.firebirdsql.jdbc</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>jt400</artifactId>
           <groupId>net.sf.jt400</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>jtds</artifactId>
           <groupId>jtds</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>LucidDbClient-minimal</artifactId>
           <groupId>luciddb</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>monetdb-jdbc</artifactId>
           <groupId>monetdb</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>postgresql</artifactId>
           <groupId>postgresql</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>sapdbc</artifactId>
           <groupId>com.sap</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>sqlite-jdbc</artifactId>
           <groupId>org.xerial</groupId>
         </exclusion>
       </exclusions>

@@ -10,6 +10,7 @@
   <artifactId>pentaho-reporting-engine-legacy-charts</artifactId>
   <properties>
     <junit.sysprop.user.timezone>UTC</junit.sysprop.user.timezone>
+    <dependency.pentaho-library.libswing.version>TRUNK-SNAPSHOT</dependency.pentaho-library.libswing.version>
     <junit.sysprop.user.region>US</junit.sysprop.user.region>
     <junit.sysprop.user.language>en</junit.sysprop.user.language>
     <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
@@ -23,43 +24,79 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>${dependency.reporting-libraries}</groupId>
+      <groupId>pentaho-library</groupId>
       <artifactId>libswing</artifactId>
-      <version>${project.version}</version>
+      <version>${dependency.pentaho-library.libswing.version}</version>
     </dependency>
     <dependency>
       <groupId>jfree</groupId>
       <artifactId>jfreechart</artifactId>
       <version>1.0.13</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>jfree</groupId>
       <artifactId>jcommon</artifactId>
       <version>1.0.16</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.10</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>hsqldb</groupId>
       <artifactId>hsqldb</artifactId>
       <version>1.8.0</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.3</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>simple-jndi</groupId>
       <artifactId>simple-jndi</artifactId>
       <version>0.11.3</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>xmlunit</groupId>
@@ -72,12 +109,23 @@
       <artifactId>pentaho-reporting-engine-classic-core-test</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-      <version>3.0</version>
-      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
+  <build>
+    <testSourceDirectory>${project.basedir}/test</testSourceDirectory>
+    <testResources>
+      <testResource>
+        <directory>${project.basedir}/test</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </testResource>
+    </testResources>
+  </build>
 </project>

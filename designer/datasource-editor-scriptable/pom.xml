@@ -12,6 +12,7 @@
   <properties>
     <junit.sysprop.user.timezone>UTC</junit.sysprop.user.timezone>
     <properties.parentGroupId>pentaho-report-designer</properties.parentGroupId>
+    <dependency.pentaho-library.libswing.version>TRUNK-SNAPSHOT</dependency.pentaho-library.libswing.version>
     <junit.sysprop.user.region>US</junit.sysprop.user.region>
     <junit.sysprop.user.language>en</junit.sysprop.user.language>
     <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
@@ -25,9 +26,9 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>${dependency.reporting-libraries}</groupId>
+      <groupId>pentaho-library</groupId>
       <artifactId>libswing</artifactId>
-      <version>${project.version}</version>
+      <version>${dependency.pentaho-library.libswing.version}</version>
     </dependency>
     <dependency>
       <groupId>org.fife.ui</groupId>

@@ -6,15 +6,14 @@
     <groupId>pentaho-reporting-engine</groupId>
     <artifactId>pentaho-reporting-engine-parent-pom</artifactId>
     <version>TRUNK-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
   </parent>
   <artifactId>pentaho-reporting-engine-classic-extensions-pmd</artifactId>
   <properties>
     <junit.sysprop.user.timezone>UTC</junit.sysprop.user.timezone>
     <pentaho.group>pentaho</pentaho.group>
     <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
+    <dependency.pentaho.pentaho-metadata.version>TRUNK-SNAPSHOT</dependency.pentaho.pentaho-metadata.version>
     <junit.sysprop.user.region>US</junit.sysprop.user.region>
-    <dependency.pentaho-metadata.revision>TRUNK-SNAPSHOT</dependency.pentaho-metadata.revision>
     <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
     <junit.sysprop.user.language>en</junit.sysprop.user.language>
     <dependency.pentaho-connections.revision>TRUNK-SNAPSHOT</dependency.pentaho-connections.revision>
@@ -25,25 +24,19 @@
       <groupId>${project.groupId}</groupId>
       <artifactId>pentaho-reporting-engine-classic-core</artifactId>
       <version>${project.version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>xml-apis</groupId>
-          <artifactId>xml-apis</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
-      <groupId>${pentaho.group}</groupId>
+      <groupId>pentaho</groupId>
       <artifactId>pentaho-metadata</artifactId>
-      <version>${dependency.pentaho-metadata.revision}</version>
+      <version>${dependency.pentaho.pentaho-metadata.version}</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>${library.group}</groupId>
+          <artifactId>libbase</artifactId>
+          <groupId>${dependency.reporting-libraries}</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>${library.group}</groupId>
+          <artifactId>libformula</artifactId>
+          <groupId>${dependency.reporting-libraries}</groupId>
         </exclusion>
         <exclusion>
           <artifactId>*</artifactId>
@@ -58,11 +51,11 @@
           <groupId>commons-logging</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>activation</artifactId>
           <groupId>javax.activation</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>xml-apis</artifactId>
           <groupId>xml-apis</groupId>
         </exclusion>
         <exclusion>
@@ -74,7 +67,7 @@
           <groupId>commons-logging</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>mondrian</artifactId>
           <groupId>pentaho</groupId>
         </exclusion>
         <exclusion>
@@ -129,64 +122,78 @@
           <artifactId>sqlite-jdbc</artifactId>
           <groupId>org.xerial</groupId>
         </exclusion>
-        <exclusion>
-          <artifactId>xml-apis</artifactId>
-          <groupId>xml-apis</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>xml-apis-ext</artifactId>
-          <groupId>xml-apis</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>org.apache.axis2</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>xerces</groupId>
-        </exclusion>
       </exclusions>
-    </dependency>
-    <!-- for some reason, maven does not download this as a transient dependency -->
-    <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-connections</artifactId>
-      <version>${dependency.pentaho-metadata.revision}</version>
     </dependency>
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>1.2.14</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>pentaho-reporting-engine-classic-core-test</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.10</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>hsqldb</groupId>
       <artifactId>hsqldb</artifactId>
       <version>1.8.0</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>simple-jndi</groupId>
       <artifactId>simple-jndi</artifactId>
       <version>0.11.3</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.0</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   <build>

@@ -9,41 +9,33 @@
   </parent>
   <artifactId>pentaho-reporting-engine-wizard-xul</artifactId>
   <properties>
-    <reporting-engine.group>pentaho-reporting-engine</reporting-engine.group>
-    <dependency.reporting-libraries>pentaho-library</dependency.reporting-libraries>
-    <dependency.pentaho-xul.revision>TRUNK-SNAPSHOT</dependency.pentaho-xul.revision>
-    <pentaho.group>pentaho</pentaho.group>
     <junit.sysprop.user.timezone>UTC</junit.sysprop.user.timezone>
+    <pentaho.group>pentaho</pentaho.group>
     <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
+    <reporting-engine.group>pentaho-reporting-engine</reporting-engine.group>
     <junit.sysprop.user.region>US</junit.sysprop.user.region>
+    <properties.parentGroupId>pentaho-report-designer</properties.parentGroupId>
+    <dependency.pentaho.pentaho-xul-swing.version>TRUNK-SNAPSHOT</dependency.pentaho.pentaho-xul-swing.version>
     <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
+    <dependency.pentaho-library.libswing.version>TRUNK-SNAPSHOT</dependency.pentaho-library.libswing.version>
     <junit.sysprop.user.language>en</junit.sysprop.user.language>
+    <dependency.reporting-libraries>pentaho-library</dependency.reporting-libraries>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-wizard-core</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>${pentaho.group}</groupId>
+      <groupId>pentaho</groupId>
       <artifactId>pentaho-xul-swing</artifactId>
-      <version>${dependency.pentaho-xul.revision}</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>xml-apis</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>xerces</groupId>
-        </exclusion>
-      </exclusions>
+      <version>${dependency.pentaho.pentaho-xul-swing.version}</version>
     </dependency>
     <dependency>
-      <groupId>${dependency.reporting-libraries}</groupId>
+      <groupId>pentaho-library</groupId>
       <artifactId>libswing</artifactId>
-      <version>${project.version}</version>
+      <version>${dependency.pentaho-library.libswing.version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -100,7 +92,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-classic-core-test</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>

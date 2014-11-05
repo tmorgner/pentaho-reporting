@@ -59,7 +59,6 @@
       <exclude org="xml-apis" module="xml-apis"/>
     </dependency>
     <dependency org="org.springframework" name="spring-core" rev="2.5.6" transitive="false" conf="default_external->default"/>
-    <dependency org="simple-jndi" name="simple-jndi" rev="0.11.3" conf="default_external->default"/>
     <dependency org="jug-lgpl" name="jug-lgpl" rev="2.0.0" transitive="false" conf="default_external->default"/>
     <dependency org="jexcelapi" name="jxl" rev="2.4.3" transitive="false" conf="default_external->default"/>
 

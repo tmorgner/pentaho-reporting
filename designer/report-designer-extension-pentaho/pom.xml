@@ -21,6 +21,7 @@
     <junit.sysprop.user.region>US</junit.sysprop.user.region>
     <properties.parentGroupId>pentaho-report-designer</properties.parentGroupId>
     <jmeter.version>2.11</jmeter.version>
+    <dependency.pentaho-library.libpensol.version>TRUNK-SNAPSHOT</dependency.pentaho-library.libpensol.version>
     <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
     <dependency.pentaho-connections.revision>TRUNK-SNAPSHOT</dependency.pentaho-connections.revision>
     <junit.sysprop.user.language>en</junit.sysprop.user.language>
@@ -35,7 +36,7 @@
     <dependency>
       <groupId>pentaho-library</groupId>
       <artifactId>libpensol</artifactId>
-      <version>${project.version}</version>
+      <version>${dependency.pentaho-library.libpensol.version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -92,7 +93,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-classic-core-test</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>

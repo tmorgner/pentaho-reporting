@@ -1,135 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>pentaho-reporting-engine</groupId>
-    <artifactId>pentaho-reporting-engine-parent-pom</artifactId>
+    <groupId>pentaho-report-designer</groupId>
+    <artifactId>pentaho-report-designer-parent-pom</artifactId>
     <version>TRUNK-SNAPSHOT</version>
   </parent>
-  <groupId>pentaho-report-designer</groupId>
   <artifactId>prd</artifactId>
   <properties>
-    <dependency.pentaho-hadoop-hive-jdbc-shim.revision>TRUNK-SNAPSHOT
-    </dependency.pentaho-hadoop-hive-jdbc-shim.revision>
-    <dependency.reporting-engine.revision>TRUNK-SNAPSHOT</dependency.reporting-engine.revision>
-    <dependency.launcher.revision>TRUNK-SNAPSHOT</dependency.launcher.revision>
-    <dependency.documentation.revision>TRUNK-SNAPSHOT</dependency.documentation.revision>
-    <dependency.oss-licenses.revision>5.1.0.0</dependency.oss-licenses.revision>
+    <dependency.pentaho.pentaho-big-data-plugin.version>TRUNK-SNAPSHOT</dependency.pentaho.pentaho-big-data-plugin.version>
+    <dependency.pentaho.pentaho-mongodb-plugin.version>TRUNK-SNAPSHOT</dependency.pentaho.pentaho-mongodb-plugin.version>
+    <dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version>TRUNK-SNAPSHOT</dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version>
+    <dependency.com.googlecode.json-simple.json-simple.version>1.1</dependency.com.googlecode.json-simple.json-simple.version>
+    <dependency.pentaho.pentaho-hadoop-hive-jdbc-shim.version>TRUNK-SNAPSHOT</dependency.pentaho.pentaho-hadoop-hive-jdbc-shim.version>
+    <dependency.pentaho.pentaho-cassandra-plugin.version>TRUNK-SNAPSHOT</dependency.pentaho.pentaho-cassandra-plugin.version>
     <junit.sysprop.user.region>US</junit.sysprop.user.region>
     <junit.sysprop.user.timezone>UTC</junit.sysprop.user.timezone>
     <reporting-engine.group>pentaho-reporting-engine</reporting-engine.group>
+    <dependency.pentaho-doc.report_designer_user_guide.version>TRUNK-SNAPSHOT</dependency.pentaho-doc.report_designer_user_guide.version>
     <junit.sysprop.user.language>en</junit.sysprop.user.language>
     <dist.base-name>prd</dist.base-name>
-    <dependency.report-designer.revision>TRUNK-SNAPSHOT</dependency.report-designer.revision>
     <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
-    <dependency.jsonpath.revision>1.0</dependency.jsonpath.revision>
-    <dependency.pentaho-big-data-plugin.revision>TRUNK-SNAPSHOT</dependency.pentaho-big-data-plugin.revision>
-    <dependency.pentaho-cassandra-plugin.revision>TRUNK-SNAPSHOT</dependency.pentaho-cassandra-plugin.revision>
+    <dependency.${ivy.artifact.group}.report-designer-ext-toc.version>TRUNK-SNAPSHOT</dependency.${ivy.artifact.group}.report-designer-ext-toc.version>
     <dependency.kettle.group>pentaho-kettle</dependency.kettle.group>
+    <dependency.pentaho-kettle.kettle5-log4j-plugin.version>TRUNK-SNAPSHOT</dependency.pentaho-kettle.kettle5-log4j-plugin.version>
     <dist.name>prd-ce</dist.name>
-    <dependency.kettle.revision>TRUNK-SNAPSHOT</dependency.kettle.revision>
+    <properties.parentGroupId>pentaho-report-designer</properties.parentGroupId>
+    <dependency.pentaho.oss-licenses.version>5.1.0.0</dependency.pentaho.oss-licenses.version>
     <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
-    <dependency.json.simple.revision>1.1</dependency.json.simple.revision>
     <dist.type>ce</dist.type>
-    <dependency.pentaho-mongodb-plugin.revision>TRUNK-SNAPSHOT</dependency.pentaho-mongodb-plugin.revision>
+    <dependency.jsonpath.jsonpath.version>1.0</dependency.jsonpath.jsonpath.version>
+    <dependency.pentaho.pentaho-application-launcher.version>TRUNK-SNAPSHOT</dependency.pentaho.pentaho-application-launcher.version>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-cda</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-external</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-jdbc</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-table</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-kettle</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-mondrian</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-olap4j</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-openerp</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-pmd</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-reflection</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-scriptable</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-xpath</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-classic-extensions-sampledata</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-legacy-functions</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-legacy-functions.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>report-designer-ext-legacy-charts</artifactId>
-      <version>${dependency.report-designer.revision}</version>
+      <version>${ivy.artifact.group}.report-designer-ext-toc.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>report-designer-ext-pentaho</artifactId>
-      <version>${dependency.report-designer.revision}</version>
+      <version>${ivy.artifact.group}.report-designer-ext-toc.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>report-designer-ext-wizard</artifactId>
-      <version>${dependency.report-designer.revision}</version>
+      <version>${ivy.artifact.group}.report-designer-ext-toc.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>report-designer-ext-toc</artifactId>
-      <version>${dependency.report-designer.revision}</version>
+      <version>${ivy.artifact.group}.report-designer-ext-toc.version}</version>
     </dependency>
     <dependency>
       <groupId>pentaho</groupId>
       <artifactId>pentaho-application-launcher</artifactId>
-      <version>${dependency.launcher.revision}</version>
+      <version>${dependency.pentaho.pentaho-application-launcher.version}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
@@ -143,9 +141,9 @@
       <version>1.2.15</version>
     </dependency>
     <dependency>
-      <groupId>${dependency.kettle.group}</groupId>
+      <groupId>pentaho-kettle</groupId>
       <artifactId>kettle-engine</artifactId>
-      <version>${dependency.kettle.revision}</version>
+      <version>${dependency.pentaho-kettle.kettle5-log4j-plugin.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>derby</artifactId>
@@ -233,18 +231,18 @@
         </exclusion>
         <exclusion>
           <artifactId>*</artifactId>
-          <groupId>${library.group}</groupId>
+          <groupId>${dependency.reporting-libraries}</groupId>
         </exclusion>
         <exclusion>
           <artifactId>*</artifactId>
-          <groupId>${ivy.artifact.group}</groupId>
+          <groupId>${project.groupId}</groupId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>${dependency.kettle.group}</groupId>
+      <groupId>pentaho-kettle</groupId>
       <artifactId>kettle5-log4j-plugin</artifactId>
-      <version>${dependency.kettle.revision}</version>
+      <version>${dependency.pentaho-kettle.kettle5-log4j-plugin.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -255,7 +253,7 @@
     <dependency>
       <groupId>com.googlecode.json-simple</groupId>
       <artifactId>json-simple</artifactId>
-      <version>${dependency.json.simple.revision}</version>
+      <version>${dependency.com.googlecode.json-simple.json-simple.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -266,7 +264,7 @@
     <dependency>
       <groupId>jsonpath</groupId>
       <artifactId>jsonpath</artifactId>
-      <version>${dependency.jsonpath.revision}</version>
+      <version>${dependency.jsonpath.jsonpath.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -299,7 +297,6 @@
             <configuration>
               <outputDirectory>${project.basedir}/lib</outputDirectory>
               <includeScope>compile</includeScope>
-              <excludeScope>provided</excludeScope>
             </configuration>
           </execution>
           <execution>
@@ -311,7 +308,6 @@
             <configuration>
               <outputDirectory>${project.basedir}/test-lib</outputDirectory>
               <includeScope>test</includeScope>
-              <excludeScope>compile</excludeScope>
             </configuration>
           </execution>
           <execution>
@@ -323,7 +319,6 @@
             <configuration>
               <outputDirectory>${project.basedir}/runtime-lib</outputDirectory>
               <includeScope>runtime</includeScope>
-              <excludeScope>compile</excludeScope>
             </configuration>
           </execution>
           <execution>
@@ -416,7 +411,7 @@
                 <artifactItem>
                   <groupId>pentaho</groupId>
                   <artifactId>pentaho-hadoop-hive-jdbc-shim</artifactId>
-                  <version>${dependency.pentaho-hadoop-hive-jdbc-shim.revision}</version>
+                  <version>${dependency.pentaho.pentaho-hadoop-hive-jdbc-shim.version}</version>
                   <type>jar</type>
                 </artifactItem>
               </artifactItems>
@@ -434,19 +429,19 @@
                 <artifactItem>
                   <groupId>pentaho</groupId>
                   <artifactId>pentaho-big-data-plugin</artifactId>
-                  <version>${dependency.pentaho-big-data-plugin.revision}</version>
+                  <version>${dependency.pentaho.pentaho-big-data-plugin.version}</version>
                   <type>zip</type>
                 </artifactItem>
                 <artifactItem>
                   <groupId>pentaho</groupId>
                   <artifactId>pentaho-mongodb-plugin</artifactId>
-                  <version>${dependency.pentaho-mongodb-plugin.revision}</version>
+                  <version>${dependency.pentaho.pentaho-mongodb-plugin.version}</version>
                   <type>zip</type>
                 </artifactItem>
                 <artifactItem>
                   <groupId>pentaho</groupId>
                   <artifactId>pentaho-cassandra-plugin</artifactId>
-                  <version>${dependency.pentaho-cassandra-plugin.revision}</version>
+                  <version>${dependency.pentaho.pentaho-cassandra-plugin.version}</version>
                   <type>zip</type>
                 </artifactItem>
               </artifactItems>
@@ -464,7 +459,7 @@
                 <artifactItem>
                   <groupId>pentaho-doc</groupId>
                   <artifactId>report_designer_user_guide</artifactId>
-                  <version>${dependency.documentation.revision}</version>
+                  <version>${dependency.pentaho-doc.report_designer_user_guide.version}</version>
                   <type>pdf</type>
                 </artifactItem>
               </artifactItems>
@@ -482,31 +477,10 @@
                 <artifactItem>
                   <groupId>pentaho</groupId>
                   <artifactId>oss-licenses</artifactId>
-                  <version>${dependency.oss-licenses.revision}</version>
-                  <destFileName>oss-licenses.zip</destFileName>
+                  <version>${dependency.pentaho.oss-licenses.version}</version>
                   <type>zip</type>
                 </artifactItem>
               </artifactItems>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <version>1.7</version>
-        <executions>
-          <execution>
-            <id>invoke-assembly</id>
-            <phase>package</phase>
-            <goals>
-              <goal>run</goal>
-            </goals>
-            <configuration>
-              <target>
-                <echo>HERE</echo>
-                <ant antfile="${basedir}/pom-build.xml" target="dist"/>
-              </target>
             </configuration>
           </execution>
         </executions>

@@ -11,13 +11,14 @@
   <artifactId>pentaho-reporting-engine-datasource-editor-kettle</artifactId>
   <properties>
     <junit.sysprop.user.timezone>UTC</junit.sysprop.user.timezone>
+    <dependency.pentaho-kettle.kettle-ui-swt.version>TRUNK-SNAPSHOT</dependency.pentaho-kettle.kettle-ui-swt.version>
+    <dependency.pentaho-library.libformula-ui.version>TRUNK-SNAPSHOT</dependency.pentaho-library.libformula-ui.version>
     <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
     <kettle.group>pentaho-kettle</kettle.group>
-    <dependency.pentaho-xul.revision>TRUNK-SNAPSHOT</dependency.pentaho-xul.revision>
+    <dependency.pentaho.pentaho-xul-core.version>TRUNK-SNAPSHOT</dependency.pentaho.pentaho-xul-core.version>
     <junit.sysprop.user.region>US</junit.sysprop.user.region>
     <properties.parentGroupId>pentaho-report-designer</properties.parentGroupId>
     <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
-    <dependency.kettle.revision>TRUNK-SNAPSHOT</dependency.kettle.revision>
     <junit.sysprop.user.language>en</junit.sysprop.user.language>
     <dependency.reporting-libraries>pentaho-library</dependency.reporting-libraries>
   </properties>
@@ -25,7 +26,7 @@
     <dependency>
       <groupId>pentaho</groupId>
       <artifactId>pentaho-xul-swing</artifactId>
-      <version>${dependency.pentaho-xul.revision}</version>
+      <version>${dependency.pentaho.pentaho-xul-core.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -38,14 +39,14 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>${dependency.reporting-libraries}</groupId>
+      <groupId>pentaho-library</groupId>
       <artifactId>libformula-ui</artifactId>
-      <version>${project.version}</version>
+      <version>${dependency.pentaho-library.libformula-ui.version}</version>
     </dependency>
     <dependency>
-      <groupId>${kettle.group}</groupId>
+      <groupId>pentaho-kettle</groupId>
       <artifactId>kettle-ui-swt</artifactId>
-      <version>${dependency.kettle.revision}</version>
+      <version>${dependency.pentaho-kettle.kettle-ui-swt.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -56,7 +57,7 @@
     <dependency>
       <groupId>pentaho</groupId>
       <artifactId>pentaho-xul-core</artifactId>
-      <version>${dependency.pentaho-xul.revision}</version>
+      <version>${dependency.pentaho.pentaho-xul-core.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>

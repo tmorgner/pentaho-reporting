@@ -11,17 +11,17 @@
   <artifactId>pentaho-reporting-engine-datasource-editor-jdbc</artifactId>
   <properties>
     <junit.sysprop.user.timezone>UTC</junit.sysprop.user.timezone>
-    <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
-    <junit.sysprop.user.region>US</junit.sysprop.user.region>
-    <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
-    <junit.sysprop.user.language>en</junit.sysprop.user.language>
-
-    <dependency.reporting-libraries>pentaho-library</dependency.reporting-libraries>
     <pentaho.group>pentaho</pentaho.group>
+    <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
     <kettle.group>pentaho-kettle</kettle.group>
     <dependency.pentaho-xul.revision>TRUNK-SNAPSHOT</dependency.pentaho-xul.revision>
-    <dependency.kettle.revision>TRUNK-SNAPSHOT</dependency.kettle.revision>
-    <dependency.pentaho-xul.revision>TRUNK-SNAPSHOT</dependency.pentaho-xul.revision>
+    <dependency.pentaho-kettle.kettle-dbdialog.version>TRUNK-SNAPSHOT</dependency.pentaho-kettle.kettle-dbdialog.version>
+    <junit.sysprop.user.region>US</junit.sysprop.user.region>
+    <properties.parentGroupId>pentaho-report-designer</properties.parentGroupId>
+    <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
+    <dependency.pentaho-library.libswing.version>TRUNK-SNAPSHOT</dependency.pentaho-library.libswing.version>
+    <junit.sysprop.user.language>en</junit.sysprop.user.language>
+    <dependency.reporting-libraries>pentaho-library</dependency.reporting-libraries>
   </properties>
   <dependencies>
     <dependency>
@@ -30,44 +30,14 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>${dependency.reporting-libraries}</groupId>
+      <groupId>pentaho-library</groupId>
       <artifactId>libswing</artifactId>
-      <version>${project.version}</version>
+      <version>${dependency.pentaho-library.libswing.version}</version>
     </dependency>
     <dependency>
-      <groupId>${kettle.group}</groupId>
-      <artifactId>kettle-engine</artifactId>
-      <version>${dependency.kettle.revision}</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>${kettle.group}</groupId>
-      <artifactId>kettle-core</artifactId>
-      <version>${dependency.kettle.revision}</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>xml-apis</artifactId>
-          <groupId>xml-apis</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>xmlParserAPIs</artifactId>
-          <groupId>xerces</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>xercesImpl</artifactId>
-          <groupId>xerces</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>${kettle.group}</groupId>
+      <groupId>pentaho-kettle</groupId>
       <artifactId>kettle-dbdialog</artifactId>
-      <version>${dependency.kettle.revision}</version>
+      <version>${dependency.pentaho-kettle.kettle-dbdialog.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -119,78 +89,63 @@
         </exclusion>
         <exclusion>
           <artifactId>*</artifactId>
-          <groupId>${library.group}</groupId>
+          <groupId>${dependency.reporting-libraries}</groupId>
         </exclusion>
         <exclusion>
           <artifactId>*</artifactId>
-          <groupId>${ivy.artifact.group}</groupId>
+          <groupId>${project.groupId}</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>derby</artifactId>
           <groupId>org.apache.derby</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>derbyclient</artifactId>
           <groupId>org.apache.derby</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>h2</artifactId>
           <groupId>com.h2database</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>hsqldb</artifactId>
           <groupId>hsqldb</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>infobright-core</artifactId>
           <groupId>infobright</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>jaybird</artifactId>
           <groupId>org.firebirdsql.jdbc</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>jt400</artifactId>
           <groupId>net.sf.jt400</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>jtds</artifactId>
           <groupId>jtds</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>LucidDbClient-minimal</artifactId>
           <groupId>luciddb</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>monetdb-jdbc</artifactId>
           <groupId>monetdb</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>postgresql</artifactId>
           <groupId>postgresql</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>sapdbc</artifactId>
           <groupId>com.sap</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>sqlite-jdbc</artifactId>
           <groupId>org.xerial</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>${pentaho.group}</groupId>
-      <artifactId>pentaho-xul-swing</artifactId>
-      <version>${dependency.pentaho-xul.revision}</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>xml-apis</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>xerces</groupId>
         </exclusion>
       </exclusions>
     </dependency>

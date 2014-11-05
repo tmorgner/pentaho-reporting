@@ -15,7 +15,7 @@
     <junit.sysprop.user.language>en</junit.sysprop.user.language>
     <reporting-engine.group>pentaho-reporting-engine</reporting-engine.group>
     <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
-    <dependency.reporting-engine.revision>TRUNK-SNAPSHOT</dependency.reporting-engine.revision>
+    <dependency.pentaho-reporting-engine.pentaho-reporting-engine-datasource-editor-jdbc.version>TRUNK-SNAPSHOT</dependency.pentaho-reporting-engine.pentaho-reporting-engine-datasource-editor-jdbc.version>
     <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
   </properties>
   <dependencies>
@@ -25,9 +25,9 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-datasource-editor-jdbc</artifactId>
-      <version>${dependency.reporting-engine.revision}</version>
+      <version>${dependency.pentaho-reporting-engine.pentaho-reporting-engine-datasource-editor-jdbc.version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -84,7 +84,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-classic-core-test</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>

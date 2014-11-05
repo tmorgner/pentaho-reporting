@@ -83,7 +83,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>${reporting-engine.group}</groupId>
+      <groupId>pentaho-reporting-engine</groupId>
       <artifactId>pentaho-reporting-engine-classic-core-test</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>

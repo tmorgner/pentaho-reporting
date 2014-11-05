@@ -11,14 +11,14 @@
   <properties>
     <junit.sysprop.user.timezone>UTC</junit.sysprop.user.timezone>
     <pentaho.group>pentaho</pentaho.group>
-    <dependency.metastore.revision>TRUNK-SNAPSHOT</dependency.metastore.revision>
+    <dependency.pentaho.metastore.version>TRUNK-SNAPSHOT</dependency.pentaho.metastore.version>
     <junit.sysprop.file.encoding>UTF-8</junit.sysprop.file.encoding>
     <kettle.group>pentaho-kettle</kettle.group>
     <dependency.pentaho-xul.revision>TRUNK-SNAPSHOT</dependency.pentaho-xul.revision>
     <junit.sysprop.user.region>US</junit.sysprop.user.region>
+    <dependency.pentaho-kettle.kettle5-log4j-plugin.version>TRUNK-SNAPSHOT</dependency.pentaho-kettle.kettle5-log4j-plugin.version>
+    <dependency.pentaho.pentaho-connections.version>TRUNK-SNAPSHOT</dependency.pentaho.pentaho-connections.version>
     <junit.sysprop.java.awt.headless>true</junit.sysprop.java.awt.headless>
-    <dependency.pentaho-connections.revision>TRUNK-SNAPSHOT</dependency.pentaho-connections.revision>
-    <dependency.kettle.revision>TRUNK-SNAPSHOT</dependency.kettle.revision>
     <junit.sysprop.user.language>en</junit.sysprop.user.language>
     <dependency.reporting-libraries>pentaho-library</dependency.reporting-libraries>
   </properties>
@@ -29,54 +29,70 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>${pentaho.group}</groupId>
+      <groupId>pentaho</groupId>
       <artifactId>pentaho-connections</artifactId>
-      <version>${dependency.pentaho-connections.revision}</version>
+      <version>${dependency.pentaho.pentaho-connections.version}</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>xml-apis</artifactId>
           <groupId>xml-apis</groupId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>${kettle.group}</groupId>
+      <groupId>pentaho-kettle</groupId>
       <artifactId>kettle-engine</artifactId>
-      <version>${dependency.kettle.revision}</version>
-    </dependency>
-    <dependency>
-      <groupId>${kettle.group}</groupId>
-      <artifactId>kettle-core</artifactId>
-      <version>${dependency.kettle.revision}</version>
+      <version>${dependency.pentaho-kettle.kettle5-log4j-plugin.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
-          <groupId>xml-apis</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>xmlParserAPIs</artifactId>
-          <groupId>xerces</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>xercesImpl</artifactId>
-          <groupId>xerces</groupId>
+          <groupId>*</groupId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>${kettle.group}</groupId>
-      <artifactId>kettle5-log4j-plugin</artifactId>
-      <version>${dependency.kettle.revision}</version>
+      <groupId>pentaho-kettle</groupId>
+      <artifactId>kettle-core</artifactId>
+      <version>${dependency.pentaho-kettle.kettle5-log4j-plugin.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
-      <groupId>${pentaho.group}</groupId>
+      <groupId>pentaho-kettle</groupId>
+      <artifactId>kettle5-log4j-plugin</artifactId>
+      <version>${dependency.pentaho-kettle.kettle5-log4j-plugin.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>pentaho</groupId>
       <artifactId>metastore</artifactId>
-      <version>${dependency.metastore.revision}</version>
+      <version>${dependency.pentaho.metastore.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
       <version>1.6</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>commons-collections</groupId>
@@ -92,6 +108,12 @@
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>1.2.14</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>commons-pool</groupId>
@@ -99,11 +121,11 @@
       <version>1.2</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>xerces</artifactId>
           <groupId>xerces</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>xml-apis</artifactId>
           <groupId>xml-apis</groupId>
         </exclusion>
       </exclusions>
@@ -117,11 +139,23 @@
       <groupId>commons-httpclient</groupId>
       <artifactId>commons-httpclient</artifactId>
       <version>3.0.1</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>commons-math</groupId>
       <artifactId>commons-math</artifactId>
       <version>1.1</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>commons-dbcp</groupId>
@@ -129,11 +163,11 @@
       <version>1.2.1</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>xerces</artifactId>
           <groupId>xerces</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>xml-apis</artifactId>
           <groupId>xml-apis</groupId>
         </exclusion>
       </exclusions>
@@ -147,21 +181,45 @@
       <groupId>commons-vfs</groupId>
       <artifactId>commons-vfs</artifactId>
       <version>1.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>commons-digester</groupId>
       <artifactId>commons-digester</artifactId>
       <version>1.8</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>commons-beanutils</groupId>
       <artifactId>commons-beanutils</artifactId>
       <version>1.7.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>ognl</groupId>
       <artifactId>ognl</artifactId>
       <version>2.6.9</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>dom4j</groupId>
@@ -169,7 +227,7 @@
       <version>1.6.1</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
+          <artifactId>xml-apis</artifactId>
           <groupId>xml-apis</groupId>
         </exclusion>
       </exclusions>
@@ -178,21 +236,34 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
       <version>2.5.6</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>jug-lgpl</groupId>
       <artifactId>jug-lgpl</artifactId>
       <version>2.0.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>jexcelapi</groupId>
       <artifactId>jxl</artifactId>
       <version>2.4.3</version>
-    </dependency>
-    <dependency>
-      <groupId>wsdl4j</groupId>
-      <artifactId>wsdl4j</artifactId>
-      <version>1.6.2</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.axis2</groupId>
@@ -200,12 +271,8 @@
       <version>1.4.1</version>
       <exclusions>
         <exclusion>
-          <artifactId>xml-apis</artifactId>
-          <groupId>xml-apis</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>xercesImpl</artifactId>
-          <groupId>xerces</groupId>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -215,16 +282,8 @@
       <version>1.4.1</version>
       <exclusions>
         <exclusion>
-          <artifactId>xmlParserAPIs</artifactId>
-          <groupId>xerces</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>xml-apis</artifactId>
-          <groupId>xml-apis</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>xercesImpl</artifactId>
-          <groupId>xerces</groupId>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -232,11 +291,23 @@
       <groupId>javassist</groupId>
       <artifactId>javassist</artifactId>
       <version>3.12.1.GA</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.scannotation</groupId>
       <artifactId>scannotation</artifactId>
       <version>1.0.2</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>stax</groupId>
@@ -249,6 +320,16 @@
       <version>3.2.4</version>
     </dependency>
     <dependency>
+      <groupId>wsdl4j</groupId>
+      <artifactId>wsdl4j</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+    <dependency>
+      <groupId>wsdl4j</groupId>
+      <artifactId>wsdl4j-qname</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+    <dependency>
       <groupId>janino</groupId>
       <artifactId>janino</artifactId>
       <version>2.5.16</version>
@@ -258,30 +339,60 @@
       <artifactId>junit</artifactId>
       <version>4.10</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>pentaho-reporting-engine-classic-core-test</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.3</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>simple-jndi</groupId>
       <artifactId>simple-jndi</artifactId>
       <version>0.11.3</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.0</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
 </project>
