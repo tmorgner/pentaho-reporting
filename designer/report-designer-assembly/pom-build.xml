@@ -1,0 +1,28 @@
+<!--===========================================================================
+  This is the build file for the Pentaho BI Platform API project.
+
+  This build file will use the build-res/subfloor.xml file as the default build
+  process and should only override the tasks that need to differ from
+  the common build file.
+
+  See build-res/subfloor.xml for more details
+============================================================================-->
+<project name="report-designer-assembly-pom-override" basedir="." default="dist" xmlns:ivy="antlib:org.apache.ivy.ant">
+
+  <description>
+    This build file is used as a wrapper from within Maven. It simply disables all clean and resolve tasks
+    so that Maven's previously downloaded artifacts are not deleted.
+  </description>
+
+
+  <import file="build.xml"/>
+
+  <target name="clean-jars"/>
+  <target name="clean"/>
+  <target name="resolve-pdf-docs"/>
+  <target name="resolve"/>
+
+  <!-- The dist target is where everything is assembled -->
+  <target name="dist" depends="clean-all, init, resolve, resolve-pdf-docs, dist-winlinux, dist-mac"
+          description="Creates the distributables for the Report Designer"/>
+</project>
