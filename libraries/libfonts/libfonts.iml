@@ -24,6 +24,17 @@
         <jarDirectory url="file://$MODULE_DIR$/lib/external" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="module-library" exported="" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/test-lib/mockito-all-1.9.5-rc1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/test-lib/mockito-all-1.9.5-rc1.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
   <component name="copyright">
     <Base>

@@ -471,8 +471,11 @@ public class PdfLogicalPageDrawable extends LogicalPageDrawable
         isNormalTextSpacing(renderableText))
     {
       final int maxLength = renderableText.computeMaximumTextSize(contentX2);
-      final String text = gs.getText(renderableText.getOffset(), maxLength, codePointBuffer);
-
+      String text = gs.getText(renderableText.getOffset(), maxLength, codePointBuffer);
+      if (containsUnhandledSpace(renderableText, maxLength))
+      {
+        text = text.replace((char) 0xa0, ' ');
+      }
       cb.showText(text);
     }
     else
@@ -496,8 +499,13 @@ public class PdfLogicalPageDrawable extends LogicalPageDrawable
           }
         }
 
-        final String text = gs.getGlyphAsString(i, codePointBuffer);
-        buffer.append(text);
+        if (g.getWidth() == 0 && g.getCodepoint() == 0xa0) {
+          buffer.append(' ');
+        }
+        else {
+          final String text = gs.getGlyphAsString(i, codePointBuffer);
+          buffer.append(text);
+        }
       }
       if (buffer.length() > 0)
       {
@@ -505,6 +513,20 @@ public class PdfLogicalPageDrawable extends LogicalPageDrawable
       }
       cb.showText(textArray);
     }
+  }
+
+  private boolean containsUnhandledSpace(final RenderableText renderableText, final int maxPos) {
+    final GlyphList gs = renderableText.getGlyphs();
+    final int offset = renderableText.getOffset();
+
+    for (int i = offset; i < maxPos; i++)
+    {
+      final Glyph g = gs.getGlyph(i);
+      if (g.getWidth() == 0 && g.getCodepoint() == 0xa0) {
+        return true;
+      }
+    }
+    return false;
   }
 
   private ParagraphRenderBox paragraphContext;
@@ -736,7 +758,7 @@ public class PdfLogicalPageDrawable extends LogicalPageDrawable
   {
     Phrase p = new Phrase();
     RichTextSpec text = node.getRichText();
-    for (RichTextSpec.StyledChunk c : text.getStyleChunks())
+    for (final RichTextSpec.StyledChunk c : text.getStyleChunks())
     {
       TypedMapWrapper<Attribute, Object> attributes = new TypedMapWrapper<Attribute, Object>(c.getAttributes());
       final Number size = attributes.get(TextAttribute.SIZE, 10f, Number.class);
@@ -762,6 +784,10 @@ public class PdfLogicalPageDrawable extends LogicalPageDrawable
       else
       {
         String textToPrint = c.getText();
+        if (pdfTextSpec.getFontMetrics().getCharWidth(0xa0) == 0) {
+          // this is one of the broken fonts ..
+          textToPrint = textToPrint.replace((char) 0xa0, ' ');
+        }
         Chunk chunk = new Chunk(textToPrint, font);
         p.add(chunk);
       }

@@ -172,7 +172,11 @@ public class BaseFontFontMetrics implements FontMetrics
         final char char1 = cpBuffer[0];
         if (char1 < 128 || (char1 >= 160 && char1 <= 255))
         {
-          final long width = (long) (baseFont.getWidth(char1) * size);
+          long width = (long) (baseFont.getWidth(char1) * size);
+          if (char1 == 160 && width == 0) {
+            width = (long) (baseFont.getWidth(' ') * size);
+          }
+
           cachedWidths[index] = width;
           return width;
         }
