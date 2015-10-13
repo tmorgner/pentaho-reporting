@@ -205,6 +205,7 @@ public class ProcessState implements ReportState {
   private LongSequence crosstabColumnSequenceCounter;
   private boolean designtime;
   private PerformanceMonitorContext performanceMonitorContext;
+  private ReportProcessStore processStore;
 
   public ProcessState() {
 
@@ -258,6 +259,7 @@ public class ProcessState implements ReportState {
     this.currentSubReport = -1;
     this.currentGroupIndex = ReportState.BEFORE_FIRST_GROUP;
     this.currentPresentationGroupIndex = ReportState.BEFORE_FIRST_GROUP;
+    this.processStore = new ReportProcessStore();
     this.functionStorage = new FunctionStorage();
     this.structureFunctionStorage = new FunctionStorage();
     this.sequenceCounter = 0;
@@ -452,6 +454,7 @@ public class ProcessState implements ReportState {
     this.errorHandler = parentState.errorHandler;
     this.functionStorage = parentState.functionStorage;
     this.structureFunctionStorage = parentState.structureFunctionStorage;
+    this.processStore = parentState.processStore;
     this.currentGroupIndex = ReportState.BEFORE_FIRST_GROUP;
     this.currentPresentationGroupIndex = ReportState.BEFORE_FIRST_GROUP;
     this.currentSubReport = subReportIndex;
@@ -621,6 +624,10 @@ public class ProcessState implements ReportState {
     this.processKey = createKey();
   }
 
+  public ReportProcessStore getProcessStore() {
+    return processStore;
+  }
+
   private DataFactory lookupDataFactory( final AbstractReportDefinition report ) {
     if ( designtime ) {
       return new DesignTimeDataFactory();
@@ -646,8 +653,8 @@ public class ProcessState implements ReportState {
       return false;
     }
 
-    if ( flowController.getReportContext().getOutputProcessorMetaData()
-      .isFeatureSupported( OutputProcessorFeature.DESIGNTIME ) ) {
+    OutputProcessorMetaData metaData = flowController.getReportContext().getOutputProcessorMetaData();
+    if ( metaData.isFeatureSupported( OutputProcessorFeature.DESIGNTIME ) ) {
       final Object attribute = report.getAttribute( AttributeNames.Designtime.NAMESPACE,
         AttributeNames.Designtime.HIDE_IN_LAYOUT_GUI_ATTRIBUTE );
       if ( Boolean.TRUE.equals( attribute ) ) {
