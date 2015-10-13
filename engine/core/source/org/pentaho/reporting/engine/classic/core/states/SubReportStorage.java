@@ -41,7 +41,7 @@ public class SubReportStorage implements Serializable {
     }
 
     // derive would regenerate instance-IDs, which is not advisable.
-    storage.put( key, subReport );
+    storage.put( key, subReport.derive(true) );
   }
 
   public SubReport restore( final FunctionStorageKey key )
@@ -55,7 +55,7 @@ public class SubReportStorage implements Serializable {
       return null;
     }
 
-    return subReport;
+    return subReport.derive(true);
   }
 
   public boolean contains( final FunctionStorageKey key ) {
