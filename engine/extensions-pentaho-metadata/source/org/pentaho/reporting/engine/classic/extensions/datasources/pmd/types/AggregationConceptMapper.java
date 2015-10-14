@@ -22,6 +22,8 @@ import org.pentaho.reporting.engine.classic.core.wizard.ConceptQueryMapper;
 import org.pentaho.reporting.engine.classic.core.wizard.DataAttributeContext;
 
 public class AggregationConceptMapper implements ConceptQueryMapper {
+  public static final ConceptQueryMapper INSTANCE = new AggregationConceptMapper();
+
   public AggregationConceptMapper() {
   }
 
