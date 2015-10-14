@@ -21,6 +21,7 @@ import org.pentaho.reporting.engine.classic.core.ReportAttributeMap;
 import org.pentaho.reporting.engine.classic.core.layout.model.BorderCorner;
 import org.pentaho.reporting.engine.classic.core.layout.model.BorderEdge;
 import org.pentaho.reporting.engine.classic.core.metadata.ElementType;
+import org.pentaho.reporting.libraries.xmlns.common.AttributeMap;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -72,16 +73,12 @@ public class CellBackground {
       throw new NullPointerException();
     }
 
-    final String[] namespaces = attrs.getNameSpaces();
-    for ( int i = 0; i < namespaces.length; i++ ) {
-      final String namespace = namespaces[ i ];
-      final String[] names = attrs.getNames( namespace );
-      for ( int j = 0; j < names.length; j++ ) {
-        final String name = names[ j ];
-        final Object value = attrs.getAttribute( namespace, name );
-        if ( value != null ) {
-          this.attributes.setAttribute( namespace, name, value );
-        }
+    for (final AttributeMap.DualKey key: attrs.keySet()) {
+      final String namespace = key.namespace;
+      final String name = key.name;
+      final Object value = attrs.getAttribute( namespace, name );
+      if ( value != null ) {
+        this.attributes.setAttribute( namespace, name, value );
       }
     }
     this.hashCode = null;

@@ -71,6 +71,7 @@ import org.pentaho.reporting.libraries.fonts.encoding.EncodingRegistry;
 import org.pentaho.reporting.libraries.formatting.FastDecimalFormat;
 import org.pentaho.reporting.libraries.resourceloader.ResourceKey;
 import org.pentaho.reporting.libraries.xmlns.common.AttributeList;
+import org.pentaho.reporting.libraries.xmlns.common.AttributeMap;
 import org.pentaho.reporting.libraries.xmlns.writer.DefaultTagDescription;
 import org.pentaho.reporting.libraries.xmlns.writer.XmlWriter;
 
@@ -82,7 +83,10 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
 import java.util.Locale;
+import java.util.Set;
 
 /**
  * @noinspection HardCodedStringLiteral
@@ -442,51 +446,39 @@ public class XmlDocumentWriter extends IterateStructuralProcessStep {
     if ( type == null ) {
       type = AutoLayoutBoxType.INSTANCE;
     }
-    final String[] attributeNamespaces = attributes.getNameSpaces();
-    Arrays.sort( attributeNamespaces );
-    for ( int i = 0; i < attributeNamespaces.length; i++ ) {
-      final String namespace = attributeNamespaces[ i ];
+
+    final Set<AttributeMap.DualKey> collection = attributes.keySet();
+    final AttributeMap.DualKey[] attributeNames = collection.toArray(new AttributeMap.DualKey[collection.size()]);
+    Arrays.sort( attributeNames, new DualKeySorter() );
+    for ( int j = 0; j < attributeNames.length; j++ ) {
+
+      final String namespace = attributeNames[ j ].namespace;
       if ( AttributeNames.Designtime.NAMESPACE.equals( namespace ) ) {
         continue;
       }
 
-      final String[] attributeNames = attributes.getNames( namespace );
-      Arrays.sort( attributeNames );
-      for ( int j = 0; j < attributeNames.length; j++ ) {
-        final String name = attributeNames[ j ];
-        final Object value = attributes.getAttribute( namespace, name );
-        if ( value == null ) {
-          continue;
-        }
-        if ( metaData.isFeatureSupported( XmlTableOutputProcessorMetaData.WRITE_RESOURCEKEYS ) == false &&
-          value instanceof ResourceKey ) {
-          continue;
-        }
+      final String name = attributeNames[ j ].name;
+      final Object value = attributes.getAttribute( namespace, name );
+      if ( value == null ) {
+        continue;
+      }
+
+      if ( metaData.isFeatureSupported( XmlTableOutputProcessorMetaData.WRITE_RESOURCEKEYS ) == false &&
+        value instanceof ResourceKey ) {
+        continue;
+      }
 
 
-        final AttributeMetaData attrMeta = type.getMetaData().getAttributeDescription( namespace, name );
-        if ( attrMeta == null ) {
-          // if you want to use attributes in this output target, declare the attribute's metadata first.
-          continue;
-        }
+      final AttributeMetaData attrMeta = type.getMetaData().getAttributeDescription( namespace, name );
+      if ( attrMeta == null ) {
+        // if you want to use attributes in this output target, declare the attribute's metadata first.
+        continue;
+      }
 
-        final AttributeList attList = new AttributeList();
-        if ( value instanceof String ) {
-          final String s = (String) value;
-          if ( StringUtils.isEmpty( s ) ) {
-            continue;
-          }
-
-          if ( xmlWriter.isNamespaceDefined( namespace ) == false &&
-            attList.isNamespaceUriDefined( namespace ) == false ) {
-            attList.addNamespaceDeclaration( "autoGenNs", namespace );
-          }
-
-          // preserve strings, but discard anything else. Until a attribute has a definition, we cannot
-          // hope to understand the attribute's value. String-attributes can be expressed in XML easily,
-          // and string is also how all unknown attributes are stored by the parser.
-          attList.setAttribute( namespace, name, s );
-          this.xmlWriter.writeTag( XmlDocumentWriter.LAYOUT_OUTPUT_NAMESPACE, "attribute", attList, XmlWriter.CLOSE );
+      final AttributeList attList = new AttributeList();
+      if ( value instanceof String ) {
+        final String s = (String) value;
+        if ( StringUtils.isEmpty( s ) ) {
           continue;
         }
 
@@ -495,46 +487,57 @@ public class XmlDocumentWriter extends IterateStructuralProcessStep {
           attList.addNamespaceDeclaration( "autoGenNs", namespace );
         }
 
-        try {
-          final PropertyEditor propertyEditor = attrMeta.getEditor();
-          final String textValue;
-          if ( propertyEditor != null ) {
-            propertyEditor.setValue( value );
-            textValue = propertyEditor.getAsText();
-          } else {
-            textValue = ConverterRegistry.toAttributeValue( value );
-          }
+        // preserve strings, but discard anything else. Until a attribute has a definition, we cannot
+        // hope to understand the attribute's value. String-attributes can be expressed in XML easily,
+        // and string is also how all unknown attributes are stored by the parser.
+        attList.setAttribute( namespace, name, s );
+        this.xmlWriter.writeTag( XmlDocumentWriter.LAYOUT_OUTPUT_NAMESPACE, "attribute", attList, XmlWriter.CLOSE );
+        continue;
+      }
 
-          if ( textValue != null ) {
-            if ( "".equals( textValue ) == false ) {
-              attList.setAttribute( namespace, name, textValue );
-              this.xmlWriter
-                .writeTag( XmlDocumentWriter.LAYOUT_OUTPUT_NAMESPACE, "attribute", attList, XmlWriter.CLOSE );
-            }
-          } else {
-            if ( value instanceof ResourceKey ) {
-              final ResourceKey reskey = (ResourceKey) value;
-              final String identifierAsString = reskey.getIdentifierAsString();
-              attList.setAttribute( namespace, name, "resource-key:" + reskey.getSchema() + ":" + identifierAsString );
-              this.xmlWriter
-                .writeTag( XmlDocumentWriter.LAYOUT_OUTPUT_NAMESPACE, "attribute", attList, XmlWriter.CLOSE );
-            } else {
-              XmlDocumentWriter.logger.debug(
-                "Attribute '" + namespace + '|' + name + "' is not convertible to a text - returned null: " + value );
-            }
+      if ( xmlWriter.isNamespaceDefined( namespace ) == false &&
+        attList.isNamespaceUriDefined( namespace ) == false ) {
+        attList.addNamespaceDeclaration( "autoGenNs", namespace );
+      }
+
+      try {
+        final PropertyEditor propertyEditor = attrMeta.getEditor();
+        final String textValue;
+        if ( propertyEditor != null ) {
+          propertyEditor.setValue( value );
+          textValue = propertyEditor.getAsText();
+        } else {
+          textValue = ConverterRegistry.toAttributeValue( value );
+        }
+
+        if ( textValue != null ) {
+          if ( "".equals( textValue ) == false ) {
+            attList.setAttribute( namespace, name, textValue );
+            this.xmlWriter
+              .writeTag( XmlDocumentWriter.LAYOUT_OUTPUT_NAMESPACE, "attribute", attList, XmlWriter.CLOSE );
           }
-        } catch ( BeanException e ) {
-          if ( attrMeta.isTransient() == false ) {
-            XmlDocumentWriter.logger.warn(
-              "Attribute '" + namespace + '|' + name + "' is not convertible with the bean-methods" );
+        } else {
+          if ( value instanceof ResourceKey ) {
+            final ResourceKey reskey = (ResourceKey) value;
+            final String identifierAsString = reskey.getIdentifierAsString();
+            attList.setAttribute( namespace, name, "resource-key:" + reskey.getSchema() + ":" + identifierAsString );
+            this.xmlWriter
+              .writeTag( XmlDocumentWriter.LAYOUT_OUTPUT_NAMESPACE, "attribute", attList, XmlWriter.CLOSE );
           } else {
             XmlDocumentWriter.logger.debug(
-              "Attribute '" + namespace + '|' + name + "' is not convertible with the bean-methods" );
+              "Attribute '" + namespace + '|' + name + "' is not convertible to a text - returned null: " + value );
           }
+        }
+      } catch ( BeanException e ) {
+        if ( attrMeta.isTransient() == false ) {
+          XmlDocumentWriter.logger.warn(
+            "Attribute '" + namespace + '|' + name + "' is not convertible with the bean-methods" );
+        } else {
+          XmlDocumentWriter.logger.debug(
+            "Attribute '" + namespace + '|' + name + "' is not convertible with the bean-methods" );
         }
       }
     }
-
   }
 
   private boolean isEmptyCorner( final BorderCorner corner ) {
@@ -898,6 +901,25 @@ public class XmlDocumentWriter extends IterateStructuralProcessStep {
 
   protected void finishAutoBox( final RenderBox box ) {
     finishBox();
+  }
+
+  private static class DualKeySorter implements Comparator<AttributeMap.DualKey> {
+    public int compare( final AttributeMap.DualKey o1, final AttributeMap.DualKey o2 ) {
+      if (o1 == null && o2 == null) {
+        return 0;
+      }
+      if (o1 == null) {
+        return -1;
+      }
+      if (o2 == null) {
+        return 1;
+      }
+      int ns = o1.namespace.compareTo( o2.namespace );
+      if (ns != 0) {
+        return ns;
+      }
+      return o1.name.compareTo( o2.name );
+    }
   }
 
 }

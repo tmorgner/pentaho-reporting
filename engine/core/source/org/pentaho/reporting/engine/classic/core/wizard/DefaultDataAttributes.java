@@ -17,15 +17,25 @@
 
 package org.pentaho.reporting.engine.classic.core.wizard;
 
+import java.io.Serializable;
+
 import org.pentaho.reporting.libraries.xmlns.common.AttributeMap;
 
 public class DefaultDataAttributes implements DataAttributes {
-  private AttributeMap<Object> valueBackend;
-  private AttributeMap<ConceptQueryMapper> mapperBackend;
+  private static class Entry implements Serializable {
+    public final ConceptQueryMapper mapper;
+    public final Object value;
+
+    private Entry( final ConceptQueryMapper mapper, final Object value ) {
+      this.mapper = mapper;
+      this.value = value;
+    }
+  }
+
+  private AttributeMap<Entry> backend;
 
   public DefaultDataAttributes() {
-    this.valueBackend = new AttributeMap<Object>();
-    this.mapperBackend = new AttributeMap<ConceptQueryMapper>();
+    this.backend = new AttributeMap<Entry>();
   }
 
   public void setMetaAttribute( final String domain,
@@ -38,12 +48,11 @@ public class DefaultDataAttributes implements DataAttributes {
     if ( domain == null ) {
       throw new NullPointerException();
     }
-    valueBackend.setAttribute( domain, name, value );
-    mapperBackend.setAttribute( domain, name, conceptMapper );
+    backend.setAttribute( domain, name, new Entry(conceptMapper, value));
   }
 
   public String[] getMetaAttributeDomains() {
-    return valueBackend.getNameSpaces();
+    return backend.getNameSpaces();
   }
 
   public String[] getMetaAttributeNames( final String domainName ) {
@@ -51,7 +60,7 @@ public class DefaultDataAttributes implements DataAttributes {
       throw new NullPointerException();
     }
 
-    return valueBackend.getNames( domainName );
+    return backend.getNames( domainName );
   }
 
   public Object getMetaAttribute( final String domain,
@@ -85,13 +94,15 @@ public class DefaultDataAttributes implements DataAttributes {
       throw new NullPointerException();
     }
 
-    final Object attribute = valueBackend.getAttribute( domain, name );
+    final Entry attribute = backend.getAttribute( domain, name );
     if ( attribute == null ) {
       return defaultValue;
     }
-
-    final ConceptQueryMapper mapper = getMetaAttributeMapper( domain, name );
-    return mapper.getValue( attribute, type, context );
+    if (attribute.value == null) {
+      return defaultValue;
+    }
+    final ConceptQueryMapper mapper = attribute.mapper;
+    return mapper.getValue( attribute.value, type, context );
   }
 
   public ConceptQueryMapper getMetaAttributeMapper( final String domain, final String name ) {
@@ -101,12 +112,12 @@ public class DefaultDataAttributes implements DataAttributes {
     if ( name == null ) {
       throw new NullPointerException();
     }
-    final ConceptQueryMapper attribute = mapperBackend.getAttribute( domain, name );
+    final Entry attribute = backend.getAttribute( domain, name );
     if ( attribute == null ) {
       return DefaultConceptQueryMapper.INSTANCE;
     }
 
-    return attribute;
+    return attribute.mapper;
   }
 
   public void merge( final DataAttributes attributes,
@@ -126,8 +137,8 @@ public class DefaultDataAttributes implements DataAttributes {
         final String name = names[ j ];
         final Object value = attributes.getMetaAttribute( domain, name, null, context );
         if ( value != null ) {
-          valueBackend.setAttribute( domain, name, value );
-          mapperBackend.setAttribute( domain, name, attributes.getMetaAttributeMapper( domain, name ) );
+          ConceptQueryMapper mapper = attributes.getMetaAttributeMapper( domain, name );
+          backend.setAttribute( domain, name, new Entry(mapper, value) );
         }
       }
     }
@@ -150,8 +161,8 @@ public class DefaultDataAttributes implements DataAttributes {
         final DataAttributeReference ref = references.getReference( domain, name );
         final Object value = ref.resolve( this, context );
         if ( value != null ) {
-          valueBackend.setAttribute( domain, name, value );
-          mapperBackend.setAttribute( domain, name, ref.resolveMapper( this ) );
+          ConceptQueryMapper conceptQueryMapper = ref.resolveMapper( this );
+          backend.setAttribute( domain, name, new Entry(conceptQueryMapper, value ));
         }
       }
     }
@@ -159,14 +170,13 @@ public class DefaultDataAttributes implements DataAttributes {
 
   public Object clone() throws CloneNotSupportedException {
     final DefaultDataAttributes o = (DefaultDataAttributes) super.clone();
-    o.valueBackend = (AttributeMap<Object>) valueBackend.clone();
-    o.mapperBackend = (AttributeMap<ConceptQueryMapper>) mapperBackend.clone();
+    o.backend = backend.clone();
     return o;
   }
 
 
   public boolean isEmpty() {
-    return valueBackend.getNameSpaces().length == 0;
+    return backend.getNameSpaces().length == 0;
   }
 
 }
