@@ -17,21 +17,24 @@
 
 package org.pentaho.reporting.engine.classic.core.modules.misc.datafactory.sql;
 
-import org.pentaho.reporting.engine.classic.core.ClassicEngineBoot;
-import org.pentaho.reporting.engine.classic.core.MetaTableModel;
-import org.pentaho.reporting.engine.classic.core.modules.misc.tablemodel.DataTableException;
-import org.pentaho.reporting.engine.classic.core.modules.misc.tablemodel.DefaultTableMetaData;
-import org.pentaho.reporting.engine.classic.core.modules.misc.tablemodel.TypeMapper;
-import org.pentaho.reporting.engine.classic.core.util.CloseableTableModel;
-import org.pentaho.reporting.engine.classic.core.wizard.DataAttributes;
-import org.pentaho.reporting.engine.classic.core.wizard.EmptyDataAttributes;
-import org.pentaho.reporting.libraries.base.config.Configuration;
-
-import javax.swing.table.AbstractTableModel;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.table.AbstractTableModel;
+
+import org.pentaho.reporting.engine.classic.core.ClassicEngineBoot;
+import org.pentaho.reporting.engine.classic.core.MetaTableModel;
+import org.pentaho.reporting.engine.classic.core.modules.misc.tablemodel.DataTableException;
+import org.pentaho.reporting.engine.classic.core.modules.misc.tablemodel.ImmutableTableMetaData;
+import org.pentaho.reporting.engine.classic.core.modules.misc.tablemodel.TableMetaData;
+import org.pentaho.reporting.engine.classic.core.modules.misc.tablemodel.TypeMapper;
+import org.pentaho.reporting.engine.classic.core.util.CloseableTableModel;
+import org.pentaho.reporting.engine.classic.core.wizard.DataAttributes;
+import org.pentaho.reporting.engine.classic.core.wizard.EmptyDataAttributes;
+import org.pentaho.reporting.engine.classic.core.wizard.ImmutableDataAttributes;
+import org.pentaho.reporting.libraries.base.config.Configuration;
+import org.pentaho.reporting.libraries.xmlns.common.AttributeMap;
 
 /**
  * A tableModel which is backed up by a java.sql.ResultSet. Use this to directly feed your database data into
@@ -45,6 +48,7 @@ import java.sql.Statement;
  */
 public class ScrollableResultSetTableModel extends AbstractTableModel
   implements CloseableTableModel, MetaTableModel {
+  public static final String COL_MAPPING_KEY = "org.pentaho.reporting.engine.classic.core.modules.misc.datafactory.sql.ColumnMappingMode";
   /**
    * The scrollable ResultSet source.
    */
@@ -67,7 +71,7 @@ public class ScrollableResultSetTableModel extends AbstractTableModel
    */
   private Class[] types;
 
-  private DefaultTableMetaData metaData;
+  private TableMetaData metaData;
 
   /**
    * Constructs the model.
@@ -119,10 +123,13 @@ public class ScrollableResultSetTableModel extends AbstractTableModel
     this.resultset = resultset;
     this.dbmd = resultset.getMetaData();
     final int colcount = dbmd.getColumnCount();
-    this.metaData = new DefaultTableMetaData( colcount );
+    AttributeMap<Object>[] columnMeta = new AttributeMap[colcount];
     for ( int i = 0; i < colcount; i++ ) {
-      ResultSetTableModelFactory.updateMetaData( dbmd, metaData, i );
+      columnMeta[i] = ResultSetTableModelFactory.collectData( dbmd, i, getColumnName( i ) );
     }
+
+    this.metaData = new ImmutableTableMetaData( ImmutableDataAttributes.EMPTY,
+                                                ResultSetTableModelFactory.map( columnMeta ) );
 
     if ( resultset.last() ) {
       rowCount = resultset.getRow();
@@ -142,13 +149,15 @@ public class ScrollableResultSetTableModel extends AbstractTableModel
       Statement statement = null;
       try {
         statement = resultset.getStatement();
-      } catch ( SQLException sqle ) {
+      }
+      catch ( SQLException sqle ) {
         // yeah, whatever
         // logger.warn("Failed to close statement", sqle);
       }
       try {
         resultset.close();
-      } catch ( SQLException e ) {
+      }
+      catch ( SQLException e ) {
         // Just in case the JDBC driver can't close a result set twice.
         //  e.printStackTrace();
         // Closing is fine if it fails ..
@@ -159,7 +168,8 @@ public class ScrollableResultSetTableModel extends AbstractTableModel
           if ( statement != null ) {
             statement.close();
           }
-        } catch ( SQLException sqle ) {
+        }
+        catch ( SQLException sqle ) {
           // yeah, whatever
         }
       }
@@ -194,7 +204,8 @@ public class ScrollableResultSetTableModel extends AbstractTableModel
       } else {
         rowCount = 0;
       }
-    } catch ( SQLException sqle ) {
+    }
+    catch ( SQLException sqle ) {
       //Log.debug ("GetRowCount failed, returning 0 rows", sqle);
       throw new DataTableException( "Accessing the result set failed: ", sqle );
     }
@@ -216,7 +227,8 @@ public class ScrollableResultSetTableModel extends AbstractTableModel
     if ( dbmd != null ) {
       try {
         return dbmd.getColumnCount();
-      } catch ( SQLException e ) {
+      }
+      catch ( SQLException e ) {
         //Log.debug ("GetColumnCount failed", e);
         throw new DataTableException( "Accessing the result set failed: ", e );
       }
@@ -246,10 +258,7 @@ public class ScrollableResultSetTableModel extends AbstractTableModel
         // any interpretation or interpolation.
         final Configuration globalConfig = ClassicEngineBoot.getInstance().getGlobalConfig();
         final boolean useLegacyColumnMapping =
-          "legacy".equalsIgnoreCase(                                                                          // NON-NLS
-            globalConfig.getConfigProperty(
-              "org.pentaho.reporting.engine.classic.core.modules.misc.datafactory.sql.ColumnMappingMode",
-              "legacy" ) );  // NON-NLS
+          "legacy".equalsIgnoreCase( globalConfig.getConfigProperty( COL_MAPPING_KEY, "legacy" ) );  // NON-NLS
 
         String columnLabel = dbmd.getColumnLabel( column + 1 );
         if ( useLegacyColumnMapping ) {
@@ -266,7 +275,8 @@ public class ScrollableResultSetTableModel extends AbstractTableModel
             return columnLabel;
           }
         }
-      } catch ( SQLException e ) {
+      }
+      catch ( SQLException e ) {
         throw new DataTableException( "Accessing the result set failed: ", e );
       }
     }
@@ -285,7 +295,8 @@ public class ScrollableResultSetTableModel extends AbstractTableModel
       try {
         resultset.absolute( row + 1 );
         return resultset.getObject( column + 1 );
-      } catch ( SQLException e ) {
+      }
+      catch ( SQLException e ) {
         throw new DataTableException( "Accessing the result set failed: ", e );
       }
     }
@@ -300,15 +311,16 @@ public class ScrollableResultSetTableModel extends AbstractTableModel
    */
   public Class getColumnClass( final int column ) {
     if ( types != null ) {
-      return types[ column ];
+      return types[column];
     }
     if ( dbmd != null ) {
       try {
         types = TypeMapper.mapTypes( dbmd );
         if ( types != null ) {
-          return types[ column ];
+          return types[column];
         }
-      } catch ( Exception e ) {
+      }
+      catch ( Exception e ) {
         throw new DataTableException( "Accessing the result set failed: ", e );
       }
     }
