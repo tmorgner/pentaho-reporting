@@ -17,6 +17,8 @@
 
 package org.pentaho.reporting.engine.classic.core.layout.style;
 
+import java.util.List;
+
 import org.pentaho.reporting.engine.classic.core.ClassicEngineBoot;
 import org.pentaho.reporting.engine.classic.core.InvalidReportStateException;
 import org.pentaho.reporting.engine.classic.core.style.StyleKey;
@@ -117,7 +119,7 @@ public class DefaultStyleCache implements StyleCache {
 
   private LFUMap<CacheKey, CacheCarrier> cache;
   private CacheKey lookupKey;
-  private StyleKey[] validateKeys;
+  private List<StyleKey> validateKeys;
   private boolean validateCache;
   private int cacheHits;
   private int cacheMiss;
@@ -169,11 +171,10 @@ public class DefaultStyleCache implements StyleCache {
     }
 
     if ( validateKeys == null ) {
-      validateKeys = StyleKey.getDefinedStyleKeys();
+      validateKeys = StyleKey.getDefinedStyleKeysList();
     }
 
-    for ( int i = 0; i < validateKeys.length; i++ ) {
-      final StyleKey validateKey = validateKeys[ i ];
+    for ( final StyleKey validateKey : validateKeys ) {
       final Object o1 = s1.getStyleProperty( validateKey );
       final Object o2 = s2.getStyleProperty( validateKey );
       if ( ObjectUtilities.equal( o1, o2 ) ) {

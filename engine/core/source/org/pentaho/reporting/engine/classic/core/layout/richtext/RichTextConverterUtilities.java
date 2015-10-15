@@ -35,6 +35,7 @@ import java.io.StringReader;
 import java.sql.Blob;
 import java.sql.Clob;
 import java.sql.SQLException;
+import java.util.List;
 
 public class RichTextConverterUtilities {
   private RichTextConverterUtilities() {
@@ -127,15 +128,12 @@ public class RichTextConverterUtilities {
     return null;
   }
 
-  public static Band convertToBand( final StyleKey[] definedStyleKeys,
+  public static Band convertToBand( final List<StyleKey> definedStyleKeys,
                                     final ReportElement element, final Element child ) {
     final Band b = new Band( element.getObjectID() );
     final ElementStyleSheet targetStyle = b.getStyle();
     final ElementStyleSheet sourceStyle = element.getStyle();
-    for ( int i = 0; i < definedStyleKeys.length; i++ ) {
-      // copy all, even the inherited styles, as we do not add the element/band to the real parent. All we do
-      // is virtual ..
-      final StyleKey key = definedStyleKeys[ i ];
+    for ( StyleKey key : definedStyleKeys ) {
       targetStyle.setStyleProperty( key, sourceStyle.getStyleProperty( key ) );
     }
 
