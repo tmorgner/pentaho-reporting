@@ -25,44 +25,44 @@ import org.pentaho.reporting.engine.classic.core.layout.output.AbstractOutputPro
 import org.pentaho.reporting.engine.classic.core.layout.output.AbstractReportProcessor;
 import org.pentaho.reporting.engine.classic.core.layout.output.ContentProcessingException;
 import org.pentaho.reporting.engine.classic.core.layout.output.LogicalPageKey;
+import org.pentaho.reporting.engine.classic.core.layout.output.OutputProcessorFeature;
 import org.pentaho.reporting.engine.classic.core.layout.output.OutputProcessorMetaData;
 import org.pentaho.reporting.engine.classic.core.modules.output.fast.FastExportOutputFunction;
 import org.pentaho.reporting.engine.classic.core.modules.output.table.html.helper.HtmlOutputProcessorMetaData;
+import org.pentaho.reporting.libraries.base.config.Configuration;
 
-public class FastHtmlExportProcessor extends AbstractReportProcessor
-{
-  private static class HtmlDataOutputProcessor extends AbstractOutputProcessor
-  {
+public class FastHtmlExportProcessor extends AbstractReportProcessor {
+  private static class HtmlDataOutputProcessor extends AbstractOutputProcessor {
     private OutputProcessorMetaData metaData;
 
-    private HtmlDataOutputProcessor()
-    {
-      metaData = new HtmlOutputProcessorMetaData(HtmlOutputProcessorMetaData.PAGINATION_NONE);
+    private HtmlDataOutputProcessor() {
+      metaData = new HtmlOutputProcessorMetaData( HtmlOutputProcessorMetaData.PAGINATION_NONE ) {
+        public void initialize( final Configuration configuration ) {
+          super.initialize( configuration );
+          addFeature( OutputProcessorFeature.FAST_EXPORT );
+        }
+      };
     }
 
-    protected void processPageContent(final LogicalPageKey logicalPageKey,
-                                      final LogicalPageBox logicalPage) throws ContentProcessingException
-    {
+    protected void processPageContent( final LogicalPageKey logicalPageKey,
+                                       final LogicalPageBox logicalPage ) throws ContentProcessingException {
       // not used ..
     }
 
-    public OutputProcessorMetaData getMetaData()
-    {
+    public OutputProcessorMetaData getMetaData() {
       return metaData;
     }
   }
 
   private FastHtmlContentItems contentItems;
 
-  public FastHtmlExportProcessor(final MasterReport report,
-                                 final FastHtmlContentItems contentItems) throws ReportProcessingException
-  {
-    super(report, new HtmlDataOutputProcessor());
+  public FastHtmlExportProcessor( final MasterReport report,
+                                  final FastHtmlContentItems contentItems ) throws ReportProcessingException {
+    super( report, new HtmlDataOutputProcessor() );
     this.contentItems = contentItems;
   }
 
-  protected OutputFunction createLayoutManager()
-  {
-    return new FastExportOutputFunction(new FastHtmlExportTemplate(contentItems));
+  protected OutputFunction createLayoutManager() {
+    return new FastExportOutputFunction( new FastHtmlExportTemplate( contentItems ) );
   }
 }
