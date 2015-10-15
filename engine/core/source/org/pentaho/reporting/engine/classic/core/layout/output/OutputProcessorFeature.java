@@ -166,6 +166,8 @@ public abstract class OutputProcessorFeature implements Serializable {
     new BooleanOutputProcessorFeature( "always-print-first-line-of-text" );
   public static final BooleanOutputProcessorFeature WATERMARK_PRINTED_ON_TOP =
     new BooleanOutputProcessorFeature( "watermark-print-on-top" );
+  public static final BooleanOutputProcessorFeature FAST_EXPORT =
+    new BooleanOutputProcessorFeature( "fast-export" );
 
   private String name;
   private int hashCode;

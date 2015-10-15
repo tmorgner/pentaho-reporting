@@ -21,6 +21,8 @@ import org.pentaho.reporting.engine.classic.core.AbstractReportPreProcessor;
 import org.pentaho.reporting.engine.classic.core.MasterReport;
 import org.pentaho.reporting.engine.classic.core.ReportProcessingException;
 import org.pentaho.reporting.engine.classic.core.SubReport;
+import org.pentaho.reporting.engine.classic.core.layout.output.OutputProcessorFeature;
+import org.pentaho.reporting.engine.classic.core.layout.output.OutputProcessorMetaData;
 import org.pentaho.reporting.engine.classic.core.states.datarow.DefaultFlowController;
 
 public class ReportDynamicStyleAnalyzerPreProcessor extends AbstractReportPreProcessor {
@@ -30,15 +32,21 @@ public class ReportDynamicStyleAnalyzerPreProcessor extends AbstractReportPrePro
   public MasterReport performPreProcessing( final MasterReport definition,
                                             final DefaultFlowController flowController )
     throws ReportProcessingException {
-    DynamicReportStyleAnalyzer analyzer = new DynamicReportStyleAnalyzer();
-    analyzer.compute( definition );
+    OutputProcessorMetaData meta = flowController.getReportContext().getOutputProcessorMetaData();
+    if ( meta.isFeatureSupported( OutputProcessorFeature.FAST_EXPORT )) {
+      DynamicReportStyleAnalyzer analyzer = new DynamicReportStyleAnalyzer();
+      analyzer.compute( definition );
+    }
     return definition;
   }
 
   public SubReport performPreProcessing( final SubReport definition,
                                          final DefaultFlowController flowController ) throws ReportProcessingException {
-    DynamicReportStyleAnalyzer analyzer = new DynamicReportStyleAnalyzer();
-    analyzer.compute( definition );
+    OutputProcessorMetaData meta = flowController.getReportContext().getOutputProcessorMetaData();
+    if ( meta.isFeatureSupported( OutputProcessorFeature.FAST_EXPORT )) {
+      DynamicReportStyleAnalyzer analyzer = new DynamicReportStyleAnalyzer();
+      analyzer.compute( definition );
+    }
     return definition;
   }
 }
