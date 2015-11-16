@@ -161,7 +161,7 @@ public class TableLayoutPaginationIT {
   @Test
   @Ignore( "Should be fixed with next commits within PRD-5547 ticket" )
   public void withHeaderAndFooter() throws Exception {
-    String file = "table-layout-pagination-header-footer.prpt";
+    String file = "table-header-footer.prpt";
     List<LogicalPageBox> pages = loadPages( file, 6 );
 
     PageValidator validator = validator().checkTableHeader();
