@@ -119,7 +119,6 @@ public class TableLayoutPaginationIT {
    *  5: th,9,10
    */
   @Test
-  @Ignore( "Should be fixed with next commits within PRD-5547 ticket" )
   public void withHeader() throws Exception {
     String file = "table-header.prpt";
     List<LogicalPageBox> pages = loadPages( file, 5 );
@@ -159,7 +158,6 @@ public class TableLayoutPaginationIT {
    *  6: th,tf
    */
   @Test
-  @Ignore( "Should be fixed with next commits within PRD-5547 ticket" )
   public void withHeaderAndFooter() throws Exception {
     String file = "table-header-footer.prpt";
     List<LogicalPageBox> pages = loadPages( file, 6 );
@@ -184,7 +182,6 @@ public class TableLayoutPaginationIT {
    *  51: th,tf
    */
   @Test
-  @Ignore( "Should be fixed with next commits within PRD-5547 ticket" )
   public void withHeaderAndFooter_Long() throws Exception {
     String file = "table-header-footer-100-records.prpt";
     List<LogicalPageBox> pages = loadPages( file, 51 );
@@ -204,7 +201,6 @@ public class TableLayoutPaginationIT {
    * the case with no page header
    */
   @Test
-  @Ignore( "Should be fixed with next commits within PRD-5547 ticket" )
   public void withHeaderAndSmallPageHeader() throws Exception {
     String file = "table-page-header-small.prpt";
     List<LogicalPageBox> pages = loadPages( file, 5 );
@@ -226,7 +222,7 @@ public class TableLayoutPaginationIT {
    *  10: ph,th,10
    */
   @Test
-  @Ignore( "Should be fixed with next commits within PRD-5547 ticket" )
+  //@Ignore( "Should be fixed with next commits within PRD-5547 ticket" )
   public void withHeaderAndLargePageHeader() throws Exception {
     String file = "table-page-header-large.prpt";
     List<LogicalPageBox> pages = loadPages( file, 10 );
@@ -242,7 +238,6 @@ public class TableLayoutPaginationIT {
    * the case with no page footer
    */
   @Test
-  @Ignore( "Should be fixed with next commits within PRD-5547 ticket" )
   public void withHeaderAndSmallPageFooter() throws Exception {
     String file = "table-page-footer-small.prpt";
     List<LogicalPageBox> pages = loadPages( file, 5 );

@@ -62,6 +62,16 @@ public final class PaginationStep extends IterateVisualProcessStep {
   private long pageOffsetKey;
   private long usablePageHeight;
 
+  // header section always precedes body and footer, and exists on every page
+  // hence when body section is proceeded, tableHeaderHeight is assigned to
+  // the correct value (0 or actual header's height)
+  private long tableHeaderHeight;
+  // the field is needed to collect gaps between pagebreaks and actual page edge
+  // as well table headers' impact;
+  // you may assume that actualShift stores offset for the exact position
+  // to contrary of shiftState, which is initialised one time
+  private long actualShift;
+
   public PaginationStep() {
     findOldestProcessKeyStep = new FindOldestProcessKeyStep();
     basePageBreakList = new PageBreakPositionList();
@@ -83,6 +93,8 @@ public final class PaginationStep extends IterateVisualProcessStep {
       this.shiftState = new InitialPaginationShiftState();
       this.breakPending = false;
       this.usablePageHeight = Long.MAX_VALUE;
+      this.tableHeaderHeight = 0;
+      this.actualShift = 0;
 
       final long[] allCurrentBreaks = pageBox.getPhysicalBreaks( RenderNode.VERTICAL_AXIS );
       if ( allCurrentBreaks.length == 0 ) {
@@ -322,17 +334,7 @@ public final class PaginationStep extends IterateVisualProcessStep {
           startTableHeaderSection( box, sectionRenderBox );
           return false;
         }
-        case FOOTER: {
-          shiftState = shiftStatePool.create( box, shiftState );
-
-          paginationTableState = new PaginationTableState( paginationTableState );
-          paginationTableState.suspendVisualStateCollection( true );
-
-          // shift the box and all children downwards. Suspend pagebreaks.
-          final long contextShift = shiftState.getShiftForNextChild();
-          BoxShifter.shiftBox( box, contextShift );
-          return false;
-        }
+        case FOOTER:
         case BODY:
           return startBlockLevelBox( box );
         default:
@@ -361,6 +363,12 @@ public final class PaginationStep extends IterateVisualProcessStep {
     RenderBox box = findRootBox( _box );
 
     final long contextShift = shiftState.getShiftForNextChild();
+    tableHeaderHeight = box.getHeight();
+    // on first page table header is placed according to natural flow, hence no shift is needed
+    // but for convenience it is easier to always add header's height on pagebreaks,
+    // so let's simply lessen the shift here
+    actualShift = -tableHeaderHeight;
+
     // shift the header downwards,
     // 1. Check that this table actually breaks across the current page. Header position must be
     // before the pagebox-offset. If not, return false, after the normal shifting.
@@ -418,9 +426,6 @@ public final class PaginationStep extends IterateVisualProcessStep {
           paginationTableState.defineArtificialPageStart( box.getHeight() + paginationTableState.getPageOffset() );
           break;
         case FOOTER:
-          shiftState = shiftState.pop( box.getInstanceId() );
-          paginationTableState = paginationTableState.pop();
-          break;
         case BODY:
           finishBlockLevelBox( box );
           break;
@@ -428,9 +433,59 @@ public final class PaginationStep extends IterateVisualProcessStep {
           throw new IllegalStateException();
       }
       return;
+    } else if ( nodeType == LayoutNodeTypes.TYPE_BOX_AUTOLAYOUT ) {
+      // PRD-5547:
+      // AutoRenderBox is left intact while paginating table-layouted canvas and then is simply cut by Printer
+      // to preserve it, let's update the coordinate with Y coordinate of the very first table section child
+      // todo Khayrutdinov : -pageHeaderOffset
+      long pageStart = paginationTableState.getPageEnd() - paginationTableState.getPageHeight();
+      long newY = -1;
+      RenderNode child = box.getFirstChild();
+      while ( child != null ) {
+        long y = getTableSectionY( child );
+        if ( y >= pageStart ) {
+          newY = y;
+          break;
+        }
+        child = child.getNext();
+      }
+      if ( newY > box.getY() ) {
+        box.setY( newY );
+      }
+    } else if ( nodeType == LayoutNodeTypes.TYPE_BOX_BREAKMARK ) {
+      actualShift += tableHeaderHeight;
+
+      long realBoxY = box.getY() + actualShift;
+      long nextBreakPosition = basePageBreakList.findNextBreakPosition( realBoxY );
+      long breakGap = nextBreakPosition - realBoxY;
+      if ( breakGap > 0 ) {
+        actualShift += breakGap;
+        shiftState.increaseShift( breakGap );
+        updateStateKeyDeep( box );
+      }
     }
 
     finishBlockLevelBox( box );
+  }
+
+  private long getTableSectionY( RenderNode node ) {
+    if ( node.getLayoutNodeType() != LayoutNodeTypes.TYPE_BOX_TABLE_SECTION ) {
+      if ( node.getNodeType() == LayoutNodeTypes.TYPE_BOX_AUTOLAYOUT ) {
+        // table section, if exists, should be the first child
+        return getTableSectionY( ( (RenderBox) node ).getFirstChild() );
+      }
+      return -1;
+    }
+
+    if ( node.getNodeType() == LayoutNodeTypes.TYPE_BOX_AUTOLAYOUT ) {
+      return getTableSectionY( ( (RenderBox) node ).getFirstChild() );
+    }
+
+    TableSectionRenderBox sectionBox = (TableSectionRenderBox) node;
+    if ( sectionBox.getDisplayRole() == TableSectionRenderBox.Role.HEADER ) {
+      return -1;
+    }
+    return sectionBox.getY();
   }
 
   protected boolean startTableSectionLevelBox( final RenderBox box ) {
@@ -737,5 +792,39 @@ public final class PaginationStep extends IterateVisualProcessStep {
       return;
     }
     paginationTableState = paginationTableState.pop();
+  }
+
+  // Methods for unit testing only!
+
+  @Deprecated
+  void setPaginationTableState(
+    PaginationTableState paginationTableState ) {
+    this.paginationTableState = paginationTableState;
+  }
+
+  @Deprecated
+  PaginationTableState getPaginationTableState() {
+    return paginationTableState;
+  }
+
+  @Deprecated
+  void setShiftState(
+    PaginationShiftState shiftState ) {
+    this.shiftState = shiftState;
+  }
+
+  @Deprecated
+  PaginationShiftState getShiftState() {
+    return shiftState;
+  }
+
+  @Deprecated
+  PageBreakPositionList getBasePageBreakList() {
+    return basePageBreakList;
+  }
+
+  @Deprecated
+  long getActualShift() {
+    return actualShift;
   }
 }
