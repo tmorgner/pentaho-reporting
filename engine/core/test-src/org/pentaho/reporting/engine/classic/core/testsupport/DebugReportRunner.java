@@ -414,7 +414,27 @@ public class DebugReportRunner {
 
     final InterceptingXmlPageOutputProcessor outputProcessor =
         new InterceptingXmlPageOutputProcessor( new NullOutputStream(), new XmlPageOutputProcessorMetaData(
-            localFontRegistry ) );
+            localFontRegistry ));
+    outputProcessor.setFlowSelector( new MultiPageFlowSelector( false, page ) );
+    final PageableReportProcessor proc = new PageableReportProcessor( report, outputProcessor );
+    proc.processReport();
+
+    List<LogicalPageBox> pages = outputProcessor.getPages();
+    Assert.assertEquals( "Pages have been generated", page.length, pages.size() );
+    return pages;
+  }
+
+  public static List<LogicalPageBox> layoutPagesRaw( final MasterReport report, final int... page ) throws Exception {
+    final LocalFontRegistry localFontRegistry = new LocalFontRegistry();
+    localFontRegistry.initialize();
+
+    final InterceptingXmlPageOutputProcessor outputProcessor =
+        new InterceptingXmlPageOutputProcessor( new NullOutputStream(), new XmlPageOutputProcessorMetaData(
+            localFontRegistry )) {
+          public boolean isNeedAlignedPage() {
+            return false;
+          }
+        };
     outputProcessor.setFlowSelector( new MultiPageFlowSelector( false, page ) );
     final PageableReportProcessor proc = new PageableReportProcessor( report, outputProcessor );
     proc.processReport();

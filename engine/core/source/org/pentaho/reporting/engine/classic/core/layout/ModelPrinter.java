@@ -319,6 +319,14 @@ public class ModelPrinter {
       b.append( "- Row: " );
       b.append( pageBox.getRowIndex() );
       print( b.toString() );
+
+      b = new StringBuilder();
+      for ( int i = 0; i < level; i++ ) {
+        b.append( "   " );
+      }
+      b.append( "- Position: " );
+      b.append( pageBox.getRowPosition() );
+      print( b.toString() );
     }
 
     if ( box instanceof TableCellRenderBox ) {

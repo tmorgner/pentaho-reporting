@@ -31,6 +31,7 @@ import org.pentaho.reporting.engine.classic.core.metadata.ElementType;
 import org.pentaho.reporting.engine.classic.core.states.ReportStateKey;
 import org.pentaho.reporting.engine.classic.core.style.StyleSheet;
 import org.pentaho.reporting.engine.classic.core.util.InstanceID;
+import org.pentaho.reporting.libraries.base.util.DebugLog;
 
 /**
  * A table section box does not much rendering or layouting at all. It represents one of the three possible sections and
@@ -45,6 +46,7 @@ public class TableRowRenderBox extends RenderBox {
   private static final Log logger = LogFactory.getLog( TableRowRenderBox.class );
   private int rowIndex;
   private boolean bodySection;
+  private Long rowPosition;
 
   public TableRowRenderBox() {
     this( SimpleStyleSheet.EMPTY_STYLE, new InstanceID(), BoxDefinition.EMPTY, AutoLayoutBoxType.INSTANCE,
@@ -56,6 +58,7 @@ public class TableRowRenderBox extends RenderBox {
       final ReportStateKey stateKey ) {
     super( HORIZONTAL_AXIS, VERTICAL_AXIS, styleSheet, instanceID, boxDefinition, elementType, attributes, stateKey );
     this.rowIndex = -1;
+    DebugLog.log("Created a row");
   }
 
   public boolean useMinimumChunkWidth() {
@@ -87,6 +90,7 @@ public class TableRowRenderBox extends RenderBox {
     super.reinit( styleSheet, elementType, attributes, instanceId );
     rowIndex = -1;
     bodySection = false;
+    rowPosition = null;
   }
 
   public boolean isBodySection() {
@@ -161,5 +165,15 @@ public class TableRowRenderBox extends RenderBox {
 
   public RenderBox create( final StyleSheet styleSheet ) {
     return new AutoRenderBox( styleSheet );
+  }
+
+  public Long getRowPosition()
+  {
+    return rowPosition;
+  }
+
+  public void setRowPosition(final Long rowPosition)
+  {
+    this.rowPosition = rowPosition;
   }
 }
