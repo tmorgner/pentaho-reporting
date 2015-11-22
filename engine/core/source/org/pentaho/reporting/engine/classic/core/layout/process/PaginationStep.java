@@ -336,9 +336,6 @@ public final class PaginationStep extends IterateVisualProcessStep {
       final TableSectionRenderBox sectionRenderBox = (TableSectionRenderBox) box;
       switch ( sectionRenderBox.getDisplayRole() ) {
         case HEADER: {
-          if (pageOffsetKey != 0) {
-            DebugLog.logHere();
-          }
           shiftState = shiftStatePool.create( box, shiftState );
 
           paginationTableState = new PaginationTableState( paginationTableState );
@@ -356,6 +353,9 @@ public final class PaginationStep extends IterateVisualProcessStep {
           throw new IllegalArgumentException();
       }
     } else {
+      if (pageOffsetKey == 168000000 && box.getCachedY() == 9500000) {
+        DebugLog.logHere();
+      }
       startTableBlockLevelBox( box );
       return true;
     }

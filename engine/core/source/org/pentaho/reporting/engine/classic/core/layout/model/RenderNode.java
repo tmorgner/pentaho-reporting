@@ -28,6 +28,7 @@ import org.pentaho.reporting.engine.classic.core.style.VerticalTextAlign;
 import org.pentaho.reporting.engine.classic.core.util.InstanceID;
 import org.pentaho.reporting.engine.classic.core.util.geom.StrictBounds;
 import org.pentaho.reporting.libraries.base.config.Configuration;
+import org.pentaho.reporting.libraries.base.util.DebugLog;
 
 public abstract class RenderNode implements Cloneable {
   public enum CacheState {
@@ -198,10 +199,16 @@ public abstract class RenderNode implements Cloneable {
 
   public void shift( final long amount ) {
     this.y += amount;
+    if (y == 168000000 && cachedY == 9500000 && this instanceof AutoRenderBox) {
+      DebugLog.logHere();
+    }
   }
 
   public void setY( final long y ) {
     this.y = y;
+    if (y == 168000000 && cachedY == 9500000 && this instanceof AutoRenderBox) {
+      DebugLog.logHere();
+    }
   }
 
   protected final void updateCacheState( final CacheState state ) {
