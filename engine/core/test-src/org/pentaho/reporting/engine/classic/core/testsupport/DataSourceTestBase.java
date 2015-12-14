@@ -259,7 +259,7 @@ public abstract class DataSourceTestBase extends TestCase {
   }
 
   protected String getTestDirectory() {
-    return "test";
+    return "test-src";
   }
 
   protected void initializeDataFactory( final DataFactory dataFactory ) throws ReportDataFactoryException {
